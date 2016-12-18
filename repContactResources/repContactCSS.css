@@ -98,6 +98,9 @@ body {
     @media screen and (min-width: 200px) and (max-width: 500px) {
       .titleFormWrapper .title {
         margin-bottom: 20px; } }
+    @media screen and (min-width: 501px) and (max-width: 800px) {
+      .titleFormWrapper .title {
+        margin-bottom: 25px; } }
   .titleFormWrapper .introText {
     font-family: open sans condensed;
     color: darkblue;
