@@ -1,6 +1,10 @@
+$phone-break: "screen and (min-width: 200px) and (max-width: 500px)";
+$tablet-break: "screen and (min-width: 501px) and (max-width: 800px)";
+
 html {
 	height: 100%;
 	width: 100%;
+	background-color: #565895;
 }
 
 body {
@@ -15,7 +19,7 @@ body {
     /*background: url(images/weThePeopleBLUR.jpg) no-repeat left center fixed;
     background-size: cover;
     background-color: rgba(204, 213, 238, 0.99);*/
-	background: linear-gradient(to bottom right, rgba(168, 0, 0, .75) -50%, rgba(248, 248, 255, .80) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBlur2.jpg) center no-repeat;
+	background: linear-gradient(to bottom right, rgba(168, 0, 0, .75) -50%, rgba(248, 248, 255, .80) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
     background-size: cover;
 }
 
@@ -24,16 +28,22 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	height: 10%;
+	min-height: 55px;
 	width: 100%;
 	margin: 0px;
 	border-bottom: 2px solid darkred;
 	/*background-color: rgba(12, 29, 141, .7);*/
 	background-color: rgba(248, 248, 255, .5);
+	@media #{$phone-break} {
+		order: 2;
+		border-bottom: none;
+		border-top: 2px solid darkred;
+	}
 
 	.menuOption {
 		width: 15%;
 		height: 100%;
-		border-left: 1px solid darkred;
+		border-left: 1px solid rgba(248, 248, 255, 0.7);
 		padding-left: 15px;
 		padding-right: 15px;
 		display: flex;
@@ -44,10 +54,35 @@ body {
 		font-family: Open Sans Condensed;
 		font-size: 1.5em;
 		transition: color .4s ease, background-color .4s ease;
+		@media #{$phone-break} {
+			width: 25%;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		@media #{$tablet-break} {
+			width: 25%;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+
+	.menuOption:first-child {
+		@media #{$phone-break} {
+			border-left: none;
+		}
+		@media #{$tablet-break} {
+			border-left: none;
+		}
 	}
 
 	.menuOption:last-child {
-		border-right: 1px solid darkred;
+		border-right: 1px solid rgba(248, 248, 255, 0.7);
+		@media #{$phone-break} {
+			border-right: none;
+		}
+		@media #{$tablet-break} {
+			border-right: none;
+		}
 	}
 
 	.menuOption:hover {
@@ -64,29 +99,43 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@media #{$phone-break} {
+		order: 1;
+	}
 
 	.title {
 		font-weight: 100;
 		font-size: 7em;
     	/*color: rgba(0, 0, 107, 0.5);*/
-    	color: rgba(147, 27, 56, 0.8);
+    	color: rgba(147, 27, 56, 0.9);
     	margin-top: 0px;
-    	margin-bottom: 25px;
+    	margin-bottom: 15px;
     	line-height: 100px;
+    	@media #{$phone-break} {
+    		margin-bottom: 20px;
+    	}
 	}
+
 
 	.introText {
 		font-family: open sans condensed;
 		color: darkblue;
 		text-align-last: justify;
 		font-size: 1.3em;
-		margin-top: -15px;
+		margin-top: 0px;
 		margin-bottom: 10px;
 		line-height: 25px;
+		@media #{$phone-break} {
+			font-size: 1.4em;
+			line-height: 30px;
+		}
+		@media #{$tablet-break} {
+			margin-top: 0px;
+		}
 
 		.underTitle {
 			font-size: 1.3em;
-    		color: rgba(147, 27, 56, 0.8);
+    		color: rgba(147, 27, 56, 0.9);
 		}
 	}
 
@@ -101,6 +150,9 @@ body {
     	color: darkred;
     	font-size: 1.5em;
 		transition: background-color .4s ease;
+		@media #{$phone-break} {
+			width: 295px;
+		}
 
 	}
 
@@ -114,4 +166,3 @@ body {
 		transition: background-color .4s ease;
 	}
 }
-
