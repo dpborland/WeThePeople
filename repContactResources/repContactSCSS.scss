@@ -114,6 +114,9 @@ body {
     	@media #{$phone-break} {
     		margin-bottom: 20px;
     	}
+    	@media #{$tablet-break} {
+    		margin-bottom: 25px;
+    	}
 	}
 
 
