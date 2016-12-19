@@ -3,13 +3,12 @@ var queryResponse;
 
 //Google Civic Info API scripts
 
-function makeRequest(e) {
+function makeRequest() {
 	let addressToSearch = document.querySelector(".addressSearchBar");
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch.value});
 	request.then(function(response) {
         queryResponse = response;
         console.log(queryResponse);
-        e.preventDefault();
 	});
 }
 
