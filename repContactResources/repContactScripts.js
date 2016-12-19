@@ -11,8 +11,8 @@ function makeRequest(e) {
         console.log(queryResponse);
 	});
 	let addy = addressToSearch.value;
-	addy.split(" ").join("+");
-	console.log(addy);
+	let replaced = addy.split(" ").join("+");
+	console.log(replaced);
 	e.preventDefault();
 }
 
