@@ -10,7 +10,9 @@ function makeRequest(e) {
         queryResponse = response;
         console.log(queryResponse);
 	});
-	console.log(addressToSearch.value);
+	let addy = addressToSearch.value;
+	addy.split(" ").join("+");
+	console.log(addy);
 	e.preventDefault();
 }
 
