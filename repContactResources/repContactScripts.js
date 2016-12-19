@@ -22,4 +22,4 @@ let hello = function() {
 	console.log("hello"); 
 }
 
-addressSearch.addEventlistener("submit", hello, false);
+addressSearch.addEventListener("submit", hello, false);
