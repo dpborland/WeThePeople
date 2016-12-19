@@ -9,8 +9,8 @@ function makeRequest(e) {
 	request.then(function(response) {
         queryResponse = response;
         console.log(queryResponse);
-        e.stopPropagation();
 	});
+	e.preventDefault();
 }
 
 function init() {
