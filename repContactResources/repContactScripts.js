@@ -4,15 +4,15 @@ var queryResponse;
 //Google Civic Info API scripts
 
 function makeRequest(e) {
-	let addressToSearch = document.querySelector(".addressSearchBar");
-	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch.value});
+	let addressSearchBar = document.querySelector(".addressSearchBar");
+	let addressToSearch = addressSearchBar.value;
+	let urlAddress = addressToSearch.split(" ").join("+");
+	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': urlAddress});
 	request.then(function(response) {
         queryResponse = response;
         console.log(queryResponse);
 	});
-	let addy = addressToSearch.value;
-	let replaced = addy.split(" ").join("+");
-	console.log(replaced);
+	console.log(urlAddress);
 	e.preventDefault();
 }
 
