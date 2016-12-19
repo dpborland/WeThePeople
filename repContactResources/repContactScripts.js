@@ -18,4 +18,4 @@ function init() {
 	});
 }
 
-addressSearch.addEventListener("submit", init, false);
+addressSearch.addEventListener("submit", makeRequest, false);
