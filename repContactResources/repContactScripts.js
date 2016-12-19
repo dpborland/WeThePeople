@@ -6,13 +6,12 @@ var queryResponse;
 function makeRequest(e) {
 	let addressSearchBar = document.querySelector(".addressSearchBar");
 	let addressToSearch = addressSearchBar.value;
-	let urlAddress = addressToSearch.split(" ").join("+");
-	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': urlAddress});
+	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
 	request.then(function(response) {
         queryResponse = response;
         console.log(queryResponse);
 	});
-	console.log(urlAddress);
+	console.log(addressToSearch);
 	e.preventDefault();
 }
 
