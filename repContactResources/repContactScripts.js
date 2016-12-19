@@ -1,10 +1,10 @@
-var addressToSearch = document.querySelector(".addressSearchBar");
 var addressSearch = document.querySelector(".addressSearch");
 var queryResponse;
 
 //Google Civic Info API scripts
 
 function makeRequest() {
+	let addressToSearch = document.querySelector(".addressSearchBar");
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch.value});
 	request.then(function(response) {
         queryResponse = response;
@@ -18,8 +18,4 @@ function init() {
 	});
 }
 
-let hello = function() {
-	console.log("hello"); 
-}
-
-addressSearch.addEventListener("submit", hello, false);
+addressSearch.addEventListener("submit", init, false);
