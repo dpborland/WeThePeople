@@ -10,6 +10,7 @@ function makeRequest(e) {
 	request.then(function(response) {
         queryResponse = response;
 		queryResponse.result.officials.forEach(function(e) { console.log(e.name, e.urls); });
+	};
 	e.preventDefault();
 }
 
