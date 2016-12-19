@@ -20,7 +20,8 @@ body {
   background-size: cover; }
   @media screen and (min-width: 200px) and (max-width: 500px) {
     body {
-      justify-content: center; } }
+      justify-content: center;
+      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat; } }
 
 .menu {
   display: flex;
@@ -96,7 +97,7 @@ body {
   @media screen and (min-width: 200px) and (max-width: 500px) {
     .titleFormWrapper {
       order: 1;
-      margin-top: 25px; } }
+      padding-bottom: 80px; } }
   .titleFormWrapper .title {
     font-weight: 100;
     font-size: 7em;
