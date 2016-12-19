@@ -9,8 +9,8 @@ function makeRequest(e) {
 	request.then(function(response) {
         queryResponse = response;
         console.log(queryResponse);
-        console.log(addressToSearch.value);
 	});
+	console.log(addressToSearch.value);
 	e.preventDefault();
 }
 
