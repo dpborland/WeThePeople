@@ -8,7 +8,8 @@ function makeRequest(e) {
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch.value});
 	request.then(function(response) {
         queryResponse = response;
-        console.log(queryResponse, addressToSearch.value);
+        console.log(queryResponse);
+        console.log(addressToSearch.value);
 	});
 	e.preventDefault();
 }
