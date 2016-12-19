@@ -1,4 +1,5 @@
 var addressToSearch = document.querySelector(".addressSearchBar");
+var addressSearch = document.querySelector(".addressSearch");
 var queryResponse;
 
 //Google Civic Info API scripts
@@ -21,4 +22,4 @@ let hello = function() {
 	console.log("hello"); 
 }
 
-addressToSearch.addEventlistener("submit", hello, false);
+addressSearch.addEventlistener("submit", hello, false);
