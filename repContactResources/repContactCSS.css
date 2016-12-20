@@ -1,31 +1,192 @@
-/*
-Error: Invalid CSS after "	}": expected selector or at-rule, was "}"
-        on line 230 of repContactSCSS.scss
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #565895; }
 
-225: 	}
-226: 
-227: 	.repWebsiteLink {
-228: 		text-decoration: none;
-229: 	}
-230: }
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 550px;
+  display: flex;
+  margin: 0px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Playfair Display", sans-serif;
+  /*background: url(images/weThePeopleBLUR.jpg) no-repeat left center fixed;
+  background-size: cover;
+  background-color: rgba(204, 213, 238, 0.99);*/
+  background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.75) -50%, rgba(248, 248, 255, 0.8) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
+  background-size: cover; }
+  @media screen and (min-width: 200px) and (max-width: 500px) {
+    body {
+      justify-content: center;
+      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat; } }
 
-Backtrace:
-repContactSCSS.scss:230
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:391:in `run'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"	}\": expected selector or at-rule, was \"}\"\A         on line 230 of repContactSCSS.scss\A \A 225: 	}\A 226: \A 227: 	.repWebsiteLink {\A 228: 		text-decoration: none;\A 229: 	}\A 230: }"; }
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 10%;
+  min-height: 55px;
+  width: 100%;
+  margin: 0px;
+  border-bottom: 2px solid darkred;
+  /*background-color: rgba(12, 29, 141, .7);*/
+  background-color: rgba(248, 248, 255, 0.5); }
+  @media screen and (min-width: 200px) and (max-width: 500px) {
+    .menu {
+      position: fixed;
+      bottom: 0;
+      order: 2;
+      border-bottom: none;
+      border-top: 2px solid darkred;
+      background-color: rgba(214, 214, 230, 0.9); } }
+  .menu .menuOption {
+    width: 15%;
+    height: 100%;
+    border-left: 1px solid rgba(248, 248, 255, 0.7);
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*color: rgba(214, 210, 218, 0.99);*/
+    color: darkblue;
+    font-family: Open Sans Condensed;
+    font-size: 1.5em;
+    transition: color .4s ease, background-color .4s ease; }
+    @media screen and (min-width: 200px) and (max-width: 500px) {
+      .menu .menuOption {
+        width: 25%;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-left: 1px solid darkred;
+        font-size: 1.25em; } }
+    @media screen and (min-width: 501px) and (max-width: 800px) {
+      .menu .menuOption {
+        width: 25%;
+        padding-left: 5px;
+        padding-right: 5px; } }
+  @media screen and (min-width: 200px) and (max-width: 500px) {
+    .menu .menuOption:first-child {
+      border-left: none; } }
+  @media screen and (min-width: 501px) and (max-width: 800px) {
+    .menu .menuOption:first-child {
+      border-left: none; } }
+  .menu .menuOption:last-child {
+    border-right: 1px solid rgba(248, 248, 255, 0.7); }
+    @media screen and (min-width: 200px) and (max-width: 500px) {
+      .menu .menuOption:last-child {
+        border-right: none; } }
+    @media screen and (min-width: 501px) and (max-width: 800px) {
+      .menu .menuOption:last-child {
+        border-right: none; } }
+  .menu .menuOption:hover {
+    /*color: rgba(147, 27, 56, .9);*/
+    color: ghostwhite;
+    background-color: rgba(0, 0, 99, 0.75);
+    cursor: pointer;
+    transition: color .4s ease, background-color .4s ease; }
+
+.titleFormWrapper {
+  display: flex;
+  /*flex-direction: column;*/
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (min-width: 200px) and (max-width: 500px) {
+    .titleFormWrapper {
+      order: 1;
+      padding-bottom: 80px; } }
+  .titleFormWrapper .title {
+    font-weight: 100;
+    font-size: 7em;
+    /*color: rgba(0, 0, 107, 0.5);*/
+    color: rgba(147, 27, 56, 0.9);
+    margin-top: 0px;
+    margin-bottom: 15px;
+    line-height: 100px; }
+    @media screen and (min-width: 200px) and (max-width: 500px) {
+      .titleFormWrapper .title {
+        margin-bottom: 20px; } }
+    @media screen and (min-width: 501px) and (max-width: 800px) {
+      .titleFormWrapper .title {
+        margin-bottom: 20px; } }
+  .titleFormWrapper .introText {
+    font-family: open sans condensed;
+    color: darkblue;
+    text-align-last: justify;
+    font-size: 1.3em;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    line-height: 25px; }
+    @media screen and (min-width: 200px) and (max-width: 500px) {
+      .titleFormWrapper .introText {
+        font-size: 1.4em;
+        line-height: 30px; } }
+    @media screen and (min-width: 501px) and (max-width: 800px) {
+      .titleFormWrapper .introText {
+        margin-top: 0px; } }
+    .titleFormWrapper .introText .underTitle {
+      font-size: 1.3em;
+      color: rgba(147, 27, 56, 0.9); }
+  .titleFormWrapper .addressSearchBar {
+    border: 2px solid darkred;
+    height: 40px;
+    width: 273px;
+    background-color: rgba(248, 248, 255, 0.3);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: open sans condensed;
+    color: darkred;
+    font-size: 1.5em;
+    transition: background-color .4s ease; }
+    @media screen and (min-width: 200px) and (max-width: 500px) {
+      .titleFormWrapper .addressSearchBar {
+        width: 295px; } }
+  .titleFormWrapper .addressSearchBar::-webkit-input-placeholder {
+    color: darkblue;
+    opacity: .3; }
+  .titleFormWrapper .addressSearchBar:focus {
+    background-color: rgba(248, 248, 255, 0.7);
+    transition: background-color .4s ease; }
+
+.repsWrapper {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 350px;
+  flex-direction: column;
+  padding: 20px;
+  border-bottom: 2px solid darkred;
+  border-top: 2px solid darkred;
+  font-family: open sans condensed;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start; }
+  @media screen and (min-width: 200px) and (max-width: 500px) {
+    .repsWrapper {
+      order: 1;
+      padding-bottom: 80px; } }
+  .repsWrapper .repImg {
+    height: 250px;
+    display: block;
+    border-right: 1px solid white;
+    padding-right: 30px; }
+  .repsWrapper .repName {
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: flex-start;
+    justify-content: flex-end;
+    color: darkred; }
+  .repsWrapper .repWebsite {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: darkblue; }
+  .repsWrapper .repWebsiteLink {
+    text-decoration: none; }
+
+/*# sourceMappingURL=repContactCSS.css.map */

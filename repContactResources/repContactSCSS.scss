@@ -196,7 +196,7 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: flex-start;
-}
+
 	@media #{$phone-break} {
 		order: 1;
 		padding-bottom: 80px;
