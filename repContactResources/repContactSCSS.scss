@@ -233,11 +233,14 @@ body {
 				margin-top: 20px;
 				margin-bottom: 20px;
 				color: darkblue;
+				text-decoration: none;
+				transition: color .3s ease;
+			}
+			.repWebsite:hover {
+				color: white;
+				transition: color .3s ease;
 			}
 
-			.repWebsiteLink {
-				text-decoration: none;
-			}
 		}
 
 		.repsWrapper:first-child {

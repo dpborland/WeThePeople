@@ -195,9 +195,12 @@ body {
         font-size: 1.5em;
         margin-top: 20px;
         margin-bottom: 20px;
-        color: darkblue; }
-      .contentWrapper .repsWrapper .repInfo .repWebsiteLink {
-        text-decoration: none; }
+        color: darkblue;
+        text-decoration: none;
+        transition: color .3s ease; }
+      .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
+        color: white;
+        transition: color .3s ease; }
     .contentWrapper .repsWrapper .repsWrapper:first-child {
       border-top: none; }
 
