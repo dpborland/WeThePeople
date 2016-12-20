@@ -106,7 +106,8 @@ body {
 
 .titleFormWrapper {
 	display: flex;
-	flex-direction: column;
+	/*flex-direction: column;*/
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	@media #{$phone-break} {
@@ -178,5 +179,19 @@ body {
 	.addressSearchBar:focus {
     	background-color: rgba(248, 248, 255, .7);
 		transition: background-color .4s ease;
+	}
+
+	.repImg {
+		height: 100px;
+		width: 100px;
+	}
+
+	.repName {
+		font-size: 2em;
+		color: darkred;
+	}
+	.repWebsite {
+		font-size: 1.5em;
+		color: darkblue;
 	}
 }
