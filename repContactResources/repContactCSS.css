@@ -191,6 +191,9 @@ body {
         align-self: flex-start;
         justify-content: flex-end;
         color: darkred; }
+      .contentWrapper .repsWrapper .repInfo .repPhone {
+        font-size: 1.5em;
+        color: darkblue; }
       .contentWrapper .repsWrapper .repInfo .repWebsite {
         font-size: 1.5em;
         margin-top: 20px;
