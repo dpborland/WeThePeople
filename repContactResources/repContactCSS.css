@@ -162,14 +162,11 @@ body {
     width: 100%;
     box-sizing: border-box;
     max-height: 350px;
-    flex-direction: column;
     flex-shrink: 0;
     padding: 20px;
-    border-bottom: 2px solid darkred;
     border-top: 2px solid darkred;
     font-family: open sans condensed;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: flex-start; }
     @media screen and (min-width: 200px) and (max-width: 500px) {
       .contentWrapper .repsWrapper {
@@ -200,5 +197,7 @@ body {
         color: darkblue; }
       .contentWrapper .repsWrapper .repInfo .repWebsiteLink {
         text-decoration: none; }
+    .contentWrapper .repsWrapper .repsWrapper:first-child {
+      border-top: none; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
