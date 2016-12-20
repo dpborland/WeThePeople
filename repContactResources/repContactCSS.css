@@ -163,6 +163,7 @@ body {
     box-sizing: border-box;
     max-height: 350px;
     flex-direction: column;
+    flex-shrink: 0;
     padding: 20px;
     border-bottom: 2px solid darkred;
     border-top: 2px solid darkred;
@@ -179,19 +180,25 @@ body {
       display: block;
       border-right: 1px solid white;
       padding-right: 30px; }
-    .contentWrapper .repsWrapper .repName {
-      font-size: 4em;
-      margin-top: 0;
-      margin-bottom: 0;
-      align-self: flex-start;
-      justify-content: flex-end;
-      color: darkred; }
-    .contentWrapper .repsWrapper .repWebsite {
-      font-size: 1.5em;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      color: darkblue; }
-    .contentWrapper .repsWrapper .repWebsiteLink {
-      text-decoration: none; }
+    .contentWrapper .repsWrapper .repInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      height: 250px;
+      padding-left: 20px; }
+      .contentWrapper .repsWrapper .repInfo .repName {
+        font-size: 4em;
+        margin-top: 0;
+        margin-bottom: 0;
+        align-self: flex-start;
+        justify-content: flex-end;
+        color: darkred; }
+      .contentWrapper .repsWrapper .repInfo .repWebsite {
+        font-size: 1.5em;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: darkblue; }
+      .contentWrapper .repsWrapper .repInfo .repWebsiteLink {
+        text-decoration: none; }
 
 /*# sourceMappingURL=repContactCSS.css.map */

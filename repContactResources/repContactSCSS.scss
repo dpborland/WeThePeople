@@ -131,7 +131,6 @@ body {
     	}
 	}
 
-
 	.introText {
 		font-family: open sans condensed;
 		color: darkblue;
@@ -195,6 +194,7 @@ body {
 		box-sizing: border-box;
 		max-height: 350px;
 		flex-direction: column;
+		flex-shrink: 0;
 		padding: 20px;
 		border-bottom: 2px solid darkred;
 		border-top: 2px solid darkred;
@@ -215,23 +215,31 @@ body {
 			padding-right: 30px;
 		}
 
-		.repName {
-			font-size: 4em;
-			margin-top: 0;
-			margin-bottom: 0;
-			align-self: flex-start;
-			justify-content: flex-end;
-			color: darkred;
-		}
-		.repWebsite {
-			font-size: 1.5em;
-			margin-top: 20px;
-			margin-bottom: 20px;
-			color: darkblue;
-		}
+		.repInfo {
+			display: flex;
+			flex-direction: column;
+			align-items: baseline;
+			height: 250px;
+			padding-left: 20px;
 
-		.repWebsiteLink {
-			text-decoration: none;
+			.repName {
+				font-size: 4em;
+				margin-top: 0;
+				margin-bottom: 0;
+				align-self: flex-start;
+				justify-content: flex-end;
+				color: darkred;
+			}
+			.repWebsite {
+				font-size: 1.5em;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				color: darkblue;
+			}
+
+			.repWebsiteLink {
+				text-decoration: none;
+			}
 		}
 	}
 }
