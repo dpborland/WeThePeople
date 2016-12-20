@@ -181,17 +181,50 @@ body {
 		transition: background-color .4s ease;
 	}
 
+}
+
+.repsWrapper {
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	max-height: 350px;
+	flex-direction: column;
+	padding: 20px;
+	border-bottom: 2px solid darkred;
+	border-top: 2px solid darkred;
+	font-family: open sans condensed;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+	@media #{$phone-break} {
+		order: 1;
+		padding-bottom: 80px;
+	}
+
 	.repImg {
-		height: 100px;
-		width: 100px;
+		height: 250px;
+		display: block;
+		border-right: 1px solid white;
+		padding-right: 30px;
 	}
 
 	.repName {
-		font-size: 2em;
+		font-size: 4em;
+		margin-top: 0;
+		margin-bottom: 0;
+		align-self: flex-start;
+		justify-content: flex-end;
 		color: darkred;
 	}
 	.repWebsite {
 		font-size: 1.5em;
+		margin-top: 20px;
+		margin-bottom: 20px;
 		color: darkblue;
+	}
+
+	.repWebsiteLink {
+		text-decoration: none;
 	}
 }
