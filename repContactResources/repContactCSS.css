@@ -20,7 +20,7 @@ body {
   background-size: cover; }
   @media screen and (min-width: 200px) and (max-width: 500px) {
     body {
-      justify-content: center;
+      padding-top: 25px;
       background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat; } }
 
 .menu {
@@ -154,11 +154,15 @@ body {
 
 .contentWrapper {
   width: 90%;
-  height: 85%;
+  height: 90%;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-self: center;
   overflow-y: scroll; }
+  @media screen and (min-width: 200px) and (max-width: 500px) {
+    .contentWrapper {
+      height: 95%; } }
   .contentWrapper .repsWrapper {
     display: flex;
     width: 100%;
@@ -166,11 +170,11 @@ body {
     max-height: 350px;
     flex-shrink: 0;
     padding: 20px;
-    padding-left: 0;
     border-top: 1px solid darkred;
     font-family: open sans condensed;
     flex-wrap: wrap;
-    align-items: flex-start; }
+    align-items: flex-start;
+    background: rgba(248, 248, 255, 0.4); }
     @media screen and (min-width: 200px) and (max-width: 500px) {
       .contentWrapper .repsWrapper {
         order: 1;
@@ -180,6 +184,10 @@ body {
       display: block;
       border-right: 1px solid rgba(248, 248, 255, 0.7);
       padding-right: 30px; }
+      @media screen and (min-width: 200px) and (max-width: 500px) {
+        .contentWrapper .repsWrapper .repImg {
+          height: 150px;
+          padding-right: 20px; } }
     .contentWrapper .repsWrapper .repInfo {
       display: flex;
       flex-direction: column;
@@ -192,12 +200,18 @@ body {
         margin-bottom: 0;
         align-self: flex-start;
         justify-content: flex-end;
-        color: darkred;
-        border-bottom: 1px solid darkred; }
+        color: darkred; }
+        @media screen and (min-width: 200px) and (max-width: 500px) {
+          .contentWrapper .repsWrapper .repInfo .repName {
+            font-size: 2em;
+            text-align: left; } }
       .contentWrapper .repsWrapper .repInfo .repPhone {
         font-size: 1.5em;
         font-weight: 100;
         color: darkblue; }
+        @media screen and (min-width: 200px) and (max-width: 500px) {
+          .contentWrapper .repsWrapper .repInfo .repPhone {
+            font-size: 1.2em; } }
       .contentWrapper .repsWrapper .repInfo .repWebsite {
         font-size: 1.5em;
         margin-top: 20px;
@@ -205,6 +219,9 @@ body {
         color: darkblue;
         text-decoration: none;
         transition: color .3s ease; }
+        @media screen and (min-width: 200px) and (max-width: 500px) {
+          .contentWrapper .repsWrapper .repInfo .repWebsite {
+            font-size: 1.2em; } }
       .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
         color: rgba(248, 248, 255, 0.7);
         transition: color .3s ease; }

@@ -23,7 +23,7 @@ body {
 	background: linear-gradient(to bottom right, rgba(168, 0, 0, .75) -50%, rgba(248, 248, 255, .80) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
     background-size: cover;
 	@media #{$phone-break} {
-		justify-content: center;
+		padding-top: 25px;
 		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
 	}
 }
@@ -184,11 +184,15 @@ body {
 
 .contentWrapper {
 	width: 90%;
-	height: 85%;
+	height: 90%;
+	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
 	align-self: center;
 	overflow-y: scroll;
+	@media #{$phone-break} {
+		height: 95%;
+	}
 
 	.repsWrapper {
 		display: flex;
@@ -197,11 +201,11 @@ body {
 		max-height: 350px;
 		flex-shrink: 0;
 		padding: 20px;
-		padding-left: 0;
 		border-top: 1px solid darkred;
 		font-family: open sans condensed;
 		flex-wrap: wrap;
 		align-items: flex-start;
+		background: rgba(248, 248, 255, 0.4);
 
 		@media #{$phone-break} {
 			order: 1;
@@ -213,6 +217,10 @@ body {
 			display: block;
 			border-right: 1px solid rgba(248, 248, 255, 0.7);
 			padding-right: 30px;
+			@media #{$phone-break} {
+				height: 150px;
+				padding-right: 20px;
+			}
 		}
 
 		.repInfo {
@@ -229,12 +237,18 @@ body {
 				align-self: flex-start;
 				justify-content: flex-end;
 				color: darkred;
-				border-bottom: 1px solid darkred;
+				@media #{$phone-break} {
+					font-size: 2em;
+					text-align: left;
+				}
 			}
 			.repPhone {
 				font-size: 1.5em;
 				font-weight: 100;
 				color: darkblue;
+				@media #{$phone-break} {
+					font-size: 1.2em;
+				}
 			}
 			.repWebsite {
 				font-size: 1.5em;
@@ -243,6 +257,9 @@ body {
 				color: darkblue;
 				text-decoration: none;
 				transition: color .3s ease;
+				@media #{$phone-break} {
+					font-size: 1.2em;
+				}
 			}
 			.repWebsite:hover {
 				color: rgba(248, 248, 255, 0.7);
