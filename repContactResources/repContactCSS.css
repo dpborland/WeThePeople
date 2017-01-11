@@ -203,8 +203,8 @@ body {
         color: darkred; }
         @media screen and (min-width: 551px) and (max-width: 850px) {
           .contentWrapper .repsWrapper .repInfo .repName {
-            font-size: 2.8em;
-            margin-bottom: 5px; } }
+            font-size: 2.4em;
+            margin-bottom: 15px; } }
         @media screen and (min-width: 200px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repName {
             font-size: 2em;
@@ -212,14 +212,16 @@ body {
       .contentWrapper .repsWrapper .repInfo .repPhone {
         font-size: 1.5em;
         font-weight: 100;
-        color: darkblue; }
+        color: darkblue;
+        margin-top: 0;
+        margin-bottom: 5px; }
         @media screen and (min-width: 200px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repPhone {
             font-size: 1.2em; } }
       .contentWrapper .repsWrapper .repInfo .repWebsite {
         font-size: 1.5em;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 0;
+        margin-bottom: 5px;
         color: darkblue;
         text-decoration: none;
         transition: color .3s ease; }

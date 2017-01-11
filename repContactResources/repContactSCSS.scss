@@ -238,8 +238,8 @@ body {
 				justify-content: flex-end;
 				color: darkred;
 				@media #{$tablet-break} {
-					font-size: 2.8em;
-					margin-bottom: 5px;
+					font-size: 2.4em;
+					margin-bottom: 15px;
 				}
 				@media #{$phone-break} {
 					font-size: 2em;
@@ -250,14 +250,16 @@ body {
 				font-size: 1.5em;
 				font-weight: 100;
 				color: darkblue;
+				margin-top: 0;
+				margin-bottom: 5px;
 				@media #{$phone-break} {
 					font-size: 1.2em;
 				}
 			}
 			.repWebsite {
 				font-size: 1.5em;
-				margin-top: 20px;
-				margin-bottom: 20px;
+				margin-top: 0;
+				margin-bottom: 5px;
 				color: darkblue;
 				text-decoration: none;
 				transition: color .3s ease;
