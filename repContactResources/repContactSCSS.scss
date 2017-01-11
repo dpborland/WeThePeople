@@ -1,5 +1,5 @@
-$phone-break: "screen and (min-width: 200px) and (max-width: 500px)";
-$tablet-break: "screen and (min-width: 501px) and (max-width: 800px)";
+$phone-break: "screen and (min-width: 200px) and (max-width: 550px)";
+$tablet-break: "screen and (min-width: 551px) and (max-width: 850px)";
 
 html {
 	height: 100%;
@@ -23,7 +23,6 @@ body {
 	background: linear-gradient(to bottom right, rgba(168, 0, 0, .75) -50%, rgba(248, 248, 255, .80) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
     background-size: cover;
 	@media #{$phone-break} {
-		padding-top: 25px;
 		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
 	}
 }
