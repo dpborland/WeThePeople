@@ -230,7 +230,7 @@ body {
       .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
         color: rgba(248, 248, 255, 0.7);
         transition: color .3s ease; }
-  .contentWrapper .repsWrapper:first-child {
+  .contentWrapper .contentWrapper:first-child {
     border-top: none; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
