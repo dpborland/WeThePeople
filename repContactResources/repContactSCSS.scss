@@ -237,7 +237,7 @@ body {
 				font-size: 3em;
 				line-height: 95%;
 				margin-top: -15px;
-				margin-bottom: 15px;
+				margin-bottom: 0px;
 				align-self: flex-start;
 				justify-content: flex-end;
 				color: darkred;
@@ -257,7 +257,7 @@ body {
 				font-weight: 100;
 				color: darkred;
 				font-style: italic;
-				margin-top: -10px;
+				margin-top: 5px;
 				margin-bottom: 10px;
 				@media #{$phone-break} {
 					font-size: 1.2em;
