@@ -253,10 +253,12 @@ body {
 				}
 			}
 			.repTitle {
-				font-size: 1.5em;
+				font-size: 1.3em;
 				font-weight: 100;
 				color: darkred;
 				font-style: italic;
+				margin-top: -10px;
+				margin-bottom: 10px;
 				@media #{$phone-break} {
 					font-size: 1.2em;
 				}
@@ -285,6 +287,40 @@ body {
 			.repWebsite:hover {
 				color: darkred;
 				transition: color .3s ease;
+			}
+		}
+
+		.repSocialMedia {
+			display: flex;
+			flex-direction: row;
+			align-items: baseline;
+			height: 50px;
+			margin-top: 5px;
+			margin-bottom: 0;
+
+			.facebookIcon {
+				height: 40px;
+				width: 40px;
+				background: url("images/Facebook.png") no-repeat center center fixed;
+				background-size: cover;
+				transition: background .3s ease;
+			}
+			.facebookIcon:hover {
+				background: url("images/FacebookGREY.png") no-repeat center center fixed;
+				background-size: cover;
+				transition: background .3s ease;
+			}
+			.twitterIcon {
+				height: 40px;
+				width: 40px;
+				background: url("images/Twitter.png") no-repeat center center fixed;
+				background-size: cover;
+				transition: background .3s ease;
+			}
+			.twitterIcon:hover {
+				background: url("images/TwitterGREY.png") no-repeat center center fixed;
+				background-size: cover;
+				transition: background .3s ease;
 			}
 		}
 	}

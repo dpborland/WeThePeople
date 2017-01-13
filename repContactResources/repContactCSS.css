@@ -216,10 +216,12 @@ body {
             text-align: left;
             margin-top: -2px; } }
       .contentWrapper .repsWrapper .repInfo .repTitle {
-        font-size: 1.5em;
+        font-size: 1.3em;
         font-weight: 100;
         color: darkred;
-        font-style: italic; }
+        font-style: italic;
+        margin-top: -10px;
+        margin-bottom: 10px; }
         @media screen and (min-width: 200px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
             font-size: 1.2em; } }
@@ -245,6 +247,33 @@ body {
       .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
         color: darkred;
         transition: color .3s ease; }
+    .contentWrapper .repsWrapper .repSocialMedia {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      height: 50px;
+      margin-top: 5px;
+      margin-bottom: 0; }
+      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon {
+        height: 40px;
+        width: 40px;
+        background: url("images/Facebook.png") no-repeat center center fixed;
+        background-size: cover;
+        transition: background .3s ease; }
+      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon:hover {
+        background: url("images/FacebookGREY.png") no-repeat center center fixed;
+        background-size: cover;
+        transition: background .3s ease; }
+      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon {
+        height: 40px;
+        width: 40px;
+        background: url("images/Twitter.png") no-repeat center center fixed;
+        background-size: cover;
+        transition: background .3s ease; }
+      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon:hover {
+        background: url("images/TwitterGREY.png") no-repeat center center fixed;
+        background-size: cover;
+        transition: background .3s ease; }
   .contentWrapper .repsWrapper:first-child {
     border-top: none; }
 
