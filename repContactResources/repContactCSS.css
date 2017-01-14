@@ -187,21 +187,25 @@ body {
       @media screen and (min-width: 200px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repImg {
           height: 150px;
-          padding-right: 20px; } }
+          padding-right: 20px;
+          order: 1; } }
     .contentWrapper .repsWrapper .repInfo {
       display: flex;
       flex-direction: column;
       align-items: baseline;
+      justify-content: space-between;
       height: 250px;
-      padding-left: 20px; }
+      padding-left: 20px;
+      border-left: 1px solid rgba(248, 248, 255, 0.7); }
       @media screen and (min-width: 200px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repInfo {
-          height: auto; } }
+          height: 200px;
+          order: 3; } }
       .contentWrapper .repsWrapper .repInfo .repName {
         font-size: 3em;
         line-height: 95%;
         margin-top: -15px;
-        margin-bottom: 15px;
+        margin-bottom: 0px;
         align-self: flex-start;
         justify-content: flex-end;
         color: darkred; }
@@ -220,7 +224,7 @@ body {
         font-weight: 100;
         color: darkred;
         font-style: italic;
-        margin-top: -10px;
+        margin-top: 5px;
         margin-bottom: 10px; }
         @media screen and (min-width: 200px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
@@ -233,7 +237,8 @@ body {
         margin-bottom: 5px; }
         @media screen and (min-width: 200px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repPhone {
-            font-size: 1.2em; } }
+            font-size: 1.2em;
+            margin-bottom: 0; } }
       .contentWrapper .repsWrapper .repInfo .repWebsite {
         font-size: 1.5em;
         margin-top: 0;
@@ -254,25 +259,28 @@ body {
       height: 50px;
       margin-top: 5px;
       margin-bottom: 0; }
+      @media screen and (min-width: 200px) and (max-width: 550px) {
+        .contentWrapper .repsWrapper .repSocialMedia {
+          order: 2; } }
       .contentWrapper .repsWrapper .repSocialMedia .facebookIcon {
         height: 40px;
         width: 40px;
-        background: url("images/Facebook.png") no-repeat center center fixed;
-        background-size: cover;
+        background: url("images/Facebook.png");
+        background-size: contain;
         transition: background .3s ease; }
       .contentWrapper .repsWrapper .repSocialMedia .facebookIcon:hover {
-        background: url("images/FacebookGREY.png") no-repeat center center fixed;
-        background-size: cover;
+        background: url("images/FacebookGREY.png");
+        background-size: contain;
         transition: background .3s ease; }
       .contentWrapper .repsWrapper .repSocialMedia .twitterIcon {
         height: 40px;
         width: 40px;
-        background: url("images/Twitter.png") no-repeat center center fixed;
-        background-size: cover;
+        background: url("images/Twitter.png");
+        background-size: contain;
         transition: background .3s ease; }
       .contentWrapper .repsWrapper .repSocialMedia .twitterIcon:hover {
-        background: url("images/TwitterGREY.png") no-repeat center center fixed;
-        background-size: cover;
+        background: url("images/TwitterGREY.png");
+        background-size: contain;
         transition: background .3s ease; }
   .contentWrapper .repsWrapper:first-child {
     border-top: none; }
