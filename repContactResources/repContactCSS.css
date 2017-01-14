@@ -178,7 +178,9 @@ body {
     background: rgba(248, 248, 255, 0.4); }
     @media screen and (min-width: 200px) and (max-width: 550px) {
       .contentWrapper .repsWrapper {
-        order: 1; } }
+        order: 1;
+        flex-direction: column;
+        flex-wrap: wrap; } }
     .contentWrapper .repsWrapper .repImg {
       height: 250px;
       display: block;
@@ -186,9 +188,10 @@ body {
       padding-right: 30px; }
       @media screen and (min-width: 200px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repImg {
+          order: 1;
           height: 150px;
           padding-right: 20px;
-          order: 1; } }
+          border-right: none; } }
     .contentWrapper .repsWrapper .repInfo {
       display: flex;
       flex-direction: column;
@@ -265,23 +268,27 @@ body {
       .contentWrapper .repsWrapper .repSocialMedia .facebookIcon {
         height: 40px;
         width: 40px;
-        background: url("images/Facebook.png");
-        background-size: contain;
-        transition: background .3s ease; }
-      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon:hover {
         background: url("images/FacebookGREY.png");
         background-size: contain;
-        transition: background .3s ease; }
+        opacity: .5;
+        transition: background .3s ease, opacity .3s ease; }
+      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon:hover {
+        background: url("images/Facebook.png");
+        background-size: contain;
+        opacity: 1;
+        transition: background .3s ease, opacity .3s ease; }
       .contentWrapper .repsWrapper .repSocialMedia .twitterIcon {
         height: 40px;
         width: 40px;
-        background: url("images/Twitter.png");
-        background-size: contain;
-        transition: background .3s ease; }
-      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon:hover {
         background: url("images/TwitterGREY.png");
         background-size: contain;
-        transition: background .3s ease; }
+        opacity: .5;
+        transition: background .3s ease, opacity .3s ease; }
+      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon:hover {
+        background: url("images/Twitter.png");
+        background-size: contain;
+        opacity: 1;
+        transition: background .3s ease, opacity .3s ease; }
   .contentWrapper .repsWrapper:first-child {
     border-top: none; }
 
