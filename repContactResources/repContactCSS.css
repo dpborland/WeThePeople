@@ -167,20 +167,24 @@ body {
       width: 95%; } }
   .contentWrapper .repsWrapper {
     display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
     width: 100%;
     box-sizing: border-box;
     max-height: 350px;
-    flex-shrink: 0;
     padding: 20px;
     border-top: 1px solid darkred;
     font-family: open sans condensed;
-    align-items: flex-start;
     background: rgba(248, 248, 255, 0.4); }
     @media screen and (min-width: 200px) and (max-width: 550px) {
       .contentWrapper .repsWrapper {
         order: 1;
-        flex-direction: column;
-        flex-wrap: wrap; } }
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 260px; } }
     .contentWrapper .repsWrapper .repImg {
       height: 250px;
       display: block;
@@ -191,15 +195,12 @@ body {
           order: 1;
           height: 150px;
           padding-right: 20px;
-          border-right: none; } }
+          margin-bottom: 5px; } }
     .contentWrapper .repsWrapper .repInfo {
       display: flex;
       flex-direction: column;
       align-items: baseline;
-      justify-content: space-between;
-      height: 250px;
-      padding-left: 20px;
-      border-left: 1px solid rgba(248, 248, 255, 0.7); }
+      padding-left: 20px; }
       @media screen and (min-width: 200px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repInfo {
           height: 200px;
@@ -207,7 +208,7 @@ body {
       .contentWrapper .repsWrapper .repInfo .repName {
         font-size: 3em;
         line-height: 95%;
-        margin-top: -15px;
+        margin-top: -5px;
         margin-bottom: 0px;
         align-self: flex-start;
         justify-content: flex-end;
@@ -259,36 +260,36 @@ body {
       display: flex;
       flex-direction: row;
       align-items: baseline;
+      justify-content: space-between;
       height: 50px;
+      width: 100px;
       margin-top: 5px;
       margin-bottom: 0; }
       @media screen and (min-width: 200px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repSocialMedia {
-          order: 2; } }
+          order: 2;
+          margin: 0;
+          width: 121px; } }
       .contentWrapper .repsWrapper .repSocialMedia .facebookIcon {
         height: 40px;
         width: 40px;
-        background: url("images/FacebookGREY.png");
-        background-size: contain;
-        opacity: .5;
-        transition: background .3s ease, opacity .3s ease; }
-      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon:hover {
         background: url("images/Facebook.png");
         background-size: contain;
-        opacity: 1;
+        opacity: .4;
         transition: background .3s ease, opacity .3s ease; }
+      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon:hover {
+        opacity: 1;
+        transition: opacity .3s ease; }
       .contentWrapper .repsWrapper .repSocialMedia .twitterIcon {
         height: 40px;
         width: 40px;
-        background: url("images/TwitterGREY.png");
-        background-size: contain;
-        opacity: .5;
-        transition: background .3s ease, opacity .3s ease; }
-      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon:hover {
         background: url("images/Twitter.png");
         background-size: contain;
-        opacity: 1;
+        opacity: .4;
         transition: background .3s ease, opacity .3s ease; }
+      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon:hover {
+        opacity: 1;
+        transition: opacity .3s ease; }
   .contentWrapper .repsWrapper:first-child {
     border-top: none; }
 
