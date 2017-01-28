@@ -23,6 +23,9 @@ body {
     background-color: rgba(204, 213, 238, 0.99);*/
 	background: linear-gradient(to bottom right, rgba(168, 0, 0, .75) -50%, rgba(248, 248, 255, .80) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
     background-size: cover;
+	@media #{$phone-break-small} {
+		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
+	}
 	@media #{$phone-break-large} {
 		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
 	}
@@ -39,6 +42,14 @@ body {
 	border-bottom: 2px solid darkred;
 	/*background-color: rgba(12, 29, 141, .7);*/
 	background-color: rgba(248, 248, 255, .5);
+	@media #{$phone-break-small} {
+		position: fixed;
+		bottom: 0;
+		order: 2;
+		border-bottom: none;
+		border-top: 1.5px solid darkred;
+		background-color: rgba(214, 214, 230, .9);
+	}
 	@media #{$phone-break-large} {
 		position: fixed;
 		bottom: 0;
@@ -63,6 +74,14 @@ body {
 		font-size: 1.5em;
 		line-height: 95%;
 		transition: color .4s ease, background-color .4s ease;
+		@media #{$phone-break-small} {
+			width: 25%;
+			padding-left: 7px;
+			padding-right: 7px;
+			border-left: 1px solid darkred;
+			font-size: 1.25em;
+			font-weight: bold;
+		}
 		@media #{$phone-break-large} {
 			width: 25%;
 			padding-left: 7px;
@@ -79,6 +98,9 @@ body {
 	}
 
 	.menuOption:first-child {
+		@media #{$phone-break-small} {
+			border-left: none;
+		}
 		@media #{$phone-break-large} {
 			border-left: none;
 		}
@@ -89,6 +111,9 @@ body {
 
 	.menuOption:last-child {
 		border-right: 1px solid rgba(248, 248, 255, 0.7);
+		@media #{$phone-break-small} {
+			border-right: none;
+		}
 		@media #{$phone-break-large} {
 			border-right: none;
 		}
@@ -112,6 +137,10 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	@media #{$phone-break-small} {
+		order: 1;
+		padding-bottom: 80px;
+	}
 	@media #{$phone-break-large} {
 		order: 1;
 		padding-bottom: 80px;
@@ -125,6 +154,9 @@ body {
     	margin-top: 0px;
     	margin-bottom: 15px;
     	line-height: 100px;
+		@media #{$phone-break-small} {
+			margin-bottom: 20px;
+		}
     	@media #{$phone-break-large} {
     		margin-bottom: 20px;
     	}
@@ -141,6 +173,10 @@ body {
 		margin-top: 0px;
 		margin-bottom: 10px;
 		line-height: 25px;
+		@media #{$phone-break-small} {
+			font-size: 1.4em;
+			line-height: 30px;
+		}
 		@media #{$phone-break-large} {
 			font-size: 1.4em;
 			line-height: 30px;
@@ -166,6 +202,9 @@ body {
     	color: darkred;
     	font-size: 1.5em;
 		transition: background-color .4s ease;
+		@media #{$phone-break-small} {
+			width: 295px;
+		}
 		@media #{$phone-break-large} {
 			width: 295px;
 		}
@@ -193,6 +232,10 @@ body {
 	flex-direction: column;
 	align-self: center;
 	overflow-y: scroll;
+	@media #{$phone-break-small} {
+		height: 85%;
+		width: 95%;
+	}
 	@media #{$phone-break-large} {
 		height: 85%;
 		width: 95%;
@@ -215,17 +258,19 @@ body {
 		border-top: 1px solid darkred;
 		font-family: open sans condensed;
 		background: rgba(248, 248, 255, 0.4);
-
+		@media #{$phone-break-small} {
+			order: 1;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-height: 260px;
+			padding: 10px;
+			align-content: space-between;
+		}
 		@media #{$phone-break-large} {
 			order: 1;
 			flex-wrap: wrap;
 			justify-content: space-between;
 			max-height: 260px;
-		}
-		@media #{$phone-break-small} {
-			padding: 10px;
-			align-content: space-between;
-
 		}
 
 		.repImg {
@@ -233,17 +278,18 @@ body {
 			display: block;
 			border-right: 1px solid rgba(248, 248, 255, 0.7);
 			padding-right: 30px;
+			@media #{$phone-break-small} {
+				order: 3;
+				padding-left: 10px;
+				margin-bottom: 5px;
+				height: 130px;
+				border-left: 1px solid rgba(248, 248, 255, 0.7);
+			}
 			@media #{$phone-break-large} {
 				order: 1;
 				height: 150px;
 				padding-right: 20px;
 				margin-bottom: 5px;
-			}
-			@media #{$phone-break-small} {
-				order: 3;
-				height: 130px;
-				padding-left: 10px;
-				border-left: 1px solid rgba(248, 248, 255, 0.7);
 			}
 		}
 
@@ -252,13 +298,13 @@ body {
 			flex-direction: column;
 			align-items: baseline;
 			padding-left: 20px;
-			@media #{$phone-break-large} {
-				height: 200px;
-				order: 3;
-			}
 			@media #{$phone-break-small} {
 				order: 1;
 				height: auto;
+			}
+			@media #{$phone-break-large} {
+				height: 200px;
+				order: 3;
 			}
 
 			.repName {
@@ -269,15 +315,20 @@ body {
 				align-self: flex-start;
 				justify-content: flex-end;
 				color: darkred;
-				@media #{$tablet-break} {
-					font-size: 2.4em;
+				@media #{$phone-break-small} {
+					font-size: 2em;
 					text-align: left;
-					margin-top: -4px;
+					margin-top: -2px;
 				}
 				@media #{$phone-break-large} {
 					font-size: 2em;
 					text-align: left;
 					margin-top: -2px;
+				}
+				@media #{$tablet-break} {
+					font-size: 2.4em;
+					text-align: left;
+					margin-top: -4px;
 				}
 			}
 			.repTitle {
@@ -287,6 +338,9 @@ body {
 				font-style: italic;
 				margin-top: 5px;
 				margin-bottom: 10px;
+				@media #{$phone-break-small} {
+					font-size: 1.2em;
+				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
 				}
@@ -297,6 +351,11 @@ body {
 				color: darkblue;
 				margin-top: 0;
 				margin-bottom: 5px;
+				@media #{$phone-break-small} {
+					font-size: 1.2em;
+					font-weight: bold;
+					margin-bottom: 0;
+				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
 					font-weight: bold;
@@ -310,6 +369,10 @@ body {
 				color: darkblue;
 				text-decoration: none;
 				transition: color .3s ease;
+				@media #{$phone-break-small} {
+					font-size: 1.2em;
+					font-weight: bold;
+				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
 					font-weight: bold;
@@ -331,15 +394,17 @@ body {
 			margin-top: 5px;
 			margin-bottom: 0;
 			padding-left: 20px;
+			@media #{$phone-break-small} {
+				order: 2;
+				width: 100px;
+				margin: 0;
+				padding-left: 0;
+			}
 			@media #{$phone-break-large} {
 				order: 2;
 				margin:	0;
 				width: 121px;
 				padding-left: 0;
-			}
-			@media #{$phone-break-small} {
-				order: 2;
-				width: 100px;
 			}
 
 			.facebookIcon {
