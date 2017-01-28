@@ -336,6 +336,7 @@ body {
 				}
 			}
 			.repTitle {
+				display: flex;
 				font-size: 1.3em;
 				font-weight: 100;
 				color: darkred;
@@ -347,6 +348,11 @@ body {
 				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
+				}
+				.repParty{
+					width: 10px;
+					font-style: normal;
+					margin-left: 5px;
 				}
 			}
 			.repPhone {

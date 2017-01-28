@@ -299,6 +299,7 @@ body {
             text-align: left;
             margin-top: -4px; } }
       .contentWrapper .repsWrapper .repInfo .repTitle {
+        display: flex;
         font-size: 1.3em;
         font-weight: 100;
         color: darkred;
@@ -311,6 +312,10 @@ body {
         @media screen and (min-width: 375px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
             font-size: 1.2em; } }
+        .contentWrapper .repsWrapper .repInfo .repTitle .repParty {
+          width: 10px;
+          font-style: normal;
+          margin-left: 5px; }
       .contentWrapper .repsWrapper .repInfo .repPhone {
         font-size: 1.5em;
         font-weight: 100;
