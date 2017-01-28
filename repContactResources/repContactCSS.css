@@ -249,9 +249,11 @@ body {
         .contentWrapper .repsWrapper .repImg {
           order: 3;
           padding-left: 10px;
+          padding-right: 0;
           margin-bottom: 5px;
           height: 130px;
-          border-left: 1px solid rgba(248, 248, 255, 0.7); } }
+          border-left: 1px solid rgba(248, 248, 255, 0.7);
+          border-right: none; } }
       @media screen and (min-width: 375px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repImg {
           order: 1;
@@ -266,7 +268,9 @@ body {
       @media screen and (min-width: 200px) and (max-width: 374px) {
         .contentWrapper .repsWrapper .repInfo {
           order: 1;
-          height: auto; } }
+          height: auto;
+          padding-left: 0;
+          padding-right: 5px; } }
       @media screen and (min-width: 375px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repInfo {
           height: 200px;

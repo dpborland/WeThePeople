@@ -281,9 +281,11 @@ body {
 			@media #{$phone-break-small} {
 				order: 3;
 				padding-left: 10px;
+				padding-right: 0;
 				margin-bottom: 5px;
 				height: 130px;
 				border-left: 1px solid rgba(248, 248, 255, 0.7);
+				border-right: none;
 			}
 			@media #{$phone-break-large} {
 				order: 1;
@@ -301,6 +303,8 @@ body {
 			@media #{$phone-break-small} {
 				order: 1;
 				height: auto;
+				padding-left: 0;
+				padding-right: 5px;
 			}
 			@media #{$phone-break-large} {
 				height: 200px;
