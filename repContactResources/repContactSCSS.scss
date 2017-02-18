@@ -1,5 +1,5 @@
-$phone-break-large: "screen and (min-width: 325px) and (max-width: 550px)";
-$phone-break-small: "screen and (min-width: 200px) and (max-width: 324px)";
+$phone-break-large: "screen and (min-width: 350px) and (max-width: 550px)";
+$phone-break-small: "screen and (min-width: 200px) and (max-width: 349px)";
 $tablet-break: "screen and (min-width: 551px) and (max-width: 850px)";
 
 html {
@@ -291,7 +291,8 @@ body {
 			@media #{$phone-break-large} {
 				order: 1;
 				height: 150px;
-				padding-right: 20px;
+				border-right: none;
+				padding-right: 15px;
 				margin-bottom: 5px;
 			}
 		}
@@ -309,7 +310,10 @@ body {
 			}
 			@media #{$phone-break-large} {
 				height: 200px;
+				justify-content: space-between;
 				order: 3;
+				padding-left: 15px;
+				border-left: 1px solid rgba(248, 248, 255, 0.7);
 			}
 
 			.repName {
