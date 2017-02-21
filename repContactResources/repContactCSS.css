@@ -406,6 +406,16 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 20px;
+    align-items: flex-start;
+    color: darkblue;
+    font-family: Open Sans Condensed;
+    font-size: 1.5em;
     background: rgba(248, 248, 255, 0.4); }
+    .contentWrapper .linksWrapper .linksLink {
+      text-decoration: none;
+      color: darkblue; }
+    .contentWrapper .linksWrapper .linksLink:hover {
+      color: darkred; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
