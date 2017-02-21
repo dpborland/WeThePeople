@@ -316,7 +316,8 @@ body {
             font-size: 1.2em; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: 1.2em; } }
+            font-size: 1.2em;
+            margin-top: -30px; } }
         .contentWrapper .repsWrapper .repInfo .repTitle .repParty {
           width: 10px;
           font-style: normal;
@@ -401,5 +402,10 @@ body {
         transition: opacity .3s ease; }
   .contentWrapper .repsWrapper:first-child {
     border-top: none; }
+  .contentWrapper .linksWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(248, 248, 255, 0.4); }
 
 /*# sourceMappingURL=repContactCSS.css.map */

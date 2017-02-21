@@ -353,6 +353,7 @@ body {
 				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
+					margin-top: -30px;
 				}
 				.repParty{
 					width: 10px;
@@ -453,6 +454,14 @@ body {
 
 	.repsWrapper:first-child {
 		border-top: none;
+	}
+
+	.linksWrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background: rgba(248, 248, 255, 0.4);
+
 	}
 
 }
