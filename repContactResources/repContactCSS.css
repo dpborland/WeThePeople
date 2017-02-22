@@ -410,8 +410,12 @@ body {
     align-items: flex-start;
     color: darkblue;
     font-family: Open Sans Condensed;
-    font-size: 1.5em;
+    font-size: 1.3em;
     background: rgba(248, 248, 255, 0.4); }
+    .contentWrapper .linksWrapper .linksTitle {
+      font-size: 1.5em;
+      color: darkred;
+      text-decoration: underline; }
     .contentWrapper .linksWrapper .linksLink {
       text-decoration: none;
       color: darkblue; }
