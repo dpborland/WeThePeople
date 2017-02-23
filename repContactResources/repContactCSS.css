@@ -405,21 +405,53 @@ body {
   .contentWrapper .linksWrapper {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: scroll;
     padding: 20px;
     align-items: flex-start;
-    color: darkblue;
     font-family: Open Sans Condensed;
     font-size: 1.3em;
+    color: darkblue;
     background: rgba(248, 248, 255, 0.4); }
+    @media screen and (min-width: 200px) and (max-width: 349px) {
+      .contentWrapper .linksWrapper {
+        width: 100%; } }
+    @media screen and (min-width: 350px) and (max-width: 550px) {
+      .contentWrapper .linksWrapper {
+        width: 100%; } }
     .contentWrapper .linksWrapper .linksTitle {
       font-size: 1.5em;
       color: darkred;
-      text-decoration: underline; }
+      margin: 13px 0 13px 0; }
     .contentWrapper .linksWrapper .linksLink {
       text-decoration: none;
-      color: darkblue; }
+      color: darkblue;
+      margin-bottom: 8px;
+      text-align: left; }
     .contentWrapper .linksWrapper .linksLink:hover {
       color: darkred; }
+  .contentWrapper .linksDescriptions {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    padding: 20px;
+    align-items: flex-start;
+    font-family: Open Sans Condensed;
+    font-size: 1.3em;
+    color: darkblue;
+    background: rgba(248, 248, 255, 0.4); }
+    @media screen and (min-width: 200px) and (max-width: 349px) {
+      .contentWrapper .linksDescriptions {
+        display: none; } }
+    @media screen and (min-width: 350px) and (max-width: 550px) {
+      .contentWrapper .linksDescriptions {
+        display: none; } }
 
 /*# sourceMappingURL=repContactCSS.css.map */
