@@ -21,4 +21,20 @@ function init() {
 	});
 }
 
-addressSearch.addEventListener("submit", makeRequest, false);
+if (addressSearch != null) {
+	addressSearch.addEventListener("submit", makeRequest, false);
+};
+
+
+
+// Links page scripts
+
+function linkInfoFill(e) {
+	let linkName = e.target;
+	console.log(linkName);
+}
+
+if (document.querySelector(".linksWrapper")) {
+	let link = document.querySelector(".linksLink");
+	link.addEventListener("mouseover", linkInfoFill, false);
+}
