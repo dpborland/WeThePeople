@@ -36,5 +36,7 @@ function linkInfoFill(e) {
 
 if (document.querySelector(".linksWrapper")) {
 	let link = Array.from(document.querySelectorAll(".linksLink"));
-	link.addEventListener("mouseover", linkInfoFill, false);
+	link.map(function(x) {
+        x.addEventListener("mouseover", linkInfoFill, false);
+    }
 }
