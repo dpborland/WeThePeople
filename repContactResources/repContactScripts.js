@@ -34,10 +34,9 @@ function linkInfoFill(e) {
 	console.log(linkName.textContent);
 }
 
-function linkInfoClear(e) {
-	let linkName = e.target;
+function linkInfoClear() {
 	let linkInfo = document.querySelector(".linksDescriptionsText");
-	linkInfo.textContent = "out";
+	linkInfo.textContent = "Hover over a link for more information";
 }
 
 if (document.querySelector(".linksWrapper")) {
