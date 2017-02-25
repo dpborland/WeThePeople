@@ -31,6 +31,7 @@ if (addressSearch != null) {
 
 function linkInfoFill(e) {
 	let linkName = e.target;
+	let linkInfo.textContent = linkName.textContent;
 	console.log(linkName.textContent);
 }
 
