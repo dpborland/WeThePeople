@@ -38,7 +38,7 @@ function linkInfoFill(e) {
 	let linkInfo = document.querySelector(".linksDescriptionsText");
 	/*linkInfo.textContent = linkName.id;
 	console.log(linkName.textContent);*/
-	console.log(linksObject[linkName.id]);
+	linkInfo.textContent = linksObject[linkName.id]);
 }
 
 function linkInfoClear() {
