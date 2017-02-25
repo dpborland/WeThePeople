@@ -31,7 +31,7 @@ if (addressSearch != null) {
 
 var linksObject = {
 	votingGuide: ["This is the official US gov't guide to voting and elections.",
-		"repContactResources/images/sixtyfivescreen.jpg"];
+		"repContactResources/images/sixtyfivescreen.jpg"]
 }
 
 function linkInfoFill(e) {
