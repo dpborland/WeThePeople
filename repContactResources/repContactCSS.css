@@ -461,6 +461,7 @@ body {
         .contentWrapper .linksWrapper .linksDescriptions {
           display: none; } }
       .contentWrapper .linksWrapper .linksDescriptions .linksScreenshot {
-        width: 100%; }
+        width: 0%;
+        transition: width .4s ease; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
