@@ -31,7 +31,7 @@ if (addressSearch != null) {
 
 function linkInfoFill(e) {
 	let linkName = e.target;
-	console.log(linkName);
+	console.log(linkName.textContent);
 }
 
 if (document.querySelector(".linksWrapper")) {
