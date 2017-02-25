@@ -37,7 +37,7 @@ function linkInfoFill(e) {
 function linkInfoClear(e) {
 	let linkName = e.target;
 	let linkInfo = document.querySelector(".linksDescriptionsText");
-	linkInfo.textContent("out");
+	linkInfo.textContent = "out";
 }
 
 if (document.querySelector(".linksWrapper")) {
