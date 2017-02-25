@@ -44,7 +44,7 @@ function linkInfoFill(e) {
 	linkImg.src = linksObject[linkName.id][1];
 	window.setTimeout(function() {
 		linkImg.style.width = "100%";
-    }, 250);
+    }, 50);
 
 }
 

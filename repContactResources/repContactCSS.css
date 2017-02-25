@@ -462,6 +462,6 @@ body {
           display: none; } }
       .contentWrapper .linksWrapper .linksDescriptions .linksScreenshot {
         width: 0%;
-        transition: width .4s ease; }
+        transition: width .3s ease; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
