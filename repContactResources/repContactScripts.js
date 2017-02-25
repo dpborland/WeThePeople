@@ -42,13 +42,17 @@ function linkInfoFill(e) {
 	console.log(linkName.textContent);*/
 	linkInfo.textContent = linksObject[linkName.id][0];
 	linkImg.src = linksObject[linkName.id][1];
-	linkImg.style.width = "100%";
+	window.setTimeout(function() {
+		linkImg.style.width = "100%";
+    }, 250);
 
 }
 
 function linkInfoClear() {
 	let linkInfo = document.querySelector(".linksDescriptionsText");
+	let linkImg = document.querySelector(".linksScreenshot");
 	linkInfo.textContent = "Hover over a link for more information";
+	linkImg.style.width = "0%";
 }
 
 if (document.querySelector(".linksWrapper")) {
