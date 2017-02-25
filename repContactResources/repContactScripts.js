@@ -36,7 +36,7 @@ function linkInfoFill(e) {
 
 function linkInfoClear(e) {
 	let linkName = e.target;
-	let linkInfo = document.querySelector(".linksDescriptions");
+	let linkInfo = document.querySelector(".linksDescriptionsText");
 	linkInfo.nodeValue("out");
 }
 
