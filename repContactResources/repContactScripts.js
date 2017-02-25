@@ -38,5 +38,5 @@ if (document.querySelector(".linksWrapper")) {
 	let link = Array.from(document.querySelectorAll(".linksLink"));
 	link.map(function(x) {
         x.addEventListener("mouseover", linkInfoFill, false);
-    }
+    });
 }
