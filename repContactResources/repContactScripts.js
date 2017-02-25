@@ -29,16 +29,16 @@ if (addressSearch != null) {
 
 // Links page scripts
 
-let votingGuide = "This is the US gov't guide to voting and elections.";
+var linksObject = {
+	votingGuide: "This is the official US gov't guide to voting and elections."
+}
 
 function linkInfoFill(e) {
 	let linkName = e.target;
 	let linkInfo = document.querySelector(".linksDescriptionsText");
 	/*linkInfo.textContent = linkName.id;
 	console.log(linkName.textContent);*/
-	if (linkName.id == "votingGuide") {
-		console.log(votingGuide);
-	}
+	console.log(linksObject[linkName.id]);
 }
 
 function linkInfoClear() {
