@@ -35,6 +35,6 @@ function linkInfoFill(e) {
 }
 
 if (document.querySelector(".linksWrapper")) {
-	let link = document.querySelector(".linksLink");
+	let link = document.querySelectorAll(".linksLink");
 	link.addEventListener("mouseover", linkInfoFill, false);
 }
