@@ -528,7 +528,8 @@ body {
 			}
 
 			.linksScreenshot {
-				width: 100%;
+				width: 0%;
+				transition: width .4s ease;
 			}
 
 			.linksDescriptionsText {

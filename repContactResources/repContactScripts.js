@@ -30,15 +30,20 @@ if (addressSearch != null) {
 // Links page scripts
 
 var linksObject = {
-	votingGuide: "This is the official US gov't guide to voting and elections."
+	votingGuide: ["This is the official US gov't guide to voting and elections.",
+		"repContactResources/images/sixtyfivescreen.jpg"];
 }
 
 function linkInfoFill(e) {
 	let linkName = e.target;
 	let linkInfo = document.querySelector(".linksDescriptionsText");
+	let linkImg = document.querySelector(".linksScreenshot");
 	/*linkInfo.textContent = linkName.id;
 	console.log(linkName.textContent);*/
-	linkInfo.textContent = linksObject[linkName.id];
+	linkInfo.textContent = linksObject[linkName.id][0];
+	linkImg.src = linksObject[linkName.id][1];
+	linkImg.style.width = "100%";
+
 }
 
 function linkInfoClear() {
