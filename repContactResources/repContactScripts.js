@@ -29,6 +29,8 @@ if (addressSearch != null) {
 
 // Links page scripts
 
+let votingGuide = "This is the US gov't guide to voting and elections.";
+
 function linkInfoFill(e) {
 	let linkName = e.target;
 	let linkInfo = document.querySelector(".linksDescriptionsText");
