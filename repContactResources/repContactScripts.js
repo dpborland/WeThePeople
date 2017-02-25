@@ -34,9 +34,16 @@ function linkInfoFill(e) {
 	console.log(linkName.textContent);
 }
 
+function linkInfoClear(e) {
+	let linkName = e.target;
+	let linkInfo = document.querySelector(".linksDescriptions");
+	linkInfo.nodeValue("out");
+}
+
 if (document.querySelector(".linksWrapper")) {
 	let link = Array.from(document.querySelectorAll(".linksLink"));
 	link.map(function(x) {
         x.addEventListener("mouseover", linkInfoFill, false);
+        x.addEventListener("mouseout", linkInfoClear, false);
     });
 }
