@@ -34,8 +34,11 @@ let votingGuide = "This is the US gov't guide to voting and elections.";
 function linkInfoFill(e) {
 	let linkName = e.target;
 	let linkInfo = document.querySelector(".linksDescriptionsText");
-	linkInfo.textContent = linkName.id;
-	console.log(linkName.textContent);
+	/*linkInfo.textContent = linkName.id;
+	console.log(linkName.textContent);*/
+	if (linkName.id == "votingGuide") {
+		console.log(votingGuide);
+	}
 }
 
 function linkInfoClear() {
