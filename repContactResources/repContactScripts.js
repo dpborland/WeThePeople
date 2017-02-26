@@ -43,7 +43,7 @@ function linkInfoFill(e) {
 	linkInfo.textContent = linksObject[linkName.id][0];
 	linkImg.src = linksObject[linkName.id][1];
 	window.setTimeout(function() {
-		linkImg.style.width = "100%";
+		linkImg.style.opacity = "1";
     }, 50);
 
 }
@@ -52,7 +52,7 @@ function linkInfoClear() {
 	let linkInfo = document.querySelector(".linksDescriptionsText");
 	let linkImg = document.querySelector(".linksScreenshot");
 	linkInfo.textContent = "Hover over a link for more information";
-	linkImg.style.width = "0%";
+	linkImg.style.opacity = "0";
 }
 
 if (document.querySelector(".linksWrapper")) {
