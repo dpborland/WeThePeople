@@ -61,7 +61,7 @@ var linksObject = {
 		"repContactResources/images/indivisiblescreen.jpg", "Indivisible homepage screenshot"],
 
 	knock: ["Knock on Every Door is an attempt to build a largescale, grassroots, volunteer led effort to reach out to potential first time voters.  Users can sign up to receive more information on volunteering with local groups.",
-		"repContactResources/images/knockscreen.jpg", "Kock on Every Door homepage screenshot"],
+		"repContactResources/images/knockscreen.jpg", "Knock on Every Door homepage screenshot"],
 
 	run: ["Run for Something advocates for, and supports, young people (those 35 and under) running for elected office. ",
 		"repContactResources/images/runscreen.jpg", "Run for Something homepage screenshot"],
@@ -76,11 +76,13 @@ function linkInfoFill(e) {
 	let linkInfo = document.querySelector(".linksDescriptionsText");
 	let linkImg = document.querySelector(".linksScreenshot");
 
+	linkInfo.textContent.style.opacity = "0";
 	linkInfo.textContent = linksObject[linkName.id][0];
 	linkImg.src = linksObject[linkName.id][1];
 	linkImg.alt = linksObject[linkName.id][2];
 	window.setTimeout(function() {
 		linkImg.style.opacity = "1";
+		linkInfo.textContent.style.opacity = "1";
     }, 50);
 
 }

@@ -514,7 +514,7 @@ body {
 			overflow-y: scroll;
 			padding: 20px;
 			align-items: center;
-			justify-content: space-around;
+			justify-content: flex-start;
 			font-family: Open Sans Condensed;
 			font-size: 1.3em;
 			color: darkblue;
@@ -530,11 +530,13 @@ body {
 			.linksScreenshot {
 				width: 100%;
 				opacity: 0;
+				margin-top: 60px;
 				transition: opacity .3s ease;
 			}
 
 			.linksDescriptionsText {
-
+				opacity: 1;
+				transition: opacity .2s ease;
 			}
 		}
 	}
