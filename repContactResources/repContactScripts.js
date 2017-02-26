@@ -31,7 +31,32 @@ if (addressSearch != null) {
 
 var linksObject = {
 	votingGuide: ["This is the official US gov't guide to voting and elections.",
-		"repContactResources/images/sixtyfivescreen.jpg"]
+		"repContactResources/images/usagovscreen.jpg"],
+
+	eac: [, "repContactResources/images/eacscreen.jpg"],
+
+	votefouroneone: [, "repContactResources/images/vote411screen.jpg"],
+
+	fec: [, "repContactResources/images/fecscreen.jpg"],
+
+	whitehouse: [, "repContactResources/images/whitehousescreen.jpg"],
+
+	senate: [, "repContactResources/images/senatescreen.jpg"],
+
+	house: [, "repContactResources/images/housescreen.jpg"],
+
+	supremecourt: [, "repContactResources/images/supremecourtscreen.jpg"],
+
+	sixtyfive: [, "repContactResources/images/sixtyfivescreen.jpg"],
+
+	indivisible: [, "repContactResources/images/indivisiblescreen.jpg"],
+
+	knock: [, "repContactResources/images/knockscreen.jpg"],
+
+	run: [, "repContactResources/images/runscreen.jpg"],
+
+	threeonefouraction: [, "repContactResources/images/314screen.jpg"]
+
 }
 
 function linkInfoFill(e) {
