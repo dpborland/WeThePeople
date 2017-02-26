@@ -82,7 +82,7 @@ function linkInfoFill(e) {
 	linkImg.alt = linksObject[linkName.id][2];
 	window.setTimeout(function() {
 		linkImg.style.opacity = "1";
-		linkInfo.textContent.style.opacity = "1";
+		linkInfo.style.opacity = "1";
     }, 50);
 
 }
