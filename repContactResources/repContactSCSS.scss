@@ -489,6 +489,7 @@ body {
 				font-size: 1.5em;
 				color: darkred;
 				margin: 13px 0 13px 0;
+				transition: color .3s ease;
 			}
 
 			.linksLink {
@@ -500,6 +501,7 @@ body {
 
 			.linksLink:hover {
 				color: darkred;
+				transition: color .3s ease;
 			}
 
 		}

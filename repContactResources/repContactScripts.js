@@ -36,7 +36,7 @@ var linksObject = {
 	eac: ["Among other things, the Electoral Assistance Commission serves as a national clearinghouse and information resource for election administration.  Their website offers a wealth of practical resources for voters, as well as guidelines for offical election administration procedures.",
 		"repContactResources/images/eacscreen.jpg", "EAC homepage screenshot"],
 
-	votefouroneone: ["Vote411 was created by the League of Women Voters, and provides nonpartisan information to the public with both general and state-specific information on much of the election process.",
+	votefouroneone: ["Vote411 was created by the League of Women Voters, and provides general and state-specific nonpartisan information to the public on much of the election process.",
 		"repContactResources/images/vote411screen.jpg", "vote411 homepage screenshot"],
 
 	fec: ["The Federal Elections Commission is an independent regulatory agency that administers and enforces federal campaign finance laws.  Their website allows users to learn about these laws, and to see campaign finance disclosures.",
@@ -80,9 +80,11 @@ function linkInfoFill(e) {
 	linkInfo.textContent = linksObject[linkName.id][0];
 	linkImg.src = linksObject[linkName.id][1];
 	linkImg.alt = linksObject[linkName.id][2];
+	window.setTimeout(function() {
 		linkInfoPlaceholder.style.opacity = "0";
 		linkImg.style.opacity = "1";
 		linkInfo.style.opacity = "1";
+    }, 100);
 
 }
 
