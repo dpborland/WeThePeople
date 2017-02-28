@@ -467,6 +467,6 @@ body {
         transition: opacity .3s ease; }
       .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsText {
         opacity: 1;
-        transition: opacity .2s ease; }
+        transition: opacity .5s ease; }
 
 /*# sourceMappingURL=repContactCSS.css.map */

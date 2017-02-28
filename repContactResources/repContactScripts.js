@@ -83,7 +83,7 @@ function linkInfoFill(e) {
 	window.setTimeout(function() {
 		linkImg.style.opacity = "1";
 		linkInfo.style.opacity = "1";
-    }, 100);
+    }, 50);
 
 }
 
