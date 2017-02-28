@@ -77,6 +77,7 @@ function linkInfoFill(e) {
 	let linkImg = document.querySelector(".linksScreenshot");
 
 	linkInfo.style.opacity = "0";
+	linkImg.style.opacity = "0";
 	linkInfo.textContent = linksObject[linkName.id][0];
 	linkImg.src = linksObject[linkName.id][1];
 	linkImg.alt = linksObject[linkName.id][2];
