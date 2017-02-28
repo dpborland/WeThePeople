@@ -465,8 +465,11 @@ body {
         opacity: 0;
         margin-top: 60px;
         transition: opacity .3s ease; }
-      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsText {
+      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsPlaceholder {
         opacity: 1;
-        transition: opacity .5s ease; }
+        transition: opacity .3s ease; }
+      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsText {
+        opacity: 0;
+        transition: opacity .3s ease; }
 
 /*# sourceMappingURL=repContactCSS.css.map */

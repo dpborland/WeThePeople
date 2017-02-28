@@ -75,12 +75,13 @@ function linkInfoFill(e) {
 	let linkName = e.target;
 	let linkInfo = document.querySelector(".linksDescriptionsText");
 	let linkImg = document.querySelector(".linksScreenshot");
+	let linkInfoPlaceholder = document.querySelector(".linksDescriptionsPlaceholder");
 
-	linkInfo.style.opacity = "0";
 	linkInfo.textContent = linksObject[linkName.id][0];
 	linkImg.src = linksObject[linkName.id][1];
 	linkImg.alt = linksObject[linkName.id][2];
 	window.setTimeout(function() {
+		linkInfoPlaceholder.style.opacity = "0";
 		linkImg.style.opacity = "1";
 		linkInfo.style.opacity = "1";
     }, 50);
@@ -89,9 +90,13 @@ function linkInfoFill(e) {
 
 function linkInfoClear() {
 	let linkInfo = document.querySelector(".linksDescriptionsText");
+	let linkInfoPlaceholder = document.querySelector(".linksDescriptionsPlaceholder")
 	let linkImg = document.querySelector(".linksScreenshot");
-	linkInfo.textContent = "Hover over a link for more information";
+
+	linkInfo.style.opacity = "0";
+	linkInfoPlaceholder.style.opacity = "0";
 	linkImg.style.opacity = "0";
+
 }
 
 if (document.querySelector(".linksWrapper")) {

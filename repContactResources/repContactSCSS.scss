@@ -534,9 +534,14 @@ body {
 				transition: opacity .3s ease;
 			}
 
-			.linksDescriptionsText {
+			.linksDescriptionsPlaceholder {
 				opacity: 1;
-				transition: opacity .5s ease;
+				transition: opacity .3s ease;
+			}
+
+			.linksDescriptionsText {
+				opacity: 0;
+				transition: opacity .3s ease;
 			}
 		}
 	}
