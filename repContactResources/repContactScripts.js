@@ -80,11 +80,9 @@ function linkInfoFill(e) {
 	linkInfo.textContent = linksObject[linkName.id][0];
 	linkImg.src = linksObject[linkName.id][1];
 	linkImg.alt = linksObject[linkName.id][2];
-	window.setTimeout(function() {
 		linkInfoPlaceholder.style.opacity = "0";
 		linkImg.style.opacity = "1";
 		linkInfo.style.opacity = "1";
-    }, 50);
 
 }
 
@@ -94,7 +92,7 @@ function linkInfoClear() {
 	let linkImg = document.querySelector(".linksScreenshot");
 
 	linkInfo.style.opacity = "0";
-	linkInfoPlaceholder.style.opacity = "0";
+	linkInfoPlaceholder.style.opacity = "1";
 	linkImg.style.opacity = "0";
 
 }
