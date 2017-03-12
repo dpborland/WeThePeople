@@ -4,7 +4,7 @@ html {
   background-color: #565895; }
 
 body {
-  height: 10%;
+  height: 100%;
   width: 100%;
   min-height: 550px;
   display: flex;
