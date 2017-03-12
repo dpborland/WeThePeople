@@ -75,6 +75,7 @@ body {
 		font-family: Open Sans Condensed;
 		font-size: 1.5em;
 		line-height: 95%;
+		text-decoration: none;
 		transition: color .4s ease, background-color .4s ease;
 		@media #{$phone-break-small} {
 			width: 25%;
