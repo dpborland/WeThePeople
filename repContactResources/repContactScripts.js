@@ -57,7 +57,7 @@ var linksObject = {
 	sixtyfive: ["The 65 is committed to making Congress work for us by mobilizing with a shared common mission, called a Weekly Call to Action.  Users can find out what issues are currently being persued, check out calling/writing scripts, and retrieve contact information for their Senators.",
 		"repContactResources/images/sixtyfivescreen.jpg", "The 65 homepage screenshot"],
 
-	indivisible: ["Indivisible tried to demystify conressional advocacy but providing a practical guide for local citizen groups.  These groups have been responsible for organizing many of the town halls that have been in the news this February.",
+	indivisible: ["Indivisible tries to demystify conressional advocacy by providing a practical organizational guide for local citizen groups.  Indivisible groups have been responsible for organizing many of the town halls that have been in the news this February.",
 		"repContactResources/images/indivisiblescreen.jpg", "Indivisible homepage screenshot"],
 
 	knock: ["Knock on Every Door is an attempt to build a largescale, grassroots, volunteer led effort to reach out to potential first time voters.  Users can sign up to receive more information on volunteering with local groups.",
@@ -66,7 +66,7 @@ var linksObject = {
 	run: ["Run for Something advocates for, and supports, young people (those 35 and under) running for elected office. ",
 		"repContactResources/images/runscreen.jpg", "Run for Something homepage screenshot"],
 
-	threeonefouraction: ["The goal of 314 Action is to strengthen communication between the STEM community, the public, and elected officials.  One of the ways they hope to acheive this goal is but advocating for STEM professionals to run for office.",
+	threeonefouraction: ["The goal of 314 Action is to strengthen communication between the STEM community, the public, and elected officials.  They hope to acheive this goal in part by advocating for STEM professionals to run for office.",
 		"repContactResources/images/314screen.jpg", "314 Action homepage screenshot"]
 
 }
@@ -90,7 +90,7 @@ function linkInfoFill(e) {
 
 function linkInfoClear() {
 	let linkInfo = document.querySelector(".linksDescriptionsText");
-	let linkInfoPlaceholder = document.querySelector(".linksDescriptionsPlaceholder")
+	let linkInfoPlaceholder = document.querySelector(".linksDescriptionsPlaceholder");
 	let linkImg = document.querySelector(".linksScreenshot");
 
 	linkInfo.style.opacity = "0";

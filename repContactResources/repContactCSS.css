@@ -431,14 +431,16 @@ body {
       .contentWrapper .linksWrapper .linksList .linksTitle {
         font-size: 1.5em;
         color: darkred;
-        margin: 13px 0 13px 0; }
+        margin: 13px 0 13px 0;
+        transition: color .3s ease; }
       .contentWrapper .linksWrapper .linksList .linksLink {
         text-decoration: none;
         color: darkblue;
         margin-bottom: 8px;
         text-align: left; }
       .contentWrapper .linksWrapper .linksList .linksLink:hover {
-        color: darkred; }
+        color: darkred;
+        transition: color .3s ease; }
     .contentWrapper .linksWrapper .linksDescriptions {
       display: flex;
       flex-direction: column;
@@ -463,7 +465,9 @@ body {
       .contentWrapper .linksWrapper .linksDescriptions .linksScreenshot {
         width: 100%;
         opacity: 0;
-        margin-top: 60px;
+        margin-top: 20px;
+        padding: 10px;
+        background: 1px solid rgba(248, 248, 255, 0.7);
         transition: opacity .3s ease; }
       .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsPlaceholder {
         opacity: 1;
