@@ -12,6 +12,7 @@ function makeRequest(e) {
 		queryResponse = response;
 		queryResponse.result.officials.forEach(function(e) {
 			resultArray.push(e.name);
+			console.log(resultArray);
 		});
 	});
 	e.preventDefault();
