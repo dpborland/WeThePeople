@@ -13,9 +13,9 @@ function makeRequest(e) {
 			localStorage.setItem("name", e.name);
 			localStorage.setItem("photoURL", e.photoURL);
 			localStorage.setItem("party", e.party);
-			localStorage.setItem("phone", e.phones[0]);
-			localStorage.setItem("website", e.urls[0]);
-			localStorage.setItem("address", e.address[0]);
+			localStorage.setItem("phone", e.phones);
+			localStorage.setItem("website", e.urls);
+			localStorage.setItem("address", e.address);
 		});
 	});
 	e.preventDefault();
