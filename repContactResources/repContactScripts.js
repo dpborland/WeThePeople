@@ -7,15 +7,11 @@ function makeRequest(e) {
 	let addressSearchBar = document.querySelector(".addressSearchBar");
 	let addressToSearch = addressSearchBar.value;
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
+	let resultArray = [];
 	request.then(function(response) {
 		queryResponse = response;
 		queryResponse.result.officials.forEach(function(e) {
-			localStorage.setItem("e.name", e.name);
-			localStorage.setItem("e.photoURL", e.photoURL);
-			localStorage.setItem("e.party", e.party);
-			localStorage.setItem("e.phone", e.phones);
-			localStorage.setItem("e.website", e.urls);
-			localStorage.setItem("e.address", e.address);
+			resultArray.push(e.name);
 		});
 	});
 	e.preventDefault();
