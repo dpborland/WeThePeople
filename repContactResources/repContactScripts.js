@@ -10,7 +10,12 @@ function makeRequest(e) {
 	request.then(function(response) {
 		queryResponse = response;
 		queryResponse.result.officials.forEach(function(e) {
-			console.log(e.name, e.urls[0]);
+			localStorage.setItem("name", e.name);
+			localStorage.setItem("photoURL", e.photoURL);
+			localStorage.setItem("party", e.party);
+			localStorage.setItem("phone" e.phones[0]);
+			localStorage.setItem("website", e.urls[0]);
+			localStorage.setItem("address", e.address[0]);
 		});
 	});
 	e.preventDefault();
@@ -121,14 +126,23 @@ if (document.querySelector(".linksWrapper")) {
 	} else {
 		console.log("We couldn't find " + y.name + "'s social media accounts");
 	}
-});
+});*/
 
-function makeResultsTemplate() {
-	let numberNeeded = queryResponse.result.officials.length;
+
+
+function templateFill() {
+
+}
+
+function constructTemplate() {
+	//let numberNeeded = queryResponse.result.officials.length;
+	let numberNeeded = 26;
 	let template = document.querySelector(".repsWrapper");
 	let contentWrapper = document.querySelector(".contentWrapper");
+	let templateArray = [];
 
 	for (var i = 0; i <= (numberNeeded - 2); i++) {
-		contentWrapper.appendChild(template);
+		templateArray[i] = template.cloneNode(true);
+		contentWrapper.appendChild(templateArray[i]);
 	}
-}*/
+}
