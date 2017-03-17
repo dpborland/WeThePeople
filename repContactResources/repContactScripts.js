@@ -8,8 +8,10 @@ function makeRequest(e) {
 	let addressToSearch = addressSearchBar.value;
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
 	request.then(function(response) {
-        queryResponse = response;
-		queryResponse.result.officials.forEach(function(e) { console.log(e.name, e.urls[0]); });
+		queryResponse = response;
+		queryResponse.result.officials.forEach(function(e) {
+			console.log(e.name, e.urls[0]);
+		});
 	});
 	e.preventDefault();
 }
@@ -106,3 +108,27 @@ if (document.querySelector(".linksWrapper")) {
         x.addEventListener("mouseout", linkInfoClear, false);
     });
 }
+
+
+//---Test Scripts---//
+
+/*queryResponse.result.officials.forEach(function(y) {
+	if (y.channels != undefined) {
+		console.log(y.name + "'s social media accounts are: " + "\n") + (y.channels.forEach(function(x) {
+			console.log("  *    http://" + x.type + ".com/" + x.id);
+			})
+		);
+	} else {
+		console.log("We couldn't find " + y.name + "'s social media accounts");
+	}
+});
+
+function makeResultsTemplate() {
+	let numberNeeded = queryResponse.result.officials.length;
+	let template = document.querySelector(".repsWrapper");
+	let contentWrapper = document.querySelector(".contentWrapper");
+
+	for (var i = 0; i <= (numberNeeded - 2); i++) {
+		contentWrapper.appendChild(template);
+	}
+}*/

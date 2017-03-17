@@ -119,7 +119,7 @@ body {
 .titleFormWrapper {
   display: flex;
   /*flex-direction: column;*/
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
   @media screen and (min-width: 200px) and (max-width: 349px) {
@@ -323,159 +323,175 @@ body {
           width: 10px;
           font-style: normal;
           margin-left: 5px; }
-      .contentWrapper .repsWrapper .repInfo .repPhone {
-        font-size: 1.5em;
+      .contentWrapper .repsWrapper .repInfo .repAddress {
+        font-size: 1.3em;
         font-weight: 100;
         color: darkblue;
         margin-top: 0;
         margin-bottom: 5px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repPhone {
+          .contentWrapper .repsWrapper .repInfo .repAddress {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 0; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .contentWrapper .repsWrapper .repInfo .repPhone {
+          .contentWrapper .repsWrapper .repInfo .repAddress {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 0; } }
-      .contentWrapper .repsWrapper .repInfo .repWebsite {
-        font-size: 1.5em;
-        margin-top: 0;
-        margin-bottom: 5px;
-        color: darkblue;
-        text-decoration: none;
-        transition: color .3s ease; }
+        .contentWrapper .repsWrapper .repInfo .repAddress .repPhone {
+          font-size: 1.3em;
+          font-weight: 100;
+          color: darkblue;
+          margin-top: 0;
+          margin-bottom: 5px; }
+          @media screen and (min-width: 200px) and (max-width: 349px) {
+            .contentWrapper .repsWrapper .repInfo .repAddress .repPhone {
+              font-size: 1.2em;
+              font-weight: bold;
+              margin-bottom: 0; } }
+          @media screen and (min-width: 350px) and (max-width: 550px) {
+            .contentWrapper .repsWrapper .repInfo .repAddress .repPhone {
+              font-size: 1.2em;
+              font-weight: bold;
+              margin-bottom: 0; } }
+        .contentWrapper .repsWrapper .repInfo .repAddress .repWebsite {
+          font-size: 1.5em;
+          margin-top: 0;
+          margin-bottom: 5px;
+          color: darkblue;
+          text-decoration: none;
+          transition: color .3s ease; }
+          @media screen and (min-width: 200px) and (max-width: 349px) {
+            .contentWrapper .repsWrapper .repInfo .repAddress .repWebsite {
+              font-size: 1.2em;
+              font-weight: bold; } }
+          @media screen and (min-width: 350px) and (max-width: 550px) {
+            .contentWrapper .repsWrapper .repInfo .repAddress .repWebsite {
+              font-size: 1.2em;
+              font-weight: bold; } }
+        .contentWrapper .repsWrapper .repInfo .repAddress .repWebsite:hover {
+          color: darkred;
+          transition: color .3s ease; }
+      .contentWrapper .repsWrapper .repInfo .repSocialMedia {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        height: 40px;
+        width: 100px;
+        margin-top: 5px;
+        margin-bottom: 0;
+        padding-left: 20px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: 1.2em;
-            font-weight: bold; } }
+          .contentWrapper .repsWrapper .repInfo .repSocialMedia {
+            order: 0;
+            flex-direction: column;
+            width: auto;
+            height: 120px;
+            margin: 0;
+            padding-left: 0; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: 1.2em;
-            font-weight: bold; } }
-      .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
-        color: darkred;
-        transition: color .3s ease; }
-    .contentWrapper .repsWrapper .repSocialMedia {
+          .contentWrapper .repsWrapper .repInfo .repSocialMedia {
+            order: 2;
+            margin: 0;
+            width: 121px;
+            padding-left: 0; } }
+        .contentWrapper .repsWrapper .repInfo .repSocialMedia .facebookIcon {
+          height: 40px;
+          width: 40px;
+          background: url("images/Facebook.png");
+          background-size: contain;
+          opacity: .4;
+          transition: background .3s ease, opacity .3s ease; }
+        .contentWrapper .repsWrapper .repInfo .repSocialMedia .facebookIcon:hover {
+          opacity: 1;
+          transition: opacity .3s ease; }
+        .contentWrapper .repsWrapper .repInfo .repSocialMedia .twitterIcon {
+          height: 40px;
+          width: 40px;
+          background: url("images/Twitter.png");
+          background-size: contain;
+          opacity: .4;
+          transition: background .3s ease, opacity .3s ease; }
+        .contentWrapper .repsWrapper .repInfo .repSocialMedia .twitterIcon:hover {
+          opacity: 1;
+          transition: opacity .3s ease; }
+    .contentWrapper .repsWrapper .repsWrapper:first-child {
+      border-top: none; }
+    .contentWrapper .repsWrapper .linksWrapper {
       display: flex;
       flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
-      height: 40px;
-      width: 100px;
-      margin-top: 5px;
-      margin-bottom: 0;
-      padding-left: 20px; }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repSocialMedia {
-          order: 0;
-          flex-direction: column;
-          width: auto;
-          height: 120px;
-          margin: 0;
-          padding-left: 0; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .repsWrapper .repSocialMedia {
-          order: 2;
-          margin: 0;
-          width: 121px;
-          padding-left: 0; } }
-      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon {
-        height: 40px;
-        width: 40px;
-        background: url("images/Facebook.png");
-        background-size: contain;
-        opacity: .4;
-        transition: background .3s ease, opacity .3s ease; }
-      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon:hover {
-        opacity: 1;
-        transition: opacity .3s ease; }
-      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon {
-        height: 40px;
-        width: 40px;
-        background: url("images/Twitter.png");
-        background-size: contain;
-        opacity: .4;
-        transition: background .3s ease, opacity .3s ease; }
-      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon:hover {
-        opacity: 1;
-        transition: opacity .3s ease; }
-  .contentWrapper .repsWrapper:first-child {
-    border-top: none; }
-  .contentWrapper .linksWrapper {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%; }
-    .contentWrapper .linksWrapper .linksList {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      overflow-y: scroll;
-      padding: 20px;
-      border-right: 1px solid rgba(248, 248, 255, 0.7);
-      align-items: flex-start;
-      font-family: Open Sans Condensed;
-      font-size: 1.3em;
-      color: darkblue;
-      background: rgba(248, 248, 255, 0.4); }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .linksWrapper .linksList {
-          width: 100%; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .linksWrapper .linksList {
-          width: 100%; } }
-      .contentWrapper .linksWrapper .linksList .linksTitle {
-        font-size: 1.5em;
-        color: darkred;
-        margin: 13px 0 13px 0;
-        transition: color .3s ease; }
-      .contentWrapper .linksWrapper .linksList .linksLink {
-        text-decoration: none;
+      width: 100%;
+      height: 100%; }
+      .contentWrapper .repsWrapper .linksWrapper .linksList {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        padding: 20px;
+        border-right: 1px solid rgba(248, 248, 255, 0.7);
+        align-items: flex-start;
+        font-family: Open Sans Condensed;
+        font-size: 1.3em;
         color: darkblue;
-        margin-bottom: 8px;
-        text-align: left; }
-      .contentWrapper .linksWrapper .linksList .linksLink:hover {
-        color: darkred;
-        transition: color .3s ease; }
-    .contentWrapper .linksWrapper .linksDescriptions {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      overflow-y: scroll;
-      padding: 20px;
-      align-items: center;
-      justify-content: flex-start;
-      font-family: Open Sans Condensed;
-      font-size: 1.3em;
-      color: darkblue;
-      background: rgba(248, 248, 255, 0.4); }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .linksWrapper .linksDescriptions {
-          display: none; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .linksWrapper .linksDescriptions {
-          display: none; } }
-      .contentWrapper .linksWrapper .linksDescriptions .linksScreenshot {
-        width: 100%;
-        opacity: 0;
-        margin-top: 20px;
-        padding: 10px;
-        background: 1px solid rgba(248, 248, 255, 0.7);
-        transition: opacity .3s ease; }
-      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsPlaceholder {
-        margin: 0px;
-        opacity: 1;
-        transition: opacity .3s ease; }
-      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsText {
-        opacity: 0;
-        transition: opacity .3s ease; }
+        background: rgba(248, 248, 255, 0.4); }
+        @media screen and (min-width: 200px) and (max-width: 349px) {
+          .contentWrapper .repsWrapper .linksWrapper .linksList {
+            width: 100%; } }
+        @media screen and (min-width: 350px) and (max-width: 550px) {
+          .contentWrapper .repsWrapper .linksWrapper .linksList {
+            width: 100%; } }
+        .contentWrapper .repsWrapper .linksWrapper .linksList .linksTitle {
+          font-size: 1.5em;
+          color: darkred;
+          margin: 13px 0 13px 0;
+          transition: color .3s ease; }
+        .contentWrapper .repsWrapper .linksWrapper .linksList .linksLink {
+          text-decoration: none;
+          color: darkblue;
+          margin-bottom: 8px;
+          text-align: left; }
+        .contentWrapper .repsWrapper .linksWrapper .linksList .linksLink:hover {
+          color: darkred;
+          transition: color .3s ease; }
+      .contentWrapper .repsWrapper .linksWrapper .linksDescriptions {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        padding: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: Open Sans Condensed;
+        font-size: 1.3em;
+        color: darkblue;
+        background: rgba(248, 248, 255, 0.4); }
+        @media screen and (min-width: 200px) and (max-width: 349px) {
+          .contentWrapper .repsWrapper .linksWrapper .linksDescriptions {
+            display: none; } }
+        @media screen and (min-width: 350px) and (max-width: 550px) {
+          .contentWrapper .repsWrapper .linksWrapper .linksDescriptions {
+            display: none; } }
+        .contentWrapper .repsWrapper .linksWrapper .linksDescriptions .linksScreenshot {
+          width: 100%;
+          opacity: 0;
+          margin-top: 20px;
+          padding: 10px;
+          background: 1px solid rgba(248, 248, 255, 0.7);
+          transition: opacity .3s ease; }
+        .contentWrapper .repsWrapper .linksWrapper .linksDescriptions .linksDescriptionsPlaceholder {
+          margin: 0px;
+          opacity: 1;
+          transition: opacity .3s ease; }
+        .contentWrapper .repsWrapper .linksWrapper .linksDescriptions .linksDescriptionsText {
+          opacity: 0;
+          transition: opacity .3s ease; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
