@@ -10,12 +10,12 @@ function makeRequest(e) {
 	request.then(function(response) {
 		queryResponse = response;
 		queryResponse.result.officials.forEach(function(e) {
-			localStorage.setItem("name[e]", e.name);
-			localStorage.setItem("photoURL[e]", e.photoURL);
-			localStorage.setItem("party[e]", e.party);
-			localStorage.setItem("phone[e]", e.phones);
-			localStorage.setItem("website[e]", e.urls);
-			localStorage.setItem("address[e]", e.address);
+			localStorage.setItem("e.name", e.name);
+			localStorage.setItem("e.photoURL", e.photoURL);
+			localStorage.setItem("e.party", e.party);
+			localStorage.setItem("e.phone", e.phones);
+			localStorage.setItem("e.website", e.urls);
+			localStorage.setItem("e.address", e.address);
 		});
 	});
 	e.preventDefault();
