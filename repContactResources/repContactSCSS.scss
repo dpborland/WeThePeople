@@ -359,7 +359,6 @@ body {
 					margin-top: -30px;
 				}
 			}
-
 			.repParty{
 				display: flex;
 				font-size: 1.3em;
@@ -368,7 +367,6 @@ body {
 				width: 10px;
 				margin-left: 5px;
 			}
-
 			.repAddress {
 				font-size: 1.3em;
 				font-weight: 100;
@@ -384,13 +382,10 @@ body {
 					font-size: 1.2em;
 					font-weight: bold;
 					margin-bottom: 0;
+				}
 			}
 			.repPhone {
-				font-size: 1.3em;
-				font-weight: 100;
-				color: darkblue;
-				margin-top: 0;
-				margin-bottom: 5px;
+				@extend .repAddress;
 				@media #{$phone-break-small} {
 					font-size: 1.2em;
 					font-weight: bold;
@@ -575,4 +570,4 @@ body {
 		}
 	}
 }
-}
+
