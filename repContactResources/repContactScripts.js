@@ -7,12 +7,12 @@ function makeRequest(e) {
 	let addressSearchBar = document.querySelector(".addressSearchBar");
 	let addressToSearch = addressSearchBar.value;
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
-	let resultArray = [];
+	let nameArray = [];
 	request.then(function(response) {
 		queryResponse = response;
 		queryResponse.result.officials.forEach(function(e) {
 			resultArray.push(e.name);
-			console.log(resultArray);
+			console.log(nameArray);
 		});
 	});
 	e.preventDefault();
@@ -125,13 +125,9 @@ if (document.querySelector(".linksWrapper")) {
 	}
 });*/
 
+//--- Puts together the basic results page ---//
 
-
-function templateFill() {
-
-}
-
-function constructTemplate() {
+(function constructResultsTemplate() {
 	//let numberNeeded = queryResponse.result.officials.length;
 	let numberNeeded = 26;
 	let template = document.querySelector(".repsWrapper");
@@ -142,4 +138,30 @@ function constructTemplate() {
 		templateArray[i] = template.cloneNode(true);
 		contentWrapper.appendChild(templateArray[i]);
 	}
+})();
+
+//--- Fills the results template with appropriate info --//
+
+function resultsTemplateFill() {
+
+
 }
+
+tempArray.forEach(function(x) {
+	x.firstElementChild.src = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg"
+
+});
+
+div.forEach(function(x) {
+    let img = x.querySelectorAll(".repImg, .repName, .repTitle, .repParty, .repAddress, .repPhone, .repWebsite");
+    img[0].src = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg"
+    img[1].textContent = "Barack Obama";
+    img[2].textContent = "President";
+    img[3].textContent = "(D)";
+    img[4].textContent = "1600 Pennsylvania Ave \nWashington, DC 20500"; //Need to figure out how to break line at correct location.
+																			// JSON return 'address' with lines? Maybe put these in table?
+    img[5].textContent = "(202) 456-1111";
+    img[6].href = "https://www.whitehouse.gov";
+    img[6].target = "_blank"
+    img[6].textContent = "www.whitehouse.gov";
+});

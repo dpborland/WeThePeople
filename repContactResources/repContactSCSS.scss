@@ -358,12 +358,17 @@ body {
 					font-size: 1.2em;
 					margin-top: -30px;
 				}
-				.repParty{
-					width: 10px;
-					font-style: normal;
-					margin-left: 5px;
-				}
 			}
+
+			.repParty{
+				display: flex;
+				font-size: 1.3em;
+				font-weight: 100;
+				font-style: italic;
+				width: 10px;
+				margin-left: 5px;
+			}
+
 			.repAddress {
 				font-size: 1.3em;
 				font-weight: 100;
