@@ -241,13 +241,17 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         max-height: 260px; } }
-    .contentWrapper .repsWrapper .repImg {
+    .contentWrapper .repsWrapper .repImgContainer {
       height: 250px;
+      width: 201px;
       display: block;
       border-right: 1px solid rgba(248, 248, 255, 0.7);
-      padding-right: 30px; }
+      padding-right: 30px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      overflow: hidden; }
       @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repImg {
+        .contentWrapper .repsWrapper .repImgContainer {
           display: none;
           order: 3;
           padding-left: 10px;
@@ -257,12 +261,18 @@ body {
           border-left: 1px solid rgba(248, 248, 255, 0.7);
           border-right: none; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .repsWrapper .repImg {
+        .contentWrapper .repsWrapper .repImgContainer {
           order: 1;
           height: 150px;
+          width: 121px;
           border-right: none;
           padding-right: 15px;
           margin-bottom: 5px; } }
+      .contentWrapper .repsWrapper .repImgContainer img {
+        min-height: 100%;
+        min-width: 100%;
+        opacity: 0;
+        filter: alpha(opacity=0); }
     .contentWrapper .repsWrapper .repInfo {
       display: flex;
       flex-direction: column;
@@ -324,6 +334,7 @@ body {
         font-size: 1.3em;
         font-weight: 100;
         font-style: italic;
+        color: darkred;
         width: 10px;
         margin-left: 5px; }
       .contentWrapper .repsWrapper .repInfo .repAddress, .contentWrapper .repsWrapper .repInfo .repPhone {
