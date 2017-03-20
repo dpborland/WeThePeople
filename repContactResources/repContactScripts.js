@@ -147,10 +147,10 @@ function resultsTemplateFill() {
 
 }
 
-tempArray.forEach(function(x) {
+/*tempArray.forEach(function(x) {
 	x.firstElementChild.src = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg"
 
-});
+});*/
 
 let div = document.querySelectorAll(".repsWrapper");
 
