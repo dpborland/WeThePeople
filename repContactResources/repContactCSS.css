@@ -332,14 +332,15 @@ body {
         margin-bottom: -5px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: 1.1em; } }
+            font-size: 1em; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin-top: -8px;
             margin-bottom: -12px; } }
-      .contentWrapper .repsWrapper .repInfo .repParty {
+      .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
         display: flex;
+        opacity: 0;
         font-size: 1.3em;
         font-weight: 100;
         font-style: italic;
@@ -347,27 +348,37 @@ body {
         width: 10px;
         margin-left: 5px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repParty {
+          .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             font-size: 1.1em; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .contentWrapper .repsWrapper .repInfo .repParty {
+          .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             font-size: 1.2em; } }
-      .contentWrapper .repsWrapper .repInfo .repAddress, .contentWrapper .repsWrapper .repInfo .repPhone {
+      .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone {
         font-size: 1.3em;
         font-weight: 100;
         color: darkblue;
         margin-top: 5px;
         margin-bottom: 0px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repAddress, .contentWrapper .repsWrapper .repInfo .repPhone {
+          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 0; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .contentWrapper .repsWrapper .repInfo .repAddress, .contentWrapper .repsWrapper .repInfo .repPhone {
+          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 0; } }
+      @media screen and (min-width: 200px) and (max-width: 349px) {
+        .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+          font-size: 1.2em;
+          font-weight: bold;
+          margin-bottom: 0; } }
+      @media screen and (min-width: 350px) and (max-width: 550px) {
+        .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+          font-size: 1.2em;
+          font-weight: bold;
+          margin-bottom: 0; } }
       .contentWrapper .repsWrapper .repInfo .repPhone {
         margin-top: 0px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {

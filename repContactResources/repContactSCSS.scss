@@ -372,16 +372,17 @@ body {
 				margin-top: 0px;
 				margin-bottom: -5px;
 				@media #{$phone-break-small} {
-					font-size: 1.1em;
+					font-size: 1em;
 				}
 				@media #{$phone-break-large} {
-					font-size: 1.2em;
+					font-size: 1.1em;
 					margin-top: -8px;
 					margin-bottom: -12px;
 				}
 			}
-			.repParty{
+			.repAddressOptionalLine{
 				display: flex;
+				opacity: 0;
 				font-size: 1.3em;
 				font-weight: 100;
 				font-style: italic;
@@ -395,7 +396,7 @@ body {
 					font-size: 1.2em;
 				}
 			}
-			.repAddress {
+			.repAddressOne {
 				font-size: 1.3em;
 				font-weight: 100;
 				color: darkblue;
@@ -412,8 +413,21 @@ body {
 					margin-bottom: 0;
 				}
 			}
+			.repAddressTwo {
+				@extend .repAddressOne;
+				@media #{$phone-break-small} {
+					font-size: 1.2em;
+					font-weight: bold;
+					margin-bottom: 0;
+				}
+				@media #{$phone-break-large} {
+					font-size: 1.2em;
+					font-weight: bold;
+					margin-bottom: 0;
+				}
+			}
 			.repPhone {
-				@extend .repAddress;
+				@extend .repAddressOne;
 				margin-top: 0px;
 				@media #{$phone-break-small} {
 					font-size: 1.2em;
