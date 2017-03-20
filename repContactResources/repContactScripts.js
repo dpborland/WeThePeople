@@ -153,15 +153,16 @@ tempArray.forEach(function(x) {
 });
 
 div.forEach(function(x) {
-    let img = x.querySelectorAll(".repImg, .repName, .repTitle, .repParty, .repAddress, .repPhone, .repWebsite");
-    img[0].src = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg"
-    img[1].textContent = "Barack Obama";
-    img[2].textContent = "President";
-    img[3].textContent = "(D)";
-    img[4].textContent = "1600 Pennsylvania Ave \nWashington, DC 20500"; //Need to figure out how to break line at correct location.
+	let repImg = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg";
+    let img = x.querySelectorAll(".repImgContainer, .repImg, .repName, .repTitle, .repParty, .repAddress, .repPhone, .repWebsite");
+    img[0].style = "background-image: url(" + repImg + ");"
+    img[1].src = repImg;
+    img[3].textContent = "President";
+    img[4].textContent = "(D)";
+    img[5].textContent = "1600 Pennsylvania Ave \nWashington, DC 20500"; //Need to figure out how to break line at correct location.
 																			// JSON return 'address' with lines? Maybe put these in table?
-    img[5].textContent = "(202) 456-1111";
-    img[6].href = "https://www.whitehouse.gov";
-    img[6].target = "_blank"
-    img[6].textContent = "www.whitehouse.gov";
+    img[6].textContent = "(202) 456-1111";
+    img[7].href = "https://www.whitehouse.gov";
+    img[7].target = "_blank"
+    img[7].textContent = "www.whitehouse.gov";
 });
