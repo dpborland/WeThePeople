@@ -267,7 +267,7 @@ body {
 			justify-content: space-between;
 			max-height: 260px;
 			padding: 10px;
-			align-content: space-around;
+			align-content: flex-start;
 		}
 		@media #{$phone-break-large} {
 			order: 1;
@@ -280,22 +280,14 @@ body {
 			height: 250px;
 			width: 201px;
 			display: block;
-			border-right: 1px solid rgba(248, 248, 255, 0.7);
 			padding-right: 30px;
-			background-position: center center;
+			background-position: center right;
 			background-repeat: no-repeat;
 			-webkit-background-size: cover;
 			background-size: cover;
 			overflow: hidden;
 			@media #{$phone-break-small} {
 				display: none;
-				order: 3;
-				padding-left: 10px;
-				padding-right: 0;
-				margin-bottom: 5px;
-				height: 130px;
-				border-left: 1px solid rgba(248, 248, 255, 0.7);
-				border-right: none;
 			}
 			@media #{$phone-break-large} {
 				order: 1;
@@ -304,6 +296,7 @@ body {
 				border-right: none;
 				padding-right: 15px;
 				margin-bottom: 5px;
+				background-position: center center;
 			}
 
 			img {
@@ -329,6 +322,8 @@ body {
 			flex-direction: column;
 			align-items: baseline;
 			padding-left: 20px;
+			margin-left: 20px;
+			border-left: 1px solid rgba(248, 248, 255, 0.7);
 			@media #{$phone-break-small} {
 				order: 1;
 				height: auto;
@@ -339,6 +334,7 @@ body {
 				height: 200px;
 				justify-content: space-between;
 				order: 3;
+				margin-left: 0px;
 				padding-left: 15px;
 				border-left: 1px solid rgba(248, 248, 255, 0.7);
 			}
@@ -373,14 +369,15 @@ body {
 				font-weight: 100;
 				color: darkred;
 				font-style: italic;
-				margin-top: 5px;
-				margin-bottom: 10px;
+				margin-top: 0px;
+				margin-bottom: -5px;
 				@media #{$phone-break-small} {
-					font-size: 1.2em;
+					font-size: 1.1em;
 				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
-					margin-top: -30px;
+					margin-top: -8px;
+					margin-bottom: -12px;
 				}
 			}
 			.repParty{
@@ -391,13 +388,19 @@ body {
 				color: darkred;
 				width: 10px;
 				margin-left: 5px;
+				@media #{$phone-break-small} {
+					font-size: 1.1em;
+				}
+				@media #{$phone-break-large} {
+					font-size: 1.2em;
+				}
 			}
 			.repAddress {
 				font-size: 1.3em;
 				font-weight: 100;
 				color: darkblue;
-				margin-top: 0;
-				margin-bottom: 5px;
+				margin-top: 5px;
+				margin-bottom: 0px;
 				@media #{$phone-break-small} {
 					font-size: 1.2em;
 					font-weight: bold;
@@ -411,6 +414,7 @@ body {
 			}
 			.repPhone {
 				@extend .repAddress;
+				margin-top: 0px;
 				@media #{$phone-break-small} {
 					font-size: 1.2em;
 					font-weight: bold;
@@ -423,11 +427,10 @@ body {
 				}
 			}
 			.repWebsite {
-				font-size: 1.5em;
+				font-size: 1.3em;
 				margin-top: 0;
 				margin-bottom: 5px;
 				color: darkblue;
-				text-decoration: none;
 				transition: color .3s ease;
 				@media #{$phone-break-small} {
 					font-size: 1.2em;
@@ -453,14 +456,17 @@ body {
 			width: 100px;
 			margin-top: 5px;
 			margin-bottom: 0;
+			margin-left: 20px;
 			padding-left: 20px;
+			padding-right: 15px;
 			@media #{$phone-break-small} {
 				order: 0;
 				flex-direction: column;
 				width: auto;
 				height: 120px;
 				margin: 0;
-				padding-left: 0;
+				padding-left: 0px;
+				padding-right: 10px;
 			}
 			@media #{$phone-break-large} {
 				order: 2;
