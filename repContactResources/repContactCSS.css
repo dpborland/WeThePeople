@@ -260,7 +260,7 @@ body {
           height: 150px;
           width: 121px;
           border-right: none;
-          padding-right: 15px;
+          padding-right: 0px;
           margin-bottom: 5px;
           background-position: center center; } }
       .contentWrapper .repsWrapper .repImgContainer img {
