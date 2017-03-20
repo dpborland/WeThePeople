@@ -152,11 +152,14 @@ tempArray.forEach(function(x) {
 
 });
 
+let div = document.querySelectorAll(".repsWrapper");
+
 div.forEach(function(x) {
 	let repImg = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg";
     let img = x.querySelectorAll(".repImgContainer, .repImg, .repName, .repTitle, .repParty, .repAddress, .repPhone, .repWebsite");
     img[0].style = "background-image: url(" + repImg + ");"
     img[1].src = repImg;
+    img[2].textContent = "Barack Obama";
     img[3].textContent = "President";
     img[4].textContent = "(D)";
     img[5].textContent = "1600 Pennsylvania Ave \nWashington, DC 20500"; //Need to figure out how to break line at correct location.
