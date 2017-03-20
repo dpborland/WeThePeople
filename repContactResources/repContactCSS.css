@@ -13,17 +13,16 @@ body {
   text-align: center;
   justify-content: space-between;
   font-family: "Playfair Display", sans-serif;
-  /*background: url(images/weThePeopleBLUR.jpg) no-repeat left center fixed;
-  background-size: cover;
-  background-color: rgba(204, 213, 238, 0.99);*/
   background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.75) -50%, rgba(248, 248, 255, 0.8) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
   background-size: cover; }
   @media screen and (min-width: 200px) and (max-width: 349px) {
     body {
-      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat; } }
+      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+      background-size: cover; } }
   @media screen and (min-width: 350px) and (max-width: 550px) {
     body {
-      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat; } }
+      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+      background-size: cover; } }
 
 .menu {
   display: flex;
@@ -261,7 +260,7 @@ body {
           width: 121px;
           border-right: none;
           padding-right: 0px;
-          margin-bottom: 5px;
+          margin-bottom: 10px;
           background-position: center center; } }
       .contentWrapper .repsWrapper .repImgContainer img {
         height: 250px;
@@ -290,7 +289,8 @@ body {
           order: 1;
           height: auto;
           padding-left: 10px;
-          padding-right: 0; } }
+          padding-right: 0;
+          margin-left: 0px; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repInfo {
           height: 200px;

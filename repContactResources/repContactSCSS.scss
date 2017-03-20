@@ -20,16 +20,15 @@ body {
     text-align: center;
     justify-content: space-between;
     font-family: "Playfair Display", sans-serif;
-    /*background: url(images/weThePeopleBLUR.jpg) no-repeat left center fixed;
-    background-size: cover;
-    background-color: rgba(204, 213, 238, 0.99);*/
 	background: linear-gradient(to bottom right, rgba(168, 0, 0, .75) -50%, rgba(248, 248, 255, .80) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
     background-size: cover;
 	@media #{$phone-break-small} {
-		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
+		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+		background-size: cover;
 	}
 	@media #{$phone-break-large} {
-		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
+		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+		background-size: cover;
 	}
 }
 
@@ -295,7 +294,7 @@ body {
 				width: 121px;
 				border-right: none;
 				padding-right: 0px;
-				margin-bottom: 5px;
+				margin-bottom: 10px;
 				background-position: center center;
 			}
 
@@ -329,6 +328,7 @@ body {
 				height: auto;
 				padding-left: 10px;
 				padding-right: 0;
+				margin-left: 0px;
 			}
 			@media #{$phone-break-large} {
 				height: 200px;
