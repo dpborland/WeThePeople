@@ -339,14 +339,11 @@ body {
             margin-top: -8px;
             margin-bottom: -12px; } }
       .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-        display: flex;
-        opacity: 0;
         font-size: 1.3em;
         font-weight: 100;
-        font-style: italic;
-        color: darkred;
-        width: 10px;
-        margin-left: 5px; }
+        color: darkblue;
+        margin-top: 5px;
+        margin-bottom: 0px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             font-size: 1.1em; } }

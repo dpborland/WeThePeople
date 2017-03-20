@@ -381,14 +381,11 @@ body {
 				}
 			}
 			.repAddressOptionalLine{
-				display: flex;
-				opacity: 0;
 				font-size: 1.3em;
 				font-weight: 100;
-				font-style: italic;
-				color: darkred;
-				width: 10px;
-				margin-left: 5px;
+				color: darkblue;
+				margin-top: 5px;
+				margin-bottom: 0px;
 				@media #{$phone-break-small} {
 					font-size: 1.1em;
 				}
