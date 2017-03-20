@@ -332,12 +332,12 @@ body {
         margin-bottom: -5px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: 1em; } }
+            font-size: 1em;
+            margin-top: 0px; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
             font-size: 1.1em;
-            margin-top: -8px;
-            margin-bottom: -12px; } }
+            margin-top: 0px; } }
       .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
         font-size: 1.3em;
         font-weight: 100;
@@ -346,10 +346,12 @@ body {
         margin-bottom: 0px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            font-size: 1.1em; } }
+            font-size: 1.1em;
+            margin-top: 10px; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            font-size: 1.2em; } }
+            font-size: 1.2em;
+            margin-top: 10px; } }
       .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone {
         font-size: 1.3em;
         font-weight: 100;
@@ -360,22 +362,24 @@ body {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone {
             font-size: 1.2em;
             font-weight: bold;
-            margin-bottom: 0; } }
+            margin-top: 0px; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone {
             font-size: 1.2em;
             font-weight: bold;
-            margin-bottom: 0; } }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repInfo .repAddressTwo {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 0; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .repsWrapper .repInfo .repAddressTwo {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 0; } }
+            margin-top: 0px; } }
+      .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+        margin-top: 0px; }
+        @media screen and (min-width: 200px) and (max-width: 349px) {
+          .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px; } }
+        @media screen and (min-width: 350px) and (max-width: 550px) {
+          .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 5px; } }
       .contentWrapper .repsWrapper .repInfo .repPhone {
         margin-top: 0px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
