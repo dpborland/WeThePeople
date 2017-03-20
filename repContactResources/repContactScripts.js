@@ -156,7 +156,7 @@ let div = document.querySelectorAll(".repsWrapper");
 
 div.forEach(function(x) {
 	let repImg = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg";
-    let img = x.querySelectorAll(".repImgContainer, .repImg, .repName, .repTitle, .repOptionalLine, .repAddressOne, .repAddressTwo, .repPhone, .repWebsite");
+    let img = x.querySelectorAll(".repImgContainer, .repImg, .repName, .repTitle, .repAddressOptionalLine, .repAddressOne, .repAddressTwo, .repPhone, .repWebsite");
     img[0].style = "background-image: url(" + repImg + ");"
     img[1].src = repImg;
     img[2].textContent = "Barack Obama";
