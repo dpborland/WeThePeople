@@ -12,7 +12,7 @@ function makeRequest(e) {
 	});
 	e.preventDefault();
 
-	queryResponse === null ?
+	queryResponse === undefined ?
         alert("Please enter a valid address")
 	: (
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse)),
