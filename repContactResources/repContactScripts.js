@@ -11,7 +11,7 @@ function makeRequest(e) {
 	request.then(function(response) {
 		queryResponse = response;
 		queryResponse.result.officials.forEach(function(e) {
-			resultArray.push(e.name);
+			nameArray.push(e.name);
 			console.log(nameArray);
 		});
 	});
@@ -150,7 +150,11 @@ function resultsTemplateFill() {
 /*tempArray.forEach(function(x) {
 	x.firstElementChild.src = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg"
 
-});*/
+});
+
+localStorage.setItem("queryResponse", JSON.stringify(queryResponse.result));
+console.log(JSON.parse(localStorage.getItem("queryResponse")));
+
 
 /*let div = document.querySelectorAll(".repsWrapper");
 
