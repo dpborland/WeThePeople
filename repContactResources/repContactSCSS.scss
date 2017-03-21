@@ -8,8 +8,6 @@ html {
 	background-color: #565895;
 }
 
-
-
 body {
     height: 100%;
     width: 100%;
@@ -27,7 +25,7 @@ body {
 		background-size: cover;
 	}
 	@media #{$phone-break-large} {
-		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
 		background-size: cover;
 	}
 }
@@ -135,10 +133,10 @@ body {
 
 .titleFormWrapper {
 	display: flex;
-	/*flex-direction: column;*/
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding-top: 25px;
 	@media #{$phone-break-small} {
 		order: 1;
 		padding-bottom: 80px;

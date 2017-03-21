@@ -127,7 +127,7 @@ if (document.querySelector(".linksWrapper")) {
 
 //--- Puts together the basic results page ---//
 
-(function constructResultsTemplate() {
+/*(function constructResultsTemplate() {
 	//let numberNeeded = queryResponse.result.officials.length;
 	let numberNeeded = 26;
 	let template = document.querySelector(".repsWrapper");
@@ -152,7 +152,7 @@ function resultsTemplateFill() {
 
 });*/
 
-let div = document.querySelectorAll(".repsWrapper");
+/*let div = document.querySelectorAll(".repsWrapper");
 
 div.forEach(function(x) {
 	let repImg = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg";
@@ -170,4 +170,4 @@ div.forEach(function(x) {
     img[8].href = "https://www.whitehouse.gov";
     img[8].target = "_blank"
     img[8].textContent = "www.whitehouse.gov";
-});
+});*/

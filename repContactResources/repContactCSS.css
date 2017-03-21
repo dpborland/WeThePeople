@@ -21,7 +21,7 @@ body {
       background-size: cover; } }
   @media screen and (min-width: 350px) and (max-width: 550px) {
     body {
-      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
       background-size: cover; } }
 
 .menu {
@@ -117,10 +117,10 @@ body {
 
 .titleFormWrapper {
   display: flex;
-  /*flex-direction: column;*/
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding-top: 25px; }
   @media screen and (min-width: 200px) and (max-width: 349px) {
     .titleFormWrapper {
       order: 1;
