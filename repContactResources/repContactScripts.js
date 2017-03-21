@@ -12,11 +12,11 @@ function makeRequest(e) {
 	});
 	e.preventDefault();
 
-	if (queryResponse != null) {
+	if (queryResponse == null) {
+        alert("Please enter a valid address");
+	} else {
         localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
-	} else {
-		alert("Please enter a valid address");
 	}
 }
 
