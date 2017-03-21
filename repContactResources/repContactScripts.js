@@ -9,12 +9,14 @@ function makeRequest(e) {
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
 	request.then(function(response) {
 		queryResponse = response;
-		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
 	});
 	e.preventDefault();
 
 	if (queryResponse != null) {
-		window.location.href = "http://contactmyreps.com/results.html";
+        localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
+        window.location.href = "http://contactmyreps.com/results.html";
+	} else {
+		alert("Please enter a valid address");
 	}
 }
 
