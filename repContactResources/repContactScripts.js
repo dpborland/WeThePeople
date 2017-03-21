@@ -12,7 +12,7 @@ function makeRequest(e) {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
 	});
 	e.preventDefault();
-	
+
 	if (queryResponse != null) {
 		window.location.href = "http://contactmyreps.com/results.html";
 	}
