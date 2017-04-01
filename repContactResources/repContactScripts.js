@@ -131,8 +131,8 @@ if (document.querySelector(".linksWrapper")) {
 //--- Puts together the basic results page ---//
 
 /*(function constructResultsTemplate() {
-	//let numberNeeded = queryResponse.result.officials.length;
-	let numberNeeded = 26;
+	let numberNeeded = queryResponse1.result.officials.length;
+	//let numberNeeded = 26;
 	let template = document.querySelector(".repsWrapper");
 	let contentWrapper = document.querySelector(".contentWrapper");
 	let templateArray = [];
@@ -150,10 +150,6 @@ function resultsTemplateFill() {
 
 }
 
-/*tempArray.forEach(function(x) {
-	x.firstElementChild.src = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg"
-
-});
 
 localStorage.setItem("queryResponse", JSON.stringify(queryResponse.result));
 console.log(JSON.parse(localStorage.getItem("queryResponse")));
@@ -178,3 +174,88 @@ div.forEach(function(x) {
     img[8].target = "_blank"
     img[8].textContent = "www.whitehouse.gov";
 });*/
+
+function resultsTemplateFill() {
+	let repsArray = queryResponse1.result.officials;
+	let repsTitle = queryResponse1.result.offices;
+	let repImgContainer = document.querySelectorAll(".repImgContainer");
+	let repImg = document.querySelectorAll(".repImg");
+	let repName = document.querySelectorAll(".repName");
+	let repTitle = document.querySelectorAll(".repTitle");
+	let repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
+	let repAddressOne = document.querySelectorAll(".repAddressOne");
+	let repAddressTwo = document.querySelectorAll(".repAddressTwo");
+	let repPhone = document.querySelectorAll(".repPhone");
+	let repWebsite = document.querySelectorAll(".repWebsite");
+	let socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
+	let socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
+	let socialMediaInfo = [];
+// Creates new array that groups social media elements into sub-arrays for easier processing
+	while (socialMediaIcon.length > 0) {
+        let socialMediaIconGroup = [];
+        let socialMediaLinkGroup = [];
+        socialMediaIconGroup.push(socialMediaIcon.splice(0, 2));
+        socialMediaLinkGroup.push(socialMediaLink.splice(0, 2));
+    }
+//Parses the JSON response and inserts appropriate data in DOM
+	repsArray.forEach(function(value, index) {
+	//If an image link exists in the JSON, fills the appropriate url for the div's background image.  Otherwise adds a filler image.
+		value.photoUrl === undefined ? repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);"
+			: repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
+
+	//Fills the img tag with the appropriate src and alt.  If no image available, adds a filler image
+		value.photoUrl === undefined ? (repImg[index].src = "images/flagBWBLUR2.jpg", repImg[index].alt = "Filler Image")
+			: (repImg[index].src = value.photoUrl, repImg[index].alt = value.name);
+
+	//Fills the rep's name
+		repName[index].textContent = value.name;
+
+	//Fills rep's title and party (if available)
+		value.party === undefined || value.party === "Unknown" ? repTitle[index].textContent = "Party Unknown"
+			: repTitle[index].textContent = value.party;
+
+	//Fills the rep's address.  The repAddressOptional holds a place for 3 line addresses
+		value.address[0].line2 === undefined ? (repAddressOptional[index].style = "height: 0px",
+				repAddressOptional[index].style = "margin-top: none",
+				repAddressOne[index].textContent = value.address[0].line1,
+				repAddressTwo[index].textContent = value.address[0].city + ", " + value.address[0].state + " " + value.address[0].zip)
+			:
+            (repAddressOptional[index].textContent = value.address[0].line1,
+                repAddressOne[index].textContent = value.address[0].line2,
+                repAddressTwo[index].textContent = value.address[0].city + ", " + value.address[0].state + " " + value.address[0].zip);
+
+	//If a phone number exists in the JSON, it is added.  Otherwise a filler message is added
+		value.phones === undefined ? repPhone[index].textContent = "Phone Number Unknown"
+			: repPhone[index].textContent = value.phones;
+
+	//Fills the rep's website
+		value.urls[0] === undefined ? (repWebsite[index].textContent = "")
+			:	(repWebsite[index].textContent = "Visit my Website",
+				repWebsite[index].href = value.urls[0]);
+
+	//Fills the rep's Facebook and Twitter
+		//If there isn't any social media info available, hide the elements
+		value.channels === undefined ? (socialMediaIconGroup[index][0].classList.add("socialMediaIconInvisible"),
+			socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible"))
+			:
+		//If there is social media info available, filter the Facebook and Twitter entries into an array
+			(socialMediaInfo = value.channels.filter(function(x) {
+				return x.type.toLowerCase() == "facebook" || x.type.toLocaleLowerCase() == "twitter";
+			}),
+		//Then, take the array and assign the entries to the appropriate elements
+				socialMediaInfo.forEach(function(val, num) {
+					socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
+					socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + "/" + val.id;
+				})
+			);
+		//
+
+		/*(value.channels.find(function(socialMedia) {
+				if (socialMedia.type == "Facebook") {
+					socialMediaLinkGroup[index][0].href = "https://www.facebook.com/" + socialMedia.id;
+				} else if (socialMedia.type == "Twitter") {
+					socialMediaLinkGroup[index][1].href = "https://www.twitter.com/" + socialMedia.id;
+				}}))*/
+	});
+
+}

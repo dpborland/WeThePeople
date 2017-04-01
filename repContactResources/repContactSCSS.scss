@@ -262,7 +262,7 @@ body {
 			order: 1;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			max-height: 260px;
+			max-height: 250px;
 			padding: 10px;
 			align-content: flex-start;
 		}
@@ -270,14 +270,15 @@ body {
 			order: 1;
 			flex-wrap: wrap;
 			justify-content: space-between;
-			max-height: 260px;
+			padding: 15px;
+			max-height: 250px;
 		}
 
 		.repImgContainer {
 			height: 250px;
 			width: 201px;
 			display: block;
-			padding-right: 30px;
+			margin-right: 20px;
 			background-position: center right;
 			background-repeat: no-repeat;
 			-webkit-background-size: cover;
@@ -288,7 +289,7 @@ body {
 			}
 			@media #{$phone-break-large} {
 				order: 1;
-				height: 150px;
+				height: 160px;
 				width: 121px;
 				border-right: none;
 				padding-right: 0px;
@@ -305,7 +306,7 @@ body {
 					display: none;
 				}
 				@media #{$phone-break-large} {
-					height: 150px;
+					height: 160px;
 					width: 121px;
 					border-right: none;
 					padding-right: 15px;
@@ -317,9 +318,9 @@ body {
 		.repInfo {
 			display: flex;
 			flex-direction: column;
+			justify-content: space-between;
 			align-items: baseline;
 			padding-left: 20px;
-			margin-left: 20px;
 			border-left: 1px solid rgba(248, 248, 255, 0.7);
 			@media #{$phone-break-small} {
 				order: 1;
@@ -329,9 +330,10 @@ body {
 				margin-left: 0px;
 			}
 			@media #{$phone-break-large} {
-				height: 200px;
+				height: 210px;
 				justify-content: space-between;
 				order: 3;
+				max-width: 55%;
 				margin-left: 0px;
 				padding-left: 15px;
 				border-left: 1px solid rgba(248, 248, 255, 0.7);
@@ -346,12 +348,12 @@ body {
 				justify-content: flex-end;
 				color: darkred;
 				@media #{$phone-break-small} {
-					font-size: 2em;
+					font-size: 6vw;
 					text-align: left;
 					margin-top: -2px;
 				}
 				@media #{$phone-break-large} {
-					font-size: 2em;
+					font-size: 6vw;
 					text-align: left;
 					margin-top: -2px;
 				}
@@ -371,33 +373,39 @@ body {
 				margin-bottom: -5px;
 				@media #{$phone-break-small} {
 					font-size: 1em;
-					margin-top: 0px;
+					margin-top: 0;
+					margin-bottom: 0;
 				}
 				@media #{$phone-break-large} {
 					font-size: 1.1em;
-					margin-top: 0px;
+					margin-top: 3px;
+					margin-bottom: 0;
 				}
 			}
 			.repAddressOptionalLine{
 				font-size: 1.3em;
 				font-weight: 100;
 				color: darkblue;
-				margin-top: 5px;
+				margin-top: 3px;
 				margin-bottom: 0px;
 				@media #{$phone-break-small} {
 					font-size: 1.1em;
 					margin-top: 10px;
+					height: 27px;
 				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
 					margin-top: 10px;
+				}
+				@media #{$tablet-break} {
+					margin-bottom: 6px;
 				}
 			}
 			.repAddressOne {
 				font-size: 1.3em;
 				font-weight: 100;
 				color: darkblue;
-				margin-top: 5px;
+				margin-top: 0px;
 				margin-bottom: 0px;
 				@media #{$phone-break-small} {
 					font-size: 1.2em;
@@ -412,7 +420,6 @@ body {
 			}
 			.repAddressTwo {
 				@extend .repAddressOne;
-				margin-top: 0px;
 				@media #{$phone-break-small} {
 					font-size: 1.2em;
 					font-weight: bold;
@@ -426,7 +433,6 @@ body {
 			}
 			.repPhone {
 				@extend .repAddressOne;
-				margin-top: 0px;
 				@media #{$phone-break-small} {
 					font-size: 1.2em;
 					font-weight: bold;
@@ -439,18 +445,21 @@ body {
 				}
 			}
 			.repWebsite {
-				font-size: 1.3em;
-				margin-top: 0;
+				@extend .repAddressOne;
 				margin-bottom: 5px;
-				color: darkblue;
 				transition: color .3s ease;
 				@media #{$phone-break-small} {
 					font-size: 1.2em;
 					font-weight: bold;
+					margin-bottom: 0;
 				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
 					font-weight: bold;
+					margin-bottom: 0;
+				}
+				@media #{$tablet-break} {
+					margin-bottom: 10px;
 				}
 			}
 			.repWebsite:hover {
@@ -466,10 +475,10 @@ body {
 			justify-content: space-between;
 			height: 40px;
 			width: 100px;
-			margin-top: 5px;
+			border-left: 1px solid rgba(248, 248, 255, 0.7);
+			margin-top: 0;
 			margin-bottom: 0;
 			margin-left: 20px;
-			padding-left: 20px;
 			padding-right: 15px;
 			@media #{$phone-break-small} {
 				order: 0;
@@ -479,35 +488,32 @@ body {
 				margin: 0;
 				padding-left: 0px;
 				padding-right: 10px;
+				border-left: none;
 			}
 			@media #{$phone-break-large} {
 				order: 2;
 				margin:	0;
 				width: 121px;
 				padding-left: 0;
+				border-left: none;
 			}
-
-			.facebookIcon {
+			.socialMediaIcon {
 				height: 40px;
 				width: 40px;
-				background: url("images/Facebook.png");
 				background-size: contain;
 				opacity: .4;
 				transition: background .3s ease, opacity .3s ease;
 			}
-			.facebookIcon:hover {
-				opacity: 1;
-				transition: opacity .3s ease;
+			.socialMediaIconInvisible {
+				display: none;
+			}
+			.facebookIcon {
+				background: url("images/Facebook.png");
 			}
 			.twitterIcon {
-				height: 40px;
-				width: 40px;
 				background: url("images/Twitter.png");
-				background-size: contain;
-				opacity: .4;
-				transition: background .3s ease, opacity .3s ease;
 			}
-			.twitterIcon:hover {
+			.socialMediaIcon:hover {
 				opacity: 1;
 				transition: opacity .3s ease;
 			}
@@ -596,7 +602,7 @@ body {
 				opacity: 0;
 				margin-top: 20px;
 				padding: 10px;
-				background: 1px solid rgba(248, 248, 255, 0.7);
+				background: rgba(248, 248, 255, 0.7);
 				transition: opacity .3s ease;
 			}
 
