@@ -117,20 +117,11 @@ if (document.querySelector(".linksWrapper")) {
 
 //---Test Scripts---//
 
-/*queryResponse.result.officials.forEach(function(y) {
-	if (y.channels != undefined) {
-		console.log(y.name + "'s social media accounts are: " + "\n") + (y.channels.forEach(function(x) {
-			console.log("  *    http://" + x.type + ".com/" + x.id);
-			})
-		);
-	} else {
-		console.log("We couldn't find " + y.name + "'s social media accounts");
-	}
-});*/
+
 
 //--- Puts together the basic results page ---//
 
-/*(function constructResultsTemplate() {
+function constructResultsTemplate() {
 	let numberNeeded = queryResponse1.result.officials.length;
 	//let numberNeeded = 26;
 	let template = document.querySelector(".repsWrapper");
@@ -141,39 +132,11 @@ if (document.querySelector(".linksWrapper")) {
 		templateArray[i] = template.cloneNode(true);
 		contentWrapper.appendChild(templateArray[i]);
 	}
-})();
+};
+
 
 //--- Fills the results template with appropriate info --//
 
-function resultsTemplateFill() {
-
-
-}
-
-
-localStorage.setItem("queryResponse", JSON.stringify(queryResponse.result));
-console.log(JSON.parse(localStorage.getItem("queryResponse")));
-
-
-/*let div = document.querySelectorAll(".repsWrapper");
-
-div.forEach(function(x) {
-	let repImg = "https://static01.nyt.com/images/2016/09/02/multimedia/obama-midway-intv/obama-midway-intv-superJumbo.jpg";
-    let img = x.querySelectorAll(".repImgContainer, .repImg, .repName, .repTitle, .repAddressOptionalLine, .repAddressOne, .repAddressTwo, .repPhone, .repWebsite");
-    img[0].style = "background-image: url(" + repImg + ");"
-    img[1].src = repImg;
-    img[2].textContent = "Barack Obama";
-    img[3].textContent = "President";
-    img[4].textContent = "The White House";
-    img[4].opacity = "1";
-    img[5].textContent = "1600 Pennsylvania Ave";
-    img[6].textContent = "Washington, DC 20500"; //Need to figure out how to break line at correct location.
-																			// JSON return 'address' with lines? Maybe put these in table?
-    img[7].textContent = "(202) 456-1111";
-    img[8].href = "https://www.whitehouse.gov";
-    img[8].target = "_blank"
-    img[8].textContent = "www.whitehouse.gov";
-});*/
 
 function resultsTemplateFill() {
 	let repsArray = queryResponse1.result.officials;
@@ -188,12 +151,12 @@ function resultsTemplateFill() {
 	let repPhone = document.querySelectorAll(".repPhone");
 	let repWebsite = document.querySelectorAll(".repWebsite");
 	let socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
+	let socialMediaLinkGroup = [];
 	let socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
-	let socialMediaInfo = [];
+	let socialMediaIconGroup = [];
+	let socialMediaCache = [];
 // Creates new array that groups social media elements into sub-arrays for easier processing
 	while (socialMediaIcon.length > 0) {
-        let socialMediaIconGroup = [];
-        let socialMediaLinkGroup = [];
         socialMediaIconGroup.push(socialMediaIcon.splice(0, 2));
         socialMediaLinkGroup.push(socialMediaLink.splice(0, 2));
     }
@@ -235,27 +198,43 @@ function resultsTemplateFill() {
 
 	//Fills the rep's Facebook and Twitter
 		//If there isn't any social media info available, hide the elements
-		value.channels === undefined ? (socialMediaIconGroup[index][0].classList.add("socialMediaIconInvisible"),
+		value.channels === undefined ?
+			(socialMediaIconGroup[index][0].classList.add("socialMediaIconInvisible"),
 			socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible"))
-			:
-		//If there is social media info available, filter the Facebook and Twitter entries into an array
-			(socialMediaInfo = value.channels.filter(function(x) {
-				return x.type.toLowerCase() == "facebook" || x.type.toLocaleLowerCase() == "twitter";
+		//Otherwise, search the Reps' channels property for Facebook and Twitter values
+		:	(value.channels.forEach(function(x) {
+				if ((x.type.toLowerCase() == "facebook") && (socialMediaCache[0] !== undefined)) {
+					return socialMediaCache[0] = x;
+				}
+				else if ((x.type.toLowerCase() == "twitter") && (socialMediaCache[0] !== undefined)) {
+					return socialMediaCache[0] = x;
+				}
+				else {
+					return socialMediaCache[1] = x;
+				}
 			}),
 		//Then, take the array and assign the entries to the appropriate elements
-				socialMediaInfo.forEach(function(val, num) {
+			socialMediaCache.forEach(function(val, num) {
+				if (socialMediaCache.length > 2) {
+                    val.type.toLowerCase() == "facebook" ? socialMediaCache[0] = val : socialMediaCache[1] = val;
+                    socialMediaCache.slice(socialMediaCache.length - 1);
+                    socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
+                    socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
+                }
+				else if (socialMediaCache.length === 2) {
 					socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
-					socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + "/" + val.id;
-				})
+					socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
+               }
+               else if (socialMediaCache.length === 1) {
+					socialMediaIconGroup[index][0].classList.add(val.type.toLowerCase() + "Icon");
+					socialMediaLinkGroup[index][0].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
+					socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible");
+				}
+			}),
+			//Finally, empty the cache array of social media info, so it will be empty for next Rep
+			socialMediaCache = []
 			);
-		//
 
-		/*(value.channels.find(function(socialMedia) {
-				if (socialMedia.type == "Facebook") {
-					socialMediaLinkGroup[index][0].href = "https://www.facebook.com/" + socialMedia.id;
-				} else if (socialMedia.type == "Twitter") {
-					socialMediaLinkGroup[index][1].href = "https://www.twitter.com/" + socialMedia.id;
-				}}))*/
 	});
 
 }

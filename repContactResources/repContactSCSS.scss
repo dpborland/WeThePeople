@@ -279,7 +279,7 @@ body {
 			width: 201px;
 			display: block;
 			margin-right: 20px;
-			background-position: center right;
+			background-position: center top;
 			background-repeat: no-repeat;
 			-webkit-background-size: cover;
 			background-size: cover;
@@ -320,6 +320,7 @@ body {
 			flex-direction: column;
 			justify-content: space-between;
 			align-items: baseline;
+			text-align: left;
 			padding-left: 20px;
 			border-left: 1px solid rgba(248, 248, 255, 0.7);
 			@media #{$phone-break-small} {
@@ -398,7 +399,7 @@ body {
 					margin-top: 10px;
 				}
 				@media #{$tablet-break} {
-					margin-bottom: 6px;
+					margin-bottom: 0px;
 				}
 			}
 			.repAddressOne {
@@ -478,7 +479,7 @@ body {
 			border-left: 1px solid rgba(248, 248, 255, 0.7);
 			margin-top: 0;
 			margin-bottom: 0;
-			margin-left: 20px;
+			padding-left: 20px;
 			padding-right: 15px;
 			@media #{$phone-break-small} {
 				order: 0;
@@ -500,7 +501,6 @@ body {
 			.socialMediaIcon {
 				height: 40px;
 				width: 40px;
-				background-size: contain;
 				opacity: .4;
 				transition: background .3s ease, opacity .3s ease;
 			}
@@ -509,9 +509,11 @@ body {
 			}
 			.facebookIcon {
 				background: url("images/Facebook.png");
+				background-size: contain;
 			}
 			.twitterIcon {
 				background: url("images/Twitter.png");
+				background-size: contain;
 			}
 			.socialMediaIcon:hover {
 				opacity: 1;
