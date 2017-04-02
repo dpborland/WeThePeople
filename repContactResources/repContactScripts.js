@@ -216,7 +216,7 @@ function resultsTemplateFill() {
 					return socialMediaCache[1] = x;
 				}
 				else if ((x.type.toLowerCase() == "twitter") && (socialMediaCache[0].type.toLowerCase() == "twitter")) {
-					return socialMediaCache.push(x);
+					return socialMediaCache[0] = x;
 				}
 			}),
 		//Then, take the array and assign the entries to the appropriate elements
