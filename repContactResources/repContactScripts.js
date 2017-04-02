@@ -203,7 +203,7 @@ function resultsTemplateFill() {
 			socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible"))
 		//Otherwise, search the Reps' channels property for Facebook and Twitter values
 		:	(value.channels.forEach(function(x) {
-				if ((x.type.toLowerCase() == "facebook" || x.type.toLowerCase() == "twitter") && (socialMediaCache.length === 0)) {
+				/*if ((x.type.toLowerCase() == "facebook" || x.type.toLowerCase() == "twitter") && (socialMediaCache.length === 0)) {
 					return socialMediaCache[0] = x;
 				}
 				else if ((x.type.toLowerCase() == "facebook") && (socialMediaCache[0].type.toLowerCase() == "facebook")) {
@@ -217,11 +217,17 @@ function resultsTemplateFill() {
 				}
 				else if ((x.type.toLowerCase() == "twitter") && (socialMediaCache[0].type.toLowerCase() == "twitter")) {
 					return socialMediaCache[0] = x;
+				}*/
+				if (x.type.toLowerCase() == "facebook") {
+					return socialMediaCache[0] = x;
+				}
+				else if (x.type.toLowerCase() == "twitter") {
+					return socialMediaCache[1] = x;
 				}
 			}),
 		//Then, take the array and assign the entries to the appropriate elements
 			socialMediaCache.forEach(function(val, num) {
-				if (socialMediaCache.length > 2) {
+				/*if (socialMediaCache.length > 2) {
                     socialMediaCache = socialMediaCache.slice(socialMediaCache.length - 1);
                     socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
                     socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
@@ -234,7 +240,23 @@ function resultsTemplateFill() {
 					socialMediaIconGroup[index][0].classList.add(val.type.toLowerCase() + "Icon");
 					socialMediaLinkGroup[index][0].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
 					socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible");
-				}
+				}*/
+
+				if ((socialMediaCache.length === 2) && (socialMediaCache[0] === undefined)) {
+					socialMediaCache = socialMediaCache.pop();
+                   socialMediaIconGroup[index][0].classList.add(val.type.toLowerCase() + "Icon");
+                   socialMediaLinkGroup[index][0].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
+                   socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible");
+               }
+               else if (socialMediaCache.length === 2) {
+					socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
+					socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
+               }
+               else if (socialMediaCache.length === 1) {
+					socialMediaIconGroup[index][0].classList.add(val.type.toLowerCase() + "Icon");
+					socialMediaLinkGroup[index][0].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
+					socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible");
+               }
 			}),
 			//Finally, empty the cache array of social media info, so it will be empty for next Rep
 			socialMediaCache = []
