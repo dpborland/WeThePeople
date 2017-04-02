@@ -213,7 +213,7 @@ function resultsTemplateFill() {
 					return socialMediaCache.unshift(x);
 				}
 				else if ((x.type.toLowerCase() == "twitter") && (socialMediaCache[0].type.toLowerCase() == "facebook")) {
-					return socialMediaCache.[1] = x;
+					return socialMediaCache[1] = x;
 				}
 				else if ((x.type.toLowerCase() == "twitter") && (socialMediaCache[0].type.toLowerCase() == "twitter")) {
 					return socialMediaCache.push(x);
