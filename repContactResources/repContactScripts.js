@@ -206,10 +206,10 @@ function resultsTemplateFill() {
 				if ((x.type.toLowerCase() == "facebook" || x.type.toLowerCase() == "twitter") && (socialMediaCache[0] === undefined)) {
 					return socialMediaCache[0] = x;
 				}
-				else if (x.type.toLowerCase() == "facebook") {
+				else if ((x.type.toLowerCase() == "facebook") && (socialMediaCache[0] !== undefined)) {
 					return socialMediaCache.unshift(x);
 				}
-				else if (x.type.toLowerCase() == "twitter") {
+				else if ((x.type.toLowerCase() == "twitter") && (socialMediaCache[0] !== undefined)) {
 					return socialMediaCache.push(x);
 				}
 			}),
