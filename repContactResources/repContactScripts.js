@@ -203,7 +203,7 @@ function resultsTemplateFill() {
 			socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible"))
 		//Otherwise, search the Reps' channels property for Facebook and Twitter values
 		:	(value.channels.forEach(function(x) {
-				if ((x.type.toLowerCase() == "facebook" || x.type.toLowerCase() == "twitter") && (socialMediaCache[0] === undefined)) {
+				if ((x.type.toLowerCase() == "facebook" || x.type.toLowerCase() == "twitter") && (socialMediaCache.length === 0)) {
 					return socialMediaCache[0] = x;
 				}
 				else if ((x.type.toLowerCase() == "facebook") && (socialMediaCache[0].type.toLowerCase() == "facebook")) {
