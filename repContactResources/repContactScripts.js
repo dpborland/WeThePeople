@@ -203,21 +203,20 @@ function resultsTemplateFill() {
 			socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible"))
 		//Otherwise, search the Reps' channels property for Facebook and Twitter values
 		:	(value.channels.forEach(function(x) {
-				if ((x.type.toLowerCase() == "facebook") && (socialMediaCache[0] === undefined)) {
+				if ((x.type.toLowerCase() == "facebook" || x.type.toLowerCase() == "twitter") && (socialMediaCache[0] === undefined)) {
 					return socialMediaCache[0] = x;
 				}
-				else if ((x.type.toLowerCase() == "twitter") && (socialMediaCache[0] === undefined)) {
-					return socialMediaCache[0] = x;
+				else if (x.type.toLowerCase() == "facebook") {
+					return socialMediaCache.unshift(x);
 				}
-				else {
-					return socialMediaCache[1] = x;
+				else if (x.type.toLowerCase() == "twitter") {
+					return socialMediaCache.push(x);
 				}
 			}),
 		//Then, take the array and assign the entries to the appropriate elements
 			socialMediaCache.forEach(function(val, num) {
 				if (socialMediaCache.length > 2) {
-                    val.type.toLowerCase() == "facebook" ? socialMediaCache[0] = val : socialMediaCache[1] = val;
-                    socialMediaCache.slice(socialMediaCache.length - 1);
+                    socialMediaCache = socialMediaCache.slice(socialMediaCache.length - 1);
                     socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
                     socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
                 }
