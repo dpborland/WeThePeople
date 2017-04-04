@@ -178,7 +178,7 @@ function resultsTemplateFill() {
 			: repTitle[index].textContent = value.party;
 
 	//Fills the rep's address.  The repAddressOptional holds a place for 3 line addresses
-		value.address[0].line2 === undefined ? (repAddressOptional[index].style = "height: 0px",
+		value.address === undefined || value.address[0].line2 === undefined ? (repAddressOptional[index].style = "height: 0px",
 				repAddressOptional[index].style = "margin-top: none",
 				repAddressOne[index].textContent = value.address[0].line1,
 				repAddressTwo[index].textContent = value.address[0].city + ", " + value.address[0].state + " " + value.address[0].zip)
