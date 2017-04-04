@@ -181,7 +181,7 @@ function resultsTemplateFill() {
 		if (value.address === undefined) {
             repAddressOptional[index].style = "height: 0px";
             repAddressOptional[index].style = "margin-top: none";
-            repAddressOne[index].textContent = "No address found";
+            repAddressOne[index].textContent = "Address unknown";
         }
 		else if (value.address[0].line2 === undefined) {
             repAddressOptional[index].style = "height: 0px";
@@ -200,7 +200,7 @@ function resultsTemplateFill() {
 			: repPhone[index].textContent = value.phones;
 
 	//Fills the rep's website
-		value.urls[0] === undefined ? (repWebsite[index].textContent = "")
+		value.urls === undefined ? (repWebsite[index].textContent = "")
 			:	(repWebsite[index].textContent = "Visit my Website",
 				repWebsite[index].href = value.urls[0]);
 
