@@ -201,23 +201,8 @@ function resultsTemplateFill() {
 		value.channels === undefined ?
 			(socialMediaIconGroup[index][0].classList.add("socialMediaIconInvisible"),
 			socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible"))
-		//Otherwise, search the Reps' channels property for Facebook and Twitter values
+		//Otherwise, search the Reps' channels property for Facebook and Twitter values, and add them to the social media cache
 		:	(value.channels.forEach(function(x) {
-				/*if ((x.type.toLowerCase() == "facebook" || x.type.toLowerCase() == "twitter") && (socialMediaCache.length === 0)) {
-					return socialMediaCache[0] = x;
-				}
-				else if ((x.type.toLowerCase() == "facebook") && (socialMediaCache[0].type.toLowerCase() == "facebook")) {
-					return socialMediaCache[0] = x;
-				}
-				else if ((x.type.toLowerCase() == "facebook") && (socialMediaCache[0].type.toLowerCase() == "twitter")){
-					return socialMediaCache.unshift(x);
-				}
-				else if ((x.type.toLowerCase() == "twitter") && (socialMediaCache[0].type.toLowerCase() == "facebook")) {
-					return socialMediaCache[1] = x;
-				}
-				else if ((x.type.toLowerCase() == "twitter") && (socialMediaCache[0].type.toLowerCase() == "twitter")) {
-					return socialMediaCache[0] = x;
-				}*/
 				if (x.type.toLowerCase() == "facebook") {
 					return socialMediaCache[0] = x;
 				}
@@ -225,33 +210,21 @@ function resultsTemplateFill() {
 					return socialMediaCache[1] = x;
 				}
 			}),
-		//Then, take the array and assign the entries to the appropriate elements
+		//Then, for each cache array index, assign the values to the appropriate elements
 			socialMediaCache.forEach(function(val, num) {
-				/*if (socialMediaCache.length > 2) {
-                    socialMediaCache = socialMediaCache.slice(socialMediaCache.length - 1);
-                    socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
-                    socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
-                }
-				else if (socialMediaCache.length === 2) {
-					socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
-					socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
-               }
-               else if (socialMediaCache.length === 1) {
-					socialMediaIconGroup[index][0].classList.add(val.type.toLowerCase() + "Icon");
-					socialMediaLinkGroup[index][0].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
-					socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible");
-				}*/
-
+			//If the Rep only has a Twitter account, pops empty Facebook array index 0, fills first div element with Twitter data, hides second div
 				if ((socialMediaCache.length === 2) && (socialMediaCache[0] === undefined)) {
 					socialMediaCache = socialMediaCache.pop();
                    socialMediaIconGroup[index][0].classList.add(val.type.toLowerCase() + "Icon");
                    socialMediaLinkGroup[index][0].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
                    socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible");
                }
+            //If Rep has both a Facebook and Twitter, fills first div element with Facebook data, fills second div element with Twitter data
                else if (socialMediaCache.length === 2) {
 					socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
 					socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
                }
+            //If Rep only has a Facebook, fills first div element, hides second
                else if (socialMediaCache.length === 1) {
 					socialMediaIconGroup[index][0].classList.add(val.type.toLowerCase() + "Icon");
 					socialMediaLinkGroup[index][0].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
