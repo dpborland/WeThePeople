@@ -178,14 +178,22 @@ function resultsTemplateFill() {
 			: repTitle[index].textContent = value.party;
 
 	//Fills the rep's address.  The repAddressOptional holds a place for 3 line addresses
-		value.address === undefined || value.address[0].line2 === undefined ? (repAddressOptional[index].style = "height: 0px",
-				repAddressOptional[index].style = "margin-top: none",
-				repAddressOne[index].textContent = value.address[0].line1,
-				repAddressTwo[index].textContent = value.address[0].city + ", " + value.address[0].state + " " + value.address[0].zip)
-			:
-            (repAddressOptional[index].textContent = value.address[0].line1,
-                repAddressOne[index].textContent = value.address[0].line2,
-                repAddressTwo[index].textContent = value.address[0].city + ", " + value.address[0].state + " " + value.address[0].zip);
+		if (value.address === undefined) {
+            repAddressOptional[index].style = "height: 0px";
+            repAddressOptional[index].style = "margin-top: none";
+            repAddressOne[index].textContent = "No address found";
+        }
+		else if (value.address[0].line2 === undefined) {
+            repAddressOptional[index].style = "height: 0px";
+            repAddressOptional[index].style = "margin-top: none";
+            repAddressOne[index].textContent = value.address[0].line1;
+            repAddressTwo[index].textContent = value.address[0].city + ", " + value.address[0].state + " " + value.address[0].zip;
+        }
+		else {
+            repAddressOptional[index].textContent = value.address[0].line1;
+            repAddressOne[index].textContent = value.address[0].line2;
+            repAddressTwo[index].textContent = value.address[0].city + ", " + value.address[0].state + " " + value.address[0].zip;
+        }
 
 	//If a phone number exists in the JSON, it is added.  Otherwise a filler message is added
 		value.phones === undefined ? repPhone[index].textContent = "Phone Number Unknown"
