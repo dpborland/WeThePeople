@@ -9,15 +9,21 @@ function makeRequest(e) {
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
 	request.then(function(response) {
 		queryResponse = response;
+		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
+		window.location.href = "http://contactmyreps.com/results.html";
+	}).catch(function(response) {
+		if ((response.result.error.message == "No address provided") || (response.result.error.message == "Failed to parse address")) {
+            alert("Please enter a valid address");
+		}
 	});
 	e.preventDefault();
 
-	queryResponse === undefined ?
+	/*queryResponse === undefined ?
         alert("Please enter a valid address")
 	: (
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse)),
         window.location.href = "http://contactmyreps.com/results.html"
-	);
+	);*/
 
 }
 
@@ -206,13 +212,13 @@ function resultsTemplateFill() {
 			(socialMediaIconGroup[index][0].classList.add("socialMediaIconInvisible"),
 			socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible"))
 		//Otherwise, search the Reps' channels property for Facebook and Twitter values, and add them to the social media cache
-		:	(value.channels.forEach(function(x) {
-				if (x.type.toLowerCase() == "facebook") {
-					return socialMediaCache[0] = x;
-				}
-				else if (x.type.toLowerCase() == "twitter") {
-					return socialMediaCache[1] = x;
-				}
+			:	(value.channels.forEach(function(x) {
+					if (x.type.toLowerCase() == "facebook") {
+						return socialMediaCache[0] = x;
+					}
+					else if (x.type.toLowerCase() == "twitter") {
+						return socialMediaCache[1] = x;
+					}
 			}),
 		//Then, for each cache array index, assign the values to the appropriate elements
 			socialMediaCache.forEach(function(val, num) {
