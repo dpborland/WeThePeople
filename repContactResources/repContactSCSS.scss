@@ -267,7 +267,7 @@ body {
 			flex-direction: row;
 			max-height: 250px;
 			padding: 10px;
-			align-content: space-between;
+			justify-content: space-between;
 		}
 		@media #{$phone-break-large} {
 			order: 1;

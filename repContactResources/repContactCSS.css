@@ -233,7 +233,7 @@ body {
         flex-direction: row;
         max-height: 250px;
         padding: 10px;
-        align-content: space-between; } }
+        justify-content: space-between; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
       .contentWrapper .repsWrapper {
         order: 1;
