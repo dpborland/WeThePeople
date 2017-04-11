@@ -230,7 +230,7 @@ body {
       .contentWrapper .repsWrapper {
         order: 1;
         flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: row;
         max-height: 250px;
         padding: 10px;
         align-content: space-between; } }
@@ -258,7 +258,7 @@ body {
         .contentWrapper .repsWrapper .repImgContainer {
           order: 1;
           height: 160px;
-          width: 121px;
+          width: 111px;
           border-right: none;
           padding-right: 0px;
           margin-bottom: 10px;
@@ -274,7 +274,7 @@ body {
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repImgContainer img {
             height: 160px;
-            width: 121px;
+            width: 111px;
             border-right: none;
             padding-right: 15px;
             margin-bottom: 5px; } }
@@ -374,11 +374,17 @@ body {
             font-size: 1.2em;
             font-weight: bold;
             margin-top: 0px; } }
+        @media screen and (min-width 200px) and (max-width: 250px) {
+          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
+            font-size: 1em; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
             font-size: 1.2em;
             font-weight: bold;
             margin-top: 0px; } }
+        @media screen and (min-width 350px) and (max-width: 450px) {
+          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
+            font-size: 1.1em; } }
       @media screen and (min-width: 200px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repInfo .repAddressTwo {
           font-size: 1.2em;
@@ -444,7 +450,7 @@ body {
         .contentWrapper .repsWrapper .repSocialMedia {
           order: 2;
           margin: 0;
-          width: 121px;
+          width: 111px;
           padding-left: 0;
           border-left: none; } }
       .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {

@@ -1,6 +1,9 @@
 $phone-break-large: "screen and (min-width: 350px) and (max-width: 550px)";
+$phone-break-large-text-adjust: "screen and (min-width 350px) and (max-width: 450px)";
 $phone-break-small: "screen and (min-width: 200px) and (max-width: 349px)";
+$phone-break-small-text-adjust: "screen and (min-width 200px) and (max-width: 250px)";
 $tablet-break: "screen and (min-width: 551px) and (max-width: 850px)";
+
 
 html {
 	height: 100%;
@@ -261,7 +264,7 @@ body {
 		@media #{$phone-break-small} {
 			order: 1;
 			flex-wrap: wrap;
-			justify-content: space-between;
+			flex-direction: row;
 			max-height: 250px;
 			padding: 10px;
 			align-content: space-between;
@@ -290,7 +293,7 @@ body {
 			@media #{$phone-break-large} {
 				order: 1;
 				height: 160px;
-				width: 121px;
+				width: 111px;
 				border-right: none;
 				padding-right: 0px;
 				margin-bottom: 10px;
@@ -307,7 +310,7 @@ body {
 				}
 				@media #{$phone-break-large} {
 					height: 160px;
-					width: 121px;
+					width: 111px;
 					border-right: none;
 					padding-right: 15px;
 					margin-bottom: 5px;
@@ -413,12 +416,18 @@ body {
 				@media #{$phone-break-small} {
 					font-size: 1.2em;
 					font-weight: bold;
-					margin-top: 0px
+					margin-top: 0px;
+				}
+				@media #{$phone-break-small-text-adjust} {
+					font-size: 1em;
 				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
 					font-weight: bold;
 					margin-top: 0px;
+				}
+				@media #{$phone-break-large-text-adjust} {
+					font-size: 1.1em;
 				}
 			}
 			.repAddressTwo {
@@ -496,7 +505,7 @@ body {
 			@media #{$phone-break-large} {
 				order: 2;
 				margin:	0;
-				width: 121px;
+				width: 111px;
 				padding-left: 0;
 				border-left: none;
 			}

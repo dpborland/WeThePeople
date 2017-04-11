@@ -115,15 +115,10 @@ if (document.querySelector(".linksWrapper")) {
 }
 
 
-//---Test Scripts---//
-
-
-
 //--- Puts together the basic results page ---//
 
 function constructResultsTemplate() {
 	let numberNeeded = queryResponse1.result.officials.length;
-	//let numberNeeded = 26;
 	let template = document.querySelector(".repsWrapper");
 	let contentWrapper = document.querySelector(".contentWrapper");
 	let templateArray = [];
@@ -135,8 +130,7 @@ function constructResultsTemplate() {
 };
 
 
-//--- Fills the results template with appropriate info --//
-
+//--- Fills the results template with appropriate info ---//
 
 function resultsTemplateFill() {
 	let repsArray = queryResponse1.result.officials;
@@ -155,6 +149,8 @@ function resultsTemplateFill() {
 	let socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
 	let socialMediaIconGroup = [];
 	let socialMediaCache = [];
+    let titles = queryResponse1.result.offices;
+
 // Creates new array that groups social media elements into sub-arrays for easier processing
 	while (socialMediaIcon.length > 0) {
         socialMediaIconGroup.push(socialMediaIcon.splice(0, 2));
@@ -174,8 +170,8 @@ function resultsTemplateFill() {
 		repName[index].textContent = value.name;
 
 	//Fills rep's title and party (if available)
-		value.party === undefined || value.party === "Unknown" ? repTitle[index].textContent = "Party Unknown"
-			: repTitle[index].textContent = value.party;
+		value.party === undefined || value.party === "Unknown" ? repTitle[index].textContent = "Party Unknown - "
+			: repTitle[index].textContent = "(" + value.party.slice(0, 1) + ") - ";
 
 	//Fills the rep's address.  The repAddressOptional holds a place for 3 line addresses
 		if (value.address === undefined) {
@@ -220,14 +216,14 @@ function resultsTemplateFill() {
 			}),
 		//Then, for each cache array index, assign the values to the appropriate elements
 			socialMediaCache.forEach(function(val, num) {
-			//If the Rep only has a Twitter account, pops empty Facebook array index 0, fills first div element with Twitter data, hides second div
+			//If the Rep only has a Twitter account, pops empty Facebook index 0, fills first div element with Twitter data, hides second div
 				if ((socialMediaCache.length === 2) && (socialMediaCache[0] === undefined)) {
 					socialMediaCache = socialMediaCache.pop();
                    socialMediaIconGroup[index][0].classList.add(val.type.toLowerCase() + "Icon");
                    socialMediaLinkGroup[index][0].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
                    socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible");
                }
-            //If Rep has both a Facebook and Twitter, fills first div element with Facebook data, fills second div element with Twitter data
+            //If Rep has both a Facebook and Twitter, fills first div element with Facebook data and second div element with Twitter data
                else if (socialMediaCache.length === 2) {
 					socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
 					socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
@@ -243,6 +239,16 @@ function resultsTemplateFill() {
 			socialMediaCache = []
 			);
 
+	//Combs through the official indices property of the offices branch to cross reference the Reps' index
+        titles.forEach(function(x) {
+            x.officialIndices.forEach(function(y) {
+                if (y === index) {
+                    repTitle[index].textContent += x.name.replace("United States", "US");
+                };
+            });
+        });
+
 	});
 
 }
+
