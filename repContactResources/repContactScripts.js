@@ -12,7 +12,7 @@ function makeRequest(e) {
 	}).then(function() {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
-    });.then(function() {
+    }).then(function() {
     	console.log("ok");
 	});
 
