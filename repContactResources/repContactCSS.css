@@ -115,114 +115,114 @@ body {
     cursor: pointer;
     transition: color .4s ease, background-color .4s ease; }
 
-.titleFormWrapper {
+.contentWrapper {
+  width: 70%;
+  height: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 25px; }
+  align-self: center;
+  overflow-y: scroll; }
   @media screen and (min-width: 200px) and (max-width: 349px) {
-    .titleFormWrapper {
-      order: 1;
-      padding-bottom: 80px; } }
+    .contentWrapper {
+      height: 85%;
+      width: 95%; } }
   @media screen and (min-width: 350px) and (max-width: 550px) {
-    .titleFormWrapper {
-      order: 1;
-      padding-bottom: 80px; } }
-  .titleFormWrapper .title {
-    font-weight: 100;
-    font-size: 7em;
-    /*color: rgba(0, 0, 107, 0.5);*/
-    color: rgba(147, 27, 56, 0.9);
-    margin-top: 0px;
-    margin-bottom: 15px;
-    line-height: 100px; }
-    @media screen and (min-width: 200px) and (max-width: 349px) {
-      .titleFormWrapper .title {
-        margin-bottom: 20px;
-        font-size: 30vw; } }
-    @media screen and (min-width: 350px) and (max-width: 550px) {
-      .titleFormWrapper .title {
-        margin-bottom: 20px; } }
-    @media screen and (min-width: 551px) and (max-width: 850px) {
-      .titleFormWrapper .title {
-        margin-bottom: 20px; } }
-  .titleFormWrapper .introText {
-    font-family: open sans condensed;
-    color: darkblue;
-    text-align-last: justify;
-    font-size: 1.3em;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    line-height: 25px; }
-    @media screen and (min-width: 200px) and (max-width: 349px) {
-      .titleFormWrapper .introText {
-        font-size: 6vw;
-        line-height: 26px; } }
-    @media screen and (min-width: 350px) and (max-width: 550px) {
-      .titleFormWrapper .introText {
-        font-size: 1.4em;
-        line-height: 30px; } }
-    @media screen and (min-width: 551px) and (max-width: 850px) {
-      .titleFormWrapper .introText {
-        margin-top: 0px; } }
-    .titleFormWrapper .introText .underTitle {
-      font-size: 1.3em;
-      color: rgba(147, 27, 56, 0.9); }
-  .titleFormWrapper .addressSearch {
-    display: flex;
-    justify-content: center; }
-    @media screen and (min-width: 200px) and (max-width: 349px) {
-      .titleFormWrapper .addressSearch {
-        width: 95%; } }
-    @media screen and (min-width: 350px) and (max-width: 550px) {
-      .titleFormWrapper .addressSearch {
-        width: 95%; } }
-    .titleFormWrapper .addressSearch .addressSearchBar {
-      border: 2px solid darkred;
-      height: 40px;
-      width: 273px;
-      background-color: rgba(248, 248, 255, 0.3);
-      padding-left: 15px;
-      padding-right: 15px;
-      font-family: open sans condensed;
-      color: darkred;
-      font-size: 1.5em;
-      transition: background-color .4s ease; }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .titleFormWrapper .addressSearch .addressSearchBar {
-          width: 295px;
-          font-size: 1.3em; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .titleFormWrapper .addressSearch .addressSearchBar {
-          width: 295px; } }
-    .titleFormWrapper .addressSearch .addressSearchBar::-webkit-input-placeholder {
-      color: darkblue;
-      opacity: .3; }
-    .titleFormWrapper .addressSearch .addressSearchBar:focus {
-      background-color: rgba(248, 248, 255, 0.7);
-      transition: background-color .4s ease; }
-  .titleFormWrapper .contentWrapper {
-    width: 70%;
-    height: 90%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    .contentWrapper {
+      height: 85%;
+      width: 95%; } }
+  @media screen and (min-width: 551px) and (max-width: 850px) {
+    .contentWrapper {
+      width: 90%; } }
+  .contentWrapper .titleFormWrapper {
     display: flex;
     flex-direction: column;
-    align-self: center;
-    overflow-y: scroll; }
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px; }
     @media screen and (min-width: 200px) and (max-width: 349px) {
-      .titleFormWrapper .contentWrapper {
-        height: 85%;
-        width: 95%; } }
+      .contentWrapper .titleFormWrapper {
+        order: 1;
+        padding-bottom: 80px; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
-      .titleFormWrapper .contentWrapper {
-        height: 85%;
-        width: 95%; } }
-    @media screen and (min-width: 551px) and (max-width: 850px) {
-      .titleFormWrapper .contentWrapper {
-        width: 90%; } }
-    .titleFormWrapper .contentWrapper .repsWrapper {
+      .contentWrapper .titleFormWrapper {
+        order: 1;
+        padding-bottom: 80px; } }
+    .contentWrapper .titleFormWrapper .title {
+      font-weight: 100;
+      font-size: 7em;
+      /*color: rgba(0, 0, 107, 0.5);*/
+      color: rgba(147, 27, 56, 0.9);
+      margin-top: 0px;
+      margin-bottom: 15px;
+      line-height: 100px; }
+      @media screen and (min-width: 200px) and (max-width: 349px) {
+        .contentWrapper .titleFormWrapper .title {
+          margin-bottom: 20px;
+          font-size: 30vw; } }
+      @media screen and (min-width: 350px) and (max-width: 550px) {
+        .contentWrapper .titleFormWrapper .title {
+          margin-bottom: 20px; } }
+      @media screen and (min-width: 551px) and (max-width: 850px) {
+        .contentWrapper .titleFormWrapper .title {
+          margin-bottom: 20px; } }
+    .contentWrapper .titleFormWrapper .introText {
+      font-family: open sans condensed;
+      color: darkblue;
+      text-align-last: justify;
+      font-size: 1.3em;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      line-height: 25px; }
+      @media screen and (min-width: 200px) and (max-width: 349px) {
+        .contentWrapper .titleFormWrapper .introText {
+          font-size: 6vw;
+          line-height: 26px; } }
+      @media screen and (min-width: 350px) and (max-width: 550px) {
+        .contentWrapper .titleFormWrapper .introText {
+          font-size: 1.4em;
+          line-height: 30px; } }
+      @media screen and (min-width: 551px) and (max-width: 850px) {
+        .contentWrapper .titleFormWrapper .introText {
+          margin-top: 0px; } }
+      .contentWrapper .titleFormWrapper .introText .underTitle {
+        font-size: 1.3em;
+        color: rgba(147, 27, 56, 0.9); }
+    .contentWrapper .titleFormWrapper .addressSearch {
+      display: flex;
+      justify-content: center; }
+      @media screen and (min-width: 200px) and (max-width: 349px) {
+        .contentWrapper .titleFormWrapper .addressSearch {
+          width: 95%; } }
+      @media screen and (min-width: 350px) and (max-width: 550px) {
+        .contentWrapper .titleFormWrapper .addressSearch {
+          width: 95%; } }
+      .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar {
+        border: 2px solid darkred;
+        height: 40px;
+        width: 273px;
+        background-color: rgba(248, 248, 255, 0.3);
+        padding-left: 15px;
+        padding-right: 15px;
+        font-family: open sans condensed;
+        color: darkred;
+        font-size: 1.5em;
+        transition: background-color .4s ease; }
+        @media screen and (min-width: 200px) and (max-width: 349px) {
+          .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar {
+            width: 295px;
+            font-size: 1.3em; } }
+        @media screen and (min-width: 350px) and (max-width: 550px) {
+          .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar {
+            width: 295px; } }
+      .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar::-webkit-input-placeholder {
+        color: darkblue;
+        opacity: .3; }
+      .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar:focus {
+        background-color: rgba(248, 248, 255, 0.7);
+        transition: background-color .4s ease; }
+    .contentWrapper .titleFormWrapper .repsWrapper {
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
@@ -237,7 +237,7 @@ body {
       font-family: open sans condensed;
       background: rgba(248, 248, 255, 0.4); }
       @media screen and (min-width: 200px) and (max-width: 349px) {
-        .titleFormWrapper .contentWrapper .repsWrapper {
+        .contentWrapper .titleFormWrapper .repsWrapper {
           order: 1;
           flex-wrap: wrap;
           flex-direction: row;
@@ -245,13 +245,13 @@ body {
           padding: 10px;
           justify-content: space-between; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
-        .titleFormWrapper .contentWrapper .repsWrapper {
+        .contentWrapper .titleFormWrapper .repsWrapper {
           order: 1;
           flex-wrap: wrap;
           justify-content: space-between;
           padding: 15px;
           max-height: 250px; } }
-      .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer {
+      .contentWrapper .titleFormWrapper .repsWrapper .repImgContainer {
         height: 250px;
         width: 201px;
         display: block;
@@ -262,10 +262,10 @@ body {
         background-size: cover;
         overflow: hidden; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer {
+          .contentWrapper .titleFormWrapper .repsWrapper .repImgContainer {
             display: none; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer {
+          .contentWrapper .titleFormWrapper .repsWrapper .repImgContainer {
             order: 1;
             height: 160px;
             width: 111px;
@@ -273,22 +273,22 @@ body {
             padding-right: 0px;
             margin-bottom: 10px;
             background-position: center center; } }
-        .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer img {
+        .contentWrapper .titleFormWrapper .repsWrapper .repImgContainer img {
           height: 250px;
           width: 231px;
           opacity: 0;
           filter: alpha(opacity=0); }
           @media screen and (min-width: 200px) and (max-width: 349px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer img {
+            .contentWrapper .titleFormWrapper .repsWrapper .repImgContainer img {
               display: none; } }
           @media screen and (min-width: 350px) and (max-width: 550px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer img {
+            .contentWrapper .titleFormWrapper .repsWrapper .repImgContainer img {
               height: 160px;
               width: 111px;
               border-right: none;
               padding-right: 15px;
               margin-bottom: 5px; } }
-      .titleFormWrapper .contentWrapper .repsWrapper .repInfo {
+      .contentWrapper .titleFormWrapper .repsWrapper .repInfo {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -297,7 +297,7 @@ body {
         padding-left: 20px;
         border-left: 1px solid rgba(248, 248, 255, 0.7); }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .titleFormWrapper .contentWrapper .repsWrapper .repInfo {
+          .contentWrapper .titleFormWrapper .repsWrapper .repInfo {
             order: 1;
             height: 197px;
             max-width: 75%;
@@ -306,7 +306,7 @@ body {
             margin-left: 0;
             border-left: none; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .titleFormWrapper .contentWrapper .repsWrapper .repInfo {
+          .contentWrapper .titleFormWrapper .repsWrapper .repInfo {
             order: 3;
             height: 210px;
             justify-content: space-between;
@@ -314,7 +314,7 @@ body {
             margin-left: 0px;
             padding-left: 15px;
             border-left: 1px solid rgba(248, 248, 255, 0.7); } }
-        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repName {
+        .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repName {
           font-size: 3em;
           line-height: 95%;
           margin-top: -5px;
@@ -323,21 +323,21 @@ body {
           justify-content: flex-end;
           color: darkred; }
           @media screen and (min-width: 200px) and (max-width: 349px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repName {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repName {
               font-size: 10vw;
               text-align: left;
               margin-top: -2px; } }
           @media screen and (min-width: 350px) and (max-width: 550px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repName {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repName {
               font-size: 6.5vw;
               text-align: left;
               margin-top: -2px; } }
           @media screen and (min-width: 551px) and (max-width: 850px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repName {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repName {
               font-size: 2.4em;
               text-align: left;
               margin-top: -4px; } }
-        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repTitle {
+        .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repTitle {
           display: flex;
           font-size: 1.3em;
           font-weight: 100;
@@ -346,95 +346,95 @@ body {
           margin-top: 0px;
           margin-bottom: -5px; }
           @media screen and (min-width: 200px) and (max-width: 349px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repTitle {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repTitle {
               font-size: 1em;
               margin-top: 0;
               margin-bottom: 0; } }
           @media screen and (min-width: 350px) and (max-width: 550px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repTitle {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repTitle {
               font-size: 1.1em;
               margin-top: 3px;
               margin-bottom: 0; } }
-        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+        .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressOptionalLine {
           font-size: 1.3em;
           font-weight: 100;
           color: darkblue;
           margin-top: 3px;
           margin-bottom: 0px; }
           @media screen and (min-width: 200px) and (max-width: 349px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressOptionalLine {
               font-size: 1.1em;
               margin-top: 10px;
               height: 27px; } }
           @media screen and (min-width: 350px) and (max-width: 550px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressOptionalLine {
               font-size: 1.2em;
               margin-top: 10px; } }
           @media screen and (min-width: 551px) and (max-width: 850px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressOptionalLine {
               margin-bottom: 0px; } }
-        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOne, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+        .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repWebsite {
           font-size: 1.3em;
           font-weight: 100;
           color: darkblue;
           margin-top: 0px;
           margin-bottom: 0px; }
           @media screen and (min-width: 200px) and (max-width: 349px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOne, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repWebsite {
               font-size: 1.2em;
               font-weight: bold;
               margin-top: 0px; } }
           @media screen and (min-width 200px) and (max-width: 250px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOne, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repWebsite {
               font-size: 1em; } }
           @media screen and (min-width: 350px) and (max-width: 550px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOne, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repWebsite {
               font-size: 1.2em;
               font-weight: bold;
               margin-top: 0px; } }
           @media screen and (min-width 350px) and (max-width: 450px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOne, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repWebsite {
               font-size: 1.1em; } }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+          .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressTwo {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 5px; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+          .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repAddressTwo {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 5px; } }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone {
+          .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repPhone {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 0; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone {
+          .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repPhone {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 0; } }
-        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+        .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repWebsite {
           margin-bottom: 5px;
           transition: color .3s ease; }
           @media screen and (min-width: 200px) and (max-width: 349px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repWebsite {
               font-size: 1.2em;
               font-weight: bold;
               margin-bottom: 0; } }
           @media screen and (min-width: 350px) and (max-width: 550px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repWebsite {
               font-size: 1.2em;
               font-weight: bold;
               margin-bottom: 0; } }
           @media screen and (min-width: 551px) and (max-width: 850px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+            .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repWebsite {
               margin-bottom: 10px; } }
-        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
+        .contentWrapper .titleFormWrapper .repsWrapper .repInfo .repWebsite:hover {
           color: darkred;
           transition: color .3s ease; }
-      .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia {
+      .contentWrapper .titleFormWrapper .repsWrapper .repSocialMedia {
         display: flex;
         flex-direction: row;
         align-items: baseline;
@@ -447,7 +447,7 @@ body {
         padding-left: 20px;
         padding-right: 15px; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia {
+          .contentWrapper .titleFormWrapper .repsWrapper .repSocialMedia {
             order: 2;
             flex-direction: column;
             width: auto;
@@ -457,39 +457,39 @@ body {
             padding-right: 0;
             border-left: none; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia {
+          .contentWrapper .titleFormWrapper .repsWrapper .repSocialMedia {
             order: 2;
             margin: 0;
             width: 111px;
             padding-left: 0;
             border-left: none; } }
-        .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
+        .contentWrapper .titleFormWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
           height: 40px;
           width: 40px;
           opacity: .4;
           transition: background .3s ease, opacity .3s ease; }
           @media screen and (min-width: 200px) and (max-width: 349px) {
-            .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
+            .contentWrapper .titleFormWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
               opacity: 1; } }
-      .titleFormWrapper .contentWrapper .repsWrapper .socialMediaIconInvisible {
+      .contentWrapper .titleFormWrapper .repsWrapper .socialMediaIconInvisible {
         display: none; }
-      .titleFormWrapper .contentWrapper .repsWrapper .facebookIcon {
+      .contentWrapper .titleFormWrapper .repsWrapper .facebookIcon {
         background: url("images/Facebook.png");
         background-size: contain; }
-      .titleFormWrapper .contentWrapper .repsWrapper .twitterIcon {
+      .contentWrapper .titleFormWrapper .repsWrapper .twitterIcon {
         background: url("images/Twitter.png");
         background-size: contain; }
-      .titleFormWrapper .contentWrapper .repsWrapper .socialMediaIcon:hover {
+      .contentWrapper .titleFormWrapper .repsWrapper .socialMediaIcon:hover {
         opacity: 1;
         transition: opacity .3s ease; }
-  .titleFormWrapper .repsWrapper:first-child {
+  .contentWrapper .repsWrapper:first-child {
     border-top: none; }
-  .titleFormWrapper .linksWrapper {
+  .contentWrapper .linksWrapper {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 100%; }
-    .titleFormWrapper .linksWrapper .linksList {
+    .contentWrapper .linksWrapper .linksList {
       display: flex;
       flex-direction: column;
       width: 50%;
@@ -505,25 +505,25 @@ body {
       color: darkblue;
       background: rgba(248, 248, 255, 0.4); }
       @media screen and (min-width: 200px) and (max-width: 349px) {
-        .titleFormWrapper .linksWrapper .linksList {
+        .contentWrapper .linksWrapper .linksList {
           width: 100%; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
-        .titleFormWrapper .linksWrapper .linksList {
+        .contentWrapper .linksWrapper .linksList {
           width: 100%; } }
-      .titleFormWrapper .linksWrapper .linksList .linksTitle {
+      .contentWrapper .linksWrapper .linksList .linksTitle {
         font-size: 1.5em;
         color: darkred;
         margin: 13px 0 13px 0;
         transition: color .3s ease; }
-      .titleFormWrapper .linksWrapper .linksList .linksLink {
+      .contentWrapper .linksWrapper .linksList .linksLink {
         text-decoration: none;
         color: darkblue;
         margin-bottom: 8px;
         text-align: left; }
-      .titleFormWrapper .linksWrapper .linksList .linksLink:hover {
+      .contentWrapper .linksWrapper .linksList .linksLink:hover {
         color: darkred;
         transition: color .3s ease; }
-    .titleFormWrapper .linksWrapper .linksDescriptions {
+    .contentWrapper .linksWrapper .linksDescriptions {
       display: flex;
       flex-direction: column;
       width: 50%;
@@ -539,23 +539,23 @@ body {
       color: darkblue;
       background: rgba(248, 248, 255, 0.4); }
       @media screen and (min-width: 200px) and (max-width: 349px) {
-        .titleFormWrapper .linksWrapper .linksDescriptions {
+        .contentWrapper .linksWrapper .linksDescriptions {
           display: none; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
-        .titleFormWrapper .linksWrapper .linksDescriptions {
+        .contentWrapper .linksWrapper .linksDescriptions {
           display: none; } }
-      .titleFormWrapper .linksWrapper .linksDescriptions .linksScreenshot {
+      .contentWrapper .linksWrapper .linksDescriptions .linksScreenshot {
         width: 100%;
         opacity: 0;
         margin-top: 20px;
         padding: 10px;
         background: rgba(248, 248, 255, 0.7);
         transition: opacity .3s ease; }
-      .titleFormWrapper .linksWrapper .linksDescriptions .linksDescriptionsPlaceholder {
+      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsPlaceholder {
         margin: 0px;
         opacity: 1;
         transition: opacity .3s ease; }
-      .titleFormWrapper .linksWrapper .linksDescriptions .linksDescriptionsText {
+      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsText {
         opacity: 0;
         transition: opacity .3s ease; }
 

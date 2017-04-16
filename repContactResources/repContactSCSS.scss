@@ -133,125 +133,123 @@ body {
 			transition: color .4s ease, background-color .4s ease;
 	}
 }
-
-.titleFormWrapper {
+.contentWrapper {
+	width: 70%;
+	height: 90%;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding-top: 25px;
+	align-self: center;
+	overflow-y: scroll;
 	@media #{$phone-break-small} {
-		order: 1;
-		padding-bottom: 80px;
+		height: 85%;
+		width: 95%;
 	}
 	@media #{$phone-break-large} {
-		order: 1;
-		padding-bottom: 80px;
+		height: 85%;
+		width: 95%;
 	}
-
-	.title {
-		font-weight: 100;
-		font-size: 7em;
-		/*color: rgba(0, 0, 107, 0.5);*/
-		color: rgba(147, 27, 56, 0.9);
-		margin-top: 0px;
-		margin-bottom: 15px;
-		line-height: 100px;
-		@media #{$phone-break-small} {
-			margin-bottom: 20px;
-			font-size: 30vw;
-		}
-		@media #{$phone-break-large} {
-			margin-bottom: 20px;
-		}
-		@media #{$tablet-break} {
-			margin-bottom: 20px;
-		}
+	@media #{$tablet-break} {
+		width: 90%;
 	}
-
-	.introText {
-		font-family: open sans condensed;
-		color: darkblue;
-		text-align-last: justify;
-		font-size: 1.3em;
-		margin-top: 0px;
-		margin-bottom: 10px;
-		line-height: 25px;
-		@media #{$phone-break-small} {
-			font-size: 6vw;
-			line-height: 26px;
-		}
-		@media #{$phone-break-large} {
-			font-size: 1.4em;
-			line-height: 30px;
-		}
-		@media #{$tablet-break} {
-			margin-top: 0px;
-		}
-
-		.underTitle {
-			font-size: 1.3em;
-			color: rgba(147, 27, 56, 0.9);
-		}
-	}
-
-	.addressSearch {
-		display: flex;
-		justify-content: center;
-		@media #{$phone-break-small} {
-			width: 95%;
-		}
-		@media #{$phone-break-large} {
-			width: 95%;
-		}
-		.addressSearchBar {
-			border: 2px solid darkred;
-			height: 40px;
-			width: 273px;
-			background-color: rgba(248, 248, 255, .3);
-			padding-left: 15px;
-			padding-right: 15px;
-			font-family: open sans condensed;
-			color: darkred;
-			font-size: 1.5em;
-			transition: background-color .4s ease;
-			@media #{$phone-break-small} {
-				width: 295px;
-				font-size: 1.3em;
-			}
-			@media #{$phone-break-large} {
-				width: 295px;
-			}
-		}
-		.addressSearchBar::-webkit-input-placeholder {
-			color: darkblue;
-			opacity: .3;
-		}
-		.addressSearchBar:focus {
-			background-color: rgba(248, 248, 255, .7);
-			transition: background-color .4s ease;
-		}
-	}
-
-	.contentWrapper {
-		width: 70%;
-		height: 90%;
-		margin-top: 20px;
-		margin-bottom: 20px;
+	.titleFormWrapper {
 		display: flex;
 		flex-direction: column;
-		align-self: center;
-		overflow-y: scroll;
+		justify-content: center;
+		align-items: center;
+		padding-top: 25px;
 		@media #{$phone-break-small} {
-			height: 85%;
-			width: 95%;
+			order: 1;
+			padding-bottom: 80px;
 		}
 		@media #{$phone-break-large} {
-			height: 85%;
-			width: 95%;
+			order: 1;
+			padding-bottom: 80px;
 		}
-		@media #{$tablet-break} {
-			width: 90%;
+
+		.title {
+			font-weight: 100;
+			font-size: 7em;
+			/*color: rgba(0, 0, 107, 0.5);*/
+			color: rgba(147, 27, 56, 0.9);
+			margin-top: 0px;
+			margin-bottom: 15px;
+			line-height: 100px;
+			@media #{$phone-break-small} {
+				margin-bottom: 20px;
+				font-size: 30vw;
+			}
+			@media #{$phone-break-large} {
+				margin-bottom: 20px;
+			}
+			@media #{$tablet-break} {
+				margin-bottom: 20px;
+			}
+		}
+
+		.introText {
+			font-family: open sans condensed;
+			color: darkblue;
+			text-align-last: justify;
+			font-size: 1.3em;
+			margin-top: 0px;
+			margin-bottom: 10px;
+			line-height: 25px;
+			@media #{$phone-break-small} {
+				font-size: 6vw;
+				line-height: 26px;
+			}
+			@media #{$phone-break-large} {
+				font-size: 1.4em;
+				line-height: 30px;
+			}
+			@media #{$tablet-break} {
+				margin-top: 0px;
+			}
+
+			.underTitle {
+				font-size: 1.3em;
+				color: rgba(147, 27, 56, 0.9);
+			}
+		}
+
+		.addressSearch {
+			display: flex;
+			justify-content: center;
+			@media #{$phone-break-small} {
+				width: 95%;
+			}
+			@media #{$phone-break-large} {
+				width: 95%;
+			}
+			.addressSearchBar {
+				border: 2px solid darkred;
+				height: 40px;
+				width: 273px;
+				background-color: rgba(248, 248, 255, .3);
+				padding-left: 15px;
+				padding-right: 15px;
+				font-family: open sans condensed;
+				color: darkred;
+				font-size: 1.5em;
+				transition: background-color .4s ease;
+				@media #{$phone-break-small} {
+					width: 295px;
+					font-size: 1.3em;
+				}
+				@media #{$phone-break-large} {
+					width: 295px;
+				}
+			}
+			.addressSearchBar::-webkit-input-placeholder {
+				color: darkblue;
+				opacity: .3;
+			}
+			.addressSearchBar:focus {
+				background-color: rgba(248, 248, 255, .7);
+				transition: background-color .4s ease;
+			}
 		}
 
 		.repsWrapper {
