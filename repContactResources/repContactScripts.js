@@ -9,19 +9,19 @@ function makeRequest(e) {
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
 	request.then(function(response) {
 		queryResponse = response;
+	}).then(function() {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
+	}).then(function() {
 		window.location.href = "http://contactmyreps.com/results.html";
-	}).catch(function(error) {
-            console.log("error");
-	});
+	}).then(constructResultsTemplate()).then(resultsTemplateFill());
 	e.preventDefault();
 
-	queryResponse === undefined ?
+	/*queryResponse === undefined ?
         alert("Please enter a valid address")
 	: (
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse)),
         window.location.href = "http://contactmyreps.com/results.html"
-	);
+	);*/
 
 }
 

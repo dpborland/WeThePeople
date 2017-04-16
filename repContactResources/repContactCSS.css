@@ -139,7 +139,8 @@ body {
     line-height: 100px; }
     @media screen and (min-width: 200px) and (max-width: 349px) {
       .titleFormWrapper .title {
-        margin-bottom: 20px; } }
+        margin-bottom: 20px;
+        font-size: 30vw; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
       .titleFormWrapper .title {
         margin-bottom: 20px; } }
@@ -156,8 +157,8 @@ body {
     line-height: 25px; }
     @media screen and (min-width: 200px) and (max-width: 349px) {
       .titleFormWrapper .introText {
-        font-size: 1.4em;
-        line-height: 30px; } }
+        font-size: 6vw;
+        line-height: 26px; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
       .titleFormWrapper .introText {
         font-size: 1.4em;
@@ -168,385 +169,394 @@ body {
     .titleFormWrapper .introText .underTitle {
       font-size: 1.3em;
       color: rgba(147, 27, 56, 0.9); }
-  .titleFormWrapper .addressSearchBar {
-    border: 2px solid darkred;
-    height: 40px;
-    width: 273px;
-    background-color: rgba(248, 248, 255, 0.3);
-    padding-left: 15px;
-    padding-right: 15px;
-    font-family: open sans condensed;
-    color: darkred;
-    font-size: 1.5em;
-    transition: background-color .4s ease; }
+  .titleFormWrapper .addressSearch {
+    display: flex;
+    justify-content: center; }
     @media screen and (min-width: 200px) and (max-width: 349px) {
-      .titleFormWrapper .addressSearchBar {
-        width: 295px; } }
+      .titleFormWrapper .addressSearch {
+        width: 95%; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
-      .titleFormWrapper .addressSearchBar {
-        width: 295px; } }
-  .titleFormWrapper .addressSearchBar::-webkit-input-placeholder {
-    color: darkblue;
-    opacity: .3; }
-  .titleFormWrapper .addressSearchBar:focus {
-    background-color: rgba(248, 248, 255, 0.7);
-    transition: background-color .4s ease; }
-
-.contentWrapper {
-  width: 70%;
-  height: 90%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  overflow-y: scroll; }
-  @media screen and (min-width: 200px) and (max-width: 349px) {
-    .contentWrapper {
-      height: 85%;
-      width: 95%; } }
-  @media screen and (min-width: 350px) and (max-width: 550px) {
-    .contentWrapper {
-      height: 85%;
-      width: 95%; } }
-  @media screen and (min-width: 551px) and (max-width: 850px) {
-    .contentWrapper {
-      width: 90%; } }
-  .contentWrapper .repsWrapper {
+      .titleFormWrapper .addressSearch {
+        width: 95%; } }
+    .titleFormWrapper .addressSearch .addressSearchBar {
+      border: 2px solid darkred;
+      height: 40px;
+      width: 273px;
+      background-color: rgba(248, 248, 255, 0.3);
+      padding-left: 15px;
+      padding-right: 15px;
+      font-family: open sans condensed;
+      color: darkred;
+      font-size: 1.5em;
+      transition: background-color .4s ease; }
+      @media screen and (min-width: 200px) and (max-width: 349px) {
+        .titleFormWrapper .addressSearch .addressSearchBar {
+          width: 295px;
+          font-size: 1.3em; } }
+      @media screen and (min-width: 350px) and (max-width: 550px) {
+        .titleFormWrapper .addressSearch .addressSearchBar {
+          width: 295px; } }
+    .titleFormWrapper .addressSearch .addressSearchBar::-webkit-input-placeholder {
+      color: darkblue;
+      opacity: .3; }
+    .titleFormWrapper .addressSearch .addressSearchBar:focus {
+      background-color: rgba(248, 248, 255, 0.7);
+      transition: background-color .4s ease; }
+  .titleFormWrapper .contentWrapper {
+    width: 70%;
+    height: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    width: 100%;
-    box-sizing: border-box;
-    max-height: 350px;
-    padding: 20px;
-    border-top: 1px solid darkred;
-    font-family: open sans condensed;
-    background: rgba(248, 248, 255, 0.4); }
+    align-self: center;
+    overflow-y: scroll; }
     @media screen and (min-width: 200px) and (max-width: 349px) {
-      .contentWrapper .repsWrapper {
-        order: 1;
-        flex-wrap: wrap;
-        flex-direction: row;
-        max-height: 250px;
-        padding: 10px;
-        justify-content: space-between; } }
+      .titleFormWrapper .contentWrapper {
+        height: 85%;
+        width: 95%; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
-      .contentWrapper .repsWrapper {
-        order: 1;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 15px;
-        max-height: 250px; } }
-    .contentWrapper .repsWrapper .repImgContainer {
-      height: 250px;
-      width: 201px;
-      display: block;
-      margin-right: 20px;
-      background-position: center top;
-      background-repeat: no-repeat;
-      -webkit-background-size: cover;
-      background-size: cover;
-      overflow: hidden; }
+      .titleFormWrapper .contentWrapper {
+        height: 85%;
+        width: 95%; } }
+    @media screen and (min-width: 551px) and (max-width: 850px) {
+      .titleFormWrapper .contentWrapper {
+        width: 90%; } }
+    .titleFormWrapper .contentWrapper .repsWrapper {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      align-content: flex-start;
+      width: 100%;
+      box-sizing: border-box;
+      max-height: 350px;
+      padding: 20px;
+      border-top: 1px solid darkred;
+      font-family: open sans condensed;
+      background: rgba(248, 248, 255, 0.4); }
       @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repImgContainer {
-          display: none; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .repsWrapper .repImgContainer {
+        .titleFormWrapper .contentWrapper .repsWrapper {
           order: 1;
-          height: 160px;
-          width: 111px;
-          border-right: none;
-          padding-right: 0px;
-          margin-bottom: 10px;
-          background-position: center center; } }
-      .contentWrapper .repsWrapper .repImgContainer img {
+          flex-wrap: wrap;
+          flex-direction: row;
+          max-height: 250px;
+          padding: 10px;
+          justify-content: space-between; } }
+      @media screen and (min-width: 350px) and (max-width: 550px) {
+        .titleFormWrapper .contentWrapper .repsWrapper {
+          order: 1;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 15px;
+          max-height: 250px; } }
+      .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer {
         height: 250px;
-        width: 231px;
-        opacity: 0;
-        filter: alpha(opacity=0); }
+        width: 201px;
+        display: block;
+        margin-right: 20px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+        overflow: hidden; }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repImgContainer img {
+          .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer {
             display: none; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .contentWrapper .repsWrapper .repImgContainer img {
+          .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer {
+            order: 1;
             height: 160px;
             width: 111px;
             border-right: none;
-            padding-right: 15px;
-            margin-bottom: 5px; } }
-    .contentWrapper .repsWrapper .repInfo {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: baseline;
-      text-align: left;
-      padding-left: 20px;
-      border-left: 1px solid rgba(248, 248, 255, 0.7); }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repInfo {
-          order: 1;
-          height: 197px;
-          max-width: 75%;
-          padding-left: 0;
-          padding-right: 0;
-          margin-left: 0;
-          border-left: none; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .repsWrapper .repInfo {
-          order: 3;
-          height: 210px;
-          justify-content: space-between;
-          max-width: 55%;
-          margin-left: 0px;
-          padding-left: 15px;
-          border-left: 1px solid rgba(248, 248, 255, 0.7); } }
-      .contentWrapper .repsWrapper .repInfo .repName {
-        font-size: 3em;
-        line-height: 95%;
-        margin-top: -5px;
-        margin-bottom: 0px;
-        align-self: flex-start;
-        justify-content: flex-end;
-        color: darkred; }
-        @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repName {
-            font-size: 10vw;
-            text-align: left;
-            margin-top: -2px; } }
-        @media screen and (min-width: 350px) and (max-width: 550px) {
-          .contentWrapper .repsWrapper .repInfo .repName {
-            font-size: 6.5vw;
-            text-align: left;
-            margin-top: -2px; } }
-        @media screen and (min-width: 551px) and (max-width: 850px) {
-          .contentWrapper .repsWrapper .repInfo .repName {
-            font-size: 2.4em;
-            text-align: left;
-            margin-top: -4px; } }
-      .contentWrapper .repsWrapper .repInfo .repTitle {
+            padding-right: 0px;
+            margin-bottom: 10px;
+            background-position: center center; } }
+        .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer img {
+          height: 250px;
+          width: 231px;
+          opacity: 0;
+          filter: alpha(opacity=0); }
+          @media screen and (min-width: 200px) and (max-width: 349px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer img {
+              display: none; } }
+          @media screen and (min-width: 350px) and (max-width: 550px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repImgContainer img {
+              height: 160px;
+              width: 111px;
+              border-right: none;
+              padding-right: 15px;
+              margin-bottom: 5px; } }
+      .titleFormWrapper .contentWrapper .repsWrapper .repInfo {
         display: flex;
-        font-size: 1.3em;
-        font-weight: 100;
-        color: darkred;
-        font-style: italic;
-        margin-top: 0px;
-        margin-bottom: -5px; }
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: baseline;
+        text-align: left;
+        padding-left: 20px;
+        border-left: 1px solid rgba(248, 248, 255, 0.7); }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: 1em;
-            margin-top: 0;
-            margin-bottom: 0; } }
+          .titleFormWrapper .contentWrapper .repsWrapper .repInfo {
+            order: 1;
+            height: 197px;
+            max-width: 75%;
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 0;
+            border-left: none; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: 1.1em;
-            margin-top: 3px;
-            margin-bottom: 0; } }
-      .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-        font-size: 1.3em;
-        font-weight: 100;
-        color: darkblue;
-        margin-top: 3px;
-        margin-bottom: 0px; }
+          .titleFormWrapper .contentWrapper .repsWrapper .repInfo {
+            order: 3;
+            height: 210px;
+            justify-content: space-between;
+            max-width: 55%;
+            margin-left: 0px;
+            padding-left: 15px;
+            border-left: 1px solid rgba(248, 248, 255, 0.7); } }
+        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repName {
+          font-size: 3em;
+          line-height: 95%;
+          margin-top: -5px;
+          margin-bottom: 0px;
+          align-self: flex-start;
+          justify-content: flex-end;
+          color: darkred; }
+          @media screen and (min-width: 200px) and (max-width: 349px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repName {
+              font-size: 10vw;
+              text-align: left;
+              margin-top: -2px; } }
+          @media screen and (min-width: 350px) and (max-width: 550px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repName {
+              font-size: 6.5vw;
+              text-align: left;
+              margin-top: -2px; } }
+          @media screen and (min-width: 551px) and (max-width: 850px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repName {
+              font-size: 2.4em;
+              text-align: left;
+              margin-top: -4px; } }
+        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repTitle {
+          display: flex;
+          font-size: 1.3em;
+          font-weight: 100;
+          color: darkred;
+          font-style: italic;
+          margin-top: 0px;
+          margin-bottom: -5px; }
+          @media screen and (min-width: 200px) and (max-width: 349px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repTitle {
+              font-size: 1em;
+              margin-top: 0;
+              margin-bottom: 0; } }
+          @media screen and (min-width: 350px) and (max-width: 550px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repTitle {
+              font-size: 1.1em;
+              margin-top: 3px;
+              margin-bottom: 0; } }
+        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+          font-size: 1.3em;
+          font-weight: 100;
+          color: darkblue;
+          margin-top: 3px;
+          margin-bottom: 0px; }
+          @media screen and (min-width: 200px) and (max-width: 349px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+              font-size: 1.1em;
+              margin-top: 10px;
+              height: 27px; } }
+          @media screen and (min-width: 350px) and (max-width: 550px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+              font-size: 1.2em;
+              margin-top: 10px; } }
+          @media screen and (min-width: 551px) and (max-width: 850px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+              margin-bottom: 0px; } }
+        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOne, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+          font-size: 1.3em;
+          font-weight: 100;
+          color: darkblue;
+          margin-top: 0px;
+          margin-bottom: 0px; }
+          @media screen and (min-width: 200px) and (max-width: 349px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOne, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+              font-size: 1.2em;
+              font-weight: bold;
+              margin-top: 0px; } }
+          @media screen and (min-width 200px) and (max-width: 250px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOne, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+              font-size: 1em; } }
+          @media screen and (min-width: 350px) and (max-width: 550px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOne, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+              font-size: 1.2em;
+              font-weight: bold;
+              margin-top: 0px; } }
+          @media screen and (min-width 350px) and (max-width: 450px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressOne, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone, .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+              font-size: 1.1em; } }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            font-size: 1.1em;
-            margin-top: 10px;
-            height: 27px; } }
-        @media screen and (min-width: 350px) and (max-width: 550px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            font-size: 1.2em;
-            margin-top: 10px; } }
-        @media screen and (min-width: 551px) and (max-width: 850px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            margin-bottom: 0px; } }
-      .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-        font-size: 1.3em;
-        font-weight: 100;
-        color: darkblue;
-        margin-top: 0px;
-        margin-bottom: 0px; }
-        @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo {
             font-size: 1.2em;
             font-weight: bold;
-            margin-top: 0px; } }
-        @media screen and (min-width 200px) and (max-width: 250px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: 1em; } }
+            margin-bottom: 5px; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repAddressTwo {
             font-size: 1.2em;
             font-weight: bold;
-            margin-top: 0px; } }
-        @media screen and (min-width 350px) and (max-width: 450px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: 1.1em; } }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repInfo .repAddressTwo {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 5px; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .repsWrapper .repInfo .repAddressTwo {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 5px; } }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repInfo .repPhone {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 0; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .repsWrapper .repInfo .repPhone {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 0; } }
-      .contentWrapper .repsWrapper .repInfo .repWebsite {
-        margin-bottom: 5px;
-        transition: color .3s ease; }
+            margin-bottom: 5px; } }
         @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 0; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
-          .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repPhone {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 0; } }
-        @media screen and (min-width: 551px) and (max-width: 850px) {
-          .contentWrapper .repsWrapper .repInfo .repWebsite {
-            margin-bottom: 10px; } }
-      .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
-        color: darkred;
-        transition: color .3s ease; }
-    .contentWrapper .repsWrapper .repSocialMedia {
+        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+          margin-bottom: 5px;
+          transition: color .3s ease; }
+          @media screen and (min-width: 200px) and (max-width: 349px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+              font-size: 1.2em;
+              font-weight: bold;
+              margin-bottom: 0; } }
+          @media screen and (min-width: 350px) and (max-width: 550px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+              font-size: 1.2em;
+              font-weight: bold;
+              margin-bottom: 0; } }
+          @media screen and (min-width: 551px) and (max-width: 850px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite {
+              margin-bottom: 10px; } }
+        .titleFormWrapper .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
+          color: darkred;
+          transition: color .3s ease; }
+      .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        height: 40px;
+        width: 100px;
+        border-left: 1px solid rgba(248, 248, 255, 0.7);
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 20px;
+        padding-right: 15px; }
+        @media screen and (min-width: 200px) and (max-width: 349px) {
+          .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia {
+            order: 2;
+            flex-direction: column;
+            width: auto;
+            height: 130px;
+            margin: 0;
+            padding-left: 0;
+            padding-right: 0;
+            border-left: none; } }
+        @media screen and (min-width: 350px) and (max-width: 550px) {
+          .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia {
+            order: 2;
+            margin: 0;
+            width: 111px;
+            padding-left: 0;
+            border-left: none; } }
+        .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
+          height: 40px;
+          width: 40px;
+          opacity: .4;
+          transition: background .3s ease, opacity .3s ease; }
+          @media screen and (min-width: 200px) and (max-width: 349px) {
+            .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
+              opacity: 1; } }
+        .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia .socialMediaIconInvisible {
+          display: none; }
+        .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia .facebookIcon {
+          background: url("images/Facebook.png");
+          background-size: contain; }
+        .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia .twitterIcon {
+          background: url("images/Twitter.png");
+          background-size: contain; }
+        .titleFormWrapper .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon:hover {
+          opacity: 1;
+          transition: opacity .3s ease; }
+    .titleFormWrapper .contentWrapper .repsWrapper:first-child {
+      border-top: none; }
+    .titleFormWrapper .contentWrapper .linksWrapper {
       display: flex;
       flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
-      height: 40px;
-      width: 100px;
-      border-left: 1px solid rgba(248, 248, 255, 0.7);
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-left: 20px;
-      padding-right: 15px; }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repSocialMedia {
-          order: 2;
-          flex-direction: column;
-          width: auto;
-          height: 130px;
-          margin: 0;
-          padding-left: 0;
-          padding-right: 0;
-          border-left: none; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .repsWrapper .repSocialMedia {
-          order: 2;
-          margin: 0;
-          width: 111px;
-          padding-left: 0;
-          border-left: none; } }
-      .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
-        height: 40px;
-        width: 40px;
-        opacity: .4;
-        transition: background .3s ease, opacity .3s ease; }
-        @media screen and (min-width: 200px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
-            opacity: 1; } }
-      .contentWrapper .repsWrapper .repSocialMedia .socialMediaIconInvisible {
-        display: none; }
-      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon {
-        background: url("images/Facebook.png");
-        background-size: contain; }
-      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon {
-        background: url("images/Twitter.png");
-        background-size: contain; }
-      .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon:hover {
-        opacity: 1;
-        transition: opacity .3s ease; }
-  .contentWrapper .repsWrapper:first-child {
-    border-top: none; }
-  .contentWrapper .linksWrapper {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%; }
-    .contentWrapper .linksWrapper .linksList {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      overflow-y: scroll;
-      padding: 20px;
-      border-right: 1px solid rgba(248, 248, 255, 0.7);
-      align-items: flex-start;
-      font-family: Open Sans Condensed;
-      font-size: 1.3em;
-      color: darkblue;
-      background: rgba(248, 248, 255, 0.4); }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .linksWrapper .linksList {
-          width: 100%; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .linksWrapper .linksList {
-          width: 100%; } }
-      .contentWrapper .linksWrapper .linksList .linksTitle {
-        font-size: 1.5em;
-        color: darkred;
-        margin: 13px 0 13px 0;
-        transition: color .3s ease; }
-      .contentWrapper .linksWrapper .linksList .linksLink {
-        text-decoration: none;
+      width: 100%;
+      height: 100%; }
+      .titleFormWrapper .contentWrapper .linksWrapper .linksList {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        padding: 20px;
+        border-right: 1px solid rgba(248, 248, 255, 0.7);
+        align-items: flex-start;
+        font-family: Open Sans Condensed;
+        font-size: 1.3em;
         color: darkblue;
-        margin-bottom: 8px;
-        text-align: left; }
-      .contentWrapper .linksWrapper .linksList .linksLink:hover {
-        color: darkred;
-        transition: color .3s ease; }
-    .contentWrapper .linksWrapper .linksDescriptions {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      overflow-y: scroll;
-      padding: 20px;
-      align-items: center;
-      justify-content: flex-start;
-      font-family: Open Sans Condensed;
-      font-size: 1.3em;
-      color: darkblue;
-      background: rgba(248, 248, 255, 0.4); }
-      @media screen and (min-width: 200px) and (max-width: 349px) {
-        .contentWrapper .linksWrapper .linksDescriptions {
-          display: none; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .linksWrapper .linksDescriptions {
-          display: none; } }
-      .contentWrapper .linksWrapper .linksDescriptions .linksScreenshot {
-        width: 100%;
-        opacity: 0;
-        margin-top: 20px;
-        padding: 10px;
-        background: rgba(248, 248, 255, 0.7);
-        transition: opacity .3s ease; }
-      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsPlaceholder {
-        margin: 0px;
-        opacity: 1;
-        transition: opacity .3s ease; }
-      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsText {
-        opacity: 0;
-        transition: opacity .3s ease; }
+        background: rgba(248, 248, 255, 0.4); }
+        @media screen and (min-width: 200px) and (max-width: 349px) {
+          .titleFormWrapper .contentWrapper .linksWrapper .linksList {
+            width: 100%; } }
+        @media screen and (min-width: 350px) and (max-width: 550px) {
+          .titleFormWrapper .contentWrapper .linksWrapper .linksList {
+            width: 100%; } }
+        .titleFormWrapper .contentWrapper .linksWrapper .linksList .linksTitle {
+          font-size: 1.5em;
+          color: darkred;
+          margin: 13px 0 13px 0;
+          transition: color .3s ease; }
+        .titleFormWrapper .contentWrapper .linksWrapper .linksList .linksLink {
+          text-decoration: none;
+          color: darkblue;
+          margin-bottom: 8px;
+          text-align: left; }
+        .titleFormWrapper .contentWrapper .linksWrapper .linksList .linksLink:hover {
+          color: darkred;
+          transition: color .3s ease; }
+      .titleFormWrapper .contentWrapper .linksWrapper .linksDescriptions {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        padding: 20px;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: Open Sans Condensed;
+        font-size: 1.3em;
+        color: darkblue;
+        background: rgba(248, 248, 255, 0.4); }
+        @media screen and (min-width: 200px) and (max-width: 349px) {
+          .titleFormWrapper .contentWrapper .linksWrapper .linksDescriptions {
+            display: none; } }
+        @media screen and (min-width: 350px) and (max-width: 550px) {
+          .titleFormWrapper .contentWrapper .linksWrapper .linksDescriptions {
+            display: none; } }
+        .titleFormWrapper .contentWrapper .linksWrapper .linksDescriptions .linksScreenshot {
+          width: 100%;
+          opacity: 0;
+          margin-top: 20px;
+          padding: 10px;
+          background: rgba(248, 248, 255, 0.7);
+          transition: opacity .3s ease; }
+        .titleFormWrapper .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsPlaceholder {
+          margin: 0px;
+          opacity: 1;
+          transition: opacity .3s ease; }
+        .titleFormWrapper .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsText {
+          opacity: 0;
+          transition: opacity .3s ease; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
