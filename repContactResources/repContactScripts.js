@@ -140,7 +140,8 @@ function constructResultsTemplate() {
 //--- Fills the results template with appropriate info ---//
 
 function resultsTemplateFill() {
-	let repsArray = queryResponse1.result.officials;
+    let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
+    let repsArray = queryResponse1.result.officials;
 	let repsTitle = queryResponse1.result.offices;
 	let repImgContainer = document.querySelectorAll(".repImgContainer");
 	let repImg = document.querySelectorAll(".repImg");
