@@ -13,10 +13,12 @@ function makeRequest(e) {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
 	}).then(function() {
 		window.location.href = "http://contactmyreps.com/results.html";
-	}).then(constructResultsTemplate()).then(resultsTemplateFill());
+	});
+
+	/*.then(constructResultsTemplate()).then(resultsTemplateFill());
 	e.preventDefault();
 
-	/*queryResponse === undefined ?
+	queryResponse === undefined ?
         alert("Please enter a valid address")
 	: (
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse)),
