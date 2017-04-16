@@ -13,9 +13,7 @@ function makeRequest(e) {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
 	}).then(function() {
 		window.location.href = "http://contactmyreps.com/results.html";
-	}).then(function() {
-        let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
-    }).then(constructResultsTemplate()).then(resultsTemplateFill());
+	}).then(constructResultsTemplate()).then(resultsTemplateFill());
 	e.preventDefault();
 
 	/*queryResponse === undefined ?
@@ -124,7 +122,8 @@ if (document.querySelector(".linksWrapper")) {
 //--- Puts together the basic results page ---//
 
 function constructResultsTemplate() {
-	let numberNeeded = queryResponse1.result.officials.length;
+    let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
+    let numberNeeded = queryResponse1.result.officials.length;
 	let template = document.querySelector(".repsWrapper");
 	let contentWrapper = document.querySelector(".contentWrapper");
 	let templateArray = [];
