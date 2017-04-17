@@ -9,13 +9,12 @@ function makeRequest(e) {
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
 	request.then(function(response) {
 		queryResponse = response;
+		return queryResponse;
 	}).then(function() {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
     }).then(function() {
     	console.log("ok");
-	}).catch(function() {
-		console.log("error bitch");
 	});
 
 	/*.then(constructResultsTemplate()).then(resultsTemplateFill());
