@@ -11,12 +11,9 @@ function makeRequest(e) {
 		queryResponse = response;
 		return queryResponse;
 	}).then(function() {
-		console.log("okay");
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
-    }).then(function() {
-    	console.log("ok");
-	});
+    }).then(constructResultsTemplate).then(resultsTemplateFill);
 	e.preventDefault();
 
 	/*.then(constructResultsTemplate()).then(resultsTemplateFill());
