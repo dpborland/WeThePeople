@@ -14,8 +14,8 @@ function makeRequest(e) {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
         document.addEventListener("DOMContentLoaded", constructResultsTemplate);
-    /*}).then(function() {
-    	let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));*/
+    }).then(function() {
+    	let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
 	}).then(function() {
 		resultsTemplateFill();
 	});
