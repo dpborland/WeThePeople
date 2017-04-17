@@ -18,7 +18,7 @@ function makeRequest(e) {
     	return queryResponse1;
 	}).then(function() {
 		constructResultsTemplate();
-    }.then(function() {
+    }).then(function() {
 		resultsTemplateFill();
 	});
 	e.preventDefault();
