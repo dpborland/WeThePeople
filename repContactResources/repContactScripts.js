@@ -14,6 +14,8 @@ function makeRequest(e) {
         window.location.href = "http://contactmyreps.com/results.html";
     }).then(function() {
     	console.log("ok");
+	}).catch(function() {
+		console.log("error bitch");
 	});
 
 	/*.then(constructResultsTemplate()).then(resultsTemplateFill());
