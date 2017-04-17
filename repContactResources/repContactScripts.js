@@ -17,6 +17,7 @@ function makeRequest(e) {
     }).then(function() {
     	console.log("ok");
 	});
+	e.preventDefault();
 
 	/*.then(constructResultsTemplate()).then(resultsTemplateFill());
 	e.preventDefault();
