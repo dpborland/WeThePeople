@@ -14,6 +14,7 @@ function makeRequest(e) {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
     }).then(function() {
+    	let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
     	document.addEventListener("DOMContentLoaded", constructResultsTemplate);
 	}).then(function() {
 		resultsTemplateFill();
@@ -129,7 +130,6 @@ if (document.querySelector(".linksWrapper")) {
 //--- Puts together the basic results page ---//
 
 function constructResultsTemplate() {
-    let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
     let numberNeeded = queryResponse1.result.officials.length;
 	let template = document.querySelector(".repsWrapper");
 	let contentWrapper = document.querySelector(".contentWrapper");
@@ -145,7 +145,6 @@ function constructResultsTemplate() {
 //--- Fills the results template with appropriate info ---//
 
 function resultsTemplateFill() {
-    let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
     let repsArray = queryResponse1.result.officials;
 	let repsTitle = queryResponse1.result.offices;
 	let repImgContainer = document.querySelectorAll(".repImgContainer");
