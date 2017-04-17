@@ -13,7 +13,11 @@ function makeRequest(e) {
 	}).then(function() {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
-    }).then(constructResultsTemplate()).then(resultsTemplateFill());
+    }).then(function() {
+    	constructResultsTemplate();
+	}).then(function() {
+		resultsTemplateFill();
+	});
 	e.preventDefault();
 
 	/*.then(constructResultsTemplate()).then(resultsTemplateFill());
