@@ -14,6 +14,9 @@ function makeRequest(e) {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
     }).then(function() {
+        let template = document.querySelector(".repsWrapper");
+		return template;
+    }).then(function() {
     	let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
 		constructResultsTemplate(queryResponse1);
     }).then(function() {
