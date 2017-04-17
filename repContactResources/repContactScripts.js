@@ -15,6 +15,7 @@ function makeRequest(e) {
         window.location.href = "http://contactmyreps.com/results.html";
     }).then(function() {
     	let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
+    	console.log(queryResponse1);
     	return queryResponse1;
 	}).then(function() {
 		constructResultsTemplate();
