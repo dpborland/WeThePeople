@@ -13,10 +13,9 @@ function makeRequest(e) {
 	}).then(function() {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
-    }).then(function() {
-    	let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
-    	console.log(queryResponse);
-    	document.addEventListener("DOMContentLoaded", constructResultsTemplate);
+        document.addEventListener("DOMContentLoaded", constructResultsTemplate);
+    /*}).then(function() {
+    	let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));*/
 	}).then(function() {
 		resultsTemplateFill();
 	});
