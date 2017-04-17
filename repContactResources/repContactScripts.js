@@ -18,7 +18,7 @@ function makeRequest(e) {
     	console.log(queryResponse1);
     	return queryResponse1;
 	}).then(function() {
-		constructResultsTemplate();
+		constructResultsTemplate(queryResponse1);
     }).then(function() {
 		resultsTemplateFill();
 	});
@@ -132,8 +132,8 @@ if (document.querySelector(".linksWrapper")) {
 
 //--- Puts together the basic results page ---//
 
-function constructResultsTemplate() {
-    let numberNeeded = queryResponse1.result.officials.length;
+function constructResultsTemplate(x) {
+    let numberNeeded = x.result.officials.length;
 	let template = document.querySelector(".repsWrapper");
 	let contentWrapper = document.querySelector(".contentWrapper");
 	let templateArray = [];
