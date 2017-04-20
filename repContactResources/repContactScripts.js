@@ -266,13 +266,13 @@ function resultsTemplateFill(queryResponse1) {
 
 	});
 
-    if (window.location.href === "http://contactmyreps.com/results.html") /*&& (document.readyState === "complete"))*/{
-    	constructResultsTemplate().then((queryResponse1) => {
-            return resultsTemplateFill(queryResponse1);
-    	}).catch((queryResponse1) => {
-    		return queryResponse1;
-		});
-    }
-
-}
+    if (window.location.href === "http://contactmyreps.com/results.html") {
+    	document.addEventListener("DOMContentLoaded", () => {
+			constructResultsTemplate().then((queryResponse1) => {
+				return resultsTemplateFill(queryResponse1);
+			}).catch((queryResponse1) => {
+				return console.log(queryResponse1);
+			});
+    	}, false);
+	}
 
