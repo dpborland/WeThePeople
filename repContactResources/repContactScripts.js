@@ -148,7 +148,7 @@ let constructResultsTemplate = function() {
 
 //--- Fills the results template with appropriate info ---//
 
-function resultsTemplateFill() {
+function resultsTemplateFill(queryResponse1) {
     let repsArray = queryResponse1.result.officials;
 	let repsTitle = queryResponse1.result.offices;
 	let repImgContainer = document.querySelectorAll(".repImgContainer");
@@ -268,7 +268,7 @@ function resultsTemplateFill() {
 
     if ((window.location.href === "http://contactmyreps.com/results.html") && (document.readyState === "complete")){
     	constructResultsTemplate.then((queryResponse1) => {
-            return resultsTemplateFill();
+            return resultsTemplateFill(queryResponse1);
     	}).catch((queryResponse1) => {
     		return queryResponse1;
 		});
