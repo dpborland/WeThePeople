@@ -266,8 +266,8 @@ function resultsTemplateFill() {
 
 	});
 
-    if (window.location.href === "http://contactmyreps.com/results.html") {
-        document.addEventListener("DOMContentLoaded", constructResultsTemplate, false)
+    if ((window.location.href === "http://contactmyreps.com/results.html") && (document.readyState === "complete")){
+    	constructResultsTemplate().then((queryResponse1) => return resultsTemplateFill()).catch((queryResponse1) => return queryResponse1);
     }
 
 }
