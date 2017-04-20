@@ -13,14 +13,6 @@ function makeRequest(e) {
 	}).then(function() {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
-    }).then(function() {
-        let template = document.querySelector(".repsWrapper");
-		return template;
-    }).then(function() {
-    	let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
-		constructResultsTemplate(queryResponse1);
-    }).then(function() {
-		resultsTemplateFill();
 	});
 	e.preventDefault();
 
@@ -34,6 +26,10 @@ function makeRequest(e) {
         window.location.href = "http://contactmyreps.com/results.html"
 	);*/
 
+}
+
+if (window.location.href === "http://contactmyreps.com/results.html") {
+	document.addEventListener("DOMContentLoaded", constructResultsTemplate, false)
 }
 
 function init() {
