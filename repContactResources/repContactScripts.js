@@ -28,10 +28,6 @@ function makeRequest(e) {
 
 }
 
-if (window.location.href === "http://contactmyreps.com/results.html") {
-	document.addEventListener("DOMContentLoaded", constructResultsTemplate, false)
-}
-
 function init() {
 	gapi.client.setApiKey("AIzaSyCIL7jjwmYLVQW8XHqn6zBX9pp0264RJoM");
 	gapi.client.load("civicinfo", "v2").then(function() { 
@@ -269,6 +265,10 @@ function resultsTemplateFill() {
         });
 
 	});
+
+    if (window.location.href === "http://contactmyreps.com/results.html") {
+        document.addEventListener("DOMContentLoaded", constructResultsTemplate, false)
+    }
 
 }
 
