@@ -128,8 +128,9 @@ if (document.querySelector(".linksWrapper")) {
 
 //--- Puts together the basic results page ---//
 
-function constructResultsTemplate(x) {
-    let numberNeeded = x.result.officials.length;
+function constructResultsTemplate() {
+    let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
+    let numberNeeded = queryResponse1.result.officials.length;
 	let template = document.querySelector(".repsWrapper");
 	let contentWrapper = document.querySelector(".contentWrapper");
 	let templateArray = [];
