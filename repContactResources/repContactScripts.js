@@ -128,17 +128,25 @@ if (document.querySelector(".linksWrapper")) {
 
 //--- Puts together the basic results page ---//
 
-function constructResultsTemplate() {
-    let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
-    let numberNeeded = queryResponse1.result.officials.length;
-	let template = document.querySelector(".repsWrapper");
-	let contentWrapper = document.querySelector(".contentWrapper");
-	let templateArray = [];
+let constructResultsTemplate = function() {
+	return new Promise ( (resolve, reject) => {
+		let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
+		let numberNeeded = queryResponse1.result.officials.length;
+		let template = document.querySelector(".repsWrapper");
+		let contentWrapper = document.querySelector(".contentWrapper");
+		let templateArray = [];
 
-	for (var i = 0; i <= (numberNeeded - 2); i++) {
-		templateArray[i] = template.cloneNode(true);
-		contentWrapper.appendChild(templateArray[i]);
-	}
+		for (var i = 0; i <= (numberNeeded - 2); i++) {
+			templateArray[i] = template.cloneNode(true);
+			contentWrapper.appendChild(templateArray[i]);
+		}
+
+		if (templateArray.length > 1) {
+			resolve(queryResponse1);
+		} else {
+			reject(queryResponse1);
+		}
+	});
 };
 
 
