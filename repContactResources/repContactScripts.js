@@ -274,5 +274,5 @@ function resultsTemplateFill(queryResponse1) {
 				return console.log(queryResponse1);
 			});
     	}, false);
-	}
+	};
 
