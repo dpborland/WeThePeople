@@ -15,17 +15,6 @@ function makeRequest(e) {
         window.location.href = "http://contactmyreps.com/results.html";
 	});
 	e.preventDefault();
-
-	/*.then(constructResultsTemplate()).then(resultsTemplateFill());
-	e.preventDefault();
-
-	queryResponse === undefined ?
-        alert("Please enter a valid address")
-	: (
-		localStorage.setItem("queryResponse", JSON.stringify(queryResponse)),
-        window.location.href = "http://contactmyreps.com/results.html"
-	);*/
-
 }
 
 function init() {
@@ -38,8 +27,6 @@ function init() {
 if (addressSearch != null) {
 	addressSearch.addEventListener("submit", makeRequest, false);
 };
-
-
 
 // Links page scripts
 
@@ -126,8 +113,8 @@ if (document.querySelector(".linksWrapper")) {
 
 let constructResultsTemplate = function() {
 	return new Promise ( (resolve, reject) => {
-		let queryResponse1 = JSON.parse(localStorage.getItem("queryResponse"));
-		let numberNeeded = queryResponse1.result.officials.length;
+		let queryResponse = JSON.parse(localStorage.getItem("queryResponse"));
+		let numberNeeded = queryResponse.result.officials.length;
 		let template = document.querySelector(".repsWrapper");
 		let contentWrapper = document.querySelector(".contentWrapper");
 		let templateArray = [];
@@ -138,9 +125,9 @@ let constructResultsTemplate = function() {
 		}
 
 		if (templateArray.length > 1) {
-			resolve(queryResponse1);
+			resolve(queryResponse);
 		} else {
-			reject(queryResponse1);
+			reject(queryResponse);
 		}
 	});
 };
@@ -148,9 +135,9 @@ let constructResultsTemplate = function() {
 
 //--- Fills the results template with appropriate info ---//
 
-function resultsTemplateFill(queryResponse1) {
-    let repsArray = queryResponse1.result.officials;
-    let repsTitle = queryResponse1.result.offices;
+function resultsTemplateFill(queryResponse) {
+    let repsArray = queryResponse.result.officials;
+    let repsTitle = queryResponse.result.offices;
     let repImgContainer = document.querySelectorAll(".repImgContainer");
     let repImg = document.querySelectorAll(".repImg");
     let repName = document.querySelectorAll(".repName");
@@ -165,7 +152,7 @@ function resultsTemplateFill(queryResponse1) {
     let socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
     let socialMediaIconGroup = [];
     let socialMediaCache = [];
-    let titles = queryResponse1.result.offices;
+    let titles = queryResponse.result.offices;
 
 // Creates new array that groups social media elements into sub-arrays for easier processing
     while (socialMediaIcon.length > 0) {
@@ -179,7 +166,7 @@ function resultsTemplateFill(queryResponse1) {
             : repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
 
         //Fills the img tag with the appropriate src and alt.  If no image available, adds a filler image
-        value.photoUrl === undefined ? (repImg[index].src = "images/flagBWBLUR2.jpg", repImg[index].alt = "Filler Image")
+        value.photoUrl === undefined ? (repImg[index].src = "repContactResources/images/flagBWBLUR2.jpg", repImg[index].alt = "Filler Image")
             : (repImg[index].src = value.photoUrl, repImg[index].alt = value.name);
 
         //Fills the rep's name
@@ -270,13 +257,11 @@ function resultsTemplateFill(queryResponse1) {
 
     if (window.location.href === "http://contactmyreps.com/results.html") {
     	document.addEventListener("DOMContentLoaded", () => {
-
-    		constructResultsTemplate().then((queryResponse1) => {
-				return resultsTemplateFill(queryResponse1);
-			}).catch((queryResponse1) => {
-				return console.log(queryResponse1);
+    		constructResultsTemplate().then((queryResponse) => {
+				return resultsTemplateFill(queryResponse);
+			}).catch((queryResponse) => {
+				return console.log(queryResponse);
 			});
-
     	}, false);
 	}
 
