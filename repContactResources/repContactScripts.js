@@ -254,7 +254,7 @@ let constructResultsTemplate = () => {
     });
 }*/
 
-let photoFill = (value, index) => {
+let photoFill = (value, index, repImgContainer, repImg) => {
     /*const repImg = document.querySelectorAll(".repImg");
     const repImgContainer = document.querySelectorAll(".repImgContainer");*/
 
