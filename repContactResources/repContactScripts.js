@@ -7,10 +7,10 @@ function makeRequest(e) {
 	let addressSearchBar = document.querySelector(".addressSearchBar");
 	let addressToSearch = addressSearchBar.value;
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
-	request.then(function(response) {
+	request.then( (response) => {
 		queryResponse = response;
 		return queryResponse;
-	}).then(function() {
+	}).then( () => {
 		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
 	});
@@ -30,7 +30,7 @@ if (addressSearch != null) {
 
 // Links page scripts
 
-var linksObject = {
+const linksObject = {
 	votingGuide: ["This is the official US government's guide to voting and elections.  Find answers to common questions about voting in the United States.",
 		"repContactResources/images/usagovscreen.jpg", "USA.gov voting and elections guide screenshot"],
 
@@ -111,7 +111,7 @@ if (document.querySelector(".linksWrapper")) {
 
 //--- Puts together the basic results page ---//
 
-let constructResultsTemplate = function() {
+let constructResultsTemplate = () => {
 	return new Promise ( (resolve, reject) => {
 		let queryResponse = JSON.parse(localStorage.getItem("queryResponse"));
 		let numberNeeded = queryResponse.result.officials.length;
@@ -135,9 +135,8 @@ let constructResultsTemplate = function() {
 
 //--- Fills the results template with appropriate info ---//
 
-function resultsTemplateFill(queryResponse) {
+/*function resultsTemplateFill(queryResponse) {
     let repsArray = queryResponse.result.officials;
-    let repsTitle = queryResponse.result.offices;
     let repImgContainer = document.querySelectorAll(".repImgContainer");
     let repImg = document.querySelectorAll(".repImg");
     let repName = document.querySelectorAll(".repName");
@@ -160,7 +159,7 @@ function resultsTemplateFill(queryResponse) {
         socialMediaLinkGroup.push(socialMediaLink.splice(0, 2));
     }
 //Parses the JSON response and inserts appropriate data in DOM
-    repsArray.forEach(function (value, index) {
+    repsArray.forEach( (value, index) => {
         //If an image link exists in the JSON, fills the appropriate url for the div's background image.  Otherwise adds a filler image.
         value.photoUrl === undefined ? repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);"
             : repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
@@ -243,25 +242,178 @@ function resultsTemplateFill(queryResponse) {
             );
 
         //Combs through the official indices property of the offices branch to cross reference the Reps' index
-        titles.forEach(function (x) {
-            x.officialIndices.forEach(function (y) {
-                if (y === index) {
-                    repTitle[index].textContent += x.name.replace("United States", "US");
+        titles.forEach(function (office) {
+            office.officialIndices.forEach(function (crossRefNum) {
+                if (crossRefNum === index) {
+                    repTitle[index].textContent += office.name.replace("United States", "US");
                 }
                 ;
             });
         });
 
     });
-}
+}*/
 
-    if (window.location.href === "http://contactmyreps.com/results.html") {
-    	document.addEventListener("DOMContentLoaded", () => {
-    		constructResultsTemplate().then((queryResponse) => {
-				return resultsTemplateFill(queryResponse);
-			}).catch((queryResponse) => {
-				return console.log(queryResponse);
-			});
-    	}, false);
-	}
+let photoFill = (value) => {
+    const repImg = document.querySelectorAll(".repImg");
+    const repImgContainer = document.querySelectorAll(".repImgContainer");
+
+    value.photoUrl === undefined ? repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);"
+        : repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
+
+    value.photoUrl === undefined ? (repImg[index].src = "repContactResources/images/flagBWBLUR2.jpg", repImg[index].alt = "Filler Image")
+        : (repImg[index].src = value.photoUrl, repImg[index].alt = value.name);
+
+    return Promise.resolve(value);
+};
+
+let partyFill = (value) => {
+    const repTitle = document.querySelectorAll(".repTitle");
+
+    value.party === undefined || value.party === "Unknown" ? repTitle[index].textContent = "Party Unknown - "
+        : repTitle[index].textContent = "(" + value.party.slice(0, 1) + ") - ";
+
+    return Promise.resolve(value);
+};
+
+let addressFill = (value) => {
+    const repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
+    const repAddressOne = document.querySelectorAll(".repAddressOne");
+    const repAddressTwo = document.querySelectorAll(".repAddressTwo");
+
+    if (value.address === undefined) {
+        repAddressOptional[index].style = "height: 0px";
+        repAddressOptional[index].style = "margin-top: none";
+        repAddressOne[index].textContent = "Address unknown";
+    }
+    else if (value.address[0].line2 === undefined) {
+        repAddressOptional[index].style = "height: 0px";
+        repAddressOptional[index].style = "margin-top: none";
+        repAddressOne[index].textContent = value.address[0].line1;
+        repAddressTwo[index].textContent = value.address[0].city + ", " + value.address[0].state + " " + value.address[0].zip;
+    }
+    else {
+        repAddressOptional[index].textContent = value.address[0].line1;
+        repAddressOne[index].textContent = value.address[0].line2;
+        repAddressTwo[index].textContent = value.address[0].city + ", " + value.address[0].state + " " + value.address[0].zip;
+    }
+
+    return Promise.resolve(value);
+};
+
+let phoneFill = (value) => {
+    const repPhone = document.querySelectorAll(".repPhone");
+
+    value.phones === undefined ? repPhone[index].textContent = "Phone Number Unknown"
+        : repPhone[index].textContent = value.phones;
+
+    return Promise.resolve(value);
+};
+
+let websiteFill = (value) => {
+    const repWebsite = document.querySelectorAll(".repWebsite");
+
+    value.urls === undefined ? (repWebsite[index].textContent = "")
+        : (repWebsite[index].textContent = "Visit my Website",
+            repWebsite[index].href = value.urls[0]);
+
+    return Promise.resolve(value);
+};
+
+let socialMediaFill = (value) => {
+    const repWebsite = document.querySelectorAll(".repWebsite");
+    const socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
+    const socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
+
+    let socialMediaLinkGroup = [];
+    let socialMediaIconGroup = [];
+    let socialMediaCache = [];
+
+    while (socialMediaIcon.length > 0) {
+        socialMediaIconGroup.push(socialMediaIcon.splice(0, 2));
+        socialMediaLinkGroup.push(socialMediaLink.splice(0, 2));
+    }
+
+    value.channels === undefined ?
+        (socialMediaIconGroup[index][0].classList.add("socialMediaIconInvisible"),
+            socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible"))
+        //Otherwise, search the Reps' channels property for Facebook and Twitter values, and add them to the social media cache
+        : (value.channels.forEach(function (x) {
+                if (x.type.toLowerCase() == "facebook") {
+                    return socialMediaCache[0] = x;
+                }
+                else if (x.type.toLowerCase() == "twitter") {
+                    return socialMediaCache[1] = x;
+                }
+            }),
+                //Then, for each cache array index, assign the values to the appropriate elements
+                socialMediaCache.forEach(function (val, num) {
+                    //If the Rep only has a Twitter account, pops empty Facebook index 0, fills first div element with Twitter data, hides second div
+                    if ((socialMediaCache.length === 2) && (socialMediaCache[0] === undefined)) {
+                        socialMediaCache = socialMediaCache.pop();
+                        socialMediaIconGroup[index][0].classList.add(val.type.toLowerCase() + "Icon");
+                        socialMediaLinkGroup[index][0].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
+                        socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible");
+                    }
+                    //If Rep has both a Facebook and Twitter, fills first div element with Facebook data and second div element with Twitter data
+                    else if (socialMediaCache.length === 2) {
+                        socialMediaIconGroup[index][num].classList.add(val.type.toLowerCase() + "Icon");
+                        socialMediaLinkGroup[index][num].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
+                    }
+                    //If Rep only has a Facebook, fills first div element, hides second
+                    else if (socialMediaCache.length === 1) {
+                        socialMediaIconGroup[index][0].classList.add(val.type.toLowerCase() + "Icon");
+                        socialMediaLinkGroup[index][0].href = "https://www." + val.type.toLowerCase() + ".com/" + val.id;
+                        socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible");
+                    }
+                }),
+                //Finally, empty the cache array of social media info, so it will be empty for next Rep
+                socialMediaCache = []
+        );
+
+    return Promise.reslove(value);
+};
+
+let titlesFill = (value, index) => {
+    const titles = queryResponse.result.offices;
+    const repTitle = document.querySelectorAll(".repTitle");
+
+    titles.forEach(function (office) {
+        office.officialIndices.forEach(function (crossRefNum) {
+            if (crossRefNum === index) {
+                repTitle[index].textContent += office.name.replace("United States", "US");
+            }
+            ;
+        });
+    });
+
+    return Promise.resolve(value);
+};
+
+let resultsTemplateFill = (queryResponse) => {
+    let repsArray = queryResponse.result.officials;
+
+    repsArray.forEach( (value, index) => {
+        return Promise.resolve(photoFill(value))
+            .then(partyFill(value))
+            .then(addressFill(value))
+            .then(phoneFill(value))
+            .then(websiteFill(value))
+            .then(socialMediaFill(value))
+            .then(titlesFill(value, index))
+            .catch((err) => {
+            return console.log("Something went wrong " + err);
+        });
+    })
+};
+
+if (window.location.href === "http://contactmyreps.com/results.html") {
+    document.addEventListener("DOMContentLoaded", () => {
+        constructResultsTemplate().then((queryResponse) => {
+            return resultsTemplateFill(queryResponse);
+        }).catch((queryResponse) => {
+            return console.log(queryResponse);
+        });
+    }, false);
+}
 
