@@ -255,9 +255,10 @@ let constructResultsTemplate = () => {
 }*/
 
 let nameFill = (value, index) => {
+    let repName = document.querySelectorAll(".repName");
+
     return Promise.resolve( () => {
         //Assigns rep's name
-        let repName = document.querySelectorAll(".repName");
         repName[index].textContent = value.name;
 
         return value, index;
@@ -389,7 +390,7 @@ let resultsTemplateFill = (queryResponse) => {
     let repsArray = queryResponse.result.officials;
     let repImgContainer = document.querySelectorAll(".repImgContainer");
     let repImg = document.querySelectorAll(".repImg");
-    let repName = document.querySelectorAll(".repName");
+    /*let repName = document.querySelectorAll(".repName");*/
     let repTitle = document.querySelectorAll(".repTitle");
     let repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
     let repAddressOne = document.querySelectorAll(".repAddressOne");
@@ -413,7 +414,7 @@ let resultsTemplateFill = (queryResponse) => {
     repsArray.forEach( (value, index) => {
         return Promise.resolve(photoFill(value, index, repImgContainer, repImg))
             .then(partyFill(value, index, repTitle))
-            .then(nameFill(value, index, repName))
+            .then(nameFill(value, index))
             .then(addressFill(value, index, repAddressOptional, repAddressOne, repAddressTwo))
             .then(phoneFill(value, index, repPhone))
             .then(websiteFill(value, index, repWebsite))
