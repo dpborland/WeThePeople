@@ -125,9 +125,9 @@ let constructResultsTemplate = () => {
 		}
 
 		if (templateArray.length > 1) {
-			resolve(queryResponse);
+			return resolve(queryResponse);
 		} else {
-			reject(queryResponse);
+			return reject(queryResponse);
 		}
 	});
 };
