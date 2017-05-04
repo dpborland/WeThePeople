@@ -476,6 +476,10 @@ if (window.location.href === "http://contactmyreps.com/results.html") {
 if (window.location.href === "http://contactmyreps.com/results.html") {
     document.addEventListener("DOMContentLoaded", () => {
         constructResultsTemplate(queryResponse)
+            .then((queryResponse) => {
+                console.log("YES");
+                return queryResponse;
+            })
             .then(nameFill(queryResponse))
             .then(photoFill(queryResponse))
             .then(partyFill(queryResponse))
