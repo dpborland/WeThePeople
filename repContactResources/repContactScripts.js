@@ -255,8 +255,8 @@ let constructResultsTemplate = () => {
 }*/
 
 let photoFill = (value, index) => {
-    const repImg = document.querySelectorAll(".repImg");
-    const repImgContainer = document.querySelectorAll(".repImgContainer");
+    /*const repImg = document.querySelectorAll(".repImg");
+    const repImgContainer = document.querySelectorAll(".repImgContainer");*/
 
     value.photoUrl === undefined ? repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);"
         : repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
@@ -268,7 +268,7 @@ let photoFill = (value, index) => {
 };
 
 let partyFill = (value, index) => {
-    const repTitle = document.querySelectorAll(".repTitle");
+    /*const repTitle = document.querySelectorAll(".repTitle");*/
 
     value.party === undefined || value.party === "Unknown" ? repTitle[index].textContent = "Party Unknown - "
         : repTitle[index].textContent = "(" + value.party.slice(0, 1) + ") - ";
@@ -277,9 +277,9 @@ let partyFill = (value, index) => {
 };
 
 let addressFill = (value, index) => {
-    const repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
+    /*const repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
     const repAddressOne = document.querySelectorAll(".repAddressOne");
-    const repAddressTwo = document.querySelectorAll(".repAddressTwo");
+    const repAddressTwo = document.querySelectorAll(".repAddressTwo");*/
 
     if (value.address === undefined) {
         repAddressOptional[index].style = "height: 0px";
@@ -302,7 +302,7 @@ let addressFill = (value, index) => {
 };
 
 let phoneFill = (value, index) => {
-    const repPhone = document.querySelectorAll(".repPhone");
+    /*const repPhone = document.querySelectorAll(".repPhone");*/
 
     value.phones === undefined ? repPhone[index].textContent = "Phone Number Unknown"
         : repPhone[index].textContent = value.phones;
@@ -311,7 +311,7 @@ let phoneFill = (value, index) => {
 };
 
 let websiteFill = (value, index) => {
-    const repWebsite = document.querySelectorAll(".repWebsite");
+    /*const repWebsite = document.querySelectorAll(".repWebsite");*/
 
     value.urls === undefined ? (repWebsite[index].textContent = "")
         : (repWebsite[index].textContent = "Visit my Website",
@@ -321,7 +321,7 @@ let websiteFill = (value, index) => {
 };
 
 let socialMediaFill = (value, index) => {
-    const repWebsite = document.querySelectorAll(".repWebsite");
+    /*const repWebsite = document.querySelectorAll(".repWebsite");
     const socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
     const socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
 
@@ -332,7 +332,7 @@ let socialMediaFill = (value, index) => {
     while (socialMediaIcon.length > 0) {
         socialMediaIconGroup.push(socialMediaIcon.splice(0, 2));
         socialMediaLinkGroup.push(socialMediaLink.splice(0, 2));
-    }
+    }*/
 
     value.channels === undefined ?
         (socialMediaIconGroup[index][0].classList.add("socialMediaIconInvisible"),
@@ -375,8 +375,8 @@ let socialMediaFill = (value, index) => {
 };
 
 let titlesFill = (value, index) => {
-    const titles = queryResponse.result.offices;
-    const repTitle = document.querySelectorAll(".repTitle");
+    /*const titles = queryResponse.result.offices;
+    const repTitle = document.querySelectorAll(".repTitle");*/
 
     titles.forEach(function (office) {
         office.officialIndices.forEach(function (crossRefNum) {
@@ -392,6 +392,27 @@ let titlesFill = (value, index) => {
 
 let resultsTemplateFill = (queryResponse) => {
     let repsArray = queryResponse.result.officials;
+    let repImgContainer = document.querySelectorAll(".repImgContainer");
+    let repImg = document.querySelectorAll(".repImg");
+    let repName = document.querySelectorAll(".repName");
+    let repTitle = document.querySelectorAll(".repTitle");
+    let repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
+    let repAddressOne = document.querySelectorAll(".repAddressOne");
+    let repAddressTwo = document.querySelectorAll(".repAddressTwo");
+    let repPhone = document.querySelectorAll(".repPhone");
+    let repWebsite = document.querySelectorAll(".repWebsite");
+    let socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
+    let socialMediaLinkGroup = [];
+    let socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
+    let socialMediaIconGroup = [];
+    let socialMediaCache = [];
+    let titles = queryResponse.result.offices;
+
+// Creates new array that groups social media elements into sub-arrays for easier processing
+    while (socialMediaIcon.length > 0) {
+        socialMediaIconGroup.push(socialMediaIcon.splice(0, 2));
+        socialMediaLinkGroup.push(socialMediaLink.splice(0, 2));
+    }
 
     repsArray.forEach( (value, index) => {
         return Promise.resolve(photoFill(value))
