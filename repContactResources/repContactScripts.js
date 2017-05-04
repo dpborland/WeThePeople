@@ -255,7 +255,7 @@ let constructResultsTemplate = () => {
 }*/
 
 let nameFill = (value, index) => {
-    return new Promise.resolve( () => {
+    return Promise.resolve( () => {
         //Assigns rep's name
         let repName = document.querySelectorAll(".repName");
         repName[index].textContent = value.name;
