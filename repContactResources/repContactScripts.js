@@ -415,7 +415,7 @@ let resultsTemplateFill = (queryResponse) => {
     }
 
     repsArray.forEach( (value, index) => {
-        return Promise.resolve(photoFill(value))
+        return Promise.resolve(photoFill(value, index, repImgContainer, repImg))
             .then(partyFill(value))
             .then(addressFill(value))
             .then(phoneFill(value))
