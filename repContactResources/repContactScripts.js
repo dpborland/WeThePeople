@@ -267,7 +267,7 @@ let photoFill = (value, index, repImgContainer, repImg) => {
     return value, index;
 };
 
-let partyFill = (value, index) => {
+let partyFill = (value, index, repTitle) => {
     /*const repTitle = document.querySelectorAll(".repTitle");*/
 
     value.party === undefined || value.party === "Unknown" ? repTitle[index].textContent = "Party Unknown - "
@@ -276,7 +276,7 @@ let partyFill = (value, index) => {
     return value, index;
 };
 
-let addressFill = (value, index) => {
+let addressFill = (value, index, repAddressOptional, repAddressOne, repAddressTwo) => {
     /*const repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
     const repAddressOne = document.querySelectorAll(".repAddressOne");
     const repAddressTwo = document.querySelectorAll(".repAddressTwo");*/
@@ -301,7 +301,7 @@ let addressFill = (value, index) => {
     return value, index;
 };
 
-let phoneFill = (value, index) => {
+let phoneFill = (value, index, repPhone) => {
     /*const repPhone = document.querySelectorAll(".repPhone");*/
 
     value.phones === undefined ? repPhone[index].textContent = "Phone Number Unknown"
@@ -310,7 +310,7 @@ let phoneFill = (value, index) => {
     return value, index;
 };
 
-let websiteFill = (value, index) => {
+let websiteFill = (value, index, repWebsite) => {
     /*const repWebsite = document.querySelectorAll(".repWebsite");*/
 
     value.urls === undefined ? (repWebsite[index].textContent = "")
@@ -320,9 +320,8 @@ let websiteFill = (value, index) => {
     return Promise.resolve(value);
 };
 
-let socialMediaFill = (value, index) => {
-    /*const repWebsite = document.querySelectorAll(".repWebsite");
-    const socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
+let socialMediaFill = (value, index, socialMediaLink, socialMediaIcon, socialMediaLinkGroup, socialMediaIconGroup, socialMediaCache) => {
+    /*const socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
     const socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
 
     let socialMediaLinkGroup = [];
@@ -374,7 +373,7 @@ let socialMediaFill = (value, index) => {
     return value, index;
 };
 
-let titlesFill = (value, index) => {
+let titlesFill = (value, index, titles, repTitle) => {
     /*const titles = queryResponse.result.offices;
     const repTitle = document.querySelectorAll(".repTitle");*/
 
@@ -416,12 +415,12 @@ let resultsTemplateFill = (queryResponse) => {
 
     repsArray.forEach( (value, index) => {
         return Promise.resolve(photoFill(value, index, repImgContainer, repImg))
-            .then(partyFill(value))
-            .then(addressFill(value))
-            .then(phoneFill(value))
-            .then(websiteFill(value))
-            .then(socialMediaFill(value))
-            .then(titlesFill(value, index))
+            .then(partyFill(value, index, repTitle))
+            .then(addressFill(value, index, repAddressOptional, repAddressOne, repAddressTwo))
+            .then(phoneFill(value, index, repPhone))
+            .then(websiteFill(value, index, repWebsite))
+            .then(socialMediaFill(value, index, socialMediaLink, socialMediaIcon, socialMediaLinkGroup, socialMediaIconGroup, socialMediaCache))
+            .then(titlesFill(value, index, titles, repTitle))
             .catch((err) => {
             return console.log("Something went wrong " + err);
         });
