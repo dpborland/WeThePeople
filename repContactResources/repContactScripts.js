@@ -259,10 +259,11 @@ let nameFill = (value, index) => {
 
     return Promise.resolve( () => {
         //Assigns rep's name
-        repName[index].textContent = value.name;
+        return repName[index].textContent = value.name;
 
-        return value, index;
     })
+    return value, index;
+
 }
 
 let photoFill = (value, index, repImgContainer, repImg) => {
