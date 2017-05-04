@@ -254,7 +254,7 @@ let constructResultsTemplate = () => {
     });
 }*/
 
-let photoFill = () => {
+let photoFill = (value, index) => {
     const repImg = document.querySelectorAll(".repImg");
     const repImgContainer = document.querySelectorAll(".repImgContainer");
 
@@ -264,19 +264,19 @@ let photoFill = () => {
     value.photoUrl === undefined ? (repImg[index].src = "repContactResources/images/flagBWBLUR2.jpg", repImg[index].alt = "Filler Image")
         : (repImg[index].src = value.photoUrl, repImg[index].alt = value.name);
 
-    return Promise.resolve(value);
+    return value, index;
 };
 
-let partyFill = () => {
+let partyFill = (value, index) => {
     const repTitle = document.querySelectorAll(".repTitle");
 
     value.party === undefined || value.party === "Unknown" ? repTitle[index].textContent = "Party Unknown - "
         : repTitle[index].textContent = "(" + value.party.slice(0, 1) + ") - ";
 
-    return Promise.resolve(value);
+    return value, index;
 };
 
-let addressFill = () => {
+let addressFill = (value, index) => {
     const repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
     const repAddressOne = document.querySelectorAll(".repAddressOne");
     const repAddressTwo = document.querySelectorAll(".repAddressTwo");
@@ -298,19 +298,19 @@ let addressFill = () => {
         repAddressTwo[index].textContent = value.address[0].city + ", " + value.address[0].state + " " + value.address[0].zip;
     }
 
-    return Promise.resolve(value);
+    return value, index;
 };
 
-let phoneFill = () => {
+let phoneFill = (value, index) => {
     const repPhone = document.querySelectorAll(".repPhone");
 
     value.phones === undefined ? repPhone[index].textContent = "Phone Number Unknown"
         : repPhone[index].textContent = value.phones;
 
-    return Promise.resolve(value);
+    return value, index;
 };
 
-let websiteFill = () => {
+let websiteFill = (value, index) => {
     const repWebsite = document.querySelectorAll(".repWebsite");
 
     value.urls === undefined ? (repWebsite[index].textContent = "")
@@ -320,7 +320,7 @@ let websiteFill = () => {
     return Promise.resolve(value);
 };
 
-let socialMediaFill = () => {
+let socialMediaFill = (value, index) => {
     const repWebsite = document.querySelectorAll(".repWebsite");
     const socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
     const socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
@@ -371,10 +371,10 @@ let socialMediaFill = () => {
                 socialMediaCache = []
         );
 
-    return Promise.reslove(value);
+    return value, index;
 };
 
-let titlesFill = () => {
+let titlesFill = (value, index) => {
     const titles = queryResponse.result.offices;
     const repTitle = document.querySelectorAll(".repTitle");
 
@@ -387,7 +387,7 @@ let titlesFill = () => {
         });
     });
 
-    return Promise.resolve(value);
+    return value, index;
 };
 
 let resultsTemplateFill = (queryResponse) => {
