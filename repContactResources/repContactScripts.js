@@ -125,9 +125,9 @@ let constructResultsTemplate = () => {
 		}
 
 		if (templateArray.length > 1) {
-			return resolve(queryResponse);
+            resolve(queryResponse);
 		} else {
-			return reject(queryResponse);
+			reject(queryResponse);
 		}
 	});
 };
@@ -475,17 +475,17 @@ if (window.location.href === "http://contactmyreps.com/results.html") {
 
 if (window.location.href === "http://contactmyreps.com/results.html") {
     document.addEventListener("DOMContentLoaded", () => {
-        constructResultsTemplate()
-        .then(nameFill(queryResponse))
-        .then(photoFill(queryResponse))
-        .then(partyFill(queryResponse))
-        .then(addressFill(queryResponse))
-        .then(phoneFill(queryResponse))
-        .then(websiteFill(queryResponse))
-        .then(socialMediaFill(queryResponse))
-        .then(titlesFill(queryResponse))
-        .catch((queryResponse) => {
-            return console.log(queryResponse);
-    });
+        constructResultsTemplate(queryResponse)
+            .then(nameFill(queryResponse))
+            .then(photoFill(queryResponse))
+            .then(partyFill(queryResponse))
+            .then(addressFill(queryResponse))
+            .then(phoneFill(queryResponse))
+            .then(websiteFill(queryResponse))
+            .then(socialMediaFill(queryResponse))
+            .then(titlesFill(queryResponse))
+            .catch((queryResponse) => {
+                return console.log(queryResponse);
+            });
     }, false);
 }
