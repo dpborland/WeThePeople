@@ -255,14 +255,14 @@ let constructResultsTemplate = () => {
 }*/
 
 let nameFill = (value, index, repName) => {
+    //Assigns rep's name
     repName[index].textContent = value.name;
 
     return value, index;
 };
 
 let photoFill = (value, index, repImgContainer, repImg) => {
-    /*const repImg = document.querySelectorAll(".repImg");
-    const repImgContainer = document.querySelectorAll(".repImgContainer");*/
+    //Assigns rep's photo and related info
 
     value.photoUrl === undefined ? repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);"
         : repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
@@ -274,7 +274,7 @@ let photoFill = (value, index, repImgContainer, repImg) => {
 };
 
 let partyFill = (value, index, repTitle) => {
-    /*const repTitle = document.querySelectorAll(".repTitle");*/
+    //Assigns rep's political party by slicing off and presenting first letter of party name
 
     value.party === undefined || value.party === "Unknown" ? repTitle[index].textContent = "Party Unknown - "
         : repTitle[index].textContent = "(" + value.party.slice(0, 1) + ") - ";
@@ -283,9 +283,7 @@ let partyFill = (value, index, repTitle) => {
 };
 
 let addressFill = (value, index, repAddressOptional, repAddressOne, repAddressTwo) => {
-    /*const repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
-    const repAddressOne = document.querySelectorAll(".repAddressOne");
-    const repAddressTwo = document.querySelectorAll(".repAddressTwo");*/
+    //Assigns rep's address to appropriate lines
 
     if (value.address === undefined) {
         repAddressOptional[index].style = "height: 0px";
@@ -308,7 +306,7 @@ let addressFill = (value, index, repAddressOptional, repAddressOne, repAddressTw
 };
 
 let phoneFill = (value, index, repPhone) => {
-    /*const repPhone = document.querySelectorAll(".repPhone");*/
+    // Assigns rep's phone number
 
     value.phones === undefined ? repPhone[index].textContent = "Phone Number Unknown"
         : repPhone[index].textContent = value.phones;
@@ -317,7 +315,7 @@ let phoneFill = (value, index, repPhone) => {
 };
 
 let websiteFill = (value, index, repWebsite) => {
-    /*const repWebsite = document.querySelectorAll(".repWebsite");*/
+    //Assigns rep's website link
 
     value.urls === undefined ? (repWebsite[index].textContent = "")
         : (repWebsite[index].textContent = "Visit my Website",
@@ -327,23 +325,14 @@ let websiteFill = (value, index, repWebsite) => {
 };
 
 let socialMediaFill = (value, index, socialMediaLink, socialMediaIcon, socialMediaLinkGroup, socialMediaIconGroup, socialMediaCache) => {
-    /*const socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
-    const socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
+    //Assigns links to rep's Facebook and Twitter to the appropriate icons
 
-    let socialMediaLinkGroup = [];
-    let socialMediaIconGroup = [];
-    let socialMediaCache = [];
-
-    while (socialMediaIcon.length > 0) {
-        socialMediaIconGroup.push(socialMediaIcon.splice(0, 2));
-        socialMediaLinkGroup.push(socialMediaLink.splice(0, 2));
-    }*/
-
+    //If the rep doesn't have a Facebook or Twitter link available, hide the icons
     value.channels === undefined ?
         (socialMediaIconGroup[index][0].classList.add("socialMediaIconInvisible"),
             socialMediaIconGroup[index][1].classList.add("socialMediaIconInvisible"))
         //Otherwise, search the Reps' channels property for Facebook and Twitter values, and add them to the social media cache
-        : (value.channels.forEach(function (x) {
+        : (value.channels.forEach( (x) => {
                 if (x.type.toLowerCase() == "facebook") {
                     return socialMediaCache[0] = x;
                 }
@@ -352,7 +341,7 @@ let socialMediaFill = (value, index, socialMediaLink, socialMediaIcon, socialMed
                 }
             }),
                 //Then, for each cache array index, assign the values to the appropriate elements
-                socialMediaCache.forEach(function (val, num) {
+                socialMediaCache.forEach( (val, num) => {
                     //If the Rep only has a Twitter account, pops empty Facebook index 0, fills first div element with Twitter data, hides second div
                     if ((socialMediaCache.length === 2) && (socialMediaCache[0] === undefined)) {
                         socialMediaCache = socialMediaCache.pop();
@@ -380,15 +369,13 @@ let socialMediaFill = (value, index, socialMediaLink, socialMediaIcon, socialMed
 };
 
 let titlesFill = (value, index, titles, repTitle) => {
-    /*const titles = queryResponse.result.offices;
-    const repTitle = document.querySelectorAll(".repTitle");*/
+    //Assigns rep's title by cross referencing offices branch
 
-    titles.forEach(function (office) {
-        office.officialIndices.forEach(function (crossRefNum) {
+    titles.forEach( (office) => {
+        office.officialIndices.forEach( (crossRefNum) => {
             if (crossRefNum === index) {
                 repTitle[index].textContent += office.name.replace("United States", "US");
-            }
-            ;
+            };
         });
     });
 
@@ -429,7 +416,7 @@ let resultsTemplateFill = (queryResponse) => {
             .then(socialMediaFill(value, index, socialMediaLink, socialMediaIcon, socialMediaLinkGroup, socialMediaIconGroup, socialMediaCache))
             .then(titlesFill(value, index, titles, repTitle))
             .catch((err) => {
-            return console.log("Something went wrong " + err);
+                return console.log("Something went wrong " + err);
         });
     })
 };
