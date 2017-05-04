@@ -254,12 +254,15 @@ let constructResultsTemplate = () => {
     });
 }*/
 
-let nameFill = (value, index, repName) => {
-    //Assigns rep's name
-    repName[index].textContent = value.name;
+let nameFill = (value, index) => {
+    return new Promise.resolve( () => {
+        //Assigns rep's name
+        let repName = document.querySelectorAll(".repName");
+        repName[index].textContent = value.name;
 
-    return value, index;
-};
+        return value, index;
+    })
+}
 
 let photoFill = (value, index, repImgContainer, repImg) => {
     //Assigns rep's photo and related info
@@ -271,7 +274,7 @@ let photoFill = (value, index, repImgContainer, repImg) => {
         : (repImg[index].src = value.photoUrl, repImg[index].alt = value.name);
 
     return value, index;
-};
+}
 
 let partyFill = (value, index, repTitle) => {
     //Assigns rep's political party by slicing off and presenting first letter of party name
@@ -280,7 +283,7 @@ let partyFill = (value, index, repTitle) => {
         : repTitle[index].textContent = "(" + value.party.slice(0, 1) + ") - ";
 
     return value, index;
-};
+}
 
 let addressFill = (value, index, repAddressOptional, repAddressOne, repAddressTwo) => {
     //Assigns rep's address to appropriate lines
@@ -303,7 +306,7 @@ let addressFill = (value, index, repAddressOptional, repAddressOne, repAddressTw
     }
 
     return value, index;
-};
+}
 
 let phoneFill = (value, index, repPhone) => {
     // Assigns rep's phone number
@@ -312,7 +315,7 @@ let phoneFill = (value, index, repPhone) => {
         : repPhone[index].textContent = value.phones;
 
     return value, index;
-};
+}
 
 let websiteFill = (value, index, repWebsite) => {
     //Assigns rep's website link
@@ -322,7 +325,7 @@ let websiteFill = (value, index, repWebsite) => {
             repWebsite[index].href = value.urls[0]);
 
     return Promise.resolve(value);
-};
+}
 
 let socialMediaFill = (value, index, socialMediaLink, socialMediaIcon, socialMediaLinkGroup, socialMediaIconGroup, socialMediaCache) => {
     //Assigns links to rep's Facebook and Twitter to the appropriate icons
@@ -366,7 +369,7 @@ let socialMediaFill = (value, index, socialMediaLink, socialMediaIcon, socialMed
         );
 
     return value, index;
-};
+}
 
 let titlesFill = (value, index, titles, repTitle) => {
     //Assigns rep's title by cross referencing offices branch
@@ -380,7 +383,7 @@ let titlesFill = (value, index, titles, repTitle) => {
     });
 
     return value, index;
-};
+}
 
 let resultsTemplateFill = (queryResponse) => {
     let repsArray = queryResponse.result.officials;
@@ -406,6 +409,7 @@ let resultsTemplateFill = (queryResponse) => {
         socialMediaLinkGroup.push(socialMediaLink.splice(0, 2));
     }
 
+    //For each official returned from the query, pipe the
     repsArray.forEach( (value, index) => {
         return Promise.resolve(photoFill(value, index, repImgContainer, repImg))
             .then(partyFill(value, index, repTitle))
@@ -418,9 +422,10 @@ let resultsTemplateFill = (queryResponse) => {
             .catch((err) => {
                 return console.log("Something went wrong " + err);
         });
-    })
-};
+    });
+}
 
+//If user navigates to the results page, adds an event listener that will construct the appropriate HTML, and display the results
 if (window.location.href === "http://contactmyreps.com/results.html") {
     document.addEventListener("DOMContentLoaded", () => {
         constructResultsTemplate().then((queryResponse) => {
