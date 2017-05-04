@@ -254,7 +254,7 @@ let constructResultsTemplate = () => {
     });
 }*/
 
-let photoFill = (value, index) => {
+let photoFill = () => {
     const repImg = document.querySelectorAll(".repImg");
     const repImgContainer = document.querySelectorAll(".repImgContainer");
 
@@ -267,7 +267,7 @@ let photoFill = (value, index) => {
     return Promise.resolve(value);
 };
 
-let partyFill = (value, index) => {
+let partyFill = () => {
     const repTitle = document.querySelectorAll(".repTitle");
 
     value.party === undefined || value.party === "Unknown" ? repTitle[index].textContent = "Party Unknown - "
@@ -276,7 +276,7 @@ let partyFill = (value, index) => {
     return Promise.resolve(value);
 };
 
-let addressFill = (value, index) => {
+let addressFill = () => {
     const repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
     const repAddressOne = document.querySelectorAll(".repAddressOne");
     const repAddressTwo = document.querySelectorAll(".repAddressTwo");
@@ -301,7 +301,7 @@ let addressFill = (value, index) => {
     return Promise.resolve(value);
 };
 
-let phoneFill = (value, index) => {
+let phoneFill = () => {
     const repPhone = document.querySelectorAll(".repPhone");
 
     value.phones === undefined ? repPhone[index].textContent = "Phone Number Unknown"
@@ -310,7 +310,7 @@ let phoneFill = (value, index) => {
     return Promise.resolve(value);
 };
 
-let websiteFill = (value, index) => {
+let websiteFill = () => {
     const repWebsite = document.querySelectorAll(".repWebsite");
 
     value.urls === undefined ? (repWebsite[index].textContent = "")
@@ -320,7 +320,7 @@ let websiteFill = (value, index) => {
     return Promise.resolve(value);
 };
 
-let socialMediaFill = (value, index) => {
+let socialMediaFill = () => {
     const repWebsite = document.querySelectorAll(".repWebsite");
     const socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
     const socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
@@ -374,7 +374,7 @@ let socialMediaFill = (value, index) => {
     return Promise.reslove(value);
 };
 
-let titlesFill = (value, index) => {
+let titlesFill = () => {
     const titles = queryResponse.result.offices;
     const repTitle = document.querySelectorAll(".repTitle");
 
