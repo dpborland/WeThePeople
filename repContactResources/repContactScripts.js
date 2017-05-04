@@ -254,7 +254,7 @@ let constructResultsTemplate = () => {
     });
 }*/
 
-let photoFill = (value) => {
+let photoFill = (value, index) => {
     const repImg = document.querySelectorAll(".repImg");
     const repImgContainer = document.querySelectorAll(".repImgContainer");
 
@@ -267,7 +267,7 @@ let photoFill = (value) => {
     return Promise.resolve(value);
 };
 
-let partyFill = (value) => {
+let partyFill = (value, index) => {
     const repTitle = document.querySelectorAll(".repTitle");
 
     value.party === undefined || value.party === "Unknown" ? repTitle[index].textContent = "Party Unknown - "
@@ -276,7 +276,7 @@ let partyFill = (value) => {
     return Promise.resolve(value);
 };
 
-let addressFill = (value) => {
+let addressFill = (value, index) => {
     const repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
     const repAddressOne = document.querySelectorAll(".repAddressOne");
     const repAddressTwo = document.querySelectorAll(".repAddressTwo");
@@ -301,7 +301,7 @@ let addressFill = (value) => {
     return Promise.resolve(value);
 };
 
-let phoneFill = (value) => {
+let phoneFill = (value, index) => {
     const repPhone = document.querySelectorAll(".repPhone");
 
     value.phones === undefined ? repPhone[index].textContent = "Phone Number Unknown"
@@ -310,7 +310,7 @@ let phoneFill = (value) => {
     return Promise.resolve(value);
 };
 
-let websiteFill = (value) => {
+let websiteFill = (value, index) => {
     const repWebsite = document.querySelectorAll(".repWebsite");
 
     value.urls === undefined ? (repWebsite[index].textContent = "")
@@ -320,7 +320,7 @@ let websiteFill = (value) => {
     return Promise.resolve(value);
 };
 
-let socialMediaFill = (value) => {
+let socialMediaFill = (value, index) => {
     const repWebsite = document.querySelectorAll(".repWebsite");
     const socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
     const socialMediaIcon = Array.from(document.querySelectorAll(".socialMediaIcon"));
