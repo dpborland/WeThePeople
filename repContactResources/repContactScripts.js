@@ -102,7 +102,7 @@ function linkInfoClear() {
 
 if (document.querySelector(".linksWrapper")) {
 	let link = Array.from(document.querySelectorAll(".linksLink"));
-	link.map(function(x) {
+	link.map( (x) => {
         x.addEventListener("mouseover", linkInfoFill, false);
         x.addEventListener("mouseout", linkInfoClear, false);
     });
@@ -254,7 +254,7 @@ let constructResultsTemplate = () => {
     });
 }*/
 
-let nameFill = (queryResponse) => {
+function nameFill(queryResponse) {
     //Assigns rep's name
     const repsArray = queryResponse.result.officials;
     const repName = document.querySelectorAll(".repName");
@@ -267,7 +267,7 @@ let nameFill = (queryResponse) => {
 
 }
 
-let photoFill = (queryResponse) => {
+function photoFil(queryResponse) {
     //Assigns rep's photo and related info
     const repsArray = queryResponse.result.officials;
     const repImg = document.querySelectorAll(".repImg");
@@ -283,7 +283,7 @@ let photoFill = (queryResponse) => {
     return queryResponse;
 }
 
-let partyFill = (queryResponse) => {
+function partyFill(queryResponse) {
     //Assigns rep's political party by slicing off and presenting first letter of party name
     const repsArray = queryResponse.result.officials;
     const repTitle = document.querySelectorAll(".repTitle");
@@ -295,7 +295,7 @@ let partyFill = (queryResponse) => {
     return queryResponse;
 }
 
-let addressFill = (queryResponse) => {
+function addressFill(queryResponse) {
     //Assigns rep's address to appropriate lines
     const repsArray = queryResponse.result.officials;
     const repAddressOptional = document.querySelectorAll(".repAddressOptionalLine");
@@ -322,7 +322,7 @@ let addressFill = (queryResponse) => {
     return queryResponse;
 }
 
-let phoneFill = (queryResponse) => {
+function phoneFill(queryResponse) {
     // Assigns rep's phone number
     const repsArray = queryResponse.result.officials;
     const repPhone = document.querySelectorAll(".repPhone");
@@ -335,7 +335,7 @@ let phoneFill = (queryResponse) => {
     return queryResponse;
 }
 
-let websiteFill = (queryResponse) => {
+function websiteFill(queryResponse) {
     //Assigns rep's website link
     const repsArray = queryResponse.result.officials;
     const repWebsite = document.querySelectorAll(".repWebsite");
@@ -349,7 +349,7 @@ let websiteFill = (queryResponse) => {
     return queryResponse;
 }
 
-let socialMediaFill = (queryResponse) => {
+function socialMediaFill(queryResponse) {
     //Assigns links to rep's Facebook and Twitter to the appropriate icons
     const repsArray = queryResponse.result.officials;
     const socialMediaLink = Array.from(document.querySelectorAll(".socialMediaLink"));
@@ -405,7 +405,7 @@ let socialMediaFill = (queryResponse) => {
     return queryResponse;
 }
 
-let titlesFill = (queryResponse) => {
+function titlesFill(queryResponse) {
     //Assigns rep's title by cross referencing offices branch
     const repsArray = queryResponse.result.officials;
     const repTitle = document.querySelectorAll(".repTitle");
@@ -475,11 +475,7 @@ if (window.location.href === "http://contactmyreps.com/results.html") {
 
 if (window.location.href === "http://contactmyreps.com/results.html") {
     document.addEventListener("DOMContentLoaded", () => {
-        constructResultsTemplate(queryResponse)
-            .then((queryResponse) => {
-                console.log("YES");
-                return queryResponse;
-            })
+        constructResultsTemplate()
             .then(nameFill(queryResponse))
             .then(photoFill(queryResponse))
             .then(partyFill(queryResponse))
