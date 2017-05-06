@@ -413,11 +413,7 @@ function titlesFill(queryResponse) {
 
     titles.forEach((office) => {
         office.officialIndices.forEach( (crossRefNum) => {
-            repsArray.forEach( (index) => {
-            if (crossRefNum === index) {
-                    repTitle[index].textContent += office.name.replace("United States", "US");
-                };
-            });
+            repTitle[crossRefNum].textContent += office.name.replace("United States", "US");
         });
     });
 
