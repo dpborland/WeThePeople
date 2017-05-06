@@ -111,7 +111,7 @@ if (document.querySelector(".linksWrapper")) {
 
 //--- Puts together the basic results page ---//
 
-let constructResultsTemplate = () => {
+function constructResultsTemplate() {
 	return new Promise ( (resolve, reject) => {
 		let queryResponse = JSON.parse(localStorage.getItem("queryResponse"));
 		let numberNeeded = queryResponse.result.officials.length;
@@ -129,6 +129,8 @@ let constructResultsTemplate = () => {
 		} else {
 			reject(queryResponse);
 		}
+
+		return queryResponse;
 	});
 };
 
