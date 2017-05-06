@@ -1,7 +1,7 @@
 $phone-break-large: "screen and (min-width: 350px) and (max-width: 550px)";
 $phone-break-large-text-adjust: "screen and (min-width 350px) and (max-width: 450px)";
-$phone-break-small: "screen and (min-width: 200px) and (max-width: 349px)";
-$phone-break-small-text-adjust: "screen and (min-width 200px) and (max-width: 250px)";
+$phone-break-medium: "screen and (min-width: 250px) and (max-width: 349px)";
+$phone-break-small: "screen and (min-width 0px) and (max-width: 249px)";
 $tablet-break: "screen and (min-width: 551px) and (max-width: 850px)";
 
 
@@ -27,6 +27,10 @@ body {
 		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
 		background-size: cover;
 	}
+	@media #{$phone-break-medium} {
+		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+		background-size: cover;
+	}
 	@media #{$phone-break-large} {
 		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
 		background-size: cover;
@@ -45,6 +49,14 @@ body {
 	/*background-color: rgba(12, 29, 141, .7);*/
 	background-color: rgba(248, 248, 255, .5);
 	@media #{$phone-break-small} {
+		position: fixed;
+		bottom: 0;
+		order: 2;
+		border-bottom: none;
+		border-top: 1.5px solid darkred;
+		background-color: rgba(214, 214, 230, .9);
+	}
+	@media #{$phone-break-medium} {
 		position: fixed;
 		bottom: 0;
 		order: 2;
@@ -85,6 +97,14 @@ body {
 			font-size: 1.17em;
 			font-weight: bold;
 		}
+		@media #{$phone-break-medium} {
+			width: 25%;
+			padding-left: 7px;
+			padding-right: 7px;
+			border-left: 1px solid darkred;
+			font-size: 1.17em;
+			font-weight: bold;
+		}
 		@media #{$phone-break-large} {
 			width: 25%;
 			padding-left: 7px;
@@ -104,6 +124,9 @@ body {
 		@media #{$phone-break-small} {
 			border-left: none;
 		}
+		@media #{$phone-break-medium} {
+			border-left: none;
+		}
 		@media #{$phone-break-large} {
 			border-left: none;
 		}
@@ -115,6 +138,9 @@ body {
 	.menuOption:last-child {
 		border-right: 1px solid rgba(248, 248, 255, 0.7);
 		@media #{$phone-break-small} {
+			border-right: none;
+		}
+		@media #{$phone-break-medium} {
 			border-right: none;
 		}
 		@media #{$phone-break-large} {
@@ -146,6 +172,10 @@ body {
 		height: 85%;
 		width: 95%;
 	}
+	@media #{$phone-break-medium} {
+		height: 85%;
+		width: 95%;
+	}
 	@media #{$phone-break-large} {
 		height: 85%;
 		width: 95%;
@@ -164,6 +194,10 @@ body {
 			order: 1;
 			padding-bottom: 80px;
 		}
+		@media #{$phone-break-medium} {
+			order: 1;
+			padding-bottom: 80px;
+		}
 		@media #{$phone-break-large} {
 			order: 1;
 			padding-bottom: 80px;
@@ -178,6 +212,10 @@ body {
 			margin-bottom: 15px;
 			line-height: 100px;
 			@media #{$phone-break-small} {
+				margin-bottom: 20px;
+				font-size: 30vw;
+			}
+			@media #{$phone-break-medium} {
 				margin-bottom: 20px;
 				font-size: 30vw;
 			}
@@ -201,6 +239,10 @@ body {
 				font-size: 6vw;
 				line-height: 26px;
 			}
+			@media #{$phone-break-medium} {
+				font-size: 6vw;
+				line-height: 26px;
+			}
 			@media #{$phone-break-large} {
 				font-size: 1.4em;
 				line-height: 30px;
@@ -221,6 +263,9 @@ body {
 			@media #{$phone-break-small} {
 				width: 95%;
 			}
+			@media #{$phone-break-medium} {
+				width: 95%;
+			}
 			@media #{$phone-break-large} {
 				width: 95%;
 			}
@@ -236,6 +281,10 @@ body {
 				font-size: 1.5em;
 				transition: background-color .4s ease;
 				@media #{$phone-break-small} {
+					width: 295px;
+					font-size: 1.3em;
+				}
+				@media #{$phone-break-medium} {
 					width: 295px;
 					font-size: 1.3em;
 				}
@@ -268,10 +317,10 @@ body {
 		border-top: 1px solid darkred;
 		font-family: open sans condensed;
 		background: rgba(248, 248, 255, 0.4);
-		@media #{$phone-break-small-text-adjust} {
+		@media #{$phone-break-small} {
 			max-height: 270px;
 		}
-		@media #{$phone-break-small} {
+		@media #{$phone-break-medium} {
 			order: 1;
 			flex-wrap: wrap;
 			flex-direction: row;
@@ -300,6 +349,9 @@ body {
 			@media #{$phone-break-small} {
 				display: none;
 			}
+			@media #{$phone-break-medium} {
+				display: none;
+			}
 			@media #{$phone-break-large} {
 				order: 1;
 				height: 160px;
@@ -316,6 +368,9 @@ body {
 				opacity: 0;
 				filter: alpha(opacity=0);
 				@media #{$phone-break-small} {
+					display: none;
+				}
+				@media #{$phone-break-medium} {
 					display: none;
 				}
 				@media #{$phone-break-large} {
@@ -336,10 +391,10 @@ body {
 			text-align: left;
 			padding-left: 20px;
 			border-left: 1px solid rgba(248, 248, 255, 0.7);
-			@media #{$phone-break-small-text-adjust} {
+			@media #{$phone-break-small} {
 				height: 245px;
 			}
-			@media #{$phone-break-small} {
+			@media #{$phone-break-medium} {
 				order: 1;
 				height: 220px;
 				max-width: 75%;
@@ -371,6 +426,11 @@ body {
 					text-align: left;
 					margin-top: -2px;
 				}
+				@media #{$phone-break-medium} {
+					font-size: 10vw;
+					text-align: left;
+					margin-top: -2px;
+				}
 				@media #{$phone-break-large} {
 					font-size: 6.5vw;
 					text-align: left;
@@ -395,6 +455,11 @@ body {
 					margin-top: 0;
 					margin-bottom: 0;
 				}
+				@media #{$phone-break-medium} {
+					font-size: 1em;
+					margin-top: 0;
+					margin-bottom: 0;
+				}
 				@media #{$phone-break-large} {
 					font-size: 1.1em;
 					margin-top: 3px;
@@ -408,6 +473,10 @@ body {
 				margin-top: 3px;
 				margin-bottom: 0px;
 				@media #{$phone-break-small} {
+					font-size: 1.1em;
+					height: initial;
+				}
+				@media #{$phone-break-medium} {
 					font-size: 1.1em;
 					height: initial;
 				}
@@ -427,12 +496,14 @@ body {
 				margin-top: 0px;
 				margin-bottom: 0px;
 				@media #{$phone-break-small} {
-					font-size: 1.2em;
+					font-size: 1em;
 					font-weight: bold;
 					margin-top: 0px;
 				}
-				@media #{$phone-break-small-text-adjust} {
-					font-size: 1em;
+				@media #{$phone-break-medium} {
+					font-size: 1.2em;
+					font-weight: bold;
+					margin-top: 0px;
 				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
@@ -450,6 +521,11 @@ body {
 					font-weight: bold;
 					margin-bottom: 5px;
 				}
+				@media #{$phone-break-medium} {
+					font-size: 1.2em;
+					font-weight: bold;
+					margin-bottom: 5px;
+				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
 					font-weight: bold;
@@ -459,6 +535,11 @@ body {
 			.repPhone {
 				@extend .repAddressOne;
 				@media #{$phone-break-small} {
+					font-size: 1.2em;
+					font-weight: bold;
+					margin-bottom: 0;
+				}
+				@media #{$phone-break-medium} {
 					font-size: 1.2em;
 					font-weight: bold;
 					margin-bottom: 0;
@@ -474,6 +555,11 @@ body {
 				margin-bottom: 5px;
 				transition: color .3s ease;
 				@media #{$phone-break-small} {
+					font-size: 1.2em;
+					font-weight: bold;
+					margin-bottom: 0;
+				}
+				@media #{$phone-break-medium} {
 					font-size: 1.2em;
 					font-weight: bold;
 					margin-bottom: 0;
@@ -515,6 +601,16 @@ body {
 				padding-right: 0;
 				border-left: none;
 			}
+			@media #{$phone-break-medium} {
+				order: 2;
+				flex-direction: column;
+				width: auto;
+				height: 130px;
+				margin: 0;
+				padding-left: 0;
+				padding-right: 0;
+				border-left: none;
+			}
 			@media #{$phone-break-large} {
 				order: 2;
 				margin: 0;
@@ -528,6 +624,9 @@ body {
 				opacity: .4;
 				transition: background .3s ease, opacity .3s ease;
 				@media #{$phone-break-small} {
+					opacity: 1;
+				}
+				@media #{$phone-break-medium} {
 					opacity: 1;
 				}
 			}
@@ -574,8 +673,10 @@ body {
 			font-size: 1.3em;
 			color: darkblue;
 			background: rgba(248, 248, 255, 0.4);
-
 			@media #{$phone-break-small} {
+				width: 100%;
+			}
+			@media #{$phone-break-medium} {
 				width: 100%;
 			}
 			@media #{$phone-break-large} {
@@ -618,8 +719,10 @@ body {
 			font-size: 1.3em;
 			color: darkblue;
 			background: rgba(248, 248, 255, .4);
-
 			@media #{$phone-break-small} {
+				display: none;
+			}
+			@media #{$phone-break-medium} {
 				display: none;
 			}
 			@media #{$phone-break-large} {
