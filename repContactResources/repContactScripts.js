@@ -3,26 +3,30 @@ var addressSearch = document.querySelector(".addressSearch");
 
 //Google Civic Info API scripts
 
+function init() {
+    gapi.client.setApiKey("AIzaSyCIL7jjwmYLVQW8XHqn6zBX9pp0264RJoM");
+    gapi.client.load("civicinfo", "v2")
+        .then( () => {
+            console.log("loaded");
+        });
+}
+
 function makeRequest(e) {
 	let addressSearchBar = document.querySelector(".addressSearchBar");
 	let addressToSearch = addressSearchBar.value;
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
-	request.then( (response) => {
-		let queryResponse = response;
-		return queryResponse;
-	}).then( (queryResponse) => {
-	    localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
-        window.location.href = "http://contactmyreps.com/results.html";
-	});
-	e.preventDefault();
-}
 
-function init() {
-	gapi.client.setApiKey("AIzaSyCIL7jjwmYLVQW8XHqn6zBX9pp0264RJoM");
-	gapi.client.load("civicinfo", "v2")
-        .then( () => {
-		    console.log("loaded");
+	request
+        .then( (response) => {
+		    let queryResponse = response;
+		    return queryResponse;
+	    })
+        .then( (queryResponse) => {
+	        localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
+            window.location.href = "http://contactmyreps.com/results.html";
 	    });
+
+	e.preventDefault();
 }
 
 if (addressSearch != null) {
@@ -275,11 +279,29 @@ function photoFill(queryResponse) {
     const repImgContainer = document.querySelectorAll(".repImgContainer");
 
     repsArray.forEach( (value, index) => {
-        value.photoUrl === undefined ? repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);"
+        if (value.photoUrl === undefined) {
+            repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);";
+            repImg[index].src = "repContactResources/images/flagBWBLUR2.jpg";
+            repImg[index].alt = "Filler Image";
+        } else if (index === 0) {
+            repImgContainer[0].style = "background-image: url(repContactResources/images/Trump.jpg);";
+            repImg[0].src = "repContactResources/images/Trump.jpg";
+            repImg[0].alt = "Trump";
+        } else if (index === 1) {
+            repImgContainer[1].style = "background-image: url(repContactResources/images/Pence.jpg);";
+            repImg[1].src = "repContactResources/images/Pence.jpg";
+            repImg[1].alt = "Pence";
+        } else {
+            repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
+            repImg[index].src = value.photoUrl;
+            repImg[index].alt = value.name;
+        }
+
+        /*value.photoUrl === undefined ? repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);"
         : repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
 
         value.photoUrl === undefined ? (repImg[index].src = "repContactResources/images/flagBWBLUR2.jpg", repImg[index].alt = "Filler Image")
-        : (repImg[index].src = value.photoUrl, repImg[index].alt = value.name);
+        : (repImg[index].src = value.photoUrl, repImg[index].alt = value.name);*/
     });
     return queryResponse;
 }
