@@ -287,7 +287,12 @@ body {
     background: rgba(248, 248, 255, 0.4); }
     @media screen and (min-width 0px) and (max-width: 249px) {
       .contentWrapper .repsWrapper {
-        max-height: 270px; } }
+        order: 1;
+        flex-wrap: wrap;
+        flex-direction: row;
+        max-height: 270px;
+        padding: 10px;
+        justify-content: space-between; } }
     @media screen and (min-width: 250px) and (max-width: 349px) {
       .contentWrapper .repsWrapper {
         order: 1;
@@ -356,7 +361,13 @@ body {
       border-left: 1px solid rgba(248, 248, 255, 0.7); }
       @media screen and (min-width 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repInfo {
-          height: 245px; } }
+          order: 1;
+          height: 245px;
+          max-width: 75%;
+          padding-left: 0;
+          padding-right: 0;
+          margin-left: 0;
+          border-left: none; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repInfo {
           order: 1;
