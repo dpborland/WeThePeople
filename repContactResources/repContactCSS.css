@@ -15,7 +15,7 @@ body {
   font-family: "Playfair Display", sans-serif;
   background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.75) -50%, rgba(248, 248, 255, 0.8) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
   background-size: cover; }
-  @media screen and (min-width 0px) and (max-width: 249px) {
+  @media screen and (min-width: 0px) and (max-width: 249px) {
     body {
       background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
       background-size: cover; } }
@@ -39,7 +39,7 @@ body {
   border-bottom: 2px solid darkred;
   /*background-color: rgba(12, 29, 141, .7);*/
   background-color: rgba(248, 248, 255, 0.5); }
-  @media screen and (min-width 0px) and (max-width: 249px) {
+  @media screen and (min-width: 0px) and (max-width: 249px) {
     .menu {
       position: fixed;
       bottom: 0;
@@ -79,7 +79,7 @@ body {
     line-height: 95%;
     text-decoration: none;
     transition: color .4s ease, background-color .4s ease; }
-    @media screen and (min-width 0px) and (max-width: 249px) {
+    @media screen and (min-width: 0px) and (max-width: 249px) {
       .menu .menuOption {
         width: 25%;
         padding-left: 7px;
@@ -108,7 +108,7 @@ body {
         width: 25%;
         padding-left: 5px;
         padding-right: 5px; } }
-  @media screen and (min-width 0px) and (max-width: 249px) {
+  @media screen and (min-width: 0px) and (max-width: 249px) {
     .menu .menuOption:first-child {
       border-left: none; } }
   @media screen and (min-width: 250px) and (max-width: 349px) {
@@ -122,7 +122,7 @@ body {
       border-left: none; } }
   .menu .menuOption:last-child {
     border-right: 1px solid rgba(248, 248, 255, 0.7); }
-    @media screen and (min-width 0px) and (max-width: 249px) {
+    @media screen and (min-width: 0px) and (max-width: 249px) {
       .menu .menuOption:last-child {
         border-right: none; } }
     @media screen and (min-width: 250px) and (max-width: 349px) {
@@ -150,7 +150,7 @@ body {
   flex-direction: column;
   align-self: center;
   overflow-y: scroll; }
-  @media screen and (min-width 0px) and (max-width: 249px) {
+  @media screen and (min-width: 0px) and (max-width: 249px) {
     .contentWrapper {
       height: 85%;
       width: 95%; } }
@@ -171,7 +171,7 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 25px; }
-    @media screen and (min-width 0px) and (max-width: 249px) {
+    @media screen and (min-width: 0px) and (max-width: 249px) {
       .contentWrapper .titleFormWrapper {
         order: 1;
         padding-bottom: 80px; } }
@@ -191,7 +191,7 @@ body {
       margin-top: 0px;
       margin-bottom: 15px;
       line-height: 100px; }
-      @media screen and (min-width 0px) and (max-width: 249px) {
+      @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .title {
           margin-bottom: 20px;
           font-size: 30vw; } }
@@ -213,7 +213,7 @@ body {
       margin-top: 0px;
       margin-bottom: 10px;
       line-height: 25px; }
-      @media screen and (min-width 0px) and (max-width: 249px) {
+      @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .introText {
           font-size: 6vw;
           line-height: 26px; } }
@@ -234,7 +234,7 @@ body {
     .contentWrapper .titleFormWrapper .addressSearch {
       display: flex;
       justify-content: center; }
-      @media screen and (min-width 0px) and (max-width: 249px) {
+      @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .addressSearch {
           width: 95%; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
@@ -254,7 +254,7 @@ body {
         color: darkred;
         font-size: 1.5em;
         transition: background-color .4s ease; }
-        @media screen and (min-width 0px) and (max-width: 249px) {
+        @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar {
             width: 295px;
             font-size: 1.3em; } }
@@ -285,7 +285,7 @@ body {
     border-top: 1px solid darkred;
     font-family: open sans condensed;
     background: rgba(248, 248, 255, 0.4); }
-    @media screen and (min-width 0px) and (max-width: 249px) {
+    @media screen and (min-width: 0px) and (max-width: 249px) {
       .contentWrapper .repsWrapper {
         order: 1;
         flex-wrap: wrap;
@@ -318,7 +318,7 @@ body {
       -webkit-background-size: cover;
       background-size: cover;
       overflow: hidden; }
-      @media screen and (min-width 0px) and (max-width: 249px) {
+      @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repImgContainer {
           display: none; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
@@ -338,7 +338,7 @@ body {
         width: 231px;
         opacity: 0;
         filter: alpha(opacity=0); }
-        @media screen and (min-width 0px) and (max-width: 249px) {
+        @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repImgContainer img {
             display: none; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
@@ -359,7 +359,7 @@ body {
       text-align: left;
       padding-left: 20px;
       border-left: 1px solid rgba(248, 248, 255, 0.7); }
-      @media screen and (min-width 0px) and (max-width: 249px) {
+      @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repInfo {
           order: 1;
           height: 245px;
@@ -394,7 +394,7 @@ body {
         align-self: flex-start;
         justify-content: flex-end;
         color: darkred; }
-        @media screen and (min-width 0px) and (max-width: 249px) {
+        @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repName {
             font-size: 10vw;
             text-align: left;
@@ -422,7 +422,7 @@ body {
         font-style: italic;
         margin-top: 0px;
         margin-bottom: -5px; }
-        @media screen and (min-width 0px) and (max-width: 249px) {
+        @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
             font-size: 1em;
             margin-top: 0;
@@ -443,7 +443,7 @@ body {
         color: darkblue;
         margin-top: 3px;
         margin-bottom: 0px; }
-        @media screen and (min-width 0px) and (max-width: 249px) {
+        @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             font-size: 1.1em;
             height: initial; } }
@@ -465,7 +465,7 @@ body {
         color: darkblue;
         margin-top: 0px;
         margin-bottom: 0px; }
-        @media screen and (min-width 0px) and (max-width: 249px) {
+        @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
             font-size: 1em;
             font-weight: bold;
@@ -483,7 +483,7 @@ body {
         @media screen and (min-width 350px) and (max-width: 450px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
             font-size: 1.1em; } }
-      @media screen and (min-width 0px) and (max-width: 249px) {
+      @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repInfo .repAddressTwo {
           font-size: 1.2em;
           font-weight: bold;
@@ -498,7 +498,7 @@ body {
           font-size: 1.2em;
           font-weight: bold;
           margin-bottom: 5px; } }
-      @media screen and (min-width 0px) and (max-width: 249px) {
+      @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repInfo .repPhone {
           font-size: 1.2em;
           font-weight: bold;
@@ -516,7 +516,7 @@ body {
       .contentWrapper .repsWrapper .repInfo .repWebsite {
         margin-bottom: 5px;
         transition: color .3s ease; }
-        @media screen and (min-width 0px) and (max-width: 249px) {
+        @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repWebsite {
             font-size: 1.2em;
             font-weight: bold;
@@ -549,7 +549,7 @@ body {
       margin-bottom: 0;
       padding-left: 20px;
       padding-right: 15px; }
-      @media screen and (min-width 0px) and (max-width: 249px) {
+      @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repSocialMedia {
           order: 2;
           flex-direction: column;
@@ -581,7 +581,7 @@ body {
         width: 40px;
         opacity: .4;
         transition: background .3s ease, opacity .3s ease; }
-        @media screen and (min-width 0px) and (max-width: 249px) {
+        @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
             opacity: 1; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
@@ -620,7 +620,7 @@ body {
       font-size: 1.3em;
       color: darkblue;
       background: rgba(248, 248, 255, 0.4); }
-      @media screen and (min-width 0px) and (max-width: 249px) {
+      @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .linksWrapper .linksList {
           width: 100%; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
@@ -657,7 +657,7 @@ body {
       font-size: 1.3em;
       color: darkblue;
       background: rgba(248, 248, 255, 0.4); }
-      @media screen and (min-width 0px) and (max-width: 249px) {
+      @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .linksWrapper .linksDescriptions {
           display: none; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
