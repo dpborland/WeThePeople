@@ -254,12 +254,12 @@ function constructResultsTemplate() {
     });
 }*/
 
-function nameFill(queryResponse) {
+function nameFill(x) {
     //Assigns rep's name
-    //const repsArray = queryResponse.result.officials;
+    const repsArray = x.result.officials;
     const repName = document.querySelectorAll(".repName");
 
-    queryResponse.result.officials.forEach( (value, index) => {
+    repsArray.forEach( (value, index) => {
         repName[index].textContent = value.name;
     });
 
@@ -476,10 +476,6 @@ if (window.location.href === "http://contactmyreps.com/results.html") {
 if (window.location.href === "http://contactmyreps.com/results.html") {
     document.addEventListener("DOMContentLoaded", () => {
         constructResultsTemplate()
-        .then((queryResponse) => {
-            console.log(queryResponse.result.officials[0].name);
-            return queryResponse;
-    })
             .then(nameFill(queryResponse))
             .then(photoFill(queryResponse))
             .then(partyFill(queryResponse))
