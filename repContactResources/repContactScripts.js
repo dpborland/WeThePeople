@@ -267,7 +267,7 @@ function nameFill(queryResponse) {
 
 }
 
-function photoFil(queryResponse) {
+function photoFill(queryResponse) {
     //Assigns rep's photo and related info
     const repsArray = queryResponse.result.officials;
     const repImg = document.querySelectorAll(".repImg");
