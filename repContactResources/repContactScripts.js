@@ -1,5 +1,5 @@
 var addressSearch = document.querySelector(".addressSearch");
-var queryResponse;
+//var queryResponse;
 
 //Google Civic Info API scripts
 
@@ -8,10 +8,10 @@ function makeRequest(e) {
 	let addressToSearch = addressSearchBar.value;
 	let request = gapi.client.civicinfo.representatives.representativeInfoByAddress({ 'address': addressToSearch});
 	request.then( (response) => {
-		queryResponse = response;
+		let queryResponse = response;
 		return queryResponse;
-	}).then( () => {
-		localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
+	}).then( (queryResponse) => {
+	    localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
         window.location.href = "http://contactmyreps.com/results.html";
 	});
 	e.preventDefault();
@@ -19,9 +19,10 @@ function makeRequest(e) {
 
 function init() {
 	gapi.client.setApiKey("AIzaSyCIL7jjwmYLVQW8XHqn6zBX9pp0264RJoM");
-	gapi.client.load("civicinfo", "v2").then(function() { 
-		console.log("loaded"); 
-	});
+	gapi.client.load("civicinfo", "v2")
+        .then( () => {
+		    console.log("loaded");
+	    });
 }
 
 if (addressSearch != null) {
@@ -407,11 +408,10 @@ function socialMediaFill(queryResponse) {
 
 function titlesFill(queryResponse) {
     //Assigns rep's title by cross referencing offices branch
-    const repsArray = queryResponse.result.officials;
     const repTitle = document.querySelectorAll(".repTitle");
     const titles = queryResponse.result.offices;
 
-    titles.forEach((office) => {
+    titles.forEach( (office) => {
         office.officialIndices.forEach( (crossRefNum) => {
             repTitle[crossRefNum].textContent += office.name.replace("United States", "US");
         });
