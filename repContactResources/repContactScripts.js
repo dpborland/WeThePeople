@@ -256,10 +256,10 @@ let constructResultsTemplate = () => {
 
 function nameFill(queryResponse) {
     //Assigns rep's name
-    const repsArray = queryResponse.result.officials;
+    //const repsArray = queryResponse.result.officials;
     const repName = document.querySelectorAll(".repName");
 
-    repsArray.forEach( (value, index) => {
+    queryResponse.result.officials.forEach( (value, index) => {
         repName[index].textContent = value.name;
     });
 
