@@ -244,6 +244,9 @@ body {
         max-height: 250px;
         padding: 10px;
         justify-content: space-between; } }
+    @media screen and (min-width 200px) and (max-width: 250px) {
+      .contentWrapper .repsWrapper {
+        max-height: 270px; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
       .contentWrapper .repsWrapper {
         order: 1;
@@ -299,12 +302,15 @@ body {
       @media screen and (min-width: 200px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repInfo {
           order: 1;
-          height: 197px;
+          height: 220px;
           max-width: 75%;
           padding-left: 0;
           padding-right: 0;
           margin-left: 0;
           border-left: none; } }
+      @media screen and (min-width 200px) and (max-width: 250px) {
+        .contentWrapper .repsWrapper .repInfo {
+          height: 245px; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repInfo {
           order: 3;
@@ -364,15 +370,15 @@ body {
         @media screen and (min-width: 200px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             font-size: 1.1em;
-            margin-top: 10px;
-            height: 27px; } }
+            height: initial; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             font-size: 1.2em;
-            margin-top: 10px; } }
+            height: initial; } }
         @media screen and (min-width: 551px) and (max-width: 850px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            margin-bottom: 0px; } }
+            margin-bottom: 0px;
+            height: 27px; } }
       .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
         font-size: 1.3em;
         font-weight: 100;
