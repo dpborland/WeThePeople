@@ -1,5 +1,12 @@
-var addressSearch = document.querySelector(".addressSearch");
+//var addressSearch = document.querySelector(".addressSearch");
 //var queryResponse;
+
+function addSearchListener() {
+    const addressSearch = document.querySelector(".addressSearch");
+    if (addressSearch != null) {
+        addressSearch.addEventListener("submit", makeRequest, false);
+    }
+}
 
 //Google Civic Info API scripts
 
@@ -8,7 +15,8 @@ function init() {
     gapi.client.load("civicinfo", "v2")
         .then( () => {
             console.log("loaded");
-        });
+        })
+        .then( addSearchListener());
 }
 
 function makeRequest(e) {
@@ -29,9 +37,9 @@ function makeRequest(e) {
 	e.preventDefault();
 }
 
-if (addressSearch != null) {
+/*if (addressSearch != null) {
 	addressSearch.addEventListener("submit", makeRequest, false);
-};
+};*/
 
 // Links page scripts
 
