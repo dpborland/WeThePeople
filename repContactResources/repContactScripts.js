@@ -411,10 +411,10 @@ function titlesFill(queryResponse) {
     const repTitle = document.querySelectorAll(".repTitle");
     const titles = queryResponse.result.offices;
 
-    repsArray.forEach( (index) => {
-        titles.forEach((office) => {
-            office.officialIndices.forEach( (crossRefNum) => {
-                if (crossRefNum === index) {
+    titles.forEach((office) => {
+        office.officialIndices.forEach( (crossRefNum) => {
+            repsArray.forEach( (index) => {
+            if (crossRefNum === index) {
                     repTitle[index].textContent += office.name.replace("United States", "US");
                 };
             });
