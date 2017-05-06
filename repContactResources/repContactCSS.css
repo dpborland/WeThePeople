@@ -236,6 +236,9 @@ body {
     border-top: 1px solid darkred;
     font-family: open sans condensed;
     background: rgba(248, 248, 255, 0.4); }
+    @media screen and (min-width 200px) and (max-width: 250px) {
+      .contentWrapper .repsWrapper {
+        max-height: 270px; } }
     @media screen and (min-width: 200px) and (max-width: 349px) {
       .contentWrapper .repsWrapper {
         order: 1;
@@ -244,9 +247,6 @@ body {
         max-height: 250px;
         padding: 10px;
         justify-content: space-between; } }
-    @media screen and (min-width 200px) and (max-width: 250px) {
-      .contentWrapper .repsWrapper {
-        max-height: 270px; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
       .contentWrapper .repsWrapper {
         order: 1;
@@ -299,6 +299,9 @@ body {
       text-align: left;
       padding-left: 20px;
       border-left: 1px solid rgba(248, 248, 255, 0.7); }
+      @media screen and (min-width 200px) and (max-width: 250px) {
+        .contentWrapper .repsWrapper .repInfo {
+          height: 245px; } }
       @media screen and (min-width: 200px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repInfo {
           order: 1;
@@ -308,9 +311,6 @@ body {
           padding-right: 0;
           margin-left: 0;
           border-left: none; } }
-      @media screen and (min-width 200px) and (max-width: 250px) {
-        .contentWrapper .repsWrapper .repInfo {
-          height: 245px; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repInfo {
           order: 3;
