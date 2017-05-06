@@ -113,7 +113,7 @@ if (document.querySelector(".linksWrapper")) {
 
 function constructResultsTemplate() {
 	return new Promise ( (resolve, reject) => {
-		let queryResponse = JSON.parse(localStorage.getItem("queryResponse"));
+		 queryResponse = JSON.parse(localStorage.getItem("queryResponse"));
 		let numberNeeded = queryResponse.result.officials.length;
 		let template = document.querySelector(".repsWrapper");
 		let contentWrapper = document.querySelector(".contentWrapper");
@@ -254,9 +254,9 @@ function constructResultsTemplate() {
     });
 }*/
 
-function nameFill(x) {
+function nameFill(queryResponse) {
     //Assigns rep's name
-    const repsArray = x.result.officials;
+    const repsArray = queryResponse.result.officials;
     const repName = document.querySelectorAll(".repName");
 
     repsArray.forEach( (value, index) => {
