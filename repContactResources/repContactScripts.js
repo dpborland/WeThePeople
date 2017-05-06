@@ -129,8 +129,6 @@ function constructResultsTemplate() {
 		} else {
 			reject(queryResponse);
 		}
-
-		return queryResponse;
 	});
 };
 
@@ -478,6 +476,10 @@ if (window.location.href === "http://contactmyreps.com/results.html") {
 if (window.location.href === "http://contactmyreps.com/results.html") {
     document.addEventListener("DOMContentLoaded", () => {
         constructResultsTemplate()
+        .then((queryResponse) => {
+            console.log(queryResponse.result.officials[0].name);
+            return queryResponse;
+    })
             .then(nameFill(queryResponse))
             .then(photoFill(queryResponse))
             .then(partyFill(queryResponse))
