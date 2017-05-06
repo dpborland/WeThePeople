@@ -86,7 +86,7 @@ function linkInfoFill(e) {
 	linkInfo.textContent = linksObject[linkName.id][0];
 	linkImg.src = linksObject[linkName.id][1];
 	linkImg.alt = linksObject[linkName.id][2];
-	window.setTimeout(function() {
+	window.setTimeout( () => {
 		linkInfoPlaceholder.style.opacity = "0";
 		linkImg.style.opacity = "1";
 		linkInfo.style.opacity = "1";
@@ -296,13 +296,8 @@ function photoFill(queryResponse) {
             repImg[index].src = value.photoUrl;
             repImg[index].alt = value.name;
         }
-
-        /*value.photoUrl === undefined ? repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);"
-        : repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
-
-        value.photoUrl === undefined ? (repImg[index].src = "repContactResources/images/flagBWBLUR2.jpg", repImg[index].alt = "Filler Image")
-        : (repImg[index].src = value.photoUrl, repImg[index].alt = value.name);*/
     });
+
     return queryResponse;
 }
 
@@ -504,7 +499,7 @@ if (window.location.href === "http://contactmyreps.com/results.html") {
             .then(websiteFill(queryResponse))
             .then(socialMediaFill(queryResponse))
             .then(titlesFill(queryResponse))
-            .catch((queryResponse) => {
+            .catch( (queryResponse) => {
                 return console.log(queryResponse);
             });
     }, false);

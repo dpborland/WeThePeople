@@ -276,6 +276,9 @@ body {
 			padding: 10px;
 			justify-content: space-between;
 		}
+		@media #{$phone-break-small-text-adjust} {
+			max-height: 270px;
+		}
 		@media #{$phone-break-large} {
 			order: 1;
 			flex-wrap: wrap;
@@ -335,12 +338,15 @@ body {
 			border-left: 1px solid rgba(248, 248, 255, 0.7);
 			@media #{$phone-break-small} {
 				order: 1;
-				height: 197px;
+				height: 220px;
 				max-width: 75%;
 				padding-left: 0;
 				padding-right: 0;
 				margin-left: 0;
 				border-left: none;
+			}
+			@media #{$phone-break-small-text-adjust} {
+				height: 245px;
 			}
 			@media #{$phone-break-large} {
 				order: 3;
@@ -403,15 +409,15 @@ body {
 				margin-bottom: 0px;
 				@media #{$phone-break-small} {
 					font-size: 1.1em;
-					margin-top: 10px;
-					height: 27px;
+					height: initial;
 				}
 				@media #{$phone-break-large} {
 					font-size: 1.2em;
-					margin-top: 10px;
+					height: initial;
 				}
 				@media #{$tablet-break} {
 					margin-bottom: 0px;
+					height: 27px;
 				}
 			}
 			.repAddressOne {
