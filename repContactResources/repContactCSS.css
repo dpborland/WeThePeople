@@ -615,6 +615,9 @@ body {
       transition: opacity .3s ease; }
   .contentWrapper .repsWrapper:first-child {
     border-top: none; }
+  @media screen and (min-width: 1250px) and (max-width: 2199px) {
+    .contentWrapper .repsWrapper:nth-child(2) {
+      border-top: none; } }
   .contentWrapper .linksWrapper {
     display: flex;
     flex-direction: row;

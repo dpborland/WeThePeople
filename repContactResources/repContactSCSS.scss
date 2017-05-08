@@ -677,6 +677,12 @@ body {
 		border-top: none;
 	}
 
+	.repsWrapper:nth-child(2) {
+		@media #{$wide-screen-break} {
+			border-top: none;
+		}
+	}
+
 	.linksWrapper {
 		display: flex;
 		flex-direction: row;
