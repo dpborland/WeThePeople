@@ -1,6 +1,5 @@
-//var addressSearch = document.querySelector(".addressSearch");
-//var queryResponse;
 
+//Adds listener to the address field.  Makes request to Google Civic Info API on form submit.
 function addSearchListener() {
     const addressSearch = document.querySelector(".addressSearch");
     if (addressSearch != null) {
@@ -16,7 +15,7 @@ function init() {
         .then( () => {
             console.log("loaded");
         })
-        .then( addSearchListener());
+        .then( addSearchListener() );
 }
 
 function makeRequest(e) {
@@ -36,10 +35,6 @@ function makeRequest(e) {
 
 	e.preventDefault();
 }
-
-/*if (addressSearch != null) {
-	addressSearch.addEventListener("submit", makeRequest, false);
-};*/
 
 // Links page scripts
 
@@ -140,7 +135,7 @@ function constructResultsTemplate() {
 		if (templateArray.length > 1) {
             resolve(queryResponse);
 		} else {
-			reject(queryResponse);
+			reject("Oops! Something went wrong!");
 		}
 	});
 };
