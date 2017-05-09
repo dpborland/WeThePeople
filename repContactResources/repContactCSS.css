@@ -318,7 +318,7 @@ body {
       .contentWrapper .repsWrapper {
         width: 49%; } }
     .contentWrapper .repsWrapper .repImgContainer {
-      height: 250px;
+      height: 290px;
       width: 201px;
       display: block;
       margin-right: 20px;
@@ -343,7 +343,7 @@ body {
           margin-bottom: 10px;
           background-position: center center; } }
       .contentWrapper .repsWrapper .repImgContainer img {
-        height: 250px;
+        height: 290px;
         width: 231px;
         opacity: 0;
         filter: alpha(opacity=0); }
@@ -365,6 +365,7 @@ body {
       flex-direction: column;
       justify-content: space-between;
       align-items: baseline;
+      height: 250px;
       text-align: left;
       padding-left: 20px;
       border-left: 1px solid rgba(248, 248, 255, 0.7); }
@@ -395,11 +396,14 @@ body {
           margin-left: 0px;
           padding-left: 15px;
           border-left: 1px solid rgba(248, 248, 255, 0.7); } }
+      @media screen and (min-width: 1250px) and (max-width: 2199px) {
+        .contentWrapper .repsWrapper .repInfo {
+          width: 50%; } }
       .contentWrapper .repsWrapper .repInfo .repName {
         font-size: 3em;
         line-height: 95%;
-        margin-top: -5px;
-        margin-bottom: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
         align-self: flex-start;
         justify-content: flex-end;
         color: darkred; }
@@ -428,7 +432,7 @@ body {
             font-size: 2.1em; } }
       .contentWrapper .repsWrapper .repInfo .repTitle {
         display: flex;
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-weight: 100;
         color: darkred;
         font-style: italic;
@@ -533,7 +537,7 @@ body {
           font-weight: bold;
           margin-bottom: 0; } }
       .contentWrapper .repsWrapper .repInfo .repWebsite {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         transition: color .3s ease; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repWebsite {
@@ -550,9 +554,6 @@ body {
             font-size: 1.2em;
             font-weight: bold;
             margin-bottom: 0; } }
-        @media screen and (min-width: 551px) and (max-width: 850px) {
-          .contentWrapper .repsWrapper .repInfo .repWebsite {
-            margin-bottom: 10px; } }
       .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
         color: darkred;
         transition: color .3s ease; }
