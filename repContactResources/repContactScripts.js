@@ -31,10 +31,9 @@ function makeRequest(e) {
         .then( (queryResponse) => {
 	        localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
             window.location.href = "http://contactmyreps.com/results.html";
-	    })
-        .catch( () => {
-            return console.log("Something went wrong");
-        });
+	    }, (err) => {
+            alert(err);
+    });
 
 	e.preventDefault();
 }
