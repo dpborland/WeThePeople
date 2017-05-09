@@ -32,7 +32,8 @@ function makeRequest(e) {
 	        localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
             window.location.href = "http://contactmyreps.com/results.html";
 	    }, (err) => {
-            alert(err);
+            alert("Please enter a valid address.");
+            console.log(err);
     });
 
 	e.preventDefault();
