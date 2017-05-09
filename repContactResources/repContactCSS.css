@@ -176,18 +176,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     padding-top: 25px; }
     @media screen and (min-width: 0px) and (max-width: 249px) {
       .contentWrapper .titleFormWrapper {
         order: 1;
+        height: 100%;
         padding-bottom: 80px; } }
     @media screen and (min-width: 250px) and (max-width: 349px) {
       .contentWrapper .titleFormWrapper {
         order: 1;
+        height: 100%;
         padding-bottom: 80px; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
       .contentWrapper .titleFormWrapper {
         order: 1;
+        height: 100%;
         padding-bottom: 80px; } }
     .contentWrapper .titleFormWrapper .title {
       font-weight: 100;
@@ -366,6 +370,7 @@ body {
       justify-content: space-between;
       align-items: baseline;
       height: 250px;
+      width: 50%;
       text-align: left;
       padding-left: 20px;
       border-left: 1px solid rgba(248, 248, 255, 0.7); }

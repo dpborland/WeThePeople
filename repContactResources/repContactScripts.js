@@ -15,7 +15,7 @@ function init() {
         .then( () => {
             console.log("loaded");
         })
-        .then( addSearchListener() );
+        .then(addSearchListener());
 }
 
 function makeRequest(e) {
@@ -31,7 +31,10 @@ function makeRequest(e) {
         .then( (queryResponse) => {
 	        localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
             window.location.href = "http://contactmyreps.com/results.html";
-	    });
+	    })
+        .catch( () => {
+            return console.log("Something went wrong");
+        });
 
 	e.preventDefault();
 }

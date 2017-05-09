@@ -196,17 +196,21 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		width: 100%;
 		padding-top: 25px;
 		@media #{$phone-break-small} {
 			order: 1;
+			height: 100%;
 			padding-bottom: 80px;
 		}
 		@media #{$phone-break-medium} {
 			order: 1;
+			height: 100%;
 			padding-bottom: 80px;
 		}
 		@media #{$phone-break-large} {
 			order: 1;
+			height: 100%;
 			padding-bottom: 80px;
 		}
 
@@ -403,6 +407,7 @@ body {
 			justify-content: space-between;
 			align-items: baseline;
 			height: 250px;
+			width: 50%;
 			text-align: left;
 			padding-left: 20px;
 			border-left: 1px solid rgba(248, 248, 255, 0.7);
