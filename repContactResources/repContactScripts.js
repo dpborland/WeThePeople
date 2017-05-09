@@ -32,8 +32,14 @@ function makeRequest(e) {
 	        localStorage.setItem("queryResponse", JSON.stringify(queryResponse));
             window.location.href = "http://contactmyreps.com/results.html";
 	    }, (err) => {
-            alert("Please enter a valid address.");
-            console.log(err);
+            if (err.status === 400 || err.status === 401) {
+                alert("Please enter a valid address.");
+            } else if (err.status === 404) {
+                alert("Address not found.  Please make sure the address includes your city and state.");
+            } else if (err.status === 503) {
+                alert("The servers are busy at the moment.  Please try again in a few minutes.");
+            }
+                console.log(err);
     });
 
 	e.preventDefault();
