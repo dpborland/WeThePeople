@@ -645,7 +645,6 @@ body {
     column-count: 2;
     column-gap: 2;
     column-width: calc(50% - 10px);
-    break-inside: avoid;
     		/*.linksList {
     			display: flex;
     			flex-direction: column;
@@ -742,6 +741,7 @@ body {
       flex-direction: column;
       justify-content: flex-start;
       box-sizing: border-box;
+      break-inside: avoid;
       width: 100%;
       min-height: 400px;
       margin: 0 0 20px 0;
