@@ -732,21 +732,27 @@ body {
 			width: 100%;
 			border-bottom: 1px solid rgba(248, 248, 255, 0.7);
 			padding-bottom: 20px;
-			transition: background-color .4s ease;
 
 			.linksImgLink {
 				height: 100%;
+				background-color: transparent;
+				transition: background-color .4s ease;
 
 				.linksImg {
 					width: 100%;
 					opacity: 1;
-					tranisition: opacity .3s ease;
+					transition: opacity .3s ease;
 				}
 
 				.linksImg:hover {
 					opacity: .4;
 					transition: opacity .3s ease;
 				}
+			}
+
+			.linksImgLink:hover {
+				background-color: darkblue;
+				transition: background-color .3s ease;
 			}
 		}
 
