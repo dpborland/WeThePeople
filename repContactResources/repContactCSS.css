@@ -639,7 +639,7 @@ body {
     font-family: Open Sans Condensed;
     color: darkred;
     background-color: rgba(248, 248, 255, 0.5); }
-  .contentWrapper .linksSectionsHeading:nth-child(1) {
+  .contentWrapper .linksSectionsHeading:nth-child(2) {
     margin-top: 20px; }
   .contentWrapper .linksSectionsWrapper {
     column-count: 2;
