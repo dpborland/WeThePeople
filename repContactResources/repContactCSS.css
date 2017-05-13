@@ -643,8 +643,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 49%;
+    box-sizing: border-box;
+    width: calc(50% - 10px);
     height: 450px;
+    margin: 0 0 20px 0;
     padding: 20px;
     background-color: rgba(248, 248, 255, 0.5);
     		/*.linksList {
@@ -755,6 +757,7 @@ body {
       font-size: 2em;
       color: darkred;
       text-decoration: none;
+      margin-top: 20px;
       transition: text-decoration .3s ease; }
     .contentWrapper .linksWrapper .linksTitle:hover {
       cursor: pointer;
