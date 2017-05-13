@@ -633,14 +633,14 @@ body {
     width: 100%;
     height: 50px;
     justify-content: center;
-    margin: 0 0 20px 0;
+    margin: 20px 0 20px 0;
     padding-bottom: 3px;
     font-size: 2.5em;
     font-family: Open Sans Condensed;
     color: darkred;
     background-color: rgba(248, 248, 255, 0.5); }
-  .contentWrapper .linksSectionsHeading:nth-child(2) {
-    margin-top: 20px; }
+  .contentWrapper .linksSectionsHeading:nth-child(1) {
+    margin-top: 0; }
   .contentWrapper .linksSectionsWrapper {
     column-count: 2;
     column-gap: 2;
