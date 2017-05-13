@@ -739,14 +739,15 @@ body {
 
 				.linksImg {
 					width: 100%;
+					opacity: 1;
+					tranisition: opacity .3s ease;
+				}
 
+				.linksImg:hover {
+					opacity: .4;
+					transition: opacity .3s ease;
 				}
 			}
-		}
-
-		.linksImgContainer:hover {
-			background-color: black;
-			transition: background-color .4s ease;
 		}
 
 		.linksTitle {
@@ -767,6 +768,7 @@ body {
 			font-family: Open Sans Condensed;
 			font-size: 1.5em;
 			color: darkblue;
+			margin: 20px 0 0 0;
 		}
 	}
 

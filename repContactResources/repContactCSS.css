@@ -755,10 +755,12 @@ body {
         .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink {
           height: 100%; }
           .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink .linksImg {
-            width: 100%; }
-      .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer:hover {
-        background-color: black;
-        transition: background-color .4s ease; }
+            width: 100%;
+            opacity: 1;
+            tranisition: opacity .3s ease; }
+          .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink .linksImg:hover {
+            opacity: .4;
+            transition: opacity .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksTitle {
         font-family: Open Sans Condensed;
         font-size: 2em;
@@ -772,6 +774,7 @@ body {
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksDescription {
         font-family: Open Sans Condensed;
         font-size: 1.5em;
-        color: darkblue; }
+        color: darkblue;
+        margin: 20px 0 0 0; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
