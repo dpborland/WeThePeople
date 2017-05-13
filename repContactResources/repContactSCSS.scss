@@ -732,11 +732,11 @@ body {
 			width: 100%;
 			border-bottom: 1px solid rgba(248, 248, 255, 0.7);
 			padding-bottom: 20px;
+			background-color: transparent;
+			transition: background-color .4s ease;
 
 			.linksImgLink {
 				height: 100%;
-				background-color: transparent;
-				transition: background-color .4s ease;
 
 				.linksImg {
 					width: 100%;
@@ -749,18 +749,19 @@ body {
 					transition: opacity .3s ease;
 				}
 			}
+		}
 
-			.linksImgLink:hover {
-				background-color: darkblue;
-				transition: background-color .3s ease;
-			}
+		.linksImgContainer:hover {
+			background-color: darkblue;
+			transition: background-color .3s ease;
 		}
 
 		.linksTitle {
 			font-family: Open Sans Condensed;
 			font-size: 2em;
 			color: darkred;
-			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid rgba(248, 248, 255, 0.7);
 			transition: color .3s ease;
 		}
 

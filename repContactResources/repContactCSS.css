@@ -750,11 +750,11 @@ body {
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer {
         width: 100%;
         border-bottom: 1px solid rgba(248, 248, 255, 0.7);
-        padding-bottom: 20px; }
+        padding-bottom: 20px;
+        background-color: transparent;
+        transition: background-color .4s ease; }
         .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink {
-          height: 100%;
-          background-color: transparent;
-          transition: background-color .4s ease; }
+          height: 100%; }
           .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink .linksImg {
             width: 100%;
             opacity: 1;
@@ -762,14 +762,15 @@ body {
           .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink .linksImg:hover {
             opacity: .4;
             transition: opacity .3s ease; }
-        .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink:hover {
-          background-color: darkblue;
-          transition: background-color .3s ease; }
+      .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer:hover {
+        background-color: darkblue;
+        transition: background-color .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksTitle {
         font-family: Open Sans Condensed;
         font-size: 2em;
         color: darkred;
-        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(248, 248, 255, 0.7);
         transition: color .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksTitle:hover {
         cursor: pointer;
