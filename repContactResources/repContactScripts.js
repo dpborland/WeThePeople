@@ -48,7 +48,7 @@ function makeRequest(e) {
 // Links page scripts
 
 const linksObject = {
-	votingGuide: ["This is the official US government's guide to voting and elections.  Find answers to common questions about voting in the United States.",
+	votingGuide: ["This is the US government's official guide to voting and elections.  Find answers to common questions about voting in the United States.",
 		"repContactResources/images/usagovscreen.jpg", "USA.gov voting and elections guide screenshot"],
 
 	eac: ["Among other things, the Electoral Assistance Commission serves as a national clearinghouse and information resource for election administration.  Their website offers a wealth of practical resources for voters, as well as guidelines for offical election administration procedures.",
@@ -75,7 +75,7 @@ const linksObject = {
 	sixtyfive: ["The 65 is committed to making Congress work for us by mobilizing with a shared common mission, called a Weekly Call to Action.  Users can find out what issues are currently being persued, check out calling/writing scripts, and retrieve contact information for their Senators.",
 		"repContactResources/images/sixtyfivescreen.jpg", "The 65 homepage screenshot"],
 
-	indivisible: ["Indivisible tries to demystify conressional advocacy by providing a practical organizational guide for local citizen groups.  Indivisible groups have been responsible for organizing many of the town halls that have been in the news this February.",
+	indivisible: ["Indivisible tries to demystify congressional advocacy by providing a practical organizational guide for local citizen groups.  Indivisible groups have been responsible for organizing many of the town halls that have been in the news this February.",
 		"repContactResources/images/indivisiblescreen.jpg", "Indivisible homepage screenshot"],
 
 	knock: ["Knock on Every Door is an attempt to build a largescale, grassroots, volunteer led effort to reach out to potential first time voters.  Users can sign up to receive more information on volunteering with local groups.",

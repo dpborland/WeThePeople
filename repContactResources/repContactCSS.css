@@ -628,85 +628,119 @@ body {
   @media screen and (min-width: 1250px) and (max-width: 2199px) {
     .contentWrapper .repsWrapper:nth-child(2) {
       border-top: none; } }
+  .contentWrapper .linksSections {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    padding-bottom: 3px;
+    font-size: 2.5em;
+    color: darkred; }
   .contentWrapper .linksWrapper {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%; }
-    .contentWrapper .linksWrapper .linksList {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      overflow-y: scroll;
-      padding: 20px;
-      border-right: 1px solid rgba(248, 248, 255, 0.7);
-      align-items: flex-start;
-      font-family: Open Sans Condensed;
-      font-size: 1.3em;
-      color: darkblue;
-      background: rgba(248, 248, 255, 0.4); }
-      @media screen and (min-width: 0px) and (max-width: 249px) {
-        .contentWrapper .linksWrapper .linksList {
-          width: 100%; } }
-      @media screen and (min-width: 250px) and (max-width: 349px) {
-        .contentWrapper .linksWrapper .linksList {
-          width: 100%; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .linksWrapper .linksList {
-          width: 100%; } }
-      .contentWrapper .linksWrapper .linksList .linksTitle {
-        font-size: 1.5em;
-        color: darkred;
-        margin: 13px 0 13px 0;
-        transition: color .3s ease; }
-      .contentWrapper .linksWrapper .linksList .linksLink {
-        text-decoration: none;
-        color: darkblue;
-        margin-bottom: 8px;
-        text-align: left; }
-      .contentWrapper .linksWrapper .linksList .linksLink:hover {
-        color: darkred;
-        transition: color .3s ease; }
-    .contentWrapper .linksWrapper .linksDescriptions {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      overflow-y: scroll;
-      padding: 20px;
-      align-items: center;
-      justify-content: flex-start;
-      font-family: Open Sans Condensed;
-      font-size: 1.3em;
-      color: darkblue;
-      background: rgba(248, 248, 255, 0.4); }
-      @media screen and (min-width: 0px) and (max-width: 249px) {
-        .contentWrapper .linksWrapper .linksDescriptions {
-          display: none; } }
-      @media screen and (min-width: 250px) and (max-width: 349px) {
-        .contentWrapper .linksWrapper .linksDescriptions {
-          display: none; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
-        .contentWrapper .linksWrapper .linksDescriptions {
-          display: none; } }
-      .contentWrapper .linksWrapper .linksDescriptions .linksScreenshot {
-        width: 100%;
-        opacity: 0;
-        margin-top: 20px;
-        padding: 10px;
-        background: rgba(248, 248, 255, 0.7);
-        transition: opacity .3s ease; }
-      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsPlaceholder {
-        margin: 0px;
-        opacity: 1;
-        transition: opacity .3s ease; }
-      .contentWrapper .linksWrapper .linksDescriptions .linksDescriptionsText {
-        opacity: 0;
-        transition: opacity .3s ease; }
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 49%;
+    height: 450px;
+    padding: 20px;
+    		/*.linksList {
+    			display: flex;
+    			flex-direction: column;
+    			width: 50%;
+    			-webkit-box-sizing: border-box;
+    			-moz-box-sizing: border-box;
+    			box-sizing: border-box;
+    			overflow-y: scroll;
+    			padding: 20px;
+    			border-right: 1px solid rgba(248, 248, 255, 0.7);
+    			align-items: flex-start;
+    			font-family: Open Sans Condensed;
+    			font-size: 1.3em;
+    			color: darkblue;
+    			background: rgba(248, 248, 255, 0.4);
+    			@media screen and (min-width: 0px) and (max-width: 249px) {
+    				width: 100%;
+    			}
+    			@media screen and (min-width: 250px) and (max-width: 349px) {
+    				width: 100%;
+    			}
+    			@media screen and (min-width: 350px) and (max-width: 550px) {
+    				width: 100%;
+    			}
+    
+    			.linksTitle {
+    				font-size: 1.5em;
+    				color: darkred;
+    				margin: 13px 0 13px 0;
+    				transition: color .3s ease;
+    			}
+    
+    			.linksLink {
+    				text-decoration: none;
+    				color: darkblue;
+    				margin-bottom: 8px;
+    				text-align: left;
+    			}
+    
+    			.linksLink:hover {
+    				color: darkred;
+    				transition: color .3s ease;
+    			}
+    
+    		}
+    
+    		.linksDescriptions {
+    			display: flex;
+    			flex-direction: column;
+    			width: 50%;
+    			-webkit-box-sizing: border-box;
+    			-moz-box-sizing: border-box;
+    			box-sizing: border-box;
+    			overflow-y: scroll;
+    			padding: 20px;
+    			align-items: center;
+    			justify-content: flex-start;
+    			font-family: Open Sans Condensed;
+    			font-size: 1.3em;
+    			color: darkblue;
+    			background: rgba(248, 248, 255, .4);
+    			@media screen and (min-width: 0px) and (max-width: 249px) {
+    				display: none;
+    			}
+    			@media screen and (min-width: 250px) and (max-width: 349px) {
+    				display: none;
+    			}
+    			@media screen and (min-width: 350px) and (max-width: 550px) {
+    				display: none;
+    			}
+    
+    			.linksScreenshot {
+    				width: 100%;
+    				opacity: 0;
+    				margin-top: 20px;
+    				padding: 10px;
+    				background: rgba(248, 248, 255, 0.7);
+    				transition: opacity .3s ease;
+    			}
+    
+    			.linksDescriptionsPlaceholder {
+    				margin: 0px;
+    				opacity: 1;
+    				transition: opacity .3s ease;
+    			}
+    
+    			.linksDescriptionsText {
+    				opacity: 0;
+    				transition: opacity .3s ease;
+    			}
+    		}*/ }
+    .contentWrapper .linksWrapper .linksImgContainer {
+      width: 100%;
+      transition: background-color .4s ease; }
+    .contentWrapper .linksWrapper .linksImgContainer:hover {
+      background-color: black;
+      transition: background-color .4s ease; }
+    .contentWrapper .linksWrapper .linksDescription {
+      color: darkblue; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
