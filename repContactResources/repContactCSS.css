@@ -749,7 +749,6 @@ body {
       background-color: rgba(248, 248, 255, 0.5); }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer {
         width: 100%;
-        border-bottom: 1px solid rgba(248, 248, 255, 0.7);
         margin-bottom: 20px;
         background-color: transparent;
         transition: background-color .4s ease; }
