@@ -639,10 +639,13 @@ body {
     font-family: Open Sans Condensed;
     color: darkred;
     background-color: rgba(248, 248, 255, 0.5); }
+  .contentWrapper .linksSectionsHeading:nth-child(2) {
+    margin-top: 20px; }
   .contentWrapper .linksSectionsWrapper {
     column-count: 2;
     column-gap: 2;
     column-width: calc(50% - 10px);
+    break-inside: avoid;
     		/*.linksList {
     			display: flex;
     			flex-direction: column;
