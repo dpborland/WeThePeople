@@ -731,7 +731,10 @@ body {
 		.linksImgContainer {
 			width: 100%;
 			margin-bottom: 20px;
-			background-color: transparent;
+			background-color: rgba(0, 0, 99, .75);
+			background-image: url(images/indivisiblescreen.jpg);
+			background-size: cover;
+			background-blend-mode: screen(50%);
 			overflow: hidden;
 			transition: background-color .4s ease;
 
@@ -753,7 +756,7 @@ body {
 		}
 
 		.linksImgContainer:hover {
-			background-color: darkblue;
+			background-color: rgba(0, 0, 99, .75);
 			transition: background-color .3s ease;
 		}
 
@@ -769,7 +772,7 @@ body {
 
 		.linksTitle:hover {
 			cursor: pointer;
-			color: rgba(0, 0, 99, .75);
+			color: darkblue;
 			transition: color .3s ease;
 		}
 

@@ -750,7 +750,10 @@ body {
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer {
         width: 100%;
         margin-bottom: 20px;
-        background-color: transparent;
+        background-color: rgba(0, 0, 99, 0.75);
+        background-image: url(images/indivisiblescreen.jpg);
+        background-size: cover;
+        background-blend-mode: screen(50%);
         overflow: hidden;
         transition: background-color .4s ease; }
         .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink {
@@ -764,7 +767,7 @@ body {
             opacity: .4;
             transition: opacity .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer:hover {
-        background-color: darkblue;
+        background-color: rgba(0, 0, 99, 0.75);
         transition: background-color .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksTitle {
         font-family: Open Sans Condensed;
@@ -776,7 +779,7 @@ body {
         transition: color .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksTitle:hover {
         cursor: pointer;
-        color: rgba(0, 0, 99, 0.75);
+        color: darkblue;
         transition: color .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksDescription {
         font-family: Open Sans Condensed;
