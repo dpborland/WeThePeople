@@ -165,6 +165,7 @@ body {
 	flex-direction: column;
 	width: 70%;
 	height: 90%;
+	padding: 0 15%;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	align-self: center;
@@ -172,20 +173,25 @@ body {
 	@media #{$phone-break-small} {
 		height: 85%;
 		width: 95%;
+		padding: 0;
 	}
 	@media #{$phone-break-medium} {
 		height: 85%;
 		width: 95%;
+		padding: 0;
 	}
 	@media #{$phone-break-large} {
 		height: 85%;
 		width: 95%;
+		padding: 0;
 	}
 	@media #{$tablet-break} {
 		width: 90%;
+		padding: 0 5%;
 	}
 	@media #{$wide-screen-break} {
 		width: 80%;
+		padding: 0 10%;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		flex-direction: row;
@@ -730,20 +736,21 @@ body {
 
 		.linksImgContainer {
 			width: 100%;
-			margin-bottom: 20px;
-			background-color: rgba(0, 0, 99, .75);
+			margin-bottom: 15px;
+			background-color: rgba(0, 0, 99, .6);
 			background-image: url(images/indivisiblescreen.jpg);
 			background-size: cover;
-			background-blend-mode: screen(50%);
+			background-blend-mode: soft-light;
+			filter: blur(0);
 			overflow: hidden;
-			transition: background-color .4s ease;
+			transition: filter .4s ease;
 
 			.linksImgLink {
 				height: 100%;
 
 				.linksImg {
 					width: 105%;
-					opacity: 1;
+					opacity: 0;
 					transform: translateX(-5px);
 					transition: opacity .3s ease;
 				}
@@ -764,6 +771,7 @@ body {
 			font-family: Open Sans Condensed;
 			font-size: 2em;
 			color: darkred;
+			text-align: left;
 			padding-top: 15px;
 			margin-top: 15px;
 			border-top: 1px solid rgba(248, 248, 255, 0.7);
@@ -779,6 +787,7 @@ body {
 		.linksDescription {
 			font-family: Open Sans Condensed;
 			font-size: 1.5em;
+			text-align: left;
 			color: darkblue;
 			margin: 15px 0 0 0;
 			padding: 0 15px;
