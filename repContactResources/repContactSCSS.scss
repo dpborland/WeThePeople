@@ -22,18 +22,21 @@ body {
     text-align: center;
     justify-content: space-between;
     font-family: "Playfair Display", sans-serif;
-	background: linear-gradient(to bottom right, rgba(168, 0, 0, .75) -50%, rgba(248, 248, 255, .80) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
-    background-size: cover;
+	/*background: linear-gradient(to bottom right, rgba(168, 0, 0, .75) -50%, rgba(248, 248, 255, .80) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
+	background: url(images/flagBWLight.jpg);
+	background-size: cover;
+	background-color: rgba(0, 0, 77, .5);
+	background-blend-mode: darken;
 	@media #{$phone-break-small} {
-		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+		/*background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
 		background-size: cover;
 	}
 	@media #{$phone-break-medium} {
-		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+		/*background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
 		background-size: cover;
 	}
 	@media #{$phone-break-large} {
-		background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
+		/*background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
 		background-size: cover;
 	}
 }
@@ -48,7 +51,7 @@ body {
 	margin: 0px;
 	border-bottom: 2px solid darkred;
 	/*background-color: rgba(12, 29, 141, .7);*/
-	background-color: rgba(248, 248, 255, .5);
+	background-color: rgba(248, 248, 255, .85);
 	@media #{$phone-break-small} {
 		position: fixed;
 		bottom: 0;
@@ -164,7 +167,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	width: 70%;
-	height: 75%%;
+	height: 75%;
 	padding: 0 15%;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -331,10 +334,10 @@ body {
 		width: 33%;
 		box-sizing: border-box;
 		max-height: 350px;
-		//padding: 20px;
-		border-top: 1px solid darkred;
+		padding: 20px;
+		margin-bottom: 10px;
 		font-family: open sans condensed;
-		background: linear-gradient(to right, rgba(255, 255, 255, 1) 20%, rgba(0, 0, 0, 0) 113%), url(images/Pence.jpg) top no-repeat;
+		background: rgba(248, 248, 255, .85);
 		background-size: cover;
 		@media #{$phone-break-small} {
 			order: 1;

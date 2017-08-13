@@ -13,19 +13,22 @@ body {
   text-align: center;
   justify-content: space-between;
   font-family: "Playfair Display", sans-serif;
-  background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.75) -50%, rgba(248, 248, 255, 0.8) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
-  background-size: cover; }
+  /*background: linear-gradient(to bottom right, rgba(168, 0, 0, .75) -50%, rgba(248, 248, 255, .80) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
+  background: url(images/flagBWLight.jpg);
+  background-size: cover;
+  background-color: rgba(0, 0, 77, 0.5);
+  background-blend-mode: darken; }
   @media screen and (min-width: 0px) and (max-width: 249px) {
     body {
-      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+      /*background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
       background-size: cover; } }
   @media screen and (min-width: 250px) and (max-width: 349px) {
     body {
-      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;
+      /*background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
       background-size: cover; } }
   @media screen and (min-width: 350px) and (max-width: 550px) {
     body {
-      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
+      /*background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
       background-size: cover; } }
 
 .menu {
@@ -38,7 +41,7 @@ body {
   margin: 0px;
   border-bottom: 2px solid darkred;
   /*background-color: rgba(12, 29, 141, .7);*/
-  background-color: rgba(248, 248, 255, 0.5); }
+  background-color: rgba(248, 248, 255, 0.85); }
   @media screen and (min-width: 0px) and (max-width: 249px) {
     .menu {
       position: fixed;
@@ -143,9 +146,10 @@ body {
 
 .contentWrapper {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 70%;
-  height: 90%;
+  height: 75%;
+  padding: 0 15%;
   margin-top: 20px;
   margin-bottom: 20px;
   align-self: center;
@@ -153,21 +157,26 @@ body {
   @media screen and (min-width: 0px) and (max-width: 249px) {
     .contentWrapper {
       height: 85%;
-      width: 95%; } }
+      width: 95%;
+      padding: 0; } }
   @media screen and (min-width: 250px) and (max-width: 349px) {
     .contentWrapper {
       height: 85%;
-      width: 95%; } }
+      width: 95%;
+      padding: 0; } }
   @media screen and (min-width: 350px) and (max-width: 550px) {
     .contentWrapper {
       height: 85%;
-      width: 95%; } }
+      width: 95%;
+      padding: 0; } }
   @media screen and (min-width: 551px) and (max-width: 850px) {
     .contentWrapper {
-      width: 90%; } }
+      width: 90%;
+      padding: 0 5%; } }
   @media screen and (min-width: 1250px) and (max-width: 2199px) {
     .contentWrapper {
       width: 80%;
+      padding: 0 10%;
       justify-content: space-between;
       flex-wrap: wrap;
       flex-direction: row; } }
@@ -282,19 +291,21 @@ body {
         background-color: rgba(248, 248, 255, 0.7);
         transition: background-color .4s ease; }
   .contentWrapper .repsWrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
-    width: 100%;
+    width: 33%;
     box-sizing: border-box;
     max-height: 350px;
     padding: 20px;
-    border-top: 1px solid darkred;
+    margin-bottom: 10px;
     font-family: open sans condensed;
-    background: rgba(248, 248, 255, 0.4); }
+    background: rgba(248, 248, 255, 0.85);
+    background-size: cover; }
     @media screen and (min-width: 0px) and (max-width: 249px) {
       .contentWrapper .repsWrapper {
         order: 1;
@@ -744,35 +755,38 @@ body {
       break-inside: avoid;
       width: 100%;
       min-height: 400px;
+      text-align: left;
       margin: 0 0 20px 0;
-      padding: 0 0 15px 0;
+      padding: 15px;
       background-color: rgba(248, 248, 255, 0.5); }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer {
         width: 100%;
-        margin-bottom: 20px;
-        background-color: rgba(0, 0, 99, 0.75);
-        background-image: url(images/indivisiblescreen.jpg);
+        background: linear-gradient(rgba(0, 0, 99, 0.8) 20%, rgba(248, 248, 255, 0.9) 110%), url(indivisiblescreenBW.jpg);
         background-size: cover;
-        background-blend-mode: screen(50%);
+        background-position: right;
+        background-blend-mode: multiply;
+        color: rgba(139, 0, 0, 0.8);
         overflow: hidden;
-        transition: background-color .4s ease; }
+        transition: color .4s ease, background-color .4s ease; }
         .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink {
           height: 100%; }
           .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink .linksImg {
-            width: 105%;
-            opacity: 1;
-            transform: translateX(-5px);
+            width: 100%;
+            visibility: hidden;
+            opacity: 0;
             transition: opacity .3s ease; }
           .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink .linksImg:hover {
             opacity: .4;
             transition: opacity .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer:hover {
         background-color: rgba(0, 0, 99, 0.75);
-        transition: background-color .3s ease; }
+        color: ghostwhite;
+        transition: color .3s ease, background-color .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksTitle {
         font-family: Open Sans Condensed;
         font-size: 2em;
         color: darkred;
+        text-align: left;
         padding-top: 15px;
         margin-top: 15px;
         border-top: 1px solid rgba(248, 248, 255, 0.7);
@@ -784,8 +798,9 @@ body {
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksDescription {
         font-family: Open Sans Condensed;
         font-size: 1.5em;
+        text-align: left;
         color: darkblue;
         margin: 15px 0 0 0;
-        padding: 0 15px; }
+        padding-top: 15px; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
