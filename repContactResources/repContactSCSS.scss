@@ -51,7 +51,7 @@ body {
 	margin: 0px;
 	border-bottom: 2px solid darkred;
 	/*background-color: rgba(12, 29, 141, .7);*/
-	background-color: rgba(248, 248, 255, .85);
+	background-color: rgba(224, 230, 235, .9);
 	@media #{$phone-break-small} {
 		position: fixed;
 		bottom: 0;
@@ -88,8 +88,9 @@ body {
 		justify-content: center;
 		/*color: rgba(214, 210, 218, 0.99);*/
 		color: darkblue;
-		font-family: Open Sans Condensed;
-		font-size: 1.5em;
+		font-family: oswald;
+		font-weight: lighter;
+		font-size: 1.3em;
 		line-height: 95%;
 		text-decoration: none;
 		transition: color .4s ease, background-color .4s ease;
@@ -329,8 +330,9 @@ body {
 		max-height: 350px;
 		padding: 20px;
 		margin-bottom: 10px;
-		font-family: open sans condensed;
-		background: rgba(248, 248, 255, 0.85);
+		font-family: roboto;
+		font-weight: lighter;
+		background: rgba(224, 230, 235, 0.9);
 		@media #{$phone-break-small} {
 			order: 1;
 			flex-wrap: wrap;
@@ -449,6 +451,8 @@ body {
 				line-height: 95%;
 				margin-top: 0;
 				margin-bottom: 0;
+				font-family: oswald;
+				font-weight: lighter;
 				align-self: flex-start;
 				justify-content: flex-end;
 				color: darkred;
