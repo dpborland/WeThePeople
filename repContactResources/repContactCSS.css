@@ -41,31 +41,28 @@ body {
   margin: 0px;
   border-bottom: 2px solid darkred;
   /*background-color: rgba(12, 29, 141, .7);*/
-  background-color: rgba(224, 230, 235, 0.9); }
+  background-color: rgba(233, 226, 233, 0.9); }
   @media screen and (min-width: 0px) and (max-width: 249px) {
     .menu {
       position: fixed;
       bottom: 0;
       order: 2;
       border-bottom: none;
-      border-top: 1.5px solid darkred;
-      background-color: rgba(214, 214, 230, 0.9); } }
+      border-top: 1.5px solid darkred; } }
   @media screen and (min-width: 250px) and (max-width: 349px) {
     .menu {
       position: fixed;
       bottom: 0;
       order: 2;
       border-bottom: none;
-      border-top: 1.5px solid darkred;
-      background-color: rgba(214, 214, 230, 0.9); } }
+      border-top: 1.5px solid darkred; } }
   @media screen and (min-width: 350px) and (max-width: 550px) {
     .menu {
       position: fixed;
       bottom: 0;
       order: 2;
       border-bottom: none;
-      border-top: 1.5px solid darkred;
-      background-color: rgba(214, 214, 230, 0.9); } }
+      border-top: 1.5px solid darkred; } }
   .menu .menuOption {
     width: 15%;
     height: 100%;
@@ -75,12 +72,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*color: rgba(214, 210, 218, 0.99);*/
     color: darkblue;
     font-family: oswald;
     font-weight: lighter;
     font-size: 1.3em;
     line-height: 95%;
+    letter-spacing: .7px;
     text-decoration: none;
     transition: color .4s ease, background-color .4s ease; }
     @media screen and (min-width: 0px) and (max-width: 249px) {
@@ -89,24 +86,23 @@ body {
         padding-left: 7px;
         padding-right: 7px;
         border-left: 1px solid darkred;
-        font-size: 1.17em;
-        font-weight: bold; } }
+        font-size: 1.1em;
+        line-height: 1.2em; } }
     @media screen and (min-width: 250px) and (max-width: 349px) {
       .menu .menuOption {
         width: 25%;
         padding-left: 7px;
         padding-right: 7px;
         border-left: 1px solid darkred;
-        font-size: 1.17em;
-        font-weight: bold; } }
+        font-size: 1.1em;
+        line-height: 1.4em; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
       .menu .menuOption {
         width: 25%;
         padding-left: 7px;
         padding-right: 7px;
         border-left: 1px solid darkred;
-        font-size: 1.25em;
-        font-weight: bold; } }
+        font-size: 1.25em; } }
     @media screen and (min-width: 551px) and (max-width: 850px) {
       .menu .menuOption {
         width: 25%;
@@ -141,14 +137,14 @@ body {
   .menu .menuOption:hover {
     /*color: rgba(147, 27, 56, .9);*/
     color: ghostwhite;
-    background-color: rgba(0, 0, 99, 0.75);
+    background-color: rgba(0, 0, 77, 0.9);
     cursor: pointer;
     transition: color .4s ease, background-color .4s ease; }
 
 .contentWrapper {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 90%;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -200,8 +196,9 @@ body {
     .contentWrapper .titleFormWrapper .title {
       font-weight: 100;
       font-size: 7em;
-      /*color: rgba(0, 0, 107, 0.5);*/
-      color: rgba(147, 27, 56, 0.9);
+      -webkit-text-stroke: 1px rgba(147, 27, 56, 0.9);
+      text-shadow: 0px 0px 18px rgba(147, 27, 56, 0.9);
+      color: rgba(233, 226, 233, 0.9);
       margin-top: 0px;
       margin-bottom: 15px;
       line-height: 100px; }
@@ -220,13 +217,17 @@ body {
         .contentWrapper .titleFormWrapper .title {
           margin-bottom: 20px; } }
     .contentWrapper .titleFormWrapper .introText {
-      font-family: open sans condensed;
-      color: darkblue;
+      font-family: oswald;
+      font-weight: lighter;
+      color: #e9e3e9;
       text-align-last: justify;
-      font-size: 1.3em;
+      font-size: 1.2em;
+      letter-spacing: .8px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 77, 0.6);
       margin-top: 0px;
       margin-bottom: 10px;
-      line-height: 25px; }
+      margin-top: 10px;
+      line-height: 23px; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .introText {
           font-size: 6vw;
@@ -243,8 +244,15 @@ body {
         .contentWrapper .titleFormWrapper .introText {
           margin-top: 0px; } }
       .contentWrapper .titleFormWrapper .introText .underTitle {
-        font-size: 1.3em;
-        color: rgba(147, 27, 56, 0.9); }
+        font-size: 1.6em;
+        border-bottom: 4px double rgba(147, 27, 56, 0.9);
+        display: block;
+        color: #e9e3e9;
+        font-family: oswald;
+        letter-spacing: initial;
+        margin-bottom: -15px;
+        padding-bottom: 15px;
+        font-weight: lighter; }
     .contentWrapper .titleFormWrapper .addressSearch {
       display: flex;
       justify-content: center; }
@@ -260,7 +268,7 @@ body {
       .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar {
         border: 2px solid darkred;
         height: 40px;
-        width: 273px;
+        width: 295px;
         background-color: rgba(248, 248, 255, 0.3);
         padding-left: 15px;
         padding-right: 15px;
@@ -292,14 +300,14 @@ body {
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
     max-height: 350px;
     padding: 20px;
     margin-bottom: 10px;
     font-family: roboto;
     font-weight: lighter;
-    background: rgba(224, 230, 235, 0.9); }
+    background: rgba(233, 226, 233, 0.9); }
     @media screen and (min-width: 0px) and (max-width: 249px) {
       .contentWrapper .repsWrapper {
         order: 1;
@@ -325,7 +333,9 @@ body {
         max-height: 250px; } }
     @media screen and (min-width: 1250px) and (max-width: 2199px) {
       .contentWrapper .repsWrapper {
-        width: 49%; } }
+        width: 39%;
+        margin-left: 5px;
+        margin-right: 5px; } }
     .contentWrapper .repsWrapper .repImgContainer {
       height: 290px;
       width: 201px;
@@ -372,17 +382,24 @@ body {
     .contentWrapper .repsWrapper .repInfo {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      box-sizing: border-box;
+      justify-content: flex-start;
       align-items: baseline;
       height: 250px;
-      width: 50%;
+      max-width: 48%;
+      font-size: 1.1em;
       text-align: left;
+      line-height: 1em;
       padding-left: 20px;
+      padding-right: 10px;
       border-left: 1px solid rgba(248, 248, 255, 0.7); }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repInfo {
           order: 1;
           height: 245px;
+          font-size: .8em;
+          line-height: 1.7em;
+          justify-content: space-around;
           max-width: 75%;
           padding-left: 0;
           padding-right: 0;
@@ -392,6 +409,9 @@ body {
         .contentWrapper .repsWrapper .repInfo {
           order: 1;
           height: 220px;
+          font-size: .9em;
+          line-height: 1.7em;
+          justify-content: space-around;
           max-width: 75%;
           padding-left: 0;
           padding-right: 0;
@@ -401,19 +421,22 @@ body {
         .contentWrapper .repsWrapper .repInfo {
           order: 3;
           height: 210px;
-          justify-content: space-between;
+          font-size: .9em;
+          line-height: 1.7em;
+          justify-content: space-around;
           max-width: 55%;
           margin-left: 0px;
           padding-left: 15px;
           border-left: 1px solid rgba(248, 248, 255, 0.7); } }
       @media screen and (min-width: 1250px) and (max-width: 2199px) {
         .contentWrapper .repsWrapper .repInfo {
-          width: 50%; } }
+          width: 50%;
+          font-size: 1.04em; } }
       .contentWrapper .repsWrapper .repInfo .repName {
-        font-size: 3em;
+        font-size: 2.5em;
         line-height: 95%;
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-top: -2px;
+        margin-bottom: 2px;
         font-family: oswald;
         font-weight: lighter;
         align-self: flex-start;
@@ -423,149 +446,119 @@ body {
           .contentWrapper .repsWrapper .repInfo .repName {
             font-size: 10vw;
             text-align: left;
-            margin-top: -2px; } }
+            margin-top: -2px;
+            margin-bottom: 5px; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repName {
             font-size: 10vw;
             text-align: left;
-            margin-top: -2px; } }
+            margin-top: -2px;
+            margin-bottom: 5px; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repName {
-            font-size: 6.5vw;
+            font-size: 6.8vw;
             text-align: left;
-            margin-top: -2px; } }
+            margin-top: -2px;
+            margin-bottom: 5px; } }
         @media screen and (min-width: 551px) and (max-width: 850px) {
           .contentWrapper .repsWrapper .repInfo .repName {
-            font-size: 2.4em;
+            font-size: 2.3em;
             text-align: left;
-            margin-top: -4px; } }
+            margin-top: -2px; } }
         @media screen and (min-width: 1250px) and (max-width: 2199px) {
           .contentWrapper .repsWrapper .repInfo .repName {
-            font-size: 2.1em; } }
+            font-size: 2.2em;
+            margin-bottom: 5px; } }
       .contentWrapper .repsWrapper .repInfo .repTitle {
         display: flex;
-        font-size: 1.2em;
+        font-size: 1em;
         font-weight: 100;
         color: darkred;
         font-style: italic;
         margin-top: 0px;
-        margin-bottom: -5px; }
+        margin-bottom: 10px; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: 1em;
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 0; } }
+            font-size: .85em;
+            margin-bottom: 10px; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: 1em;
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 0; } }
+            font-size: .85em;
+            margin-bottom: 10px; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: 1.1em;
-            font-weight: bold;
-            margin-top: 3px;
-            margin-bottom: 0; } }
+            font-size: .85em;
+            margin-bottom: 10px; } }
       .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-weight: 100;
-        height: 27px;
         color: darkblue;
         margin-top: 4px;
         margin-bottom: 0px; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            font-size: 1.1em;
-            font-weight: bold;
-            height: initial; } }
+            font-size: .95em; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            font-size: 1.1em;
-            font-weight: bold;
-            height: initial; } }
+            font-size: .95em; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            font-size: 1.2em;
-            font-weight: bold;
-            height: initial; } }
+            font-size: .95em; } }
         @media screen and (min-width: 551px) and (max-width: 850px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            margin-bottom: 0px;
-            height: 27px; } }
+            margin-bottom: 0px; } }
       .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-        font-size: 1.3em;
+        font-size: 1.2em;
         font-weight: 100;
         color: darkblue;
         margin-top: 0px;
         margin-bottom: 0px; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: 1em;
+            font-size: .95em;
             font-weight: bold;
             margin-top: 0px; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: 1.2em;
-            font-weight: bold;
+            font-size: .95em;
             margin-top: 0px; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: 1.2em;
-            font-weight: bold;
+            font-size: .95em;
             margin-top: 0px; } }
         @media screen and (min-width 350px) and (max-width: 450px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
             font-size: 1.1em; } }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repInfo .repAddressTwo {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 5px; } }
+          font-size: .95em; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repInfo .repAddressTwo {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 5px; } }
+          font-size: .95em; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repInfo .repAddressTwo {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 5px; } }
+          font-size: .95em; } }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repInfo .repPhone {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 0; } }
+          font-size: .95em; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repInfo .repPhone {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 0; } }
+          font-size: .95em; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repInfo .repPhone {
-          font-size: 1.2em;
-          font-weight: bold;
-          margin-bottom: 0; } }
+          font-size: .95em; } }
       .contentWrapper .repsWrapper .repInfo .repWebsite {
         margin-bottom: 10px;
         transition: color .3s ease; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 0; } }
+            font-size: .95em; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 0; } }
+            font-size: .95em; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 0; } }
+            font-size: .95em; } }
       .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
         color: darkred;
         transition: color .3s ease; }
@@ -643,9 +636,10 @@ body {
     margin: 20px 0 20px 0;
     padding-bottom: 5px;
     font-size: 2.5em;
-    font-family: Open Sans Condensed;
+    font-family: Oswald;
+    font-weight: lighter;
     color: darkred;
-    background-color: rgba(248, 248, 255, 0.5); }
+    background-color: rgba(224, 230, 235, 0.9); }
   .contentWrapper .linksSectionsHeading:nth-child(1) {
     margin-top: 0; }
   .contentWrapper .linksSectionsWrapper {
@@ -744,11 +738,10 @@ body {
       width: 100%;
       min-height: 400px;
       margin: 0 0 20px 0;
-      padding: 0 0 15px 0;
-      background-color: rgba(248, 248, 255, 0.5); }
+      padding: 15px;
+      background-color: rgba(224, 230, 235, 0.9); }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer {
-        width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         background-color: transparent;
         overflow: hidden;
         transition: background-color .4s ease; }
@@ -766,11 +759,11 @@ body {
         background-color: darkblue;
         transition: background-color .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksTitle {
-        font-family: Open Sans Condensed;
+        font-family: Oswald;
+        font-weight: lighter;
         font-size: 2em;
         color: darkred;
         padding-top: 15px;
-        margin-top: 15px;
         border-top: 1px solid rgba(248, 248, 255, 0.7);
         transition: color .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksTitle:hover {
@@ -778,10 +771,13 @@ body {
         color: rgba(0, 0, 99, 0.75);
         transition: color .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksDescription {
-        font-family: Open Sans Condensed;
-        font-size: 1.5em;
+        font-family: Roboto;
+        font-weight: lighter;
+        font-size: 1.3em;
+        line-height: 1.3em;
+        letter-spacing: 1.2px;
+        text-align: justify;
         color: darkblue;
-        margin: 15px 0 0 0;
-        padding: 0 15px; }
+        margin: 15px 0 0 0; }
 
 /*# sourceMappingURL=repContactCSS.css.map */

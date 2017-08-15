@@ -51,14 +51,13 @@ body {
 	margin: 0px;
 	border-bottom: 2px solid darkred;
 	/*background-color: rgba(12, 29, 141, .7);*/
-	background-color: rgba(224, 230, 235, .9);
+	background-color: rgba(233, 226, 233, 0.9);
 	@media #{$phone-break-small} {
 		position: fixed;
 		bottom: 0;
 		order: 2;
 		border-bottom: none;
 		border-top: 1.5px solid darkred;
-		background-color: rgba(214, 214, 230, .9);
 	}
 	@media #{$phone-break-medium} {
 		position: fixed;
@@ -66,7 +65,6 @@ body {
 		order: 2;
 		border-bottom: none;
 		border-top: 1.5px solid darkred;
-		background-color: rgba(214, 214, 230, .9);
 	}
 	@media #{$phone-break-large} {
 		position: fixed;
@@ -74,7 +72,6 @@ body {
 		order: 2;
 		border-bottom: none;
 		border-top: 1.5px solid darkred;
-		background-color: rgba(214, 214, 230, .9);
 	}
 
 	.menuOption {
@@ -86,12 +83,12 @@ body {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		/*color: rgba(214, 210, 218, 0.99);*/
 		color: darkblue;
 		font-family: oswald;
 		font-weight: lighter;
 		font-size: 1.3em;
 		line-height: 95%;
+		letter-spacing: .7px;
 		text-decoration: none;
 		transition: color .4s ease, background-color .4s ease;
 		@media #{$phone-break-small} {
@@ -99,16 +96,16 @@ body {
 			padding-left: 7px;
 			padding-right: 7px;
 			border-left: 1px solid darkred;
-			font-size: 1.17em;
-			font-weight: bold;
+			font-size: 1.1em;
+			line-height: 1.2em;
 		}
 		@media #{$phone-break-medium} {
 			width: 25%;
 			padding-left: 7px;
 			padding-right: 7px;
 			border-left: 1px solid darkred;
-			font-size: 1.17em;
-			font-weight: bold;
+			font-size: 1.1em;
+			line-height: 1.4em;
 		}
 		@media #{$phone-break-large} {
 			width: 25%;
@@ -116,7 +113,6 @@ body {
 			padding-right: 7px;
 			border-left: 1px solid darkred;
 			font-size: 1.25em;
-			font-weight: bold;
 		}
 		@media #{$tablet-break} {
 			width: 25%;
@@ -159,7 +155,7 @@ body {
 	.menuOption:hover {
 		/*color: rgba(147, 27, 56, .9);*/
 		color: ghostwhite;
-		background-color: rgba(0, 0, 99, .75);
+		background-color: rgba(0, 0, 77, .9);
 		cursor: pointer;
 		transition: color .4s ease, background-color .4s ease;
 	}
@@ -167,7 +163,7 @@ body {
 .contentWrapper {
 	display: flex;
 	flex-direction: column;
-	width: 70%;
+	width: 100%;
 	height: 90%;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -221,8 +217,9 @@ body {
 		.title {
 			font-weight: 100;
 			font-size: 7em;
-			/*color: rgba(0, 0, 107, 0.5);*/
-			color: rgba(147, 27, 56, 0.9);
+			-webkit-text-stroke: 1px rgba(147, 27, 56, 0.9);
+			text-shadow: 0px 0px 18px rgba(147, 27, 56, 0.9);
+			color: rgba(233, 226, 233, 0.9);
 			margin-top: 0px;
 			margin-bottom: 15px;
 			line-height: 100px;
@@ -243,13 +240,17 @@ body {
 		}
 
 		.introText {
-			font-family: open sans condensed;
-			color: darkblue;
+			font-family: oswald;
+			font-weight: lighter;
+			color: rgba(233, 227, 233, 1);
 			text-align-last: justify;
-			font-size: 1.3em;
+			font-size: 1.2em;
+			letter-spacing: .8px;
+			text-shadow: 1px 1px 4px rgba(0, 0, 77, 0.6);
 			margin-top: 0px;
 			margin-bottom: 10px;
-			line-height: 25px;
+			margin-top: 10px;
+			line-height: 23px;
 			@media #{$phone-break-small} {
 				font-size: 6vw;
 				line-height: 26px;
@@ -267,8 +268,15 @@ body {
 			}
 
 			.underTitle {
-				font-size: 1.3em;
-				color: rgba(147, 27, 56, 0.9);
+				font-size: 1.6em;
+				border-bottom: 4px double rgba(147, 27, 56, 0.9);
+				display: block;
+				color: rgba(233, 227, 233, 1);
+				font-family: oswald;
+				letter-spacing: initial;
+				margin-bottom: -15px;
+				padding-bottom: 15px;
+				font-weight: lighter;
 			}
 		}
 
@@ -287,7 +295,7 @@ body {
 			.addressSearchBar {
 				border: 2px solid darkred;
 				height: 40px;
-				width: 273px;
+				width: 295px;
 				background-color: rgba(248, 248, 255, .3);
 				padding-left: 15px;
 				padding-right: 15px;
@@ -325,14 +333,14 @@ body {
 		flex-wrap: wrap;
 		align-items: flex-start;
 		align-content: flex-start;
-		width: 100%;
+		width: 80%;
 		box-sizing: border-box;
 		max-height: 350px;
 		padding: 20px;
 		margin-bottom: 10px;
 		font-family: roboto;
 		font-weight: lighter;
-		background: rgba(224, 230, 235, 0.9);
+		background: rgba(233, 226, 233, 0.9);
 		@media #{$phone-break-small} {
 			order: 1;
 			flex-wrap: wrap;
@@ -356,7 +364,9 @@ body {
 			max-height: 250px;
 		}
 		@media #{$wide-screen-break} {
-			width: 49%;
+			width: 39%;
+			margin-left: 5px;
+			margin-right: 5px;
 		}
 
 		.repImgContainer {
@@ -409,16 +419,23 @@ body {
 		.repInfo {
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			box-sizing: border-box;
+			justify-content: flex-start;
 			align-items: baseline;
 			height: 250px;
-			width: 50%;
+			max-width: 48%;
+			font-size: 1.1em;
 			text-align: left;
+			line-height: 1em;
 			padding-left: 20px;
+			padding-right: 10px;
 			border-left: 1px solid rgba(248, 248, 255, 0.7);
 			@media #{$phone-break-small} {
 				order: 1;
 				height: 245px;
+				font-size: .8em;
+				line-height: 1.7em;
+				justify-content: space-around;
 				max-width: 75%;
 				padding-left: 0;
 				padding-right: 0;
@@ -427,6 +444,9 @@ body {
 			@media #{$phone-break-medium} {
 				order: 1;
 				height: 220px;
+				font-size: .9em;
+				line-height: 1.7em;
+				justify-content: space-around;
 				max-width: 75%;
 				padding-left: 0;
 				padding-right: 0;
@@ -436,7 +456,9 @@ body {
 			@media #{$phone-break-large} {
 				order: 3;
 				height: 210px;
-				justify-content: space-between;
+				font-size: .9em;
+				line-height: 1.7em;
+				justify-content: space-around;
 				max-width: 55%;
 				margin-left: 0px;
 				padding-left: 15px;
@@ -444,13 +466,14 @@ body {
 			}
 			@media #{$wide-screen-break} {
 				width: 50%;
+				font-size: 1.04em;
 			}
 
 			.repName {
-				font-size: 3em;
+				font-size: 2.5em;
 				line-height: 95%;
-				margin-top: 0;
-				margin-bottom: 0;
+				margin-top: -2px;
+				margin-bottom: 2px;
 				font-family: oswald;
 				font-weight: lighter;
 				align-self: flex-start;
@@ -460,100 +483,88 @@ body {
 					font-size: 10vw;
 					text-align: left;
 					margin-top: -2px;
+					margin-bottom: 5px;
 				}
 				@media #{$phone-break-medium} {
 					font-size: 10vw;
 					text-align: left;
 					margin-top: -2px;
+					margin-bottom: 5px;
 				}
 				@media #{$phone-break-large} {
-					font-size: 6.5vw;
+					font-size: 6.8vw;
+					text-align: left;
+					margin-top: -2px;
+					margin-bottom: 5px;
+				}
+				@media #{$tablet-break} {
+					font-size: 2.3em;
 					text-align: left;
 					margin-top: -2px;
 				}
-				@media #{$tablet-break} {
-					font-size: 2.4em;
-					text-align: left;
-					margin-top: -4px;
-				}
 				@media #{$wide-screen-break} {
-					font-size: 2.1em;
+					font-size: 2.2em;
+					margin-bottom: 5px;
 				}
 			}
 			.repTitle {
 				display: flex;
-				font-size: 1.2em;
+				font-size: 1em;
 				font-weight: 100;
 				color: darkred;
 				font-style: italic;
 				margin-top: 0px;
-				margin-bottom: -5px;
+				margin-bottom: 10px;
 				@media #{$phone-break-small} {
-					font-size: 1em;
-					font-weight: bold;
-					margin-top: 0;
-					margin-bottom: 0;
+					font-size: .85em;
+					margin-bottom: 10px;
 				}
 				@media #{$phone-break-medium} {
-					font-size: 1em;
-					font-weight: bold;
-					margin-top: 0;
-					margin-bottom: 0;
+					font-size: .85em;
+					margin-bottom: 10px;
 				}
 				@media #{$phone-break-large} {
-					font-size: 1.1em;
-					font-weight: bold;
-					margin-top: 3px;
-					margin-bottom: 0;
+					font-size: .85em;
+					margin-bottom: 10px;
 				}
 
 			}
 			.repAddressOptionalLine {
-				font-size: 1.3em;
+				font-size: 1.2em;
 				font-weight: 100;
-				height: 27px;
 				color: darkblue;
 				margin-top: 4px;
 				margin-bottom: 0px;
 				@media #{$phone-break-small} {
-					font-size: 1.1em;
-					font-weight: bold;
-					height: initial;
+					font-size: .95em;
 				}
 				@media #{$phone-break-medium} {
-					font-size: 1.1em;
-					font-weight: bold;
-					height: initial;
+					font-size: .95em;
 				}
 				@media #{$phone-break-large} {
-					font-size: 1.2em;
-					font-weight: bold;
-					height: initial;
+					font-size: .95em;
 				}
 				@media #{$tablet-break} {
 					margin-bottom: 0px;
-					height: 27px;
 				}
 			}
 			.repAddressOne {
-				font-size: 1.3em;
+				font-size: 1.2em;
 				font-weight: 100;
 				color: darkblue;
 				margin-top: 0px;
 				margin-bottom: 0px;
 				@media #{$phone-break-small} {
-					font-size: 1em;
+					font-size: .95em;
 					font-weight: bold;
 					margin-top: 0px;
 				}
 				@media #{$phone-break-medium} {
-					font-size: 1.2em;
-					font-weight: bold;
+					font-size: .95em;
 					margin-top: 0px;
 				}
 				@media #{$phone-break-large} {
-					font-size: 1.2em;
-					font-weight: bold;
+					font-size: .95em;
 					margin-top: 0px;
 				}
 				@media #{$phone-break-large-text-adjust} {
@@ -563,37 +574,25 @@ body {
 			.repAddressTwo {
 				@extend .repAddressOne;
 				@media #{$phone-break-small} {
-					font-size: 1.2em;
-					font-weight: bold;
-					margin-bottom: 5px;
+					font-size: .95em;
 				}
 				@media #{$phone-break-medium} {
-					font-size: 1.2em;
-					font-weight: bold;
-					margin-bottom: 5px;
+					font-size: .95em;
 				}
 				@media #{$phone-break-large} {
-					font-size: 1.2em;
-					font-weight: bold;
-					margin-bottom: 5px;
+					font-size: .95em;
 				}
 			}
 			.repPhone {
 				@extend .repAddressOne;
 				@media #{$phone-break-small} {
-					font-size: 1.2em;
-					font-weight: bold;
-					margin-bottom: 0;
+					font-size: .95em;
 				}
 				@media #{$phone-break-medium} {
-					font-size: 1.2em;
-					font-weight: bold;
-					margin-bottom: 0;
+					font-size: .95em;
 				}
 				@media #{$phone-break-large} {
-					font-size: 1.2em;
-					font-weight: bold;
-					margin-bottom: 0;
+					font-size: .95em;
 				}
 			}
 			.repWebsite {
@@ -601,19 +600,13 @@ body {
 				margin-bottom: 10px;
 				transition: color .3s ease;
 				@media #{$phone-break-small} {
-					font-size: 1.2em;
-					font-weight: bold;
-					margin-bottom: 0;
+					font-size: .95em;
 				}
 				@media #{$phone-break-medium} {
-					font-size: 1.2em;
-					font-weight: bold;
-					margin-bottom: 0;
+					font-size: .95em;
 				}
 				@media #{$phone-break-large} {
-					font-size: 1.2em;
-					font-weight: bold;
-					margin-bottom: 0;
+					font-size: .95em;
 				}
 			}
 			.repWebsite:hover {
@@ -709,9 +702,10 @@ body {
 		margin: 20px 0 20px 0;
 		padding-bottom: 5px;
 		font-size: 2.5em;
-		font-family: Open Sans Condensed;
+		font-family: Oswald;
+		font-weight: lighter;
 		color: darkred;
-		background-color: rgba(248, 248, 255, 0.5);
+		background-color: rgba(224, 230, 235, 0.9);
 	}
 
 	.linksSectionsHeading:nth-child(1) {
@@ -732,12 +726,11 @@ body {
 			width: 100%;
 			min-height: 400px;
 			margin: 0 0 20px 0;
-			padding: 0 0 15px 0;
-			background-color: rgba(248, 248, 255, 0.5);
+			padding: 15px;
+			background-color: rgba(224, 230, 235, 0.9);
 
 			.linksImgContainer {
-				width: 100%;
-				margin-bottom: 20px;
+				margin-bottom: 10px;
 				background-color: transparent;
 				overflow: hidden;
 				transition: background-color .4s ease;
@@ -765,11 +758,11 @@ body {
 			}
 
 			.linksTitle {
-				font-family: Open Sans Condensed;
+				font-family: Oswald;
+				font-weight: lighter;
 				font-size: 2em;
 				color: darkred;
 				padding-top: 15px;
-				margin-top: 15px;
 				border-top: 1px solid rgba(248, 248, 255, 0.7);
 				transition: color .3s ease;
 			}
@@ -781,11 +774,14 @@ body {
 			}
 
 			.linksDescription {
-				font-family: Open Sans Condensed;
-				font-size: 1.5em;
+				font-family: Roboto;
+				font-weight: lighter;
+				font-size: 1.3em;
+				line-height: 1.3em;
+				letter-spacing: 1.2px;
+				text-align: justify;
 				color: darkblue;
 				margin: 15px 0 0 0;
-				padding: 0 15px;
 			}
 		}
 
