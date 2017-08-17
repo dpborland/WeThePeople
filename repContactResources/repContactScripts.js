@@ -130,7 +130,7 @@ if (document.querySelector(".linksWrapper")) {
 
 function constructResultsTemplate() {
 	return new Promise ( (resolve, reject) => {
-		 queryResponse = JSON.parse(localStorage.getItem("queryResponse"));
+	    queryResponse = JSON.parse(localStorage.getItem("queryResponse"));
 		let numberNeeded = queryResponse.result.officials.length;
 		let template = document.querySelector(".repsWrapper");
 		let contentWrapper = document.querySelector(".contentWrapper");
