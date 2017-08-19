@@ -162,7 +162,7 @@ body {
       height: 85%; } }
   @media screen and (min-width: 1250px) and (max-width: 2199px) {
     .contentWrapper {
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
       flex-direction: row; } }
   .contentWrapper .titleFormWrapper {
@@ -294,8 +294,7 @@ body {
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
-    width: 80%;
-    box-sizing: border-box;
+    width: 60%;
     max-height: 350px;
     padding: 15px;
     margin-bottom: 10px;
@@ -323,8 +322,11 @@ body {
         order: 1;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 15px;
+        padding: 10px;
         max-height: 250px; } }
+    @media screen and (min-width: 551px) and (max-width: 850px) {
+      .contentWrapper .repsWrapper {
+        width: 80%; } }
     @media screen and (min-width: 1250px) and (max-width: 2199px) {
       .contentWrapper .repsWrapper {
         width: 39%;
@@ -334,7 +336,7 @@ body {
       height: 290px;
       width: 201px;
       display: block;
-      margin-right: 20px;
+      margin-right: 15px;
       background-position: center top;
       background-repeat: no-repeat;
       -webkit-background-size: cover;
@@ -354,6 +356,7 @@ body {
           border-right: none;
           padding-right: 0px;
           margin-bottom: 10px;
+          margin-right: 10px;
           background-position: center center; } }
       .contentWrapper .repsWrapper .repImgContainer img {
         height: 290px;
@@ -371,7 +374,7 @@ body {
             height: 160px;
             width: 111px;
             border-right: none;
-            padding-right: 15px;
+            padding-right: 10px;
             margin-bottom: 5px; } }
     .contentWrapper .repsWrapper .repInfo {
       display: flex;
@@ -381,18 +384,16 @@ body {
       align-items: baseline;
       height: 250px;
       max-width: 48%;
-      font-size: 1.1em;
       text-align: left;
       line-height: 1em;
-      padding-left: 20px;
+      padding-left: 15px;
       padding-right: 10px;
       border-left: 1px solid rgba(248, 248, 255, 0.7); }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repInfo {
           order: 1;
           height: 245px;
-          font-size: .8em;
-          line-height: 1.7em;
+          line-height: 1.5em;
           justify-content: space-around;
           max-width: 75%;
           padding-left: 0;
@@ -403,8 +404,7 @@ body {
         .contentWrapper .repsWrapper .repInfo {
           order: 1;
           height: 220px;
-          font-size: .9em;
-          line-height: 1.7em;
+          line-height: 1.6em;
           justify-content: space-around;
           max-width: 75%;
           padding-left: 0;
@@ -415,13 +415,15 @@ body {
         .contentWrapper .repsWrapper .repInfo {
           order: 3;
           height: 210px;
-          font-size: .9em;
-          line-height: 1.7em;
+          line-height: 1.3em;
           justify-content: space-around;
-          max-width: 55%;
+          max-width: 60%;
           margin-left: 0px;
-          padding-left: 15px;
+          padding-left: 10px;
           border-left: 1px solid rgba(248, 248, 255, 0.7); } }
+      @media screen and (min-width: 551px) and (max-width: 850px) {
+        .contentWrapper .repsWrapper .repInfo {
+          font-size: .9em; } }
       @media screen and (min-width: 1250px) and (max-width: 2199px) {
         .contentWrapper .repsWrapper .repInfo {
           width: 50%;
@@ -465,7 +467,7 @@ body {
             margin-bottom: 5px; } }
       .contentWrapper .repsWrapper .repInfo .repTitle {
         display: flex;
-        font-size: 1em;
+        font-size: .85em;
         font-weight: 100;
         color: darkred;
         font-style: italic;
@@ -473,28 +475,28 @@ body {
         margin-bottom: 10px; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: .85em;
-            margin-bottom: 10px; } }
+            font-size: .8em;
+            margin-bottom: 5px; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
-            font-size: .85em;
-            margin-bottom: 10px; } }
+            font-size: .8em;
+            margin-bottom: 5px; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
             font-size: .85em;
-            margin-bottom: 10px; } }
+            margin-bottom: 5px; } }
       .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-        font-size: 1.2em;
+        font-size: .9em;
         font-weight: 100;
         color: darkblue;
         margin-top: 4px;
         margin-bottom: 0px; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            font-size: .95em; } }
+            font-size: .9em; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-            font-size: .95em; } }
+            font-size: .9em; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             font-size: .95em; } }
@@ -502,19 +504,18 @@ body {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             margin-bottom: 0px; } }
       .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-        font-size: 1.2em;
+        font-size: .9em;
         font-weight: 100;
         color: darkblue;
         margin-top: 0px;
         margin-bottom: 0px; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: .95em;
-            font-weight: bold;
+            font-size: .9em;
             margin-top: 0px; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: .95em;
+            font-size: .9em;
             margin-top: 0px; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
@@ -525,19 +526,19 @@ body {
             font-size: 1.1em; } }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repInfo .repAddressTwo {
-          font-size: .95em; } }
+          font-size: .9em; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repInfo .repAddressTwo {
-          font-size: .95em; } }
+          font-size: .9em; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repInfo .repAddressTwo {
           font-size: .95em; } }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repInfo .repPhone {
-          font-size: .95em; } }
+          font-size: .9em; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repInfo .repPhone {
-          font-size: .95em; } }
+          font-size: .9em; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .repsWrapper .repInfo .repPhone {
           font-size: .95em; } }
@@ -546,13 +547,16 @@ body {
         transition: color .3s ease; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: .95em; } }
+            font-size: .9em;
+            margin-bottom: 0; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: .95em; } }
+            font-size: .9em;
+            margin-bottom: 0; } }
         @media screen and (min-width: 350px) and (max-width: 550px) {
           .contentWrapper .repsWrapper .repInfo .repWebsite {
-            font-size: .95em; } }
+            font-size: .95em;
+            margin-bottom: 0; } }
       .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
         color: darkred;
         transition: color .3s ease; }
@@ -566,7 +570,7 @@ body {
       border-left: 1px solid rgba(248, 248, 255, 0.7);
       margin-top: 0;
       margin-bottom: 0;
-      padding-left: 20px;
+      padding-left: 15px;
       padding-right: 15px; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repSocialMedia {
@@ -594,6 +598,7 @@ body {
           margin: 0;
           width: 111px;
           padding-left: 0;
+          padding-right: 10px;
           border-left: none; } }
       .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
         height: 40px;
