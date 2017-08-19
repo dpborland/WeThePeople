@@ -86,7 +86,7 @@ body {
         padding-left: 7px;
         padding-right: 7px;
         border-left: 1px solid darkred;
-        font-size: 1.1em;
+        font-size: .75em;
         line-height: 1.2em; } }
     @media screen and (min-width: 250px) and (max-width: 349px) {
       .menu .menuOption {
