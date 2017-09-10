@@ -1,0 +1,296 @@
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #565895; }
+
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 550px;
+  display: flex;
+  margin: 0px;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  font-family: "Playfair Display", sans-serif;
+  /*background: url(images/weThePeopleBLUR.jpg) no-repeat left center fixed;
+  background-size: cover;
+  background-color: rgba(204, 213, 238, 0.99);*/
+  background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.75) -50%, rgba(248, 248, 255, 0.8) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;
+  background-size: cover; }
+  @media screen and (min-width: 200px) and (max-width: 550px) {
+    body {
+      background: linear-gradient(to bottom right, rgba(168, 0, 0, 0.85) -50%, rgba(248, 248, 255, 0.9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat; } }
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 10%;
+  min-height: 55px;
+  width: 100%;
+  margin: 0px;
+  border-bottom: 2px solid darkred;
+  /*background-color: rgba(12, 29, 141, .7);*/
+  background-color: rgba(248, 248, 255, 0.5); }
+  @media screen and (min-width: 200px) and (max-width: 550px) {
+    .menu {
+      position: fixed;
+      bottom: 0;
+      order: 2;
+      border-bottom: none;
+      border-top: 1.5px solid darkred;
+      background-color: rgba(214, 214, 230, 0.9); } }
+  .menu .menuOption {
+    width: 15%;
+    height: 100%;
+    border-left: 1px solid rgba(248, 248, 255, 0.7);
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*color: rgba(214, 210, 218, 0.99);*/
+    color: darkblue;
+    font-family: Open Sans Condensed;
+    font-size: 1.5em;
+    line-height: 95%;
+    transition: color .4s ease, background-color .4s ease; }
+    @media screen and (min-width: 200px) and (max-width: 550px) {
+      .menu .menuOption {
+        width: 25%;
+        padding-left: 7px;
+        padding-right: 7px;
+        border-left: 1px solid darkred;
+        font-size: 1.25em; } }
+    @media screen and (min-width: 551px) and (max-width: 850px) {
+      .menu .menuOption {
+        width: 25%;
+        padding-left: 5px;
+        padding-right: 5px; } }
+  @media screen and (min-width: 200px) and (max-width: 550px) {
+    .menu .menuOption:first-child {
+      border-left: none; } }
+  @media screen and (min-width: 551px) and (max-width: 850px) {
+    .menu .menuOption:first-child {
+      border-left: none; } }
+  .menu .menuOption:last-child {
+    border-right: 1px solid rgba(248, 248, 255, 0.7); }
+    @media screen and (min-width: 200px) and (max-width: 550px) {
+      .menu .menuOption:last-child {
+        border-right: none; } }
+    @media screen and (min-width: 551px) and (max-width: 850px) {
+      .menu .menuOption:last-child {
+        border-right: none; } }
+  .menu .menuOption:hover {
+    /*color: rgba(147, 27, 56, .9);*/
+    color: ghostwhite;
+    background-color: rgba(0, 0, 99, 0.75);
+    cursor: pointer;
+    transition: color .4s ease, background-color .4s ease; }
+
+.titleFormWrapper {
+  display: flex;
+  /*flex-direction: column;*/
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (min-width: 200px) and (max-width: 550px) {
+    .titleFormWrapper {
+      order: 1;
+      padding-bottom: 80px; } }
+  .titleFormWrapper .title {
+    font-weight: 100;
+    font-size: 7em;
+    /*color: rgba(0, 0, 107, 0.5);*/
+    color: rgba(147, 27, 56, 0.9);
+    margin-top: 0px;
+    margin-bottom: 15px;
+    line-height: 100px; }
+    @media screen and (min-width: 200px) and (max-width: 550px) {
+      .titleFormWrapper .title {
+        margin-bottom: 20px; } }
+    @media screen and (min-width: 551px) and (max-width: 850px) {
+      .titleFormWrapper .title {
+        margin-bottom: 20px; } }
+  .titleFormWrapper .introText {
+    font-family: open sans condensed;
+    color: darkblue;
+    text-align-last: justify;
+    font-size: 1.3em;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    line-height: 25px; }
+    @media screen and (min-width: 200px) and (max-width: 550px) {
+      .titleFormWrapper .introText {
+        font-size: 1.4em;
+        line-height: 30px; } }
+    @media screen and (min-width: 551px) and (max-width: 850px) {
+      .titleFormWrapper .introText {
+        margin-top: 0px; } }
+    .titleFormWrapper .introText .underTitle {
+      font-size: 1.3em;
+      color: rgba(147, 27, 56, 0.9); }
+  .titleFormWrapper .addressSearchBar {
+    border: 2px solid darkred;
+    height: 40px;
+    width: 273px;
+    background-color: rgba(248, 248, 255, 0.3);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: open sans condensed;
+    color: darkred;
+    font-size: 1.5em;
+    transition: background-color .4s ease; }
+    @media screen and (min-width: 200px) and (max-width: 550px) {
+      .titleFormWrapper .addressSearchBar {
+        width: 295px; } }
+  .titleFormWrapper .addressSearchBar::-webkit-input-placeholder {
+    color: darkblue;
+    opacity: .3; }
+  .titleFormWrapper .addressSearchBar:focus {
+    background-color: rgba(248, 248, 255, 0.7);
+    transition: background-color .4s ease; }
+
+.contentWrapper {
+  width: 90%;
+  height: 90%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  overflow-y: scroll; }
+  @media screen and (min-width: 200px) and (max-width: 550px) {
+    .contentWrapper {
+      height: 85%;
+      width: 95%; } }
+  .contentWrapper .repsWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 350px;
+    padding: 20px;
+    border-top: 1px solid darkred;
+    font-family: open sans condensed;
+    background: rgba(248, 248, 255, 0.4); }
+    @media screen and (min-width: 200px) and (max-width: 550px) {
+      .contentWrapper .repsWrapper {
+        order: 1;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 260px; } }
+    .contentWrapper .repsWrapper .repImg {
+      height: 250px;
+      display: block;
+      border-right: 1px solid rgba(248, 248, 255, 0.7);
+      padding-right: 30px; }
+      @media screen and (min-width: 200px) and (max-width: 550px) {
+        .contentWrapper .repsWrapper .repImg {
+          order: 1;
+          height: 150px;
+          padding-right: 20px;
+          margin-bottom: 5px; } }
+    .contentWrapper .repsWrapper .repInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      padding-left: 20px; }
+      @media screen and (min-width: 200px) and (max-width: 550px) {
+        .contentWrapper .repsWrapper .repInfo {
+          height: 200px;
+          order: 3; } }
+      .contentWrapper .repsWrapper .repInfo .repName {
+        font-size: 3em;
+        line-height: 95%;
+        margin-top: -5px;
+        margin-bottom: 0px;
+        align-self: flex-start;
+        justify-content: flex-end;
+        color: darkred; }
+        @media screen and (min-width: 551px) and (max-width: 850px) {
+          .contentWrapper .repsWrapper .repInfo .repName {
+            font-size: 2.4em;
+            text-align: left;
+            margin-top: -4px; } }
+        @media screen and (min-width: 200px) and (max-width: 550px) {
+          .contentWrapper .repsWrapper .repInfo .repName {
+            font-size: 2em;
+            text-align: left;
+            margin-top: -2px; } }
+      .contentWrapper .repsWrapper .repInfo .repTitle {
+        font-size: 1.3em;
+        font-weight: 100;
+        color: darkred;
+        font-style: italic;
+        margin-top: 5px;
+        margin-bottom: 10px; }
+        @media screen and (min-width: 200px) and (max-width: 550px) {
+          .contentWrapper .repsWrapper .repInfo .repTitle {
+            font-size: 1.2em; } }
+      .contentWrapper .repsWrapper .repInfo .repPhone {
+        font-size: 1.5em;
+        font-weight: 100;
+        color: darkblue;
+        margin-top: 0;
+        margin-bottom: 5px; }
+        @media screen and (min-width: 200px) and (max-width: 550px) {
+          .contentWrapper .repsWrapper .repInfo .repPhone {
+            font-size: 1.2em;
+            margin-bottom: 0; } }
+      .contentWrapper .repsWrapper .repInfo .repWebsite {
+        font-size: 1.5em;
+        margin-top: 0;
+        margin-bottom: 5px;
+        color: darkblue;
+        text-decoration: none;
+        transition: color .3s ease; }
+        @media screen and (min-width: 200px) and (max-width: 550px) {
+          .contentWrapper .repsWrapper .repInfo .repWebsite {
+            font-size: 1.2em; } }
+      .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
+        color: darkred;
+        transition: color .3s ease; }
+    .contentWrapper .repsWrapper .repSocialMedia {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      height: 50px;
+      width: 100px;
+      margin-top: 5px;
+      margin-bottom: 0; }
+      @media screen and (min-width: 200px) and (max-width: 550px) {
+        .contentWrapper .repsWrapper .repSocialMedia {
+          order: 2;
+          margin: 0;
+          width: 121px; } }
+      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon {
+        height: 40px;
+        width: 40px;
+        background: url("images/Facebook.png");
+        background-size: contain;
+        opacity: .4;
+        transition: background .3s ease, opacity .3s ease; }
+      .contentWrapper .repsWrapper .repSocialMedia .facebookIcon:hover {
+        opacity: 1;
+        transition: opacity .3s ease; }
+      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon {
+        height: 40px;
+        width: 40px;
+        background: url("images/Twitter.png");
+        background-size: contain;
+        opacity: .4;
+        transition: background .3s ease, opacity .3s ease; }
+      .contentWrapper .repsWrapper .repSocialMedia .twitterIcon:hover {
+        opacity: 1;
+        transition: opacity .3s ease; }
+  .contentWrapper .repsWrapper:first-child {
+    border-top: none; }
+
+/*# sourceMappingURL=rep.map */
