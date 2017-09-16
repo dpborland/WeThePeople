@@ -159,26 +159,8 @@ body {
 		cursor: pointer;
 		transition: color .4s ease, background-color .4s ease;
 	}
-
-	#results {
-		color: rgba(233, 226, 233, 0.9);
-		background: rgba(139, 0, 0, .85); //dark red
-	}
-
-	#scripts {
-		color: rgba(0, 0, 77, 0.95);
-		background: rgba(239, 239, 239, .9); //white
-	}
-
-	#links {
-		color: rgba(233, 226, 233, 0.9);
-		background: rgba(22, 22, 77, .85); //dark blue
-	}
-	#about {
-		color: rgba(239, 239, 239, .9);
-		background: rgba(52, 84, 209, .85); //bright blue
-	}
 }
+
 .contentWrapper {
 	display: flex;
 	flex-direction: column;
