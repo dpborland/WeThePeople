@@ -61,6 +61,7 @@ body {
   @media screen and (min-width: 350px) and (max-width: 550px) {
     .menu {
       position: fixed;
+      height: 8%;
       bottom: 0;
       order: 2;
       border-bottom: none; } }
@@ -90,20 +91,23 @@ body {
         padding-left: 7px;
         padding-right: 7px;
         font-size: .75em;
-        line-height: 1.2em; } }
+        line-height: 1.2em;
+        justify-content: center; } }
     @media screen and (min-width: 250px) and (max-width: 349px) {
       .menu .menuOption {
         width: 22.5%;
         padding-left: 7px;
         padding-right: 7px;
         font-size: .9em;
-        line-height: 1.2em; } }
+        line-height: 1.2em;
+        justify-content: center; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
       .menu .menuOption {
-        width: 16.25%;
+        width: 23.75%;
         letter-spacing: .2vw;
-        font-size: 2vw;
-        line-height: 2.4vw; } }
+        font-size: 3.4vw;
+        line-height: 4.1vw;
+        justify-content: center; } }
     @media screen and (min-width: 1250px) and (max-width: 2199px) {
       .menu .menuOption {
         font-size: 1.4em; } }
@@ -152,18 +156,18 @@ body {
   @media screen and (min-width: 0px) and (max-width: 249px) {
     .contentWrapper {
       height: 85%;
-      margin-top: 15px;
-      margin-bottom: 15px; } }
+      margin-bottom: 15px;
+      justify-content: center; } }
   @media screen and (min-width: 250px) and (max-width: 349px) {
     .contentWrapper {
       height: 85%;
-      margin-top: 15px;
-      margin-bottom: 15px; } }
+      margin-bottom: 15px;
+      justify-content: center; } }
   @media screen and (min-width: 350px) and (max-width: 550px) {
     .contentWrapper {
       height: 87%;
-      margin-top: 15px;
-      margin-bottom: 15px; } }
+      margin-bottom: 15px;
+      justify-content: center; } }
   @media screen and (min-width: 551px) and (max-width: 850px) {
     .contentWrapper {
       justify-content: flex-start;
@@ -187,19 +191,18 @@ body {
     @media screen and (min-width: 0px) and (max-width: 249px) {
       .contentWrapper .titleFormWrapper {
         order: 1;
-        height: 100%;
-        padding-bottom: 80px; } }
+        width: 95%;
+        padding: 2% 4% 4% 4%; } }
     @media screen and (min-width: 250px) and (max-width: 349px) {
       .contentWrapper .titleFormWrapper {
         order: 1;
-        height: 85%;
-        width: 90%; } }
+        width: 95%;
+        padding: 2% 4% 4% 4%; } }
     @media screen and (min-width: 350px) and (max-width: 550px) {
       .contentWrapper .titleFormWrapper {
         order: 1;
-        width: 80%;
-        height: 85%;
-        /*box-shadow: -1px 16px 40px 0px rgba(22, 22, 77, .85);*/ } }
+        width: 95%;
+        padding: 2% 4% 4% 4%; } }
     @media screen and (min-width: 551px) and (max-width: 850px) {
       .contentWrapper .titleFormWrapper {
         width: 64%;
@@ -226,11 +229,9 @@ body {
           font-size: 25vw; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .titleFormWrapper .title {
-          width: 90%;
-          font-size: 22vmin;
+          font-size: 28vw;
           letter-spacing: 2px;
-          word-spacing: -8px;
-          margin-bottom: 15px; } }
+          line-height: 26vw; } }
       @media screen and (min-width: 551px) and (max-width: 850px) {
         .contentWrapper .titleFormWrapper .title {
           font-size: 18.6vw;
@@ -254,15 +255,18 @@ body {
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .underTitle {
           font-size: 5.9vmin;
-          letter-spacing: 0.22vw; } }
+          letter-spacing: .22vw;
+          margin-top: 0; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .titleFormWrapper .underTitle {
           font-size: 5.9vmin;
-          letter-spacing: 0.22vw; } }
+          letter-spacing: .22vw;
+          margin-top: 0; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .titleFormWrapper .underTitle {
-          font-size: 5.9vmin;
-          letter-spacing: .22vw; } }
+          font-size: 7vw;
+          letter-spacing: .42vw;
+          margin-top: 0; } }
       @media screen and (min-width: 551px) and (max-width: 850px) {
         .contentWrapper .titleFormWrapper .underTitle {
           font-size: 4.6vmin; } }
@@ -288,20 +292,21 @@ body {
           letter-spacing: .3vw; } }
       @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .titleFormWrapper .introText {
-          font-size: 3.6vw;
-          line-height: 5vw;
-          letter-spacing: .3vw; } }
+          font-size: 3.9vw;
+          line-height: 6vw;
+          margin: 10px 0 15px 0;
+          letter-spacing: .1vw; } }
       @media screen and (min-width: 551px) and (max-width: 850px) {
         .contentWrapper .titleFormWrapper .introText {
-          font-size: 3vw;
-          letter-spacing: .2vw;
-          line-height: 3.8vw; } }
-      .contentWrapper .titleFormWrapper .introText .heardSpan .youSpan {
+          font-size: 2.4vw;
+          letter-spacing: .3vw;
+          line-height: 4vw; } }
+      .contentWrapper .titleFormWrapper .introText .heardSpan, .contentWrapper .titleFormWrapper .introText .youSpan {
         margin-right: -1.3%; }
     .contentWrapper .titleFormWrapper .addressSearch {
       display: flex;
       justify-content: center;
-      width: 100%; }
+      width: 101%; }
       .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar {
         border: 2px solid rgba(139, 0, 0, 0.85);
         height: 40px;
