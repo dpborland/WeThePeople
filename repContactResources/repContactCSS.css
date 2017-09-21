@@ -26,7 +26,7 @@ body {
     body {
       /*background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) left no-repeat;*/
       background-size: cover; } }
-  @media screen and (min-width: 350px) and (max-width: 550px) {
+  @media screen and (min-width: 350px) and (max-width: 549px) {
     body {
       /*background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
       background-size: cover; } }
@@ -54,11 +54,11 @@ body {
   @media screen and (min-width: 250px) and (max-width: 349px) {
     .menu {
       position: fixed;
+      height: 7%;
       bottom: 0;
       order: 2;
-      border-bottom: none;
-      border-top: 1.5px solid darkred; } }
-  @media screen and (min-width: 350px) and (max-width: 550px) {
+      border-bottom: none; } }
+  @media screen and (min-width: 350px) and (max-width: 549px) {
     .menu {
       position: fixed;
       height: 8%;
@@ -66,15 +66,15 @@ body {
       order: 2;
       border-bottom: none; } }
   .menu .menuOption {
-    width: 20.5%;
+    width: 16%;
     height: 100%;
     /*border-left: 1px solid rgba(248, 248, 255, 0.7);*/
     border-bottom: 3px solid transparent;
     box-sizing: border-box;
-    padding: 1vw 1vw .75vw 1vw;
+    padding: 1vw 4vw .75vw 2vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     color: rgba(0, 0, 77, 0.75);
     font-family: open sans;
     font-weight: 400;
@@ -87,27 +87,33 @@ body {
     transition: color .4s ease, border-bottom .3s ease, background-color .4s ease; }
     @media screen and (min-width: 0px) and (max-width: 249px) {
       .menu .menuOption {
-        width: 22.5%;
-        padding-left: 7px;
-        padding-right: 7px;
-        font-size: .75em;
-        line-height: 1.2em;
-        justify-content: center; } }
-    @media screen and (min-width: 250px) and (max-width: 349px) {
-      .menu .menuOption {
-        width: 22.5%;
-        padding-left: 7px;
-        padding-right: 7px;
-        font-size: .9em;
-        line-height: 1.2em;
-        justify-content: center; } }
-    @media screen and (min-width: 350px) and (max-width: 550px) {
-      .menu .menuOption {
         width: 23.75%;
+        padding: 1vw 1vw 1vw 3vw;
         letter-spacing: .2vw;
         font-size: 3.4vw;
-        line-height: 4.1vw;
-        justify-content: center; } }
+        line-height: 4.1vw; } }
+    @media screen and (min-width: 250px) and (max-width: 349px) {
+      .menu .menuOption {
+        width: 23.75%;
+        padding: 1vw 1vw 1vw 3vw;
+        letter-spacing: .2vw;
+        font-size: 3.4vw;
+        line-height: 4.1vw; } }
+    @media screen and (min-width: 350px) and (max-width: 549px) {
+      .menu .menuOption {
+        width: 23.75%;
+        padding: 1vw 1vw 1vw 3vw;
+        letter-spacing: .2vw;
+        font-size: 3.4vw;
+        line-height: 4.1vw; } }
+    @media screen and (min-width: 550px) and (max-width: 749px) {
+      .menu .menuOption {
+        width: initial;
+        padding: 1vw 2vw 0vw 2vw;
+        justify-content: flex-end;
+        font-weight: 600;
+        font-size: 1.6vw;
+        text-align: center; } }
     @media screen and (min-width: 1250px) and (max-width: 2199px) {
       .menu .menuOption {
         font-size: 1.4em; } }
@@ -117,10 +123,10 @@ body {
   @media screen and (min-width: 250px) and (max-width: 349px) {
     .menu .menuOption:first-child {
       border-left: none; } }
-  @media screen and (min-width: 350px) and (max-width: 550px) {
+  @media screen and (min-width: 350px) and (max-width: 549px) {
     .menu .menuOption:first-child {
       border-left: none; } }
-  @media screen and (min-width: 551px) and (max-width: 850px) {
+  @media screen and (min-width: 550px) and (max-width: 749px) {
     .menu .menuOption:first-child {
       border-left: none; } }
   .menu .menuOption:last-child {
@@ -131,10 +137,10 @@ body {
     @media screen and (min-width: 250px) and (max-width: 349px) {
       .menu .menuOption:last-child {
         border-right: none; } }
-    @media screen and (min-width: 350px) and (max-width: 550px) {
+    @media screen and (min-width: 350px) and (max-width: 549px) {
       .menu .menuOption:last-child {
         border-right: none; } }
-    @media screen and (min-width: 551px) and (max-width: 850px) {
+    @media screen and (min-width: 550px) and (max-width: 749px) {
       .menu .menuOption:last-child {
         border-right: none; } }
   .menu .menuOption:hover {
@@ -163,12 +169,12 @@ body {
       height: 85%;
       margin-bottom: 15px;
       justify-content: center; } }
-  @media screen and (min-width: 350px) and (max-width: 550px) {
+  @media screen and (min-width: 350px) and (max-width: 549px) {
     .contentWrapper {
       height: 87%;
       margin-bottom: 15px;
       justify-content: center; } }
-  @media screen and (min-width: 551px) and (max-width: 850px) {
+  @media screen and (min-width: 550px) and (max-width: 749px) {
     .contentWrapper {
       justify-content: flex-start;
       padding-top: 3vh;
@@ -198,12 +204,12 @@ body {
         order: 1;
         width: 95%;
         padding: 2% 4% 4% 4%; } }
-    @media screen and (min-width: 350px) and (max-width: 550px) {
+    @media screen and (min-width: 350px) and (max-width: 549px) {
       .contentWrapper .titleFormWrapper {
         order: 1;
         width: 95%;
         padding: 2% 4% 4% 4%; } }
-    @media screen and (min-width: 551px) and (max-width: 850px) {
+    @media screen and (min-width: 550px) and (max-width: 749px) {
       .contentWrapper .titleFormWrapper {
         width: 64%;
         height: initial; } }
@@ -221,18 +227,20 @@ body {
       line-height: 24vw; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .title {
-          margin-bottom: 20px;
-          font-size: 30vw; } }
+          font-size: 28vw;
+          letter-spacing: 2px;
+          line-height: 26vw; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
-        .contentWrapper .titleFormWrapper .title {
-          margin-bottom: 3vw;
-          font-size: 25vw; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .titleFormWrapper .title {
           font-size: 28vw;
           letter-spacing: 2px;
           line-height: 26vw; } }
-      @media screen and (min-width: 551px) and (max-width: 850px) {
+      @media screen and (min-width: 350px) and (max-width: 549px) {
+        .contentWrapper .titleFormWrapper .title {
+          font-size: 28vw;
+          letter-spacing: 2px;
+          line-height: 26vw; } }
+      @media screen and (min-width: 550px) and (max-width: 749px) {
         .contentWrapper .titleFormWrapper .title {
           font-size: 18.6vw;
           letter-spacing: initial;
@@ -254,20 +262,20 @@ body {
       font-weight: lighter; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .underTitle {
-          font-size: 5.9vmin;
-          letter-spacing: .22vw;
+          font-size: 7vw;
+          letter-spacing: .42vw;
           margin-top: 0; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
-        .contentWrapper .titleFormWrapper .underTitle {
-          font-size: 5.9vmin;
-          letter-spacing: .22vw;
-          margin-top: 0; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .titleFormWrapper .underTitle {
           font-size: 7vw;
           letter-spacing: .42vw;
           margin-top: 0; } }
-      @media screen and (min-width: 551px) and (max-width: 850px) {
+      @media screen and (min-width: 350px) and (max-width: 549px) {
+        .contentWrapper .titleFormWrapper .underTitle {
+          font-size: 7vw;
+          letter-spacing: .42vw;
+          margin-top: 0; } }
+      @media screen and (min-width: 550px) and (max-width: 749px) {
         .contentWrapper .titleFormWrapper .underTitle {
           font-size: 4.6vmin; } }
     .contentWrapper .titleFormWrapper .introText {
@@ -282,24 +290,26 @@ body {
       line-height: 3.5vw; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .introText {
-          font-size: 3.6vw;
-          line-height: 5vw;
-          letter-spacing: .3vw; } }
+          font-size: 3.9vw;
+          line-height: 6vw;
+          margin: 10px 0 15px 0;
+          letter-spacing: .1vw; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
-        .contentWrapper .titleFormWrapper .introText {
-          font-size: 3.6vw;
-          line-height: 5vw;
-          letter-spacing: .3vw; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
         .contentWrapper .titleFormWrapper .introText {
           font-size: 3.9vw;
           line-height: 6vw;
           margin: 10px 0 15px 0;
           letter-spacing: .1vw; } }
-      @media screen and (min-width: 551px) and (max-width: 850px) {
+      @media screen and (min-width: 350px) and (max-width: 549px) {
         .contentWrapper .titleFormWrapper .introText {
-          font-size: 2.4vw;
-          letter-spacing: .3vw;
+          font-size: 3.9vw;
+          line-height: 6vw;
+          margin: 10px 0 15px 0;
+          letter-spacing: .1vw; } }
+      @media screen and (min-width: 550px) and (max-width: 749px) {
+        .contentWrapper .titleFormWrapper .introText {
+          font-size: 2.5vw;
+          letter-spacing: 0vw;
           line-height: 4vw; } }
       .contentWrapper .titleFormWrapper .introText .heardSpan, .contentWrapper .titleFormWrapper .introText .youSpan {
         margin-right: -1.3%; }
@@ -318,14 +328,15 @@ body {
         font-weight: lighter;
         color: darkred;
         font-size: 1.5em;
+        box-shadow: inset 0px 2px 11px 1px rgba(0, 0, 77, 0.7);
         transition: background-color .4s ease; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar {
-            font-size: 1.3em; } }
+            font-size: 6vw; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar {
-            font-size: 1.3em; } }
-        @media screen and (min-width: 350px) and (max-width: 550px) {
+            font-size: 6vw; } }
+        @media screen and (min-width: 350px) and (max-width: 549px) {
           .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar {
             width: 100%; } }
       .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar::-webkit-input-placeholder {
@@ -366,7 +377,7 @@ body {
         max-height: 250px;
         padding: 10px;
         justify-content: space-between; } }
-    @media screen and (min-width: 350px) and (max-width: 550px) {
+    @media screen and (min-width: 350px) and (max-width: 549px) {
       .contentWrapper .repsWrapper {
         order: 1;
         flex-wrap: wrap;
@@ -374,7 +385,7 @@ body {
         padding: 10px;
         width: 85%;
         max-height: 250px; } }
-    @media screen and (min-width: 551px) and (max-width: 850px) {
+    @media screen and (min-width: 550px) and (max-width: 749px) {
       .contentWrapper .repsWrapper {
         width: 80%; } }
     @media screen and (min-width: 1250px) and (max-width: 2199px) {
@@ -398,7 +409,7 @@ body {
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repImgContainer {
           display: none; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
+      @media screen and (min-width: 350px) and (max-width: 549px) {
         .contentWrapper .repsWrapper .repImgContainer {
           order: 1;
           height: 160px;
@@ -418,7 +429,7 @@ body {
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repImgContainer img {
             display: none; } }
-        @media screen and (min-width: 350px) and (max-width: 550px) {
+        @media screen and (min-width: 350px) and (max-width: 549px) {
           .contentWrapper .repsWrapper .repImgContainer img {
             height: 160px;
             width: 111px;
@@ -460,7 +471,7 @@ body {
           padding-right: 0;
           margin-left: 0;
           border-left: none; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
+      @media screen and (min-width: 350px) and (max-width: 549px) {
         .contentWrapper .repsWrapper .repInfo {
           order: 3;
           height: 210px;
@@ -470,7 +481,7 @@ body {
           margin-left: 0px;
           padding-left: 10px;
           border-left: 1px solid rgba(248, 248, 255, 0.7); } }
-      @media screen and (min-width: 551px) and (max-width: 850px) {
+      @media screen and (min-width: 550px) and (max-width: 749px) {
         .contentWrapper .repsWrapper .repInfo {
           width: 48%;
           font-size: .9em; } }
@@ -501,13 +512,13 @@ body {
             text-align: left;
             margin-top: -2px;
             margin-bottom: 5px; } }
-        @media screen and (min-width: 350px) and (max-width: 550px) {
+        @media screen and (min-width: 350px) and (max-width: 549px) {
           .contentWrapper .repsWrapper .repInfo .repName {
             font-size: 6.8vw;
             text-align: left;
             margin-top: -2px;
             margin-bottom: 5px; } }
-        @media screen and (min-width: 551px) and (max-width: 850px) {
+        @media screen and (min-width: 550px) and (max-width: 749px) {
           .contentWrapper .repsWrapper .repInfo .repName {
             font-size: 2.3em;
             text-align: left;
@@ -532,7 +543,7 @@ body {
           .contentWrapper .repsWrapper .repInfo .repTitle {
             font-size: .8em;
             margin-bottom: 5px; } }
-        @media screen and (min-width: 350px) and (max-width: 550px) {
+        @media screen and (min-width: 350px) and (max-width: 549px) {
           .contentWrapper .repsWrapper .repInfo .repTitle {
             font-size: .75em;
             margin-bottom: 5px; } }
@@ -551,10 +562,10 @@ body {
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             font-size: .9em; } }
-        @media screen and (min-width: 350px) and (max-width: 550px) {
+        @media screen and (min-width: 350px) and (max-width: 549px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             font-size: .85em; } }
-        @media screen and (min-width: 551px) and (max-width: 850px) {
+        @media screen and (min-width: 550px) and (max-width: 749px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             margin-bottom: 0px; } }
         @media screen and (min-width: 1250px) and (max-width: 2199px) {
@@ -574,7 +585,7 @@ body {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
             font-size: .9em;
             margin-top: 0px; } }
-        @media screen and (min-width: 350px) and (max-width: 550px) {
+        @media screen and (min-width: 350px) and (max-width: 549px) {
           .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
             font-size: .85em;
             margin-top: 0px; } }
@@ -590,7 +601,7 @@ body {
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repInfo .repAddressTwo {
           font-size: .9em; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
+      @media screen and (min-width: 350px) and (max-width: 549px) {
         .contentWrapper .repsWrapper .repInfo .repAddressTwo {
           font-size: .85em; } }
       @media screen and (min-width: 1250px) and (max-width: 2199px) {
@@ -602,7 +613,7 @@ body {
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .repsWrapper .repInfo .repPhone {
           font-size: .9em; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
+      @media screen and (min-width: 350px) and (max-width: 549px) {
         .contentWrapper .repsWrapper .repInfo .repPhone {
           font-size: .85em; } }
       @media screen and (min-width: 1250px) and (max-width: 2199px) {
@@ -619,7 +630,7 @@ body {
           .contentWrapper .repsWrapper .repInfo .repWebsite {
             font-size: .9em;
             margin-bottom: 0; } }
-        @media screen and (min-width: 350px) and (max-width: 550px) {
+        @media screen and (min-width: 350px) and (max-width: 549px) {
           .contentWrapper .repsWrapper .repInfo .repWebsite {
             font-size: .85em;
             margin-bottom: 0; } }
@@ -661,7 +672,7 @@ body {
           padding-left: 0;
           padding-right: 0;
           border-left: none; } }
-      @media screen and (min-width: 350px) and (max-width: 550px) {
+      @media screen and (min-width: 350px) and (max-width: 549px) {
         .contentWrapper .repsWrapper .repSocialMedia {
           order: 2;
           margin: 0;
@@ -735,7 +746,7 @@ body {
                 @media screen and (min-width: 250px) and (max-width: 349px) {
                     width: 100%;
                 }
-                @media screen and (min-width: 350px) and (max-width: 550px) {
+                @media screen and (min-width: 350px) and (max-width: 549px) {
                     width: 100%;
                 }
                 .linksTitle {
@@ -776,7 +787,7 @@ body {
                 @media screen and (min-width: 250px) and (max-width: 349px) {
                     display: none;
                 }
-                @media screen and (min-width: 350px) and (max-width: 550px) {
+                @media screen and (min-width: 350px) and (max-width: 549px) {
                     display: none;
                 }
                 .linksScreenshot {
