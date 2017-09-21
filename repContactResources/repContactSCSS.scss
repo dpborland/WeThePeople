@@ -77,18 +77,18 @@ body {
 	}
 
 	.menuOption {
-		width: 16%;
+		width: initial;
 		height: 100%;
 		/*border-left: 1px solid rgba(248, 248, 255, 0.7);*/
 		border-bottom: 3px solid transparent;
 		box-sizing: border-box;
-		padding: 1vw 4vw .75vw 2vw;
+		padding: 1vw 2vw .5vw 2vw;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-end;
 		color: rgba(0, 0, 77, 0.75);
 		font-family: open sans;
-		font-weight: 400;
+		font-weight: 600;
 		font-size: 1.6vw;
 		line-height: 2.4vw;
 		letter-spacing: .2vw;
@@ -119,7 +119,7 @@ body {
 		}
 		@media #{$tablet-break} {
 			width: initial;
-			padding: 1vw 2vw 0vw 2vw;
+			padding: 1vw 2vw .5vw 2vw;
 			justify-content: flex-end;
 			font-weight: 600;
 			font-size: 1.6vw;
@@ -176,7 +176,7 @@ body {
 	align-items: center;
 	width: 100%;
 	height: 90%;
-	margin-top: 20px;
+	margin: 50px 0 0 0;
 	align-self: center;
 	overflow-y: scroll;
 	@media #{$phone-break-small} {
@@ -186,16 +186,17 @@ body {
 	}
 	@media #{$phone-break-medium} {
 		height: 85%;
-		margin-bottom: 15px;
+		margin: 10px 0 15px 0;
 		justify-content: center;
 	}
 	@media #{$phone-break-large} {
 		height: 87%;
-		margin-bottom: 15px;
+		margin: 10px 0 15px 0;
 		justify-content: center;
 	}
 	@media #{$tablet-break} {
 		justify-content: flex-start;
+		margin: 10px 0 15px 0;
 		padding-top: 3vh;
 		padding-bottom: 3vh;
 	}
@@ -207,14 +208,14 @@ body {
 
 	.titleFormWrapper {
 		display: flex;
+		width: 50%;
 		box-sizing: border-box;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		background-color: rgba(239, 239, 239, 0.9);
 		box-shadow: -3px 16px 40px 0px rgba(23, 22, 77, .7);
-		width: 65%;
-		padding: 3% 4% 4% 4%;
+		padding: .5% 3% 3% 3%;
 		@media #{$phone-break-small} {
 			order: 1;
 			width: 95%;
@@ -232,21 +233,22 @@ body {
 		}
 		@media #{$tablet-break} {
 			width: 64%;
-			height: initial;
+			padding: 2% 4% 4% 4%;
 		}
 
 		.title {
 			width: 102%;
 			font-weight: 100;
-			font-size: 7em;
+			font-size: 14vw;
+			letter-spacing: .3vw;
 			/*-webkit-text-stroke: 1px rgba(147, 27, 56, 0.9);
 			text-shadow: 0px 0px 18px rgba(147, 27, 56, 0.9);
 			color: rgba(233, 226, 233, 0.9);*/
 			text-shadow: 2px 2px 6px rgba(0, 0, 77, 0.7);
 			color: rgba(147, 27, 56, 0.9);
-			margin-top: 0px;
-			margin-bottom: 15px;
-			line-height: 24vw;
+			margin-top: 0;
+			margin-bottom: 10px;
+			line-height: 14.5vw;
 			@media #{$phone-break-small} {
 				font-size: 28vw;
 				letter-spacing: 2px;
@@ -272,7 +274,7 @@ body {
 
 		.underTitle {
 			width: 100%;
-			font-size: 5.9vmin;
+			font-size: 3.3vw;
 			border-bottom: 4px double rgba(147, 27, 56, 0.9);
 			/*border-bottom: 4px double rgba(147, 27, 56, 0.9);
             box-shadow: 0px 5px 4px -5px rgba(0, 0, 77, 0.6);*/
@@ -308,12 +310,12 @@ body {
 		.introText {
 			width: 100%;
 			font-family: open sans;
+			font-size: 1.9vw;
 			font-weight: 400;
 			color: rgba(0, 0, 77, 0.95);
 			text-align-last: justify;
-			font-size: 2.4vw;
-			letter-spacing: .1vw;
-			margin: 15px 0 20px 0;
+			letter-spacing: 0vw;
+			margin: 10px 0 15px 0;
 			line-height: 3.5vw;
 			@media #{$phone-break-small} {
 				font-size: 3.9vw;
