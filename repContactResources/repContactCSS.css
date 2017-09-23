@@ -13,7 +13,7 @@ body {
   text-align: center;
   justify-content: space-between;
   font-family: "Playfair Display", sans-serif;
-  /*background: linear-gradient(to bottom right, rgba(168, 0, 0, .75) -50%, rgba(248, 248, 255, .80) 33%, rgba(0, 0, 139, 0.8) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
+  /*background: linear-gradient(to bottom right, rgba(0, 0, 77, .75) 20%, rgba(4, 49, 90, .80) 73%), url(images/flagBWLight.jpg);*/
   background: url(images/flagBWLight.jpg);
   background-size: cover;
   background-color: rgba(0, 0, 77, 0.5);
@@ -114,6 +114,12 @@ body {
         font-weight: 600;
         font-size: 1.6vw;
         text-align: center; } }
+    @media screen and (min-width: 900px) and (max-width: 1249px) {
+      .menu .menuOption {
+        font-size: .8em;
+        letter-spacing: .05em;
+        line-height: initial;
+        padding: 1px 20px 3px 20px; } }
     @media screen and (min-width: 1250px) and (max-width: 2199px) {
       .menu .menuOption {
         font-size: 1.4em; } }
@@ -187,12 +193,13 @@ body {
       flex-direction: row; } }
   .contentWrapper .titleFormWrapper {
     display: flex;
-    width: 50%;
+    width: 45%;
     box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgba(239, 239, 239, 0.9);
+    /*box-shadow: 0px 16px 35px 7px rgba(23, 22, 77, 0.7);*/
     box-shadow: -3px 16px 40px 0px rgba(23, 22, 77, 0.7);
     padding: .5% 3% 3% 3%; }
     @media screen and (min-width: 0px) and (max-width: 249px) {
@@ -214,10 +221,15 @@ body {
       .contentWrapper .titleFormWrapper {
         width: 64%;
         padding: 2% 4% 4% 4%; } }
+    @media screen and (min-width: 900px) and (max-width: 1249px) {
+      .contentWrapper .titleFormWrapper {
+        width: 400px;
+        height: 490px;
+        padding: .75% 2.75% 3% 2.75%; } }
     .contentWrapper .titleFormWrapper .title {
       width: 102%;
       font-weight: 100;
-      font-size: 14vw;
+      font-size: 12.45vw;
       letter-spacing: .3vw;
       /*-webkit-text-stroke: 1px rgba(147, 27, 56, 0.9);
       text-shadow: 0px 0px 18px rgba(147, 27, 56, 0.9);
@@ -226,7 +238,7 @@ body {
       color: rgba(147, 27, 56, 0.9);
       margin-top: 0;
       margin-bottom: 10px;
-      line-height: 14.5vw; }
+      line-height: 13vw; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .title {
           font-size: 28vw;
@@ -248,16 +260,21 @@ body {
           letter-spacing: initial;
           line-height: 16vw;
           margin-bottom: 20px; } }
+      @media screen and (min-width: 900px) and (max-width: 1249px) {
+        .contentWrapper .titleFormWrapper .title {
+          font-size: 7.4em;
+          letter-spacing: initial;
+          line-height: 1em; } }
     .contentWrapper .titleFormWrapper .underTitle {
       width: 100%;
-      font-size: 3.3vw;
+      font-size: 3.2vw;
       border-bottom: 4px double rgba(147, 27, 56, 0.9);
       			/*border-bottom: 4px double rgba(147, 27, 56, 0.9);
                   box-shadow: 0px 5px 4px -5px rgba(0, 0, 77, 0.6);*/
       /*color: rgba(233, 227, 233, 1);*/
       color: rgba(0, 0, 77, 0.75);
       font-family: oswald;
-      letter-spacing: .22vw;
+      letter-spacing: .15vw;
       text-align-last: justify;
       margin: 10px 0 0 0;
       padding-bottom: 10px;
@@ -279,17 +296,22 @@ body {
           margin-top: 0; } }
       @media screen and (min-width: 550px) and (max-width: 749px) {
         .contentWrapper .titleFormWrapper .underTitle {
-          font-size: 4.6vmin; } }
+          font-size: 4.6vw;
+          letter-spacing: 2.5vw; } }
+      @media screen and (min-width: 900px) and (max-width: 1249px) {
+        .contentWrapper .titleFormWrapper .underTitle {
+          font-size: 1.75em;
+          letter-spacing: .05em; } }
     .contentWrapper .titleFormWrapper .introText {
       width: 100%;
       font-family: open sans;
-      font-size: 1.9vw;
+      font-size: 1.8vw;
       font-weight: 400;
       color: rgba(0, 0, 77, 0.95);
       text-align-last: justify;
       letter-spacing: 0vw;
-      margin: 10px 0 15px 0;
-      line-height: 3.5vw; }
+      margin: 13px 0 15px 0;
+      line-height: 3vw; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .introText {
           font-size: 3.9vw;
@@ -310,9 +332,14 @@ body {
           letter-spacing: .1vw; } }
       @media screen and (min-width: 550px) and (max-width: 749px) {
         .contentWrapper .titleFormWrapper .introText {
-          font-size: 2.5vw;
+          font-size: 2.6vw;
           letter-spacing: 0vw;
           line-height: 4vw; } }
+      @media screen and (min-width: 900px) and (max-width: 1249px) {
+        .contentWrapper .titleFormWrapper .introText {
+          font-size: 1em;
+          letter-spacing: 0;
+          line-height: 1.5em; } }
       .contentWrapper .titleFormWrapper .introText .heardSpan, .contentWrapper .titleFormWrapper .introText .youSpan {
         margin-right: -1.3%; }
     .contentWrapper .titleFormWrapper .addressSearch {
