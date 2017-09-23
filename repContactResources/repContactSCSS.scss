@@ -210,16 +210,14 @@ body {
 		padding-top: 3vh;
 		padding-bottom: 3vh;
 	}
-	@media #{$desktop-break-large} {
-		justify-content: center;
-		flex-wrap: wrap;
-		flex-direction: row;
-	}
 
 	.titleFormWrapper {
 		display: flex;
 		box-sizing: border-box;
 		flex-direction: column;
+		width: 400px;
+		height: 490px;
+		padding: .75% 2.75% 3% 2.75%;
 		justify-content: center;
 		align-items: center;
 		background-color: rgba(239, 239, 239, 0.9);
@@ -257,6 +255,9 @@ body {
 		.title {
 			width: 102%;
 			font-weight: 100;
+			font-size: 7.2em;
+			letter-spacing: initial;
+			line-height: 1em;
 			/*-webkit-text-stroke: 1px rgba(147, 27, 56, 0.9);
 			text-shadow: 0px 0px 18px rgba(147, 27, 56, 0.9);
 			color: rgba(233, 226, 233, 0.9);*/
@@ -291,7 +292,7 @@ body {
 				line-height: 13vw;
 			}
 			@media #{$desktop-break-medium} {
-				font-size: 7.4em;
+				font-size: 7.2em;
 				letter-spacing: initial;
 				line-height: 1em;
 			}
@@ -305,6 +306,8 @@ body {
 			/*color: rgba(233, 227, 233, 1);*/
 			color: rgba(0, 0, 77, 0.75);
 			font-family: oswald;
+			font-size: 1.75em;
+			letter-spacing: .05em;
 			text-align-last: justify;
 			margin: 10px 0 0 0;
 			padding-bottom: 10px;
@@ -342,6 +345,9 @@ body {
 			width: 100%;
 			font-family: open sans;
 			font-weight: 400;
+			font-size: 1em;
+			letter-spacing: 0;
+			line-height: 1.5em;
 			color: rgba(0, 0, 77, 0.95);
 			text-align-last: justify;
 			margin: 13px 0 15px 0;
