@@ -84,16 +84,12 @@ body {
 		/*border-left: 1px solid rgba(248, 248, 255, 0.7);*/
 		border-bottom: 3px solid transparent;
 		box-sizing: border-box;
-		padding: 1vw 2vw .5vw 2vw;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		color: rgba(0, 0, 77, 0.75);
 		font-family: open sans;
 		font-weight: 600;
-		font-size: 1.6vw;
-		line-height: 2.4vw;
-		letter-spacing: .2vw;
 		text-align: left;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -128,7 +124,10 @@ body {
 			text-align: center;
 		}
 		@media #{$desktop-break-small} {
-
+			font-size: 1.6vw;
+			line-height: 2.4vw;
+			letter-spacing: .2vw;
+			padding: 1vw 2vw .5vw 2vw;
 		}
 		@media #{$desktop-break-medium} {
 			font-size: .8em;
@@ -219,7 +218,6 @@ body {
 
 	.titleFormWrapper {
 		display: flex;
-		width: 45%;
 		box-sizing: border-box;
 		flex-direction: column;
 		justify-content: center;
@@ -227,7 +225,6 @@ body {
 		background-color: rgba(239, 239, 239, 0.9);
 		/*box-shadow: 0px 16px 35px 7px rgba(23, 22, 77, 0.7);*/
 		box-shadow: -3px 16px 40px 0px rgba(23, 22, 77, .7);
-		padding: .5% 3% 3% 3%;
 		@media #{$phone-break-small} {
 			order: 1;
 			width: 95%;
@@ -248,7 +245,8 @@ body {
 			padding: 2% 4% 4% 4%;
 		}
 		@media #{$desktop-break-small} {
-
+			width: 45%;
+			padding: .5% 3% 3% 3%;
 		}
 		@media #{$desktop-break-medium} {
 			width: 400px;
@@ -259,8 +257,6 @@ body {
 		.title {
 			width: 102%;
 			font-weight: 100;
-			font-size: 12.45vw;
-			letter-spacing: .3vw;
 			/*-webkit-text-stroke: 1px rgba(147, 27, 56, 0.9);
 			text-shadow: 0px 0px 18px rgba(147, 27, 56, 0.9);
 			color: rgba(233, 226, 233, 0.9);*/
@@ -268,7 +264,6 @@ body {
 			color: rgba(147, 27, 56, 0.9);
 			margin-top: 0;
 			margin-bottom: 10px;
-			line-height: 13vw;
 			@media #{$phone-break-small} {
 				font-size: 28vw;
 				letter-spacing: 2px;
@@ -291,7 +286,9 @@ body {
 				margin-bottom: 20px;
 			}
 			@media #{$desktop-break-small} {
-
+				font-size: 12.45vw;
+				letter-spacing: .3vw;
+				line-height: 13vw;
 			}
 			@media #{$desktop-break-medium} {
 				font-size: 7.4em;
@@ -302,14 +299,12 @@ body {
 
 		.underTitle {
 			width: 100%;
-			font-size: 3.2vw;
 			border-bottom: 4px double rgba(147, 27, 56, 0.9);
 			/*border-bottom: 4px double rgba(147, 27, 56, 0.9);
             box-shadow: 0px 5px 4px -5px rgba(0, 0, 77, 0.6);*/
 			/*color: rgba(233, 227, 233, 1);*/
 			color: rgba(0, 0, 77, 0.75);
 			font-family: oswald;
-			letter-spacing: .15vw;
 			text-align-last: justify;
 			margin: 10px 0 0 0;
 			padding-bottom: 10px;
@@ -331,10 +326,11 @@ body {
 			}
 			@media #{$tablet-break} {
 				font-size: 4.6vw;
-				letter-spacing: 2.5vw;
+				letter-spacing: .25vw;
 			}
 			@media #{$desktop-break-small} {
-
+				font-spacing: 3.2vw;
+				letter-spacing: .15vw;
 			}
 			@media #{$desktop-break-medium} {
 				font-size: 1.75em;
@@ -345,13 +341,10 @@ body {
 		.introText {
 			width: 100%;
 			font-family: open sans;
-			font-size: 1.8vw;
 			font-weight: 400;
 			color: rgba(0, 0, 77, 0.95);
 			text-align-last: justify;
-			letter-spacing: 0vw;
 			margin: 13px 0 15px 0;
-			line-height: 3vw;
 			@media #{$phone-break-small} {
 				font-size: 3.9vw;
 				line-height: 6vw;
@@ -376,7 +369,9 @@ body {
 				line-height: 4vw;
 			}
 			@media #{$desktop-break-small} {
-
+				font-size: 1.8vw;
+				letter-spacing: 0;
+				line-height: 3vw;
 			}
 			@media #{$desktop-break-medium} {
 				font-size: 1em;
