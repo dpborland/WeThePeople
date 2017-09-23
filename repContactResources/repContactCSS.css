@@ -304,7 +304,7 @@ body {
           letter-spacing: .25vw; } }
       @media screen and (min-width: 750px) and (max-width: 899px) {
         .contentWrapper .titleFormWrapper .underTitle {
-          font-spacing: 3.2vw;
+          font-size: 3.2vw;
           letter-spacing: .15vw; } }
       @media screen and (min-width: 900px) and (max-width: 1249px) {
         .contentWrapper .titleFormWrapper .underTitle {
