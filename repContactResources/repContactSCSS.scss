@@ -58,6 +58,8 @@ body {
 	z-index: 999;
 	@media #{$phone-break-small} {
 		position: fixed;
+		justify-content: center;
+		height: 6%;
 		bottom: 0;
 		order: 2;
 		border-bottom: none;
@@ -65,17 +67,28 @@ body {
 	}
 	@media #{$phone-break-medium} {
 		position: fixed;
-		height: 7%;
+		justify-content: center;
+		height: 6%;
 		bottom: 0;
 		order: 2;
 		border-bottom: none;
 	}
 	@media #{$phone-break-large} {
 		position: fixed;
-		height: 8%;
+		justify-content: center;
+		height: 7%;
 		bottom: 0;
 		order: 2;
 		border-bottom: none;
+	}
+	@media #{$desktop-break-small} {
+		justify-content: center;
+	}
+	@media #{$desktop-break-medium} {
+		justify-content: flex-start;
+	}
+	@media #{$desktop-break-large} {
+		justify-content: flex-start;
 	}
 
 	.menuOption {
@@ -90,30 +103,34 @@ body {
 		color: rgba(0, 0, 77, 0.75);
 		font-family: open sans;
 		font-weight: 600;
+		font-size: .8em;
+		letter-spacing: .05em;
+		line-height: initial;
+		padding: 1px 20px 3px 20px;
 		text-align: left;
 		text-transform: uppercase;
 		text-decoration: none;
 		transition: color .4s ease, border-bottom .3s ease, background-color .4s ease;
 		@media #{$phone-break-small} {
-			width: 23.75%;
+			width: 25%;
 			padding: 1vw 1vw 1vw 3vw;
 			letter-spacing: .2vw;
-			font-size: 3.4vw;
-			line-height: 4.1vw;
+			font-size: 3.1vw;
+			line-height: 4.7vw;
 		}
 		@media #{$phone-break-medium} {
-			width: 23.75%;
+			width: 25%;
 			padding: 1vw 1vw 1vw 3vw;
 			letter-spacing: .2vw;
-			font-size: 3.4vw;
-			line-height: 4.1vw;
+			font-size: 3.1vw;
+			line-height: 4.7vw;
 		}
 		@media #{$phone-break-large} {
-			width: 23.75%;
+			width: 25%;
 			padding: 1vw 1vw 1vw 3vw;
 			letter-spacing: .2vw;
-			font-size: 3.4vw;
-			line-height: 4.1vw;
+			font-size: 3.1vw;
+			line-height: 4.7vw;
 		}
 		@media #{$tablet-break} {
 			width: initial;
@@ -121,13 +138,14 @@ body {
 			justify-content: flex-end;
 			font-weight: 600;
 			font-size: 1.6vw;
+			letter-spacing: .2vw;
 			text-align: center;
 		}
 		@media #{$desktop-break-small} {
 			font-size: 1.6vw;
 			line-height: 2.4vw;
 			letter-spacing: .2vw;
-			padding: 1vw 2vw .5vw 2vw;
+			padding: 1px 20px 3px 20px;
 		}
 		@media #{$desktop-break-medium} {
 			font-size: .8em;
@@ -136,7 +154,10 @@ body {
 			padding: 1px 20px 3px 20px;
 		}
 		@media #{$desktop-break-large} {
-			font-size: 1.4em;
+			font-size: .8em;
+			letter-spacing: .05em;
+			line-height: initial;
+			padding: 1px 20px 3px 20px;
 		}
 	}
 
@@ -186,26 +207,29 @@ body {
 	align-items: center;
 	width: 100%;
 	height: 90%;
-	margin: 50px 0 0 0;
+	margin: 0;
+	padding-top: 50px;
 	align-self: center;
 	overflow-y: scroll;
 	@media #{$phone-break-small} {
-		height: 85%;
-		margin-bottom: 15px;
+		height: 90%;
+		margin: 0 0 15px 0;
+		padding-top: 20px;
 		justify-content: center;
 	}
 	@media #{$phone-break-medium} {
-		height: 85%;
-		margin: 10px 0 15px 0;
+		height: 90%;
+		margin: 0 0 15px 0;
+		padding-top: 20px;
 		justify-content: center;
 	}
 	@media #{$phone-break-large} {
-		height: 87%;
-		margin: 10px 0 15px 0;
+		height: 90%;
+		margin: 0 0 15px 0;
+		padding-top: 20px;
 		justify-content: center;
 	}
 	@media #{$tablet-break} {
-		justify-content: flex-start;
 		margin: 10px 0 15px 0;
 		padding-top: 3vh;
 		padding-bottom: 3vh;
@@ -216,8 +240,7 @@ body {
 		box-sizing: border-box;
 		flex-direction: column;
 		width: 400px;
-		height: 490px;
-		padding: .75% 2.75% 3% 2.75%;
+		padding: 5px 25px 25px 25px;
 		justify-content: center;
 		align-items: center;
 		background-color: rgba(239, 239, 239, 0.9);
@@ -249,7 +272,9 @@ body {
 		@media #{$desktop-break-medium} {
 			width: 400px;
 			height: 490px;
-			padding: .75% 2.75% 3% 2.75%;
+		}
+		@media #{$desktop-break-large} {
+			height: 490px;
 		}
 
 		.title {
@@ -439,10 +464,11 @@ body {
 		width: 60%;
 		max-height: 350px;
 		padding: 15px;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 		font-family: roboto;
 		font-weight: lighter;
 		background: rgba(233, 226, 233, 0.9);
+		box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, .7);
 		@media #{$phone-break-small} {
 			order: 1;
 			flex-wrap: wrap;
@@ -470,11 +496,22 @@ body {
 		}
 		@media #{$tablet-break} {
 			width: 80%;
+			min-width: 500px;
+			max-width: 570px;
+		}
+		@media #{$desktop-break-small} {
+			min-width: 500px;
+			max-width: 570px;
+		}
+		@media #{$desktop-break-medium} {
+			min-width: 500px;
+			max-width: 570px;
 		}
 		@media #{$desktop-break-large} {
-			width: 39%;
 			margin-left: 5px;
 			margin-right: 5px;
+			min-width: 500px;
+			max-width: 570px;
 		}
 
 		.repImgContainer {
@@ -482,6 +519,7 @@ body {
 			width: 201px;
 			display: block;
 			margin-right: 15px;
+			box-shadow: 4px 9px 35px -1px rgba(23, 22, 77, .7);
 			background-position: center top;
 			background-repeat: no-repeat;
 			-webkit-background-size: cover;
@@ -536,7 +574,7 @@ body {
 			line-height: 1em;
 			padding-left: 15px;
 			padding-right: 10px;
-			border-left: 1px solid rgba(248, 248, 255, 0.7);
+			border-left: 4px double rgba(148, 27, 56, 0.9);
 			@media #{$phone-break-small} {
 				order: 1;
 				height: 245px;
@@ -584,7 +622,8 @@ body {
 				margin-top: -2px;
 				margin-bottom: 2px;
 				font-family: oswald;
-				font-weight: lighter;
+				font-weight: 300;
+				letter-spacing: 1px;
 				align-self: flex-start;
 				justify-content: flex-end;
 				color: darkred;
@@ -612,16 +651,18 @@ body {
 					margin-top: -2px;
 				}
 				@media #{$desktop-break-large} {
-					font-size: 2.2em;
+					font-size: 2.5em;
 					margin-bottom: 5px;
 				}
 			}
 			.repTitle {
 				display: flex;
-				font-size: 1em;
+				font-size: 1.1em;
 				font-weight: 100;
 				color: darkred;
+				font-family: oswald;
 				font-style: italic;
+				letter-spacing: .5px;
 				margin-top: 0px;
 				margin-bottom: 10px;
 				@media #{$phone-break-small} {
@@ -643,8 +684,8 @@ body {
 			}
 			.repAddressOptionalLine {
 				font-size: 1.1em;
-				font-weight: 100;
-				color: darkblue;
+				font-weight: 400;
+				color: rgba(0, 0, 77, .8);
 				margin-top: 4px;
 				margin-bottom: 0px;
 				@media #{$phone-break-small} {
@@ -665,8 +706,8 @@ body {
 			}
 			.repAddressOne {
 				font-size: 1.1em;
-				font-weight: 100;
-				color: darkblue;
+				font-weight: 400;
+				color: rgba(0, 0, 77, .8);
 				margin-top: 0px;
 				margin-bottom: 0px;
 				@media #{$phone-break-small} {
@@ -751,7 +792,7 @@ body {
 			justify-content: space-between;
 			height: 40px;
 			width: 100px;
-			border-left: 1px solid rgba(248, 248, 255, 0.7);
+			border-left: 4px double rgba(148, 27, 56, 0.9);
 			margin-top: 0;
 			margin-bottom: 0;
 			padding-left: 15px;
@@ -788,12 +829,19 @@ body {
 				height: 40px;
 				width: 40px;
 				opacity: .4;
-				transition: background .3s ease, opacity .3s ease;
+				box-shadow: 0 0 0 transparent;
+				transition: transform .3s ease, box-shadow .3s ease, background .3s ease, opacity .3s ease;
 				@media #{$phone-break-small} {
 					opacity: 1;
+					box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, .7);
 				}
 				@media #{$phone-break-medium} {
 					opacity: 1;
+					box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, .7);
+				}
+				@media #{$phone-break-large} {
+					opacity: 1;
+					box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, .7);
 				}
 			}
 		}
@@ -810,7 +858,9 @@ body {
 		}
 		.socialMediaIcon:hover {
 			opacity: 1;
-			transition: opacity .3s ease;
+			box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, .7);
+			transform: translate3d(-0.5px, -0.5px, 0px);
+			transition: box-shadow .3s ease .05s, transform .3s ease, opacity .3s ease;
 		}
 	}
 
