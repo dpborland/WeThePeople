@@ -626,7 +626,7 @@ body {
 				letter-spacing: 1px;
 				align-self: flex-start;
 				justify-content: flex-end;
-				color: darkred;
+				color: rgba(148, 27, 56, 0.9);
 				@media #{$phone-break-small} {
 					font-size: 10vw;
 					text-align: left;
@@ -659,7 +659,7 @@ body {
 				display: flex;
 				font-size: 1.1em;
 				font-weight: 100;
-				color: darkred;
+				color: rgba(148, 27, 56, 0.9);
 				font-family: oswald;
 				font-style: italic;
 				letter-spacing: .5px;
