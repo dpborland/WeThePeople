@@ -479,7 +479,7 @@ body {
       height: 290px;
       width: 201px;
       display: block;
-      margin-right: 15px;
+      margin-right: 20px;
       box-shadow: 4px 9px 35px -1px rgba(23, 22, 77, 0.7);
       background-position: center top;
       background-repeat: no-repeat;
@@ -529,7 +529,7 @@ body {
       max-width: 58%;
       text-align: left;
       line-height: 1em;
-      padding-left: 15px;
+      padding-left: 20px;
       padding-right: 10px;
       border-left: 4px double rgba(148, 27, 56, 0.9); }
       @media screen and (min-width: 0px) and (max-width: 249px) {
@@ -613,7 +613,7 @@ body {
             margin-bottom: 5px; } }
       .contentWrapper .repsWrapper .repInfo .repTitle {
         display: flex;
-        font-size: 1.1em;
+        font-size: 1.025em;
         font-weight: 100;
         color: rgba(148, 27, 56, 0.9);
         font-family: oswald;
@@ -637,7 +637,7 @@ body {
           .contentWrapper .repsWrapper .repInfo .repTitle {
             font-size: .9em; } }
       .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
-        font-size: 1.1em;
+        font-size: 1.025em;
         font-weight: 400;
         color: rgba(0, 0, 77, 0.8);
         margin-top: 4px;
@@ -658,7 +658,7 @@ body {
           .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
             font-size: 1em; } }
       .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
-        font-size: 1.1em;
+        font-size: 1.025em;
         font-weight: 400;
         color: rgba(0, 0, 77, 0.8);
         margin-top: 0px;
@@ -736,7 +736,7 @@ body {
       border-left: 4px double rgba(148, 27, 56, 0.9);
       margin-top: 0;
       margin-bottom: 0;
-      padding-left: 15px;
+      padding-left: 20px;
       padding-right: 15px; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .repsWrapper .repSocialMedia {
