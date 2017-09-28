@@ -59,27 +59,26 @@ body {
 	@media #{$phone-break-small} {
 		position: fixed;
 		justify-content: center;
-		height: 6%;
+		box-sizing: border-box;
+		height: 50px;
 		bottom: 0;
 		order: 2;
-		border-bottom: none;
-		border-top: 1.5px solid darkred;
 	}
 	@media #{$phone-break-medium} {
 		position: fixed;
 		justify-content: center;
-		height: 6%;
+		box-sizing: border-box;
+		height: 60px;
 		bottom: 0;
 		order: 2;
-		border-bottom: none;
 	}
 	@media #{$phone-break-large} {
 		position: fixed;
 		justify-content: center;
-		height: 7%;
+		box-sizing: border-box;
+		height: 60px;
 		bottom: 0;
 		order: 2;
-		border-bottom: none;
 	}
 	@media #{$desktop-break-small} {
 		justify-content: center;
@@ -113,24 +112,27 @@ body {
 		transition: color .4s ease, border-bottom .3s ease, background-color .4s ease;
 		@media #{$phone-break-small} {
 			width: 25%;
-			padding: 1vw 1vw 1vw 3vw;
+			padding: 1vw 1vw 1vw 1vw;
 			letter-spacing: .2vw;
-			font-size: 3.1vw;
-			line-height: 4.7vw;
+			font-size: .4em;
+			line-height: 1.5em;
+			text-align: center;
 		}
 		@media #{$phone-break-medium} {
 			width: 25%;
-			padding: 1vw 1vw 1vw 3vw;
+			padding: 1vw 3vw 1vw 3vw;
 			letter-spacing: .2vw;
-			font-size: 3.1vw;
-			line-height: 4.7vw;
+			font-size: .68em;
+			line-height: 1.5em;
+			text-align: center;
 		}
 		@media #{$phone-break-large} {
 			width: 25%;
-			padding: 1vw 1vw 1vw 3vw;
+			padding: 1vw 3.1vw 1vw 3.1vw;
 			letter-spacing: .2vw;
-			font-size: 3.1vw;
-			line-height: 4.7vw;
+			font-size: .9em;
+			line-height: 1.3em;
+			text-align: center;
 		}
 		@media #{$tablet-break} {
 			width: initial;
@@ -142,7 +144,7 @@ body {
 			text-align: center;
 		}
 		@media #{$desktop-break-small} {
-			font-size: 1.6vw;
+			font-size: 1.8vw;
 			line-height: 2.4vw;
 			letter-spacing: .2vw;
 			padding: 1px 20px 3px 20px;
@@ -215,24 +217,34 @@ body {
 		height: 90%;
 		margin: 0 0 15px 0;
 		padding-top: 20px;
-		justify-content: center;
+		justify-content: initial;
 	}
 	@media #{$phone-break-medium} {
 		height: 90%;
 		margin: 0 0 15px 0;
 		padding-top: 20px;
-		justify-content: center;
+		justify-content: initial;
 	}
 	@media #{$phone-break-large} {
 		height: 90%;
 		margin: 0 0 15px 0;
 		padding-top: 20px;
-		justify-content: center;
+		justify-content: initial;
 	}
 	@media #{$tablet-break} {
 		margin: 10px 0 15px 0;
 		padding-top: 3vh;
 		padding-bottom: 3vh;
+	}
+	@media #{$desktop-break-medium} {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	@media #{$desktop-break-large} {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.titleFormWrapper {
@@ -496,7 +508,7 @@ body {
 		}
 		@media #{$tablet-break} {
 			width: 80%;
-			min-width: 500px;
+			min-width: 540px;
 			max-width: 570px;
 		}
 		@media #{$desktop-break-small} {
@@ -506,10 +518,10 @@ body {
 		@media #{$desktop-break-medium} {
 			min-width: 500px;
 			max-width: 570px;
+			margin: 0 10px 20px 10px;
 		}
 		@media #{$desktop-break-large} {
-			margin-left: 5px;
-			margin-right: 5px;
+			margin: 0 10px 20px 10px;
 			min-width: 500px;
 			max-width: 570px;
 		}
@@ -611,7 +623,7 @@ body {
 				font-size: .9em;
 			}
 			@media #{$desktop-break-large} {
-				width: 50%;
+				width: 55%;
 				font-size: 1.04em;
 				line-height: 1.3em;
 			}
