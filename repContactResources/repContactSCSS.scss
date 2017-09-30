@@ -6,6 +6,7 @@ $tablet-break: "screen and (min-width: 550px) and (max-width: 749px)";
 $desktop-break-small: "screen and (min-width: 750px) and (max-width: 899px)";
 $desktop-break-medium:"screen and (min-width: 900px) and (max-width: 1249px)";
 $desktop-break-large: "screen and (min-width: 1250px) and (max-width: 2199px)";
+$portrait-break: "screen and (max-height: 500px)";
 
 
 html {
@@ -15,16 +16,17 @@ html {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
 	height: 100%;
 	width: 100%;
 	min-height: 550px;
-	display: flex;
 	margin: 0px;
-	flex-direction: column;
 	text-align: center;
 	justify-content: space-between;
 	font-family: "Playfair Display", sans-serif;
-	/*background: linear-gradient(to bottom right, rgba(0, 0, 77, .75) 20%, rgba(4, 49, 90, .80) 73%), url(images/flagBWLight.jpg);*/
+	/*background: linear-gradient(to bottom, rgba(148, 27, 56, 0.65) 10%, rgba(51, 4, 90, .7) 50%, rgba(22, 23, 77, .75) 70%), url(images/flagBWLight.jpg);
+	background: linear-gradient(to bottom right, rgba(0, 0, 77, .75) 20%, rgba(4, 49, 90, .80) 73%), url(images/flagBWLight.jpg);*/
 	background: url(images/flagBWLight.jpg);
 	background-size: cover;
 	background-color: rgba(0, 0, 77, .5);
@@ -40,6 +42,9 @@ body {
 	@media #{$phone-break-large} {
 		/*background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
 		background-size: cover;
+	}
+	@media #{$portrait-break} {
+		flex-direction: row;
 	}
 }
 
@@ -88,6 +93,15 @@ body {
 	}
 	@media #{$desktop-break-large} {
 		justify-content: flex-start;
+	}
+	@media #{$portrait-break} {
+		flex-direction: column;
+		height: 100%;
+		width: 8%;
+		order: 2;
+		justify-content: center;
+		border-top: none;
+		border-left: 7px double rgba(147, 27, 56, 0.9);
 	}
 
 	.menuOption {
@@ -160,6 +174,13 @@ body {
 			letter-spacing: .05em;
 			line-height: initial;
 			padding: 1px 20px 3px 20px;
+		}
+		@media #{$portrait-break} {
+			font-size: .85em;
+			letter-spacing: .05em;
+			line-height: initial;
+			text-align: center;
+			padding: 5px 10px 5px 10px;
 		}
 	}
 
@@ -246,6 +267,11 @@ body {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
+	@media #{$portrait-break} {
+		flex-direction: row;
+		justify-content: center;
+		height: 100%;
+	}
 
 	.titleFormWrapper {
 		display: flex;
@@ -280,13 +306,22 @@ body {
 		@media #{$desktop-break-small} {
 			width: 45%;
 			padding: .5% 3% 3% 3%;
+			align-self: flex-start;
 		}
 		@media #{$desktop-break-medium} {
 			width: 400px;
 			height: 490px;
+			align-self: flex-start;
 		}
 		@media #{$desktop-break-large} {
 			height: 490px;
+			align-self: flex-start;
+		}
+		@media #{$portrait-break} {
+			width: 90vh;
+			height: 95%;
+			margin: 10px 0;
+			align-self: flex-start;
 		}
 
 		.title {
@@ -333,6 +368,11 @@ body {
 				letter-spacing: initial;
 				line-height: 1em;
 			}
+			@media #{$portrait-break} {
+				font-size: 24.2vh;
+				letter-spacing: 1vh;
+				line-height: .9em;
+			}
 		}
 
 		.underTitle {
@@ -375,6 +415,11 @@ body {
 			@media #{$desktop-break-medium} {
 				font-size: 1.75em;
 				letter-spacing: .05em;
+			}
+			@media #{$portrait-break} {
+				font-size: 6vh;
+				letter-spacing: .08em;
+				margin: 5px 0;
 			}
 		}
 
@@ -420,6 +465,12 @@ body {
 				font-size: 1em;
 				letter-spacing: 0;
 				line-height: 1.5em;
+			}
+			@media #{$portrait-break} {
+				font-size: 3.6vh;
+				letter-spacing: 0;
+				line-height: 5vh;
+				margin: 10px 0;
 			}
 
 			.heardSpan, .youSpan {
