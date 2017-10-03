@@ -163,12 +163,12 @@ body {
     @media screen and (max-height: 500px) {
       .menu .menuOption {
         height: 20%;
-        font-size: .85em;
+        font-size: 1.4vw;
         letter-spacing: .05em;
         line-height: initial;
         justify-content: center;
         text-align: center;
-        padding: 5px 10px 5px 10px; } }
+        padding: 5px 8px 5px 8px; } }
   @media screen and (min-width: 0px) and (max-width: 249px) {
     .menu .menuOption:first-child {
       border-left: none; } }
@@ -284,8 +284,7 @@ body {
     @media screen and (min-width: 750px) and (max-width: 899px) {
       .contentWrapper .titleFormWrapper {
         width: 45%;
-        padding: .5% 3% 3% 3%;
-        align-self: flex-start; } }
+        padding: .5% 3% 3% 3%; } }
     @media screen and (min-width: 900px) and (max-width: 1249px) {
       .contentWrapper .titleFormWrapper {
         width: 400px;
@@ -297,9 +296,10 @@ body {
         align-self: flex-start; } }
     @media screen and (max-height: 500px) {
       .contentWrapper .titleFormWrapper {
-        width: 90vh;
+        width: 85vh;
         height: 95%;
         margin: 10px 0;
+        padding: 5px 20px 20px 20px;
         align-self: flex-start; } }
     .contentWrapper .titleFormWrapper .title {
       width: 102%;
@@ -312,8 +312,7 @@ body {
       color: rgba(233, 226, 233, 0.9);*/
       text-shadow: 2px 2px 6px rgba(0, 0, 77, 0.7);
       color: rgba(147, 27, 56, 0.9);
-      margin-top: 0;
-      margin-bottom: 10px; }
+      margin: 0 0 10px 0; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .titleFormWrapper .title {
           font-size: 28vw;
@@ -334,7 +333,7 @@ body {
           font-size: 18.6vw;
           letter-spacing: initial;
           line-height: 16vw;
-          margin-bottom: 20px; } }
+          margin: 0 0 20px 0; } }
       @media screen and (min-width: 750px) and (max-width: 899px) {
         .contentWrapper .titleFormWrapper .title {
           font-size: 12.45vw;
@@ -347,9 +346,10 @@ body {
           line-height: 1em; } }
       @media screen and (max-height: 500px) {
         .contentWrapper .titleFormWrapper .title {
-          font-size: 24.2vh;
+          font-size: 23vh;
           letter-spacing: 1vh;
-          line-height: .9em; } }
+          line-height: .9em;
+          margin: 0 0 10px 0; } }
     .contentWrapper .titleFormWrapper .underTitle {
       width: 100%;
       border-bottom: 4px double rgba(147, 27, 56, 0.9);
@@ -393,7 +393,7 @@ body {
           letter-spacing: .05em; } }
       @media screen and (max-height: 500px) {
         .contentWrapper .titleFormWrapper .underTitle {
-          font-size: 6vh;
+          font-size: 5.5vh;
           letter-spacing: .08em;
           margin: 5px 0; } }
     .contentWrapper .titleFormWrapper .introText {
@@ -441,10 +441,10 @@ body {
           line-height: 1.5em; } }
       @media screen and (max-height: 500px) {
         .contentWrapper .titleFormWrapper .introText {
-          font-size: 3.6vh;
+          font-size: 3.4vh;
           letter-spacing: 0;
           line-height: 5vh;
-          margin: 10px 0; } }
+          margin: 0 0 8px 0; } }
       .contentWrapper .titleFormWrapper .introText .heardSpan, .contentWrapper .titleFormWrapper .introText .youSpan {
         margin-right: -1.3%; }
     .contentWrapper .titleFormWrapper .addressSearch {
