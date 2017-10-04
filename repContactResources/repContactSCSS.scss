@@ -238,20 +238,20 @@ body {
 	@media #{$phone-break-small} {
 		height: 90%;
 		margin: 0 0 15px 0;
-		padding-top: 20px;
-		justify-content: initial;
+		padding-top: 5px;
+		justify-content: center;
 	}
 	@media #{$phone-break-medium} {
 		height: 90%;
 		margin: 0 0 15px 0;
-		padding-top: 20px;
-		justify-content: initial;
+		padding-top: 5px;
+		justify-content: center;
 	}
 	@media #{$phone-break-large} {
 		height: 90%;
 		margin: 0 0 15px 0;
-		padding-top: 20px;
-		justify-content: initial;
+		padding-top: 5px;
+		justify-content: center;
 	}
 	@media #{$tablet-break} {
 		margin: 10px 0 15px 0;
@@ -339,7 +339,7 @@ body {
 			color: rgba(147, 27, 56, 0.9);
 			margin: 0 0 10px 0;
 			@media #{$phone-break-small} {
-				font-size: 28vw;
+				font-size: 27.5vw;
 				letter-spacing: 2px;
 				line-height: 26vw;
 			}
