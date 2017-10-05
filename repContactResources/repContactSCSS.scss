@@ -6,8 +6,8 @@ $tablet-break: "screen and (min-width: 550px) and (max-width: 749px)";
 $desktop-break-small: "screen and (min-width: 750px) and (max-width: 899px)";
 $desktop-break-medium:"screen and (min-width: 900px) and (max-width: 1249px)";
 $desktop-break-large: "screen and (min-width: 1250px) and (max-width: 2199px)";
-$landscape-break: "screen and (max-height: 500px)";
-
+$landscape-break-small: "screen and (max-height: 250px)";
+$landscape-break-large: "screen and (max-height: 500px)";
 
 html {
 	height: 100%;
@@ -42,7 +42,10 @@ body {
 		/*background: linear-gradient(to bottom right, rgba(168, 0, 0, .85) -50%, rgba(248, 248, 255, .9) 33%, rgba(0, 0, 139, 0.9) 130%), url(images/flagBWBLUR2.jpg) center no-repeat;*/
 		background-size: cover;
 	}
-	@media #{$landscape-break} {
+	@media #{$landscape-break-small} {
+		flex-direction: row;
+	}
+	@media #{$landscape-break-large} {
 		flex-direction: row;
 	}
 }
@@ -93,11 +96,21 @@ body {
 	@media #{$desktop-break-large} {
 		justify-content: flex-start;
 	}
-	@media #{$landscape-break} {
+	@media #{$landscape-break-small} {
 		flex-direction: column;
 		position: initial;
 		height: 100%;
-		width: 10%;
+		width: 80px;
+		order: 2;
+		justify-content: center;
+		border-top: none;
+		border-left: 7px double rgba(147, 27, 56, 0.9);
+	}
+	@media #{$landscape-break-large} {
+		flex-direction: column;
+		position: initial;
+		height: 100%;
+		width: 80px;
 		order: 2;
 		justify-content: center;
 		border-top: none;
@@ -178,10 +191,20 @@ body {
 			line-height: initial;
 			padding: 1px 20px 3px 20px;
 		}
-		@media #{$landscape-break} {
+		@media #{$landscape-break-small} {
 			height: 20%;
 			width: 100%;
-			font-size: 1.4vw;
+			font-size: 5vw;
+			letter-spacing: .05em;
+			line-height: initial;
+			justify-content: center;
+			text-align: center;
+			padding: 5px 5px 5px 5px;
+		}
+		@media #{$landscape-break-large} {
+			height: 20%;
+			width: 100%;
+			font-size: .8em;
 			letter-spacing: .05em;
 			line-height: initial;
 			justify-content: center;
@@ -273,7 +296,13 @@ body {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	@media #{$landscape-break} {
+	@media #{$landscape-break-small} {
+		flex-direction: row;
+		justify-content: center;
+		height: 100%;
+		padding: 0;
+	}
+	@media #{$landscape-break-large} {
 		flex-direction: row;
 		justify-content: center;
 		height: 100%;
@@ -323,12 +352,20 @@ body {
 			height: 490px;
 			align-self: flex-start;
 		}
-		@media #{$landscape-break} {
-			width: 85vh;
-			height: 95%;
+		@media #{$landscape-break-small} {
+			width: 80vh;
+			height: 90%;
+			margin: 5px 0;
+			padding: 2vh 5vh 5vh 5vh;
+			align-self: center;
+			justify-content: space-around;
+		}
+		@media #{$landscape-break-large} {
+			width: 80vh;
+			height: 90%;
 			margin: 10px 0;
-			padding: 5px 20px 20px 20px;
-			align-self: flex-start;
+			padding: 2vh 5vh 5vh 5vh;
+			align-self: center;
 			justify-content: space-around;
 		}
 
@@ -375,8 +412,14 @@ body {
 				letter-spacing: initial;
 				line-height: 1em;
 			}
-			@media #{$landscape-break} {
-				font-size: 22vh;
+			@media #{$landscape-break-small} {
+				font-size: 21.5vh;
+				letter-spacing: 1vh;
+				line-height: .9em;
+				margin: 0 0 3px 0;
+			}
+			@media #{$landscape-break-large} {
+				font-size: 21.5vh;
 				letter-spacing: 1vh;
 				line-height: .9em;
 				margin: 0 0 10px 0;
@@ -424,8 +467,13 @@ body {
 				font-size: 1.75em;
 				letter-spacing: .05em;
 			}
-			@media #{$landscape-break} {
-				font-size: 5.5vh;
+			@media #{$landscape-break-small} {
+				font-size: 5.3vh;
+				letter-spacing: .08em;
+				margin: 3px 0;
+			}
+			@media #{$landscape-break-large} {
+				font-size: 5.3vh;
 				letter-spacing: .08em;
 				margin: 5px 0;
 			}
@@ -474,8 +522,14 @@ body {
 				letter-spacing: 0;
 				line-height: 1.5em;
 			}
-			@media #{$landscape-break} {
-				font-size: 3.4vh;
+			@media #{$landscape-break-small} {
+				font-size: 3.3vh;
+				letter-spacing: 0;
+				line-height: 5vh;
+				margin: 0 0 3px 0;
+			}
+			@media #{$landscape-break-large} {
+				font-size: 3.3vh;
 				letter-spacing: 0;
 				line-height: 5vh;
 				margin: 0 0 8px 0;
@@ -510,10 +564,11 @@ body {
 				@media #{$phone-break-medium} {
 					font-size: 6vw;
 				}
-				@media #{$phone-break-large} {
-					width: 100%;
+				@media #{$landscape-break-small} {
+					height: 10vh;
+					font-size: 5vh;
 				}
-				@media #{$landscape-break} {
+				@media #{$landscape-break-large} {
 					height: 10vh;
 					font-size: 5vh;
 				}
