@@ -354,8 +354,8 @@ body {
 		}
 		@media #{$landscape-break-small} {
 			width: 80vh;
-			height: 90%;
-			margin: 5px 0;
+			height: 100%;
+			margin: 0;
 			padding: 2vh 5vh 5vh 5vh;
 			align-self: center;
 			justify-content: space-around;
@@ -422,7 +422,7 @@ body {
 				font-size: 21.5vh;
 				letter-spacing: 1vh;
 				line-height: .9em;
-				margin: 0 0 10px 0;
+				margin: 0 0 8px 0;
 			}
 		}
 
@@ -476,6 +476,7 @@ body {
 				font-size: 5.3vh;
 				letter-spacing: .08em;
 				margin: 5px 0;
+				padding: 0 0 5px 0;
 			}
 		}
 
@@ -532,7 +533,7 @@ body {
 				font-size: 3.3vh;
 				letter-spacing: 0;
 				line-height: 5vh;
-				margin: 0 0 8px 0;
+				margin: 0 0 5px 0;
 			}
 
 			.heardSpan, .youSpan {
@@ -569,7 +570,7 @@ body {
 					font-size: 5vh;
 				}
 				@media #{$landscape-break-large} {
-					height: 10vh;
+					height: 8vh;
 					font-size: 5vh;
 				}
 			}

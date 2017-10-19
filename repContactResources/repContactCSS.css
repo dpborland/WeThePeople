@@ -331,8 +331,8 @@ body {
     @media screen and (max-height: 250px) {
       .contentWrapper .titleFormWrapper {
         width: 80vh;
-        height: 90%;
-        margin: 5px 0;
+        height: 100%;
+        margin: 0;
         padding: 2vh 5vh 5vh 5vh;
         align-self: center;
         justify-content: space-around; } }
@@ -398,7 +398,7 @@ body {
           font-size: 21.5vh;
           letter-spacing: 1vh;
           line-height: .9em;
-          margin: 0 0 10px 0; } }
+          margin: 0 0 8px 0; } }
     .contentWrapper .titleFormWrapper .underTitle {
       width: 100%;
       border-bottom: 4px double rgba(147, 27, 56, 0.9);
@@ -449,7 +449,8 @@ body {
         .contentWrapper .titleFormWrapper .underTitle {
           font-size: 5.3vh;
           letter-spacing: .08em;
-          margin: 5px 0; } }
+          margin: 5px 0;
+          padding: 0 0 5px 0; } }
     .contentWrapper .titleFormWrapper .introText {
       width: 100%;
       font-family: open sans;
@@ -504,7 +505,7 @@ body {
           font-size: 3.3vh;
           letter-spacing: 0;
           line-height: 5vh;
-          margin: 0 0 8px 0; } }
+          margin: 0 0 5px 0; } }
       .contentWrapper .titleFormWrapper .introText .heardSpan, .contentWrapper .titleFormWrapper .introText .youSpan {
         margin-right: -1.3%; }
     .contentWrapper .titleFormWrapper .addressSearch {
@@ -536,7 +537,7 @@ body {
             font-size: 5vh; } }
         @media screen and (max-height: 500px) {
           .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar {
-            height: 10vh;
+            height: 8vh;
             font-size: 5vh; } }
       .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar::-webkit-input-placeholder {
         color: rgba(239, 239, 239, 0.6);
