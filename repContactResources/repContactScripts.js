@@ -132,13 +132,13 @@ function constructResultsTemplate() {
 	return new Promise ( (resolve, reject) => {
 	    queryResponse = JSON.parse(localStorage.getItem("queryResponse"));
 		let numberNeeded = queryResponse.result.officials.length;
-		let template = document.querySelector(".repsWrapper");
-		let contentCard = document.querySelector(".contentCard");
+		let template = document.querySelector(".contentCard");
+		let contentWrapper = document.querySelector(".contentWrapper");
 		let templateArray = [];
 
 		for (var i = 0; i <= (numberNeeded - 2); i++) {
 			templateArray[i] = template.cloneNode(true);
-			contentCard.appendChild(templateArray[i]);
+			contentWrapper.appendChild(templateArray[i]);
 		}
 
 		if (templateArray.length > 1) {
