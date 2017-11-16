@@ -547,7 +547,7 @@ body {
       .contentWrapper .titleFormWrapper .addressSearch .addressSearchBar:focus {
         background-color: rgba(248, 248, 255, 0.7);
         transition: background-color .4s ease; }
-  .contentWrapper .repsWrapper {
+  .contentWrapper .contentCard {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
@@ -563,7 +563,7 @@ body {
     background: rgba(233, 226, 233, 0.9);
     box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7); }
     @media screen and (min-width: 0px) and (max-width: 249px) {
-      .contentWrapper .repsWrapper {
+      .contentWrapper .contentCard {
         order: 1;
         flex-wrap: wrap;
         flex-direction: row;
@@ -572,7 +572,7 @@ body {
         padding: 10px;
         justify-content: space-between; } }
     @media screen and (min-width: 250px) and (max-width: 349px) {
-      .contentWrapper .repsWrapper {
+      .contentWrapper .contentCard {
         order: 1;
         flex-wrap: wrap;
         flex-direction: row;
@@ -581,7 +581,7 @@ body {
         padding: 10px;
         justify-content: space-between; } }
     @media screen and (min-width: 350px) and (max-width: 549px) {
-      .contentWrapper .repsWrapper {
+      .contentWrapper .contentCard {
         order: 1;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -589,25 +589,25 @@ body {
         width: 85%;
         max-height: 250px; } }
     @media screen and (min-width: 550px) and (max-width: 749px) {
-      .contentWrapper .repsWrapper {
+      .contentWrapper .contentCard {
         width: 80%;
         min-width: 540px;
         max-width: 570px; } }
     @media screen and (min-width: 750px) and (max-width: 899px) {
-      .contentWrapper .repsWrapper {
+      .contentWrapper .contentCard {
         min-width: 500px;
         max-width: 570px; } }
     @media screen and (min-width: 900px) and (max-width: 1249px) {
-      .contentWrapper .repsWrapper {
+      .contentWrapper .contentCard {
         min-width: 500px;
         max-width: 570px;
         margin: 0 10px 20px 10px; } }
     @media screen and (min-width: 1250px) and (max-width: 2199px) {
-      .contentWrapper .repsWrapper {
+      .contentWrapper .contentCard {
         margin: 0 10px 20px 10px;
         min-width: 500px;
         max-width: 570px; } }
-    .contentWrapper .repsWrapper .repImgContainer {
+    .contentWrapper .contentCard .cardImgContainer {
       height: 290px;
       width: 201px;
       display: block;
@@ -619,13 +619,13 @@ body {
       background-size: cover;
       overflow: hidden; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
-        .contentWrapper .repsWrapper .repImgContainer {
+        .contentWrapper .contentCard .cardImgContainer {
           display: none; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repImgContainer {
+        .contentWrapper .contentCard .cardImgContainer {
           display: none; } }
       @media screen and (min-width: 350px) and (max-width: 549px) {
-        .contentWrapper .repsWrapper .repImgContainer {
+        .contentWrapper .contentCard .cardImgContainer {
           order: 1;
           height: 160px;
           width: 111px;
@@ -634,24 +634,24 @@ body {
           margin-bottom: 10px;
           margin-right: 10px;
           background-position: center center; } }
-      .contentWrapper .repsWrapper .repImgContainer img {
+      .contentWrapper .contentCard .cardImgContainer img {
         height: 290px;
         width: 201px;
         opacity: 0; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
-          .contentWrapper .repsWrapper .repImgContainer img {
+          .contentWrapper .contentCard .cardImgContainer img {
             display: none; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repImgContainer img {
+          .contentWrapper .contentCard .cardImgContainer img {
             display: none; } }
         @media screen and (min-width: 350px) and (max-width: 549px) {
-          .contentWrapper .repsWrapper .repImgContainer img {
+          .contentWrapper .contentCard .cardImgContainer img {
             height: 160px;
             width: 111px;
             border-right: none;
             padding-right: 10px;
             margin-bottom: 5px; } }
-    .contentWrapper .repsWrapper .repInfo {
+    .contentWrapper .contentCard .repInfo {
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
@@ -665,7 +665,7 @@ body {
       padding-right: 10px;
       border-left: 4px double rgba(148, 27, 56, 0.9); }
       @media screen and (min-width: 0px) and (max-width: 249px) {
-        .contentWrapper .repsWrapper .repInfo {
+        .contentWrapper .contentCard .repInfo {
           order: 1;
           height: 245px;
           line-height: 1.5em;
@@ -676,7 +676,7 @@ body {
           margin-left: 0;
           border-left: none; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repInfo {
+        .contentWrapper .contentCard .repInfo {
           order: 1;
           height: 220px;
           line-height: 1.6em;
@@ -687,7 +687,7 @@ body {
           margin-left: 0;
           border-left: none; } }
       @media screen and (min-width: 350px) and (max-width: 549px) {
-        .contentWrapper .repsWrapper .repInfo {
+        .contentWrapper .contentCard .repInfo {
           order: 3;
           height: 210px;
           line-height: 1.1em;
@@ -697,15 +697,15 @@ body {
           padding-left: 10px;
           border-left: 1px solid rgba(248, 248, 255, 0.7); } }
       @media screen and (min-width: 550px) and (max-width: 749px) {
-        .contentWrapper .repsWrapper .repInfo {
+        .contentWrapper .contentCard .repInfo {
           width: 48%;
           font-size: .9em; } }
       @media screen and (min-width: 1250px) and (max-width: 2199px) {
-        .contentWrapper .repsWrapper .repInfo {
+        .contentWrapper .contentCard .repInfo {
           width: 55%;
           font-size: 1.04em;
           line-height: 1.3em; } }
-      .contentWrapper .repsWrapper .repInfo .repName {
+      .contentWrapper .contentCard .repInfo .repName {
         font-size: 2.8em;
         line-height: 95%;
         margin-top: -2px;
@@ -717,33 +717,33 @@ body {
         justify-content: flex-end;
         color: rgba(148, 27, 56, 0.9); }
         @media screen and (min-width: 0px) and (max-width: 249px) {
-          .contentWrapper .repsWrapper .repInfo .repName {
+          .contentWrapper .contentCard .repInfo .repName {
             font-size: 10vw;
             text-align: left;
             margin-top: -2px;
             margin-bottom: 5px; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repName {
+          .contentWrapper .contentCard .repInfo .repName {
             font-size: 10vw;
             text-align: left;
             margin-top: -2px;
             margin-bottom: 5px; } }
         @media screen and (min-width: 350px) and (max-width: 549px) {
-          .contentWrapper .repsWrapper .repInfo .repName {
+          .contentWrapper .contentCard .repInfo .repName {
             font-size: 6.8vw;
             text-align: left;
             margin-top: -2px;
             margin-bottom: 5px; } }
         @media screen and (min-width: 550px) and (max-width: 749px) {
-          .contentWrapper .repsWrapper .repInfo .repName {
+          .contentWrapper .contentCard .repInfo .repName {
             font-size: 2.3em;
             text-align: left;
             margin-top: -2px; } }
         @media screen and (min-width: 1250px) and (max-width: 2199px) {
-          .contentWrapper .repsWrapper .repInfo .repName {
+          .contentWrapper .contentCard .repInfo .repName {
             font-size: 2.5em;
             margin-bottom: 5px; } }
-      .contentWrapper .repsWrapper .repInfo .repTitle {
+      .contentWrapper .contentCard .repInfo .repTitle {
         display: flex;
         font-size: 1.025em;
         font-weight: 100;
@@ -754,111 +754,111 @@ body {
         margin-top: 0px;
         margin-bottom: 10px; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
-          .contentWrapper .repsWrapper .repInfo .repTitle {
+          .contentWrapper .contentCard .repInfo .repTitle {
             font-size: .8em;
             margin-bottom: 5px; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repTitle {
+          .contentWrapper .contentCard .repInfo .repTitle {
             font-size: .8em;
             margin-bottom: 5px; } }
         @media screen and (min-width: 350px) and (max-width: 549px) {
-          .contentWrapper .repsWrapper .repInfo .repTitle {
+          .contentWrapper .contentCard .repInfo .repTitle {
             font-size: .75em;
             margin-bottom: 5px; } }
         @media screen and (min-width: 1250px) and (max-width: 2199px) {
-          .contentWrapper .repsWrapper .repInfo .repTitle {
+          .contentWrapper .contentCard .repInfo .repTitle {
             font-size: .9em; } }
-      .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+      .contentWrapper .contentCard .repInfo .repAddressOptionalLine {
         font-size: 1.025em;
         font-weight: 400;
         color: rgba(0, 0, 77, 0.8);
         margin-top: 4px;
         margin-bottom: 0px; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+          .contentWrapper .contentCard .repInfo .repAddressOptionalLine {
             font-size: .9em; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+          .contentWrapper .contentCard .repInfo .repAddressOptionalLine {
             font-size: .9em; } }
         @media screen and (min-width: 350px) and (max-width: 549px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+          .contentWrapper .contentCard .repInfo .repAddressOptionalLine {
             font-size: .85em; } }
         @media screen and (min-width: 550px) and (max-width: 749px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+          .contentWrapper .contentCard .repInfo .repAddressOptionalLine {
             margin-bottom: 0px; } }
         @media screen and (min-width: 1250px) and (max-width: 2199px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOptionalLine {
+          .contentWrapper .contentCard .repInfo .repAddressOptionalLine {
             font-size: 1em; } }
-      .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
+      .contentWrapper .contentCard .repInfo .repAddressOne, .contentWrapper .contentCard .repInfo .repAddressTwo, .contentWrapper .contentCard .repInfo .repPhone, .contentWrapper .contentCard .repInfo .repWebsite {
         font-size: 1.025em;
         font-weight: 400;
         color: rgba(0, 0, 77, 0.8);
         margin-top: 0px;
         margin-bottom: 0px; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .contentWrapper .contentCard .repInfo .repAddressOne, .contentWrapper .contentCard .repInfo .repAddressTwo, .contentWrapper .contentCard .repInfo .repPhone, .contentWrapper .contentCard .repInfo .repWebsite {
             font-size: .9em;
             margin-top: 0px; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .contentWrapper .contentCard .repInfo .repAddressOne, .contentWrapper .contentCard .repInfo .repAddressTwo, .contentWrapper .contentCard .repInfo .repPhone, .contentWrapper .contentCard .repInfo .repWebsite {
             font-size: .9em;
             margin-top: 0px; } }
         @media screen and (min-width: 350px) and (max-width: 549px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .contentWrapper .contentCard .repInfo .repAddressOne, .contentWrapper .contentCard .repInfo .repAddressTwo, .contentWrapper .contentCard .repInfo .repPhone, .contentWrapper .contentCard .repInfo .repWebsite {
             font-size: .85em;
             margin-top: 0px; } }
         @media screen and (min-width 350px) and (max-width: 450px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .contentWrapper .contentCard .repInfo .repAddressOne, .contentWrapper .contentCard .repInfo .repAddressTwo, .contentWrapper .contentCard .repInfo .repPhone, .contentWrapper .contentCard .repInfo .repWebsite {
             font-size: 1.1em; } }
         @media screen and (min-width: 1250px) and (max-width: 2199px) {
-          .contentWrapper .repsWrapper .repInfo .repAddressOne, .contentWrapper .repsWrapper .repInfo .repAddressTwo, .contentWrapper .repsWrapper .repInfo .repPhone, .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .contentWrapper .contentCard .repInfo .repAddressOne, .contentWrapper .contentCard .repInfo .repAddressTwo, .contentWrapper .contentCard .repInfo .repPhone, .contentWrapper .contentCard .repInfo .repWebsite {
             font-size: 1em; } }
       @media screen and (min-width: 0px) and (max-width: 249px) {
-        .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+        .contentWrapper .contentCard .repInfo .repAddressTwo {
           font-size: .9em; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+        .contentWrapper .contentCard .repInfo .repAddressTwo {
           font-size: .9em; } }
       @media screen and (min-width: 350px) and (max-width: 549px) {
-        .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+        .contentWrapper .contentCard .repInfo .repAddressTwo {
           font-size: .85em; } }
       @media screen and (min-width: 1250px) and (max-width: 2199px) {
-        .contentWrapper .repsWrapper .repInfo .repAddressTwo {
+        .contentWrapper .contentCard .repInfo .repAddressTwo {
           font-size: 1em; } }
       @media screen and (min-width: 0px) and (max-width: 249px) {
-        .contentWrapper .repsWrapper .repInfo .repPhone {
+        .contentWrapper .contentCard .repInfo .repPhone {
           font-size: .9em; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repInfo .repPhone {
+        .contentWrapper .contentCard .repInfo .repPhone {
           font-size: .9em; } }
       @media screen and (min-width: 350px) and (max-width: 549px) {
-        .contentWrapper .repsWrapper .repInfo .repPhone {
+        .contentWrapper .contentCard .repInfo .repPhone {
           font-size: .85em; } }
       @media screen and (min-width: 1250px) and (max-width: 2199px) {
-        .contentWrapper .repsWrapper .repInfo .repPhone {
+        .contentWrapper .contentCard .repInfo .repPhone {
           font-size: 1em; } }
-      .contentWrapper .repsWrapper .repInfo .repWebsite {
+      .contentWrapper .contentCard .repInfo .repWebsite {
         margin-bottom: 10px;
         transition: color .3s ease; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
-          .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .contentWrapper .contentCard .repInfo .repWebsite {
             font-size: .9em;
             margin-bottom: 0; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .contentWrapper .contentCard .repInfo .repWebsite {
             font-size: .9em;
             margin-bottom: 0; } }
         @media screen and (min-width: 350px) and (max-width: 549px) {
-          .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .contentWrapper .contentCard .repInfo .repWebsite {
             font-size: .85em;
             margin-bottom: 0; } }
         @media screen and (min-width: 1250px) and (max-width: 2199px) {
-          .contentWrapper .repsWrapper .repInfo .repWebsite {
+          .contentWrapper .contentCard .repInfo .repWebsite {
             font-size: 1em; } }
-      .contentWrapper .repsWrapper .repInfo .repWebsite:hover {
+      .contentWrapper .contentCard .repInfo .repWebsite:hover {
         color: darkred;
         transition: color .3s ease; }
-    .contentWrapper .repsWrapper .repSocialMedia {
+    .contentWrapper .contentCard .repSocialMedia {
       display: flex;
       flex-direction: row;
       align-items: baseline;
@@ -871,7 +871,7 @@ body {
       padding-left: 20px;
       padding-right: 15px; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
-        .contentWrapper .repsWrapper .repSocialMedia {
+        .contentWrapper .contentCard .repSocialMedia {
           order: 2;
           flex-direction: column;
           width: auto;
@@ -881,7 +881,7 @@ body {
           padding-right: 0;
           border-left: none; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
-        .contentWrapper .repsWrapper .repSocialMedia {
+        .contentWrapper .contentCard .repSocialMedia {
           order: 2;
           flex-direction: column;
           width: auto;
@@ -891,40 +891,40 @@ body {
           padding-right: 0;
           border-left: none; } }
       @media screen and (min-width: 350px) and (max-width: 549px) {
-        .contentWrapper .repsWrapper .repSocialMedia {
+        .contentWrapper .contentCard .repSocialMedia {
           order: 2;
           margin: 0;
           width: 111px;
           padding-left: 0;
           padding-right: 10px;
           border-left: none; } }
-      .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
+      .contentWrapper .contentCard .repSocialMedia .socialMediaIcon {
         height: 40px;
         width: 40px;
         opacity: .4;
         box-shadow: 0 0 0 transparent;
         transition: transform .3s ease, box-shadow .3s ease, background .3s ease, opacity .3s ease; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
-          .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
+          .contentWrapper .contentCard .repSocialMedia .socialMediaIcon {
             opacity: 1;
             box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, 0.7); } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
-          .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
+          .contentWrapper .contentCard .repSocialMedia .socialMediaIcon {
             opacity: 1;
             box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, 0.7); } }
         @media screen and (min-width: 350px) and (max-width: 549px) {
-          .contentWrapper .repsWrapper .repSocialMedia .socialMediaIcon {
+          .contentWrapper .contentCard .repSocialMedia .socialMediaIcon {
             opacity: 1;
             box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, 0.7); } }
-    .contentWrapper .repsWrapper .socialMediaIconInvisible {
+    .contentWrapper .contentCard .socialMediaIconInvisible {
       display: none; }
-    .contentWrapper .repsWrapper .facebookIcon {
+    .contentWrapper .contentCard .facebookIcon {
       background: url("images/Facebook.png");
       background-size: contain; }
-    .contentWrapper .repsWrapper .twitterIcon {
+    .contentWrapper .contentCard .twitterIcon {
       background: url("images/Twitter.png");
       background-size: contain; }
-    .contentWrapper .repsWrapper .socialMediaIcon:hover {
+    .contentWrapper .contentCard .socialMediaIcon:hover {
       opacity: 1;
       box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, 0.7);
       transform: translate3d(-0.5px, -0.5px, 0px);
@@ -938,14 +938,16 @@ body {
     display: flex;
     width: 80%;
     min-height: 50px;
-    justify-content: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
     margin: 20px 0 20px 0;
-    padding: 40px 0 0 5px;
+    padding: 0 0 0 40px;
     font-size: 2.5em;
     font-family: Oswald;
     font-weight: lighter;
     color: darkred;
-    background-color: rgba(224, 230, 235, 0.9); }
+    background-color: rgba(224, 230, 235, 0.9);
+    box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7); }
   .contentWrapper .linksSectionsHeading:nth-child(1) {
     margin-top: 0; }
   .contentWrapper .linksSectionsWrapper {

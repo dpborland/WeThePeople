@@ -133,12 +133,12 @@ function constructResultsTemplate() {
 	    queryResponse = JSON.parse(localStorage.getItem("queryResponse"));
 		let numberNeeded = queryResponse.result.officials.length;
 		let template = document.querySelector(".repsWrapper");
-		let contentWrapper = document.querySelector(".contentWrapper");
+		let contentCard = document.querySelector(".contentCard");
 		let templateArray = [];
 
 		for (var i = 0; i <= (numberNeeded - 2); i++) {
 			templateArray[i] = template.cloneNode(true);
-			contentWrapper.appendChild(templateArray[i]);
+			contentCard.appendChild(templateArray[i]);
 		}
 
 		if (templateArray.length > 1) {
@@ -154,7 +154,7 @@ function constructResultsTemplate() {
 
 /*function resultsTemplateFill(queryResponse) {
     let repsArray = queryResponse.result.officials;
-    let repImgContainer = document.querySelectorAll(".repImgContainer");
+    let cardImgContainer = document.querySelectorAll(".cardImgContainer");
     let repImg = document.querySelectorAll(".repImg");
     let repName = document.querySelectorAll(".repName");
     let repTitle = document.querySelectorAll(".repTitle");
@@ -178,8 +178,8 @@ function constructResultsTemplate() {
 //Parses the JSON response and inserts appropriate data in DOM
     repsArray.forEach( (value, index) => {
         //If an image link exists in the JSON, fills the appropriate url for the div's background image.  Otherwise adds a filler image.
-        value.photoUrl === undefined ? repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);"
-            : repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
+        value.photoUrl === undefined ? cardImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);"
+            : cardImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
 
         //Fills the img tag with the appropriate src and alt.  If no image available, adds a filler image
         value.photoUrl === undefined ? (repImg[index].src = "repContactResources/images/flagBWBLUR2.jpg", repImg[index].alt = "Filler Image")
@@ -288,23 +288,23 @@ function photoFill(queryResponse) {
     //Assigns rep's photo and related info
     const repsArray = queryResponse.result.officials;
     const repImg = document.querySelectorAll(".repImg");
-    const repImgContainer = document.querySelectorAll(".repImgContainer");
+    const cardImgContainer = document.querySelectorAll(".cardImgContainer");
 
     repsArray.forEach( (value, index) => {
         if (value.photoUrl === undefined) {
-            repImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);";
+            cardImgContainer[index].style = "background-image: url(repContactResources/images/flagBWBLUR2.jpg);";
             repImg[index].src = "repContactResources/images/flagBWBLUR2.jpg";
             repImg[index].alt = "Filler Image";
         } else if (index === 0) {
-            repImgContainer[0].style = "background-image: url(repContactResources/images/Trump.jpg);";
+            cardImgContainer[0].style = "background-image: url(repContactResources/images/Trump.jpg);";
             repImg[0].src = "repContactResources/images/Trump.jpg";
             repImg[0].alt = "Trump";
         } else if (index === 1) {
-            repImgContainer[1].style = "background-image: url(repContactResources/images/Pence.jpg);";
+            cardImgContainer[1].style = "background-image: url(repContactResources/images/Pence.jpg);";
             repImg[1].src = "repContactResources/images/Pence.jpg";
             repImg[1].alt = "Pence";
         } else {
-            repImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
+            cardImgContainer[index].style = "background-image: url(" + value.photoUrl + ");";
             repImg[index].src = value.photoUrl;
             repImg[index].alt = value.name;
         }
@@ -451,7 +451,7 @@ function titlesFill(queryResponse) {
 
 /*let resultsTemplateFill = (queryResponse) => {
     let repsArray = queryResponse.result.officials;
-    let repImgContainer = document.querySelectorAll(".repImgContainer");
+    let cardImgContainer = document.querySelectorAll(".cardImgContainer");
     let repImg = document.querySelectorAll(".repImg");
     let repName = document.querySelectorAll(".repName");
     let repTitle = document.querySelectorAll(".repTitle");
@@ -475,7 +475,7 @@ function titlesFill(queryResponse) {
 
     //For each official returned from the query, pipe the
     repsArray.forEach( (value, index) => {
-        return Promise.resolve(photoFill(value, index, repImgContainer, repImg))
+        return Promise.resolve(photoFill(value, index, cardImgContainer, repImg))
             .then(partyFill(value, index, repTitle))
             .then(nameFill(value, index))
             .then(addressFill(value, index, repAddressOptional, repAddressOne, repAddressTwo))

@@ -1,3 +1,5 @@
+//~~~~~~// SASS Variables //~~~~~~//
+
 $phone-break-small: "screen and (min-width: 0px) and (max-width: 249px)";
 $phone-break-medium: "screen and (min-width: 250px) and (max-width: 349px)";
 $phone-break-large: "screen and (min-width: 350px) and (max-width: 549px)";
@@ -8,6 +10,8 @@ $desktop-break-medium:"screen and (min-width: 900px) and (max-width: 1249px)";
 $desktop-break-large: "screen and (min-width: 1250px) and (max-width: 2199px)";
 $landscape-break-small: "screen and (max-height: 250px)";
 $landscape-break-large: "screen and (min-height: 251px) and (max-height: 500px)";
+
+//~~~~~~// Basic page styles //~~~~~~//
 
 html {
 	height: 100%;
@@ -49,6 +53,8 @@ body {
 		flex-direction: row;
 	}
 }
+
+//~~~~~~// Menu's styles //~~~~~~//
 
 .menu {
 	display: flex;
@@ -253,6 +259,8 @@ body {
 	}
 }
 
+//~~~~~~// Content wrapper's styles //~~~~~~//
+
 .contentWrapper {
 	display: flex;
 	flex-direction: column;
@@ -310,6 +318,8 @@ body {
 		padding: 0;
 		margin: 0;
 	}
+
+	//~~~~~~// Title page's styles //~~~~~~//
 
 	.titleFormWrapper {
 		display: flex;
@@ -587,7 +597,9 @@ body {
 		}
 	}
 
-	.repsWrapper {
+	//~~~~~~// Beginning of results page's styles //~~~~~~~//
+
+	.contentCard {
 		display: flex;
 		flex-direction: column;
 		flex-shrink: 0;
@@ -647,7 +659,7 @@ body {
 			max-width: 570px;
 		}
 
-		.repImgContainer {
+		.cardImgContainer {
 			height: 290px;
 			width: 201px;
 			display: block;
@@ -1007,18 +1019,22 @@ body {
 		}
 	}
 
+	//~~~~~~// Beginning of links page's styles //~~~~~~//
+
 	.linksSectionsHeading {
 		display: flex;
 		width: 80%;
 		min-height: 50px;
-		justify-content: center;
+		justify-content: flex-start;
+		box-sizing: border-box;
 		margin: 20px 0 20px 0;
-		padding: 40px 0 0 5px;
+		padding: 0 0 0 40px;
 		font-size: 2.5em;
 		font-family: Oswald;
 		font-weight: lighter;
 		color: darkred;
 		background-color: rgba(224, 230, 235, 0.9);
+		box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7);
 	}
 
 	.linksSectionsHeading:nth-child(1) {
