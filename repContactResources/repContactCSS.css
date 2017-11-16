@@ -934,11 +934,14 @@ body {
     .contentWrapper .contentCard .linksInfo {
       display: flex;
       flex-direction: column;
-      width: 60%; }
+      width: 60%;
+      height: 290px;
+      border-left: 4px double rgba(139, 0, 0, 0.8); }
       .contentWrapper .contentCard .linksInfo .linksTitle {
         font-family: Oswald;
         font-weight: lighter;
-        font-size: 1.6em;
+        font-size: 1.8em;
+        letter-spacing: 1px;
         text-align: left;
         text-decoration: none;
         color: rgba(139, 0, 0, 0.9);
@@ -950,7 +953,7 @@ body {
         transition: color .3s ease; }
       .contentWrapper .contentCard .linksInfo .linksDescription {
         font-family: Roboto;
-        font-size: 1.2em;
+        font-size: 1.1em;
         line-height: 1.3em;
         letter-spacing: 1.2px;
         margin: 0 0 0 20px;
