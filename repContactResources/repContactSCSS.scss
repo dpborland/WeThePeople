@@ -1009,7 +1009,7 @@ body {
 		}
 
 		.linksImg {
-			opacity: 1;
+			opacity: 1 !important;
 		}
 
 		.linksInfo {
@@ -1035,7 +1035,7 @@ body {
 			}
 
 			.linksDescription {
-				font-family: Open Sans;
+				font-family: Roboto;
 				font-size: 1.2em;
 				line-height: 1.3em;
 				letter-spacing: 1.2px;

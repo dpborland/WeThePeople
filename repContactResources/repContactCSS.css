@@ -930,7 +930,7 @@ body {
       transform: translate3d(-0.5px, -0.5px, 0px);
       transition: box-shadow .3s ease .05s, transform .3s ease, opacity .3s ease; }
     .contentWrapper .contentCard .linksImg {
-      opacity: 1; }
+      opacity: 1 !important; }
     .contentWrapper .contentCard .linksInfo {
       display: flex;
       flex-direction: column;
@@ -949,7 +949,7 @@ body {
         color: rgba(0, 0, 99, 0.75);
         transition: color .3s ease; }
       .contentWrapper .contentCard .linksInfo .linksDescription {
-        font-family: Open Sans;
+        font-family: Roboto;
         font-size: 1.2em;
         line-height: 1.3em;
         letter-spacing: 1.2px;
