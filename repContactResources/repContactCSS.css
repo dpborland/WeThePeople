@@ -929,10 +929,34 @@ body {
       box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, 0.7);
       transform: translate3d(-0.5px, -0.5px, 0px);
       transition: box-shadow .3s ease .05s, transform .3s ease, opacity .3s ease; }
-  .contentWrapper .repsWrapper:first-child {
+    .contentWrapper .contentCard .linksTitle {
+      width: 50%;
+      font-family: Oswald;
+      font-weight: lighter;
+      font-size: 2em;
+      text-align: left;
+      text-decoration: none;
+      color: rgba(139, 0, 0, 0.9);
+      margin: 0 0 0 20px;
+      transition: color .3s ease; }
+    .contentWrapper .contentCard .linksTitle:hover {
+      cursor: pointer;
+      color: rgba(0, 0, 99, 0.75);
+      transition: color .3s ease; }
+    .contentWrapper .contentCard .linksDescription {
+      width: 50%;
+      font-family: Open Sans;
+      font-size: 1.4em;
+      line-height: 1.3em;
+      letter-spacing: 1.2px;
+      margin: 0 0 0 20px;
+      text-align: justify;
+      color: rgba(0, 0, 77, 0.9);
+      margin: 15px 0 0 20px; }
+  .contentWrapper .contentCard:first-child {
     border-top: none; }
   @media screen and (min-width: 1250px) and (max-width: 2199px) {
-    .contentWrapper .repsWrapper:nth-child(2) {
+    .contentWrapper .contentCard:nth-child(2) {
       border-top: none; } }
   .contentWrapper .linksSectionsHeading {
     display: flex;

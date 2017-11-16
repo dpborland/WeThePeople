@@ -1007,17 +1007,49 @@ body {
 			transform: translate3d(-0.5px, -0.5px, 0px);
 			transition: box-shadow .3s ease .05s, transform .3s ease, opacity .3s ease;
 		}
+
+		.linksTitle {
+			width: 50%;
+			font-family: Oswald;
+			font-weight: lighter;
+			font-size: 2em;
+			text-align: left;
+			text-decoration: none;
+			color: rgba(139, 0, 0, .9);
+			margin: 0 0 0 20px;
+			transition: color .3s ease;
+		}
+
+		.linksTitle:hover {
+			cursor: pointer;
+			color: rgba(0, 0, 99, .75);
+			transition: color .3s ease;
+		}
+
+		.linksDescription {
+			width: 50%;
+			font-family: Open Sans;
+			font-size: 1.4em;
+			line-height: 1.3em;
+			letter-spacing: 1.2px;
+			margin: 0 0 0 20px;
+			text-align: justify;
+			color: rgba(0, 0, 77, .9);
+			margin: 15px 0 0 20px;
+		}
 	}
 
-	.repsWrapper:first-child {
+	.contentCard:first-child {
 		border-top: none;
 	}
 
-	.repsWrapper:nth-child(2) {
+	.contentCard:nth-child(2) {
 		@media #{$desktop-break-large} {
 			border-top: none;
 		}
 	}
+
+
 
 	//~~~~~~// Beginning of links page's styles //~~~~~~//
 
