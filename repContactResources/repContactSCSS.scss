@@ -1115,9 +1115,23 @@ body {
 				.linksImgLink {
 					height: 100%;
 
+					.linksImgScreen {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						height: 500px;
+						width: 300px;
+						background: rgba(23, 22, 77, .6);
+
+						.linkSVG {
+							height: 100px;
+							width: 100px;
+						}
+					}
+
 					.linksImg {
-						width: 500px;
-						height: 300px;
+						height: 500px;
+						width: 300px;
 						opacity: 1;
 						transition: opacity .3s ease;
 					}
