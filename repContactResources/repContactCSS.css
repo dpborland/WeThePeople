@@ -1109,7 +1109,7 @@ body {
       background-color: darkblue;
       transition: background-color .3s ease; }
     .contentWrapper .linksCard .linksTitle {
-      width: 50%;
+      width: 80%;
       font-family: Oswald;
       font-weight: lighter;
       font-size: 2em;
@@ -1123,7 +1123,7 @@ body {
       color: rgba(0, 0, 99, 0.75);
       transition: color .3s ease; }
     .contentWrapper .linksCard .linksDescription {
-      width: 50%;
+      width: 80%;
       font-family: Open Sans;
       font-size: 1.4em;
       line-height: 1.3em;
