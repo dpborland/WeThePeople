@@ -1087,11 +1087,16 @@ body {
         position: absolute;
         height: 290px;
         width: 201px;
-        background: rgba(23, 22, 77, 0.6); }
+        background: rgba(23, 22, 77, 0.8);
+        opacity: 1;
+        transition: opacity .3s ease; }
         .contentWrapper .linksCard .linksImgLink .linksImgScreen .linkSVG {
           height: 75px;
           width: 75px;
           opacity: .75; }
+      .contentWrapper .linksCard .linksImgLink .linksImgScreen:hover {
+        opacity: .5;
+        transition: .3s ease; }
       .contentWrapper .linksCard .linksImgLink .linksImg {
         height: 290px;
         width: 201px;

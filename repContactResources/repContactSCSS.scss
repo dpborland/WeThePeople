@@ -1109,13 +1109,20 @@ body {
 				position: absolute;
 				height: 290px;
 				width: 201px;
-				background: rgba(23, 22, 77, .6);
+				background: rgba(23, 22, 77, .8);
+				opacity: 1;
+				transition: opacity .3s ease;
 
 				.linkSVG {
 					height: 75px;
 					width: 75px;
 					opacity: .75;
 				}
+			}
+
+			.linksImgScreen:hover {
+				opacity: .5;
+				transition: .3s ease;
 			}
 
 			.linksImg {
