@@ -1105,41 +1105,34 @@ body {
 			box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, .7);
 			background-color: rgba(224, 230, 235, 0.9);
 
-			.linksImgContainer {
-				margin-bottom: 10px;
-				background-color: transparent;
-				overflow: hidden;
-				box-shadow: 4px 9px 35px -1px rgba(23, 22, 77, .7);
-				transition: background-color .4s ease;
 
-				.linksImgLink {
-					height: 100%;
+			.linksImgLink {
+				height: 100%;
 
-					.linksImgScreen {
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						height: 500px;
-						width: 300px;
-						background: rgba(23, 22, 77, .6);
+				.linksImgScreen {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					height: 500px;
+					width: 300px;
+					background: rgba(23, 22, 77, .6);
 
-						.linkSVG {
-							height: 100px;
-							width: 100px;
-						}
+					.linkSVG {
+						height: 100px;
+						width: 100px;
 					}
+				}
 
-					.linksImg {
-						height: 500px;
-						width: 300px;
-						opacity: 1;
-						transition: opacity .3s ease;
-					}
+				.linksImg {
+					height: 500px;
+					width: 300px;
+					opacity: 1;
+					transition: opacity .3s ease;
+				}
 
-					.linksImg:hover {
-						opacity: .4;
-						transition: opacity .3s ease;
-					}
+				.linksImg:hover {
+					opacity: .4;
+					transition: opacity .3s ease;
 				}
 			}
 

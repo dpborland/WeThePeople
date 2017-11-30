@@ -1083,32 +1083,26 @@ body {
       padding: 15px;
       box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7);
       background-color: rgba(224, 230, 235, 0.9); }
-      .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer {
-        margin-bottom: 10px;
-        background-color: transparent;
-        overflow: hidden;
-        box-shadow: 4px 9px 35px -1px rgba(23, 22, 77, 0.7);
-        transition: background-color .4s ease; }
-        .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink {
-          height: 100%; }
-          .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink .linksImgScreen {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 500px;
-            width: 300px;
-            background: rgba(23, 22, 77, 0.6); }
-            .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink .linksImgScreen .linkSVG {
-              height: 100px;
-              width: 100px; }
-          .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink .linksImg {
-            height: 500px;
-            width: 300px;
-            opacity: 1;
-            transition: opacity .3s ease; }
-          .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer .linksImgLink .linksImg:hover {
-            opacity: .4;
-            transition: opacity .3s ease; }
+      .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgLink {
+        height: 100%; }
+        .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgLink .linksImgScreen {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 500px;
+          width: 300px;
+          background: rgba(23, 22, 77, 0.6); }
+          .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgLink .linksImgScreen .linkSVG {
+            height: 100px;
+            width: 100px; }
+        .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgLink .linksImg {
+          height: 500px;
+          width: 300px;
+          opacity: 1;
+          transition: opacity .3s ease; }
+        .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgLink .linksImg:hover {
+          opacity: .4;
+          transition: opacity .3s ease; }
       .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer:hover {
         background-color: darkblue;
         transition: background-color .3s ease; }
