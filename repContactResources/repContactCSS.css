@@ -1069,7 +1069,7 @@ body {
                     transition: opacity .3s ease;
                 }
             }*/ }
-    .contentWrapper .linksSectionsWrapper .linksWrapper {
+    .contentWrapper .linksSectionsWrapper .linksCard {
       display: flex;
       height: 300px;
       flex-direction: column;
@@ -1083,30 +1083,30 @@ body {
       padding: 15px;
       box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7);
       background-color: rgba(224, 230, 235, 0.9); }
-      .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgLink {
+      .contentWrapper .linksSectionsWrapper .linksCard .linksImgLink {
         height: 100%; }
-        .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgLink .linksImgScreen {
+        .contentWrapper .linksSectionsWrapper .linksCard .linksImgLink .linksImgScreen {
           display: flex;
           justify-content: center;
           align-items: center;
           height: 500px;
           width: 300px;
           background: rgba(23, 22, 77, 0.6); }
-          .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgLink .linksImgScreen .linkSVG {
+          .contentWrapper .linksSectionsWrapper .linksCard .linksImgLink .linksImgScreen .linkSVG {
             height: 100px;
             width: 100px; }
-        .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgLink .linksImg {
+        .contentWrapper .linksSectionsWrapper .linksCard .linksImgLink .linksImg {
           height: 500px;
           width: 300px;
           opacity: 1;
           transition: opacity .3s ease; }
-        .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgLink .linksImg:hover {
+        .contentWrapper .linksSectionsWrapper .linksCard .linksImgLink .linksImg:hover {
           opacity: .4;
           transition: opacity .3s ease; }
-      .contentWrapper .linksSectionsWrapper .linksWrapper .linksImgContainer:hover {
+      .contentWrapper .linksSectionsWrapper .linksCard .linksImgContainer:hover {
         background-color: darkblue;
         transition: background-color .3s ease; }
-      .contentWrapper .linksSectionsWrapper .linksWrapper .linksTitle {
+      .contentWrapper .linksSectionsWrapper .linksCard .linksTitle {
         width: 50%;
         font-family: Oswald;
         font-weight: lighter;
@@ -1116,11 +1116,11 @@ body {
         color: rgba(139, 0, 0, 0.9);
         margin: 0 0 0 20px;
         transition: color .3s ease; }
-      .contentWrapper .linksSectionsWrapper .linksWrapper .linksTitle:hover {
+      .contentWrapper .linksSectionsWrapper .linksCard .linksTitle:hover {
         cursor: pointer;
         color: rgba(0, 0, 99, 0.75);
         transition: color .3s ease; }
-      .contentWrapper .linksSectionsWrapper .linksWrapper .linksDescription {
+      .contentWrapper .linksSectionsWrapper .linksCard .linksDescription {
         width: 50%;
         font-family: Open Sans;
         font-size: 1.4em;
