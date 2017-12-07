@@ -644,7 +644,47 @@ body {
     font-family: roboto;
     font-weight: lighter;
     background: rgba(233, 226, 233, 0.9);
-    box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7); }
+    box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7);
+    		/*.linksImg {
+    			opacity: 1 !important;
+    		}
+    
+    		.linksInfo {
+    			display: flex;
+    			flex-direction: column;
+    			width: 60%;
+    			height: 290px;
+    			border-left: 4px double rgba(139, 0, 0, .8);
+    
+    			.linksTitle {
+    				font-family: Oswald;
+    				font-weight: lighter;
+    				font-size: 1.8em;
+    				letter-spacing: 1px;
+    				text-align: left;
+    				text-decoration: none;
+    				color: rgba(139, 0, 0, .9);
+    				margin: 0 0 0 20px;
+    				transition: color .3s ease;
+    			}
+    
+    			.linksTitle:hover {
+    				cursor: pointer;
+    				color: rgba(0, 0, 99, .75);
+    				transition: color .3s ease;
+    			}
+    
+    			.linksDescription {
+    				font-family: Roboto;
+    				font-size: 1.1em;
+    				line-height: 1.3em;
+    				letter-spacing: 1.2px;
+    				margin: 0 0 0 20px;
+    				text-align: justify;
+    				color: rgba(0, 0, 77, .9);
+    				margin: 15px 0 0 20px;
+    			}
+    		}*/ }
     @media screen and (min-width: 0px) and (max-width: 249px) {
       .contentWrapper .contentCard {
         order: 1;
@@ -1013,37 +1053,6 @@ body {
       box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, 0.7);
       transform: translate3d(-0.5px, -0.5px, 0px);
       transition: box-shadow .3s ease .05s, transform .3s ease, opacity .3s ease; }
-    .contentWrapper .contentCard .linksImg {
-      opacity: 1 !important; }
-    .contentWrapper .contentCard .linksInfo {
-      display: flex;
-      flex-direction: column;
-      width: 60%;
-      height: 290px;
-      border-left: 4px double rgba(139, 0, 0, 0.8); }
-      .contentWrapper .contentCard .linksInfo .linksTitle {
-        font-family: Oswald;
-        font-weight: lighter;
-        font-size: 1.8em;
-        letter-spacing: 1px;
-        text-align: left;
-        text-decoration: none;
-        color: rgba(139, 0, 0, 0.9);
-        margin: 0 0 0 20px;
-        transition: color .3s ease; }
-      .contentWrapper .contentCard .linksInfo .linksTitle:hover {
-        cursor: pointer;
-        color: rgba(0, 0, 99, 0.75);
-        transition: color .3s ease; }
-      .contentWrapper .contentCard .linksInfo .linksDescription {
-        font-family: Roboto;
-        font-size: 1.1em;
-        line-height: 1.3em;
-        letter-spacing: 1.2px;
-        margin: 0 0 0 20px;
-        text-align: justify;
-        color: rgba(0, 0, 77, 0.9);
-        margin: 15px 0 0 20px; }
   .contentWrapper .contentCard:first-child {
     border-top: none; }
   @media screen and (min-width: 1250px) and (max-width: 2199px) {
@@ -1129,16 +1138,16 @@ body {
         position: absolute;
         height: 290px;
         width: 201px;
-        background: rgba(23, 22, 77, 0.8);
+        background: rgba(23, 22, 77, 0.3);
         opacity: 1;
-        transition: opacity .3s ease; }
+        transition: background .3s ease; }
         .contentWrapper .linksCard .linksImgLink .linksImgScreen .linkSVG {
           height: 50px;
           width: 50px;
-          opacity: .75; }
+          opacity: .9; }
       .contentWrapper .linksCard .linksImgLink .linksImgScreen:hover {
-        opacity: .5;
-        transition: .3s ease; }
+        background: rgba(23, 22, 77, 0.9);
+        transition: background 0.3s ease; }
       .contentWrapper .linksCard .linksImgLink .linksImg {
         height: 290px;
         width: 201px;
@@ -1171,8 +1180,23 @@ body {
       line-height: 1.3em;
       letter-spacing: 1.2px;
       margin: 0 0 0 20px;
-      text-align: justify;
+      text-align: left;
       color: rgba(0, 0, 77, 0.9);
       margin: 15px 0 0 20px; }
+      @media screen and (min-width: 0px) and (max-width: 249px) {
+        .contentWrapper .linksCard .linksDescription {
+          font-size: .9em; } }
+      @media screen and (min-width: 250px) and (max-width: 349px) {
+        .contentWrapper .linksCard .linksDescription {
+          font-size: .9em; } }
+      @media screen and (min-width: 350px) and (max-width: 549px) {
+        .contentWrapper .linksCard .linksDescription {
+          font-size: .85em; } }
+      @media screen and (min-width 350px) and (max-width: 450px) {
+        .contentWrapper .linksCard .linksDescription {
+          font-size: 1.1em; } }
+      @media screen and (min-width: 1250px) and (max-width: 2199px) {
+        .contentWrapper .linksCard .linksDescription {
+          font-size: 1em; } }
 
 /*# sourceMappingURL=repContactCSS.css.map */
