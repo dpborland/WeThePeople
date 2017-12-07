@@ -1069,16 +1069,10 @@ body {
   .contentWrapper .linksSectionsHeading:nth-child(1) {
     margin-top: 0; }
   .contentWrapper .linksCard {
-    display: flex;
     height: 300px;
-    flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
     break-inside: avoid;
     margin: 0 0 20px 0;
-    padding: 15px;
     box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7);
     background-color: rgba(224, 230, 235, 0.9); }
     @media screen and (min-width: 1250px) and (max-width: 2199px) {
@@ -1121,7 +1115,7 @@ body {
       font-size: 2em;
       text-align: left;
       text-decoration: none;
-      color: rgba(139, 0, 0, 0.9);
+      color: rgba(148, 27, 56, 0.9);
       margin: 0 0 0 20px;
       transition: color .3s ease; }
     .contentWrapper .linksCard .linksTitle:hover {
