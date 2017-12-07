@@ -1009,7 +1009,7 @@ body {
 			transition: box-shadow .3s ease .05s, transform .3s ease, opacity .3s ease;
 		}
 
-		.linksImg {
+		/*.linksImg {
 			opacity: 1 !important;
 		}
 
@@ -1048,7 +1048,7 @@ body {
 				color: rgba(0, 0, 77, .9);
 				margin: 15px 0 0 20px;
 			}
-		}
+		}*/
 	}
 
 	.contentCard:first-child {
@@ -1184,48 +1184,58 @@ body {
 			transition: background-color .3s ease;
 		}
 
-		.linksTitle {
-			width: 90%;
-			font-family: Oswald;
-			font-weight: lighter;
-			font-size: 2em;
-			text-align: left;
-			text-decoration: none;
-			color: rgba(148, 27, 56, 0.9);
-			margin: 0 0 0 20px;
-			transition: color .3s ease;
-		}
+		.linksInfo {
+			display: flex;
+			flex-direction: column;
+			width: 60%;
+			height: 290px;
+			border-left: 4px double rgba(139, 0, 0, .8);
 
-		.linksTitle:hover {
-			cursor: pointer;
-			color: rgba(0, 0, 99, .75);
-			transition: color .3s ease;
-		}
+			.linksTitle {
+				width: 90%;
+				font-family: Oswald;
+				font-weight: lighter;
+				font-size: 1.8em;
+				letter-spacing: 1px;
+				text-align: left;
+				text-decoration: none;
+				color: rgba(148, 27, 56, 0.9);
+				margin: 0 0 0 20px;
+				transition: color .3s ease;
+			}
 
-		.linksDescription {
-			width: 90%;
-			font-family: Open Sans;
-			font-size: 1.4em;
-			line-height: 1.3em;
-			letter-spacing: 1.2px;
-			margin: 0 0 0 20px;
-			text-align: left;
-			color: rgba(0, 0, 77, .9);
-			margin: 15px 0 0 20px;
-			@media #{$phone-break-small} {
-				font-size: .9em;
+			.linksTitle:hover {
+				cursor: pointer;
+				color: rgba(0, 0, 99, .75);
+				transition: color .3s ease;
 			}
-			@media #{$phone-break-medium} {
-				font-size: .9em;
-			}
-			@media #{$phone-break-large} {
-				font-size: .85em;
-			}
-			@media #{$phone-break-large-text-adjust} {
+
+			.linksDescription {
+				width: 90%;
+				font-family: Roboto;
+				font-weight: 400;
 				font-size: 1.1em;
-			}
-			@media #{$desktop-break-large} {
-				font-size: 1em;
+				line-height: 1.3em;
+				letter-spacing: 1.2px;
+				margin: 0 0 0 20px;
+				text-align: left;
+				color: rgba(0, 0, 77, .9);
+				margin: 15px 0 0 20px;
+				@media #{$phone-break-small} {
+					font-size: .9em;
+				}
+				@media #{$phone-break-medium} {
+					font-size: .9em;
+				}
+				@media #{$phone-break-large} {
+					font-size: .85em;
+				}
+				@media #{$phone-break-large-text-adjust} {
+					font-size: 1.1em;
+				}
+				@media #{$desktop-break-large} {
+					font-size: 1em;
+				}
 			}
 		}
 	}
