@@ -1067,7 +1067,7 @@ body {
 
 	.linksSectionsHeading {
 		display: flex;
-		width: 80%;
+		width: 600px;
 		min-height: 50px;
 		justify-content: center;
 		box-sizing: border-box;
@@ -1076,7 +1076,7 @@ body {
 		font-size: 2.5em;
 		font-family: Oswald;
 		font-weight: lighter;
-		color: darkred;
+		color: rgba(148, 27, 56, 0.9);
 		background-color: rgba(224, 230, 235, 0.9);
 		box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7);
 		@media #{$desktop-break-large} {
