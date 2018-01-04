@@ -1072,6 +1072,10 @@ body {
     color: rgba(148, 27, 56, 0.9);
     background-color: rgba(224, 230, 235, 0.9);
     box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7); }
+    @media screen and (min-width: 900px) and (max-width: 1249px) {
+      .contentWrapper .linksSectionsHeading {
+        width: 600px;
+        margin: 0 20px 20px 20px; } }
     @media screen and (min-width: 1250px) and (max-width: 2199px) {
       .contentWrapper .linksSectionsHeading {
         width: 1220px; } }
@@ -1121,9 +1125,8 @@ body {
         max-width: 570px; } }
     @media screen and (min-width: 900px) and (max-width: 1249px) {
       .contentWrapper .linksCard {
-        min-width: 500px;
-        max-width: 570px;
-        margin: 0 10px 20px 10px; } }
+        width: 600px;
+        margin: 0 20px 20px 20px; } }
     @media screen and (min-width: 1250px) and (max-width: 2199px) {
       .contentWrapper .linksCard {
         margin: 0 10px 20px 10px;
