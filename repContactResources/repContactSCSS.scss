@@ -1109,6 +1109,9 @@ body {
 
 	.activismHeading {
 		order: 2;
+		@media #{$phone-break-large} {
+			margin: 0 0 20px 0;
+		}
 	}
 
 	.linksCard {
@@ -1161,14 +1164,14 @@ body {
 		.linksImgContainer {
 
 			@media #{$phone-break-small} {
-				height: 250px;
-				width: 140px;
+
 			}
 			@media #{$phone-break-medium} {
 
 			}
 			@media #{$phone-break-large} {
-
+				height: 250px;
+				width: 140px;
 			}
 
 			.linksImgLink {

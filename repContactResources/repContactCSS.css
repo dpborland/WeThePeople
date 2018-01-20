@@ -1013,6 +1013,9 @@ body {
     order: 0; }
   .contentWrapper .activismHeading {
     order: 2; }
+    @media screen and (min-width: 350px) and (max-width: 549px) {
+      .contentWrapper .activismHeading {
+        margin: 0 0 20px 0; } }
   .contentWrapper .linksCard {
     height: 300px;
     justify-content: flex-start;
@@ -1059,7 +1062,7 @@ body {
         margin: 0 10px 20px 10px;
         min-width: 500px;
         max-width: 570px; } }
-    @media screen and (min-width: 0px) and (max-width: 249px) {
+    @media screen and (min-width: 350px) and (max-width: 549px) {
       .contentWrapper .linksCard .linksImgContainer {
         height: 250px;
         width: 140px; } }
