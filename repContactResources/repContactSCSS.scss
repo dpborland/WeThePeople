@@ -271,6 +271,7 @@ body {
 	padding-top: 50px;
 	align-self: center;
 	overflow-y: scroll;
+	overflow-x: hidden;
 	@media #{$phone-break-small} {
 		height: 90%;
 		margin: 0 0 15px 0;
@@ -1080,13 +1081,14 @@ body {
 		background-color: rgba(224, 230, 235, 0.9);
 		box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7);
 		@media #{$phone-break-small} {
-			width: 85%;
+			width: 100%;
 		}
 		@media #{$phone-break-medium} {
-			width: 85%;
+			width: 100%;
 		}
 		@media #{$phone-break-large} {
-			width: 85%;
+			width: 100%;
+			font-size: 8vw;
 		}
 		@media #{$tablet-break} {
 			width: 500px;
@@ -1171,7 +1173,7 @@ body {
 			}
 			@media #{$phone-break-large} {
 				height: 250px;
-				width: 140px;
+				width: 120px;
 			}
 
 			.linksImgLink {
@@ -1205,7 +1207,7 @@ body {
 
 				}
 				@media #{$phone-break-large} {
-					width: 140px;
+					width: 120px;
 					height: 250px;
 				}
 
@@ -1255,6 +1257,7 @@ body {
 			width: 60%;
 			height: 290px;
 			border-left: 4px double rgba(139, 0, 0, .8);
+			overflow-y: scroll;
 			@media #{$phone-break-small} {
 				order: 2;
 				border-left: 1px solid rgba(248, 248, 255, 0.7);
@@ -1279,6 +1282,18 @@ body {
 				color: rgba(148, 27, 56, 0.9);
 				margin: 0 0 0 20px;
 				transition: color .3s ease;
+
+				@media #{$phone-break-small} {
+
+				}
+				@media #{$phone-break-medium} {
+
+				}
+				@media #{$phone-break-large} {
+					font-size: 1.4em;
+					margin: 0 0 0 10px;
+					letter-spacing: .5px;
+				}
 			}
 
 			.linksTitle:hover {
@@ -1306,6 +1321,8 @@ body {
 				}
 				@media #{$phone-break-large} {
 					font-size: .85em;
+					margin: 5px 0 0 10px;
+					letter-spacing: .5px;
 				}
 				@media #{$phone-break-large-text-adjust} {
 					font-size: 1.1em;
