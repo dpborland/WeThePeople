@@ -1319,6 +1319,7 @@ body {
 
 				.linkSVGTitle {
 					display: none;
+					transition: background-color .3s ease;
 					@media #{$phone-break-small} {
 						display: block;
 						height: 33px;
@@ -1327,7 +1328,6 @@ body {
 						margin: 6px 0px;
 						background-color: rgba(148, 27, 56, 0.8);
 						padding: 5px;
-						transition: background-color .3s ease;
 					}
 					@media #{$phone-break-medium} {
 						display: block;
