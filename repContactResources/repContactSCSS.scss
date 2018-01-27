@@ -1270,12 +1270,14 @@ body {
 			overflow-y: scroll;
 			@media #{$phone-break-small} {
 				width: 100%;
+				height: initial;
 				order: 2;
 				border-left: none;
 				padding: 5px 10px;
 			}
 			@media #{$phone-break-medium} {
 				width: 100%;
+				height: initial;
 				order: 2;
 				border-left: none;
 				padding: 5px 10px;
@@ -1294,6 +1296,7 @@ body {
 				font-size: 1.8em;
 				letter-spacing: 1px;
 				text-align: left;
+				justify-content: space-between;
 				text-decoration: none;
 				color: rgba(148, 27, 56, 0.9);
 				margin: 0 0 0 20px;

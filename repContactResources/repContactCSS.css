@@ -1132,12 +1132,14 @@ body {
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .linksCard .linksInfo {
           width: 100%;
+          height: initial;
           order: 2;
           border-left: none;
           padding: 5px 10px; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .linksCard .linksInfo {
           width: 100%;
+          height: initial;
           order: 2;
           border-left: none;
           padding: 5px 10px; } }
@@ -1154,6 +1156,7 @@ body {
         font-size: 1.8em;
         letter-spacing: 1px;
         text-align: left;
+        justify-content: space-between;
         text-decoration: none;
         color: rgba(148, 27, 56, 0.9);
         margin: 0 0 0 20px;
