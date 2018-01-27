@@ -1184,8 +1184,9 @@ body {
               width: 33px;
               align-self: right;
               margin: 6px 0px;
-              background: rgba(148, 27, 56, 0.8);
-              padding: 5px; } }
+              background-color: rgba(148, 27, 56, 0.8);
+              padding: 5px;
+              transition: background-color .3s ease; } }
           @media screen and (min-width: 250px) and (max-width: 349px) {
             .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
               display: block;

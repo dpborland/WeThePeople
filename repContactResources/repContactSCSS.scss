@@ -1325,8 +1325,9 @@ body {
 						width: 33px;
 						align-self: right;
 						margin: 6px 0px;
-						background: rgba(148, 27, 56, 0.8);
+						background-color: rgba(148, 27, 56, 0.8);
 						padding: 5px;
+						transition: background-color .3s ease;
 					}
 					@media #{$phone-break-medium} {
 						display: block;
