@@ -1149,7 +1149,7 @@ body {
           order: 2;
           border-left: 1px solid rgba(248, 248, 255, 0.7); } }
       .contentWrapper .linksCard .linksInfo .linksTitle {
-        display: flex;
+        display: initial;
         width: 90%;
         font-family: Oswald;
         font-weight: lighter;
@@ -1162,6 +1162,7 @@ body {
         transition: color .3s ease; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .linksCard .linksInfo .linksTitle {
+            display: flex;
             width: 100%;
             justify-content: space-between;
             align-items: center;
@@ -1170,6 +1171,7 @@ body {
             margin: 0; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .linksCard .linksInfo .linksTitle {
+            display: flex;
             width: 100%;
             justify-content: space-between;
             align-items: center;

@@ -1289,7 +1289,7 @@ body {
 			}
 
 			.linksTitle {
-				display: flex;
+				display: initial;
 				width: 90%;
 				font-family: Oswald;
 				font-weight: lighter;
@@ -1302,6 +1302,7 @@ body {
 				transition: color .3s ease;
 
 				@media #{$phone-break-small} {
+					display: flex;
 					width: 100%;
 					justify-content: space-between;
 					align-items: center;
@@ -1310,6 +1311,7 @@ body {
 					margin: 0;
 				}
 				@media #{$phone-break-medium} {
+					display: flex;
 					width: 100%;
 					justify-content: space-between;
 					align-items: center;
