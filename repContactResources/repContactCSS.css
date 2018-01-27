@@ -1016,6 +1016,12 @@ body {
     order: 0; }
   .contentWrapper .activismHeading {
     order: 2; }
+    @media screen and (min-width: 0px) and (max-width: 249px) {
+      .contentWrapper .activismHeading {
+        margin: 0 0 20px 0; } }
+    @media screen and (min-width: 250px) and (max-width: 349px) {
+      .contentWrapper .activismHeading {
+        margin: 0 0 20px 0; } }
     @media screen and (min-width: 350px) and (max-width: 549px) {
       .contentWrapper .activismHeading {
         margin: 0 0 20px 0; } }
@@ -1127,12 +1133,14 @@ body {
         .contentWrapper .linksCard .linksInfo {
           width: 100%;
           order: 2;
-          border-left: 1px solid rgba(248, 248, 255, 0.7); } }
+          border-left: none;
+          padding: 5px 10px; } }
       @media screen and (min-width: 250px) and (max-width: 349px) {
         .contentWrapper .linksCard .linksInfo {
           width: 100%;
           order: 2;
-          border-left: none; } }
+          border-left: none;
+          padding: 5px 10px; } }
       @media screen and (min-width: 350px) and (max-width: 549px) {
         .contentWrapper .linksCard .linksInfo {
           width: 60%;
@@ -1151,11 +1159,13 @@ body {
         transition: color .3s ease; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .linksCard .linksInfo .linksTitle {
+            width: 100%;
             font-size: 1.4em;
             letter-spacing: 1px;
             margin: 0; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .linksCard .linksInfo .linksTitle {
+            width: 100%;
             font-size: 1.4em;
             letter-spacing: 1px;
             margin: 0; } }
@@ -1164,6 +1174,29 @@ body {
             font-size: 1.4em;
             margin: 0 0 0 10px;
             letter-spacing: .5px; } }
+        .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
+          display: none; }
+          @media screen and (min-width: 0px) and (max-width: 249px) {
+            .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
+              display: block;
+              height: 33px;
+              width: 33px;
+              align-self: right;
+              margin: 6px 0px;
+              background: rgba(148, 27, 56, 0.8);
+              padding: 5px; } }
+          @media screen and (min-width: 250px) and (max-width: 349px) {
+            .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
+              display: block;
+              height: 33px;
+              width: 33px;
+              align-self: right;
+              margin: 6px 0px;
+              background: rgba(148, 27, 56, 0.8);
+              padding: 5px; } }
+          @media screen and (min-width: 350px) and (max-width: 549px) {
+            .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
+              display: none; } }
       .contentWrapper .linksCard .linksInfo .linksTitle:hover {
         cursor: pointer;
         color: rgba(0, 0, 99, 0.75);
@@ -1181,11 +1214,13 @@ body {
         margin: 15px 0 0 20px; }
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .linksCard .linksInfo .linksDescription {
+            width: 100%;
             font-size: .9em;
             margin: 12px 0;
             letter-spacing: .6px; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .linksCard .linksInfo .linksDescription {
+            width: 100%;
             font-size: .9em;
             margin: 12px 0;
             letter-spacing: .6px; } }

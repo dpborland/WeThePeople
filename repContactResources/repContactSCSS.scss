@@ -1112,6 +1112,12 @@ body {
 
 	.activismHeading {
 		order: 2;
+		@media #{$phone-break-small} {
+			margin: 0 0 20px 0;
+		}
+		@media #{$phone-break-medium} {
+			margin: 0 0 20px 0;
+		}
 		@media #{$phone-break-large} {
 			margin: 0 0 20px 0;
 		}
@@ -1265,12 +1271,14 @@ body {
 			@media #{$phone-break-small} {
 				width: 100%;
 				order: 2;
-				border-left: 1px solid rgba(248, 248, 255, 0.7);
+				border-left: none;
+				padding: 5px 10px;
 			}
 			@media #{$phone-break-medium} {
 				width: 100%;
 				order: 2;
 				border-left: none;
+				padding: 5px 10px;
 			}
 			@media #{$phone-break-large} {
 				width: 60%;
@@ -1291,11 +1299,13 @@ body {
 				transition: color .3s ease;
 
 				@media #{$phone-break-small} {
+					width: 100%;
 					font-size: 1.4em;
 					letter-spacing: 1px;
 					margin: 0;
 				}
 				@media #{$phone-break-medium} {
+					width: 100%;
 					font-size: 1.4em;
 					letter-spacing: 1px;
 					margin: 0;
@@ -1304,6 +1314,31 @@ body {
 					font-size: 1.4em;
 					margin: 0 0 0 10px;
 					letter-spacing: .5px;
+				}
+
+				.linkSVGTitle {
+					display: none;
+					@media #{$phone-break-small} {
+						display: block;
+						height: 33px;
+						width: 33px;
+						align-self: right;
+						margin: 6px 0px;
+						background: rgba(148, 27, 56, 0.8);
+						padding: 5px;
+					}
+					@media #{$phone-break-medium} {
+						display: block;
+						height: 33px;
+						width: 33px;
+						align-self: right;
+						margin: 6px 0px;
+						background: rgba(148, 27, 56, 0.8);
+						padding: 5px;
+					}
+					@media #{$phone-break-large} {
+						display: none;
+					}
 				}
 			}
 
@@ -1325,11 +1360,13 @@ body {
 				color: rgba(0, 0, 77, .9);
 				margin: 15px 0 0 20px;
 				@media #{$phone-break-small} {
+					width: 100%;
 					font-size: .9em;
 					margin: 12px 0;
 					letter-spacing: .6px;
 				}
 				@media #{$phone-break-medium} {
+					width: 100%;
 					font-size: .9em;
 					margin: 12px 0;
 					letter-spacing: .6px;
