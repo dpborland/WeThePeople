@@ -518,7 +518,6 @@ if (window.location.href === "http://contactmyreps.com/results.html") {
 }
 
 if (window.location.href === "http://contactmyreps.com/links.html") {
-    const linkSVGs = Array.from(document.querySelectorAll(".linkSVGTitle"));
     const titles = Array.from(document.querySelectorAll(".linksTitle"));
 
     titles.forEach( (title) => {

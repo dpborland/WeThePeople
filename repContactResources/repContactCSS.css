@@ -1166,7 +1166,7 @@ body {
             width: 100%;
             justify-content: space-between;
             align-items: center;
-            font-size: 1.4em;
+            font-size: 8vw;
             letter-spacing: 1px;
             margin: 0; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
@@ -1175,7 +1175,7 @@ body {
             width: 100%;
             justify-content: space-between;
             align-items: center;
-            font-size: 1.4em;
+            font-size: 8vw;
             letter-spacing: 1px;
             margin: 0; } }
         @media screen and (min-width: 350px) and (max-width: 549px) {
@@ -1183,21 +1183,21 @@ body {
             font-size: 1.4em;
             margin: 0 0 0 10px;
             letter-spacing: .5px; } }
-        .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
+        .contentWrapper .linksCard .linksInfo .linksTitle .linksTitleSVG {
           display: none;
           box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, 0.7);
           transition: background-color .3s ease; }
           @media screen and (min-width: 0px) and (max-width: 249px) {
-            .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
+            .contentWrapper .linksCard .linksInfo .linksTitle .linksTitleSVG {
               display: block;
               height: 33px;
               width: 33px;
               align-self: right;
-              margin: 6px 0px;
+              margin: 6px 0 6px 6px;
               background-color: rgba(148, 27, 56, 0.8);
               padding: 5px; } }
           @media screen and (min-width: 250px) and (max-width: 349px) {
-            .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
+            .contentWrapper .linksCard .linksInfo .linksTitle .linksTitleSVG {
               display: block;
               height: 33px;
               width: 33px;
@@ -1206,7 +1206,7 @@ body {
               background: rgba(148, 27, 56, 0.8);
               padding: 5px; } }
           @media screen and (min-width: 350px) and (max-width: 549px) {
-            .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
+            .contentWrapper .linksCard .linksInfo .linksTitle .linksTitleSVG {
               display: none; } }
       .contentWrapper .linksCard .linksInfo .linksTitle:hover {
         cursor: pointer;

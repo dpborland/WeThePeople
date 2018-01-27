@@ -1306,7 +1306,7 @@ body {
 					width: 100%;
 					justify-content: space-between;
 					align-items: center;
-					font-size: 1.4em;
+					font-size: 8vw;
 					letter-spacing: 1px;
 					margin: 0;
 				}
@@ -1315,7 +1315,7 @@ body {
 					width: 100%;
 					justify-content: space-between;
 					align-items: center;
-					font-size: 1.4em;
+					font-size: 8vw;
 					letter-spacing: 1px;
 					margin: 0;
 				}
@@ -1325,7 +1325,7 @@ body {
 					letter-spacing: .5px;
 				}
 
-				.linkSVGTitle {
+				.linksTitleSVG {
 					display: none;
 					box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, 0.7);
 					transition: background-color .3s ease;
@@ -1334,7 +1334,7 @@ body {
 						height: 33px;
 						width: 33px;
 						align-self: right;
-						margin: 6px 0px;
+						margin: 6px 0 6px 6px;
 						background-color: rgba(148, 27, 56, 0.8);
 						padding: 5px;
 					}
