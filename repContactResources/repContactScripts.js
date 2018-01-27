@@ -524,12 +524,12 @@ if (window.location.href === "http://contactmyreps.com/links.html") {
     titles.forEach( (title) => {
         title.addEventListener("mouseover", (e) => {
             let specific = e.target.children[0];
-            specific.style.backgroundColor = "rgba(0, 0, 99, 0.75)";
+            specific === undefined ? console.log("nope") : specific.style.backgroundColor = "rgba(0, 0, 99, 0.75)";
         }, false);
 
         title.addEventListener("mouseout", (e) => {
             let specific = e.target.children[0];
-            specific.style.backgroundColor = "rgba(148, 27, 56, 0.8)";
+            specific === undefined ? console.log("nope") : specific.style.backgroundColor = "rgba(148, 27, 56, 0.8)";
         }, false);
     });
 }

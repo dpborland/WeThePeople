@@ -1156,7 +1156,6 @@ body {
         font-size: 1.8em;
         letter-spacing: 1px;
         text-align: left;
-        justify-content: space-between;
         text-decoration: none;
         color: rgba(148, 27, 56, 0.9);
         margin: 0 0 0 20px;
@@ -1164,12 +1163,16 @@ body {
         @media screen and (min-width: 0px) and (max-width: 249px) {
           .contentWrapper .linksCard .linksInfo .linksTitle {
             width: 100%;
+            justify-content: space-between;
+            align-items: center;
             font-size: 1.4em;
             letter-spacing: 1px;
             margin: 0; } }
         @media screen and (min-width: 250px) and (max-width: 349px) {
           .contentWrapper .linksCard .linksInfo .linksTitle {
             width: 100%;
+            justify-content: space-between;
+            align-items: center;
             font-size: 1.4em;
             letter-spacing: 1px;
             margin: 0; } }
@@ -1180,6 +1183,7 @@ body {
             letter-spacing: .5px; } }
         .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
           display: none;
+          box-shadow: 3px 2px 8px -1px rgba(23, 22, 77, 0.7);
           transition: background-color .3s ease; }
           @media screen and (min-width: 0px) and (max-width: 249px) {
             .contentWrapper .linksCard .linksInfo .linksTitle .linkSVGTitle {
