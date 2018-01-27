@@ -1085,6 +1085,7 @@ body {
 		}
 		@media #{$phone-break-medium} {
 			width: 100%;
+			font-size: 8.2vw;
 		}
 		@media #{$phone-break-large} {
 			width: 100%;
@@ -1130,6 +1131,7 @@ body {
 			max-height: 270px;
 			padding: 10px;
 			justify-content: space-between;
+			overflow: scroll;
 		}
 		@media #{$phone-break-medium} {
 			flex-wrap: wrap;
@@ -1138,6 +1140,7 @@ body {
 			max-height: 250px;
 			padding: 10px;
 			justify-content: space-between;
+			overflow: scroll;
 		}
 		@media #{$phone-break-large} {
 			flex-wrap: wrap;
@@ -1164,7 +1167,7 @@ body {
 		}
 
 		.linksImgContainer {
-
+			margin-bottom: 0;
 			@media #{$phone-break-small} {
 
 			}
@@ -1237,6 +1240,7 @@ body {
 				@media #{$phone-break-large} {
 					width: 170px;
 					height: 250px;
+					margin-left: -20px;
 				}
 			}
 
@@ -1259,14 +1263,17 @@ body {
 			border-left: 4px double rgba(139, 0, 0, .8);
 			overflow-y: scroll;
 			@media #{$phone-break-small} {
+				width: 100%;
 				order: 2;
 				border-left: 1px solid rgba(248, 248, 255, 0.7);
 			}
 			@media #{$phone-break-medium} {
+				width: 100%;
 				order: 2;
-				border-left: 1px solid rgba(248, 248, 255, 0.7);
+				border-left: none;
 			}
 			@media #{$phone-break-large} {
+				width: 60%;
 				order: 2;
 				border-left: 1px solid rgba(248, 248, 255, 0.7);
 			}
@@ -1284,10 +1291,14 @@ body {
 				transition: color .3s ease;
 
 				@media #{$phone-break-small} {
-
+					font-size: 1.4em;
+					letter-spacing: 1px;
+					margin: 0;
 				}
 				@media #{$phone-break-medium} {
-
+					font-size: 1.4em;
+					letter-spacing: 1px;
+					margin: 0;
 				}
 				@media #{$phone-break-large} {
 					font-size: 1.4em;
@@ -1315,9 +1326,13 @@ body {
 				margin: 15px 0 0 20px;
 				@media #{$phone-break-small} {
 					font-size: .9em;
+					margin: 12px 0;
+					letter-spacing: .6px;
 				}
 				@media #{$phone-break-medium} {
 					font-size: .9em;
+					margin: 12px 0;
+					letter-spacing: .6px;
 				}
 				@media #{$phone-break-large} {
 					font-size: .85em;
