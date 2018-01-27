@@ -517,24 +517,24 @@ if (window.location.href === "http://contactmyreps.com/results.html") {
     }, false);
 }
 
-if (window.location.href === "http://contactmyreps.com/links.html") {
+/*if (window.location.href === "http://contactmyreps.com/links.html") {
     const linkSVGs = Array.from(document.querySelectorAll(".linkSVGTitle"));
     const titleContainers = Array.from(document.querySelectorAll(".linksTitle"));
 
-    titleContainers.forEach( (container, index) => {
-        container.addEventListener("mouseover", () => {
+    titleContainers.forEach( (container) => {
+        container.addEventListener("mouseover", (e) => {
             linkSVGs.forEach( (link) => {
                 link[index].style.backgroundColor = "rgba(0, 0, 99, 0.75)";
             });
         }, false);
     });
 
-    titleContainers.forEach( (container, index) => {
-        container.addEventListener("mouseout", () => {
+    titleContainers.forEach( (container) => {
+        container.addEventListener("mouseout", (e) => {
             linkSVGs.forEach( (link) => {
                 link[index].style.backgroundColor = "rgba(148, 27, 56, 0.8)";
             });
         }, false);
     });
 
-}
+}/*

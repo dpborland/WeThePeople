@@ -1147,6 +1147,7 @@ body {
           order: 2;
           border-left: 1px solid rgba(248, 248, 255, 0.7); } }
       .contentWrapper .linksCard .linksInfo .linksTitle {
+        display: flex;
         width: 90%;
         font-family: Oswald;
         font-weight: lighter;
