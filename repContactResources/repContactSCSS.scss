@@ -1418,6 +1418,7 @@ body {
 
 	.aboutCard {
 		display: flex;
+		flex-wrap: nowrap;
 		flex-direction: column;
 		padding: 25px;
 		height: 80%;
@@ -1427,16 +1428,19 @@ body {
 			min-height: 90%;
 			justify-content: start;
 			margin-top: 10px;
+			padding: 15px;
 		}
 		@media #{$phone-break-medium} {
 			min-height: 90%;
 			justify-content: start;
 			margin-top: 10px;
+			padding: 15px;
 		}
 		@media #{$phone-break-large} {
 			min-height: 90%;
 			justify-content: start;
 			margin-top: 10px;
+			padding: 15px;
 		}
 		@media #{$tablet-break} {
 			min-height: 60%;
@@ -1454,6 +1458,7 @@ body {
 		}
 
 		.aboutTitle {
+			width: 100%;
 			font-size: 2.5em;
 			font-family: Oswald;
 			font-weight: lighter;
