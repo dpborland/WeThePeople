@@ -1268,6 +1268,8 @@ body {
       font-size: 2.5em;
       font-family: Oswald;
       font-weight: lighter;
+      letter-spacing: 1px;
+      text-align: left;
       color: rgba(148, 27, 56, 0.9); }
     .contentWrapper .aboutCard .aboutText {
       font-family: Roboto;
