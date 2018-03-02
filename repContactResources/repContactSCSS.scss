@@ -1068,7 +1068,7 @@ body {
 
 	.linksSectionsHeading {
 		display: flex;
-		width: 570px;
+		width: 500px;
 		min-height: 40px;
 		justify-content: center;
 		align-items: center;
@@ -1081,18 +1081,20 @@ body {
 		background-color: rgba(224, 230, 235, 0.9);
 		box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7);
 		@media #{$phone-break-small} {
-			width: 100%;
+			width: 100%; 
+			font-size: 9vw;
 		}
 		@media #{$phone-break-medium} {
-			width: 100%;
+			width: 600px;
 			font-size: 8.2vw;
+			padding: 15px 0;
 		}
 		@media #{$phone-break-large} {
 			width: 100%;
 			font-size: 8vw;
 		}
 		@media #{$tablet-break} {
-			width: 500px;
+			width: 540px;
 		}
 		@media #{$desktop-break-medium} {
 			margin: 0 20px 20px 20px;
@@ -1306,7 +1308,7 @@ body {
 					width: 100%;
 					justify-content: space-between;
 					align-items: center;
-					font-size: 8vw;
+					font-size: 8.5vw;
 					letter-spacing: 1px;
 					margin: 0;
 				}
@@ -1343,7 +1345,7 @@ body {
 						height: 33px;
 						width: 33px;
 						align-self: right;
-						margin: 6px 0px;
+						margin: 6px 0 6px 6px;
 						background: rgba(148, 27, 56, 0.8);
 						padding: 5px;
 					}
