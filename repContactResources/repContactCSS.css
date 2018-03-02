@@ -1263,24 +1263,26 @@ body {
     height: 20%;
     width: 80%;
     overflow: scroll; }
-    .contentWrapper .scriptsCard .scriptTitle {
-      width: 100%;
-      font-size: 2.5em;
-      font-family: Oswald;
-      font-weight: lighter;
-      letter-spacing: 1px;
-      text-align: left;
-      color: rgba(148, 27, 56, 0.9);
-      margin: 0 0 20px 0; }
-    .contentWrapper .scriptsCard .scriptSizer {
-      width: 100%;
-      font-size: 2.5em;
-      font-family: Oswald;
-      font-weight: lighter;
-      letter-spacing: 1px;
-      text-align: left;
-      color: rgba(148, 27, 56, 0.9);
-      margin: 0 0 20px 0; }
+    .contentWrapper .scriptsCard .scriptText {
+      width: 100%; }
+      .contentWrapper .scriptsCard .scriptText .scriptTitleText {
+        width: 90%;
+        font-size: 2.5em;
+        font-family: Oswald;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        text-align: left;
+        color: rgba(148, 27, 56, 0.9);
+        margin: 0 0 20px 0; }
+      .contentWrapper .scriptsCard .scriptText .scriptSizer {
+        width: 10%;
+        font-size: 2.5em;
+        font-family: Oswald;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        text-align: left;
+        color: rgba(148, 27, 56, 0.9);
+        margin: 0 0 20px 0; }
     .contentWrapper .scriptsCard .scriptText {
       font-family: Roboto;
       font-weight: 400;
