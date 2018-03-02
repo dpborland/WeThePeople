@@ -1422,6 +1422,32 @@ body {
 		padding: 25px;
 		height: 80%;
 		width: 80%;
+		overflow: scroll;
+		@media #{$phone-break-small} {
+
+		}
+		@media #{$phone-break-medium} {
+
+		}
+		@media #{$phone-break-large} {
+			min-height: 90%;
+			justify-content: start;
+			margin-top: 10px;
+		}
+		@media #{$tablet-break} {
+			min-height: 60%;
+			justify-content: start;
+			margin-top: 10px;
+		}
+		@media #{$desktop-break-small} {
+
+		}
+		@media #{$desktop-break-medium} {
+
+		}
+		@media #{$desktop-break-large} {
+
+		}
 
 		.aboutTitle {
 			font-size: 2.5em;
@@ -1431,6 +1457,27 @@ body {
 			text-align: left;
 			color: rgba(148, 27, 56, 0.9);
 			margin: 0 0 20px 0;
+			@media #{$phone-break-small} {
+
+			}
+			@media #{$phone-break-medium} {
+
+			}
+			@media #{$phone-break-large} {
+
+			}
+			@media #{$tablet-break} {
+
+			}
+			@media #{$desktop-break-small} {
+
+			}
+			@media #{$desktop-break-medium} {
+
+			}
+			@media #{$desktop-break-large} {
+
+			}
 		}
 
 		.aboutText {
@@ -1442,6 +1489,27 @@ body {
 			margin: 0 0 0 20px;
 			text-align: left;
 			color: rgba(0, 0, 77, .9);
+			@media #{$phone-break-small} {
+
+			}
+			@media #{$phone-break-medium} {
+
+			}
+			@media #{$phone-break-large} {
+
+			}
+			@media #{$tablet-break} {
+
+			}
+			@media #{$desktop-break-small} {
+
+			}
+			@media #{$desktop-break-medium} {
+
+			}
+			@media #{$desktop-break-large} {
+
+			}
 		}
 	}
 

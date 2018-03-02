@@ -1260,7 +1260,18 @@ body {
     flex-direction: column;
     padding: 25px;
     height: 80%;
-    width: 80%; }
+    width: 80%;
+    overflow: scroll; }
+    @media screen and (min-width: 350px) and (max-width: 549px) {
+      .contentWrapper .aboutCard {
+        min-height: 90%;
+        justify-content: start;
+        margin-top: 10px; } }
+    @media screen and (min-width: 550px) and (max-width: 749px) {
+      .contentWrapper .aboutCard {
+        min-height: 60%;
+        justify-content: start;
+        margin-top: 10px; } }
     .contentWrapper .aboutCard .aboutTitle {
       font-size: 2.5em;
       font-family: Oswald;
