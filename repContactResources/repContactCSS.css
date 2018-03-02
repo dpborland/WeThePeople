@@ -1262,6 +1262,16 @@ body {
     height: 80%;
     width: 80%;
     overflow: scroll; }
+    @media screen and (min-width: 0px) and (max-width: 249px) {
+      .contentWrapper .aboutCard {
+        min-height: 90%;
+        justify-content: start;
+        margin-top: 10px; } }
+    @media screen and (min-width: 250px) and (max-width: 349px) {
+      .contentWrapper .aboutCard {
+        min-height: 90%;
+        justify-content: start;
+        margin-top: 10px; } }
     @media screen and (min-width: 350px) and (max-width: 549px) {
       .contentWrapper .aboutCard {
         min-height: 90%;
@@ -1280,6 +1290,27 @@ body {
       text-align: left;
       color: rgba(148, 27, 56, 0.9);
       margin: 0 0 20px 0; }
+      @media screen and (min-width: 0px) and (max-width: 249px) {
+        .contentWrapper .aboutCard .aboutTitle {
+          text-align: center; } }
+      @media screen and (min-width: 250px) and (max-width: 349px) {
+        .contentWrapper .aboutCard .aboutTitle {
+          text-align: center; } }
+      @media screen and (min-width: 350px) and (max-width: 549px) {
+        .contentWrapper .aboutCard .aboutTitle {
+          text-align: center; } }
+      @media screen and (min-width: 550px) and (max-width: 749px) {
+        .contentWrapper .aboutCard .aboutTitle {
+          text-align: center; } }
+      @media screen and (min-width: 750px) and (max-width: 899px) {
+        .contentWrapper .aboutCard .aboutTitle {
+          text-align: left; } }
+      @media screen and (min-width: 900px) and (max-width: 1249px) {
+        .contentWrapper .aboutCard .aboutTitle {
+          text-align: left; } }
+      @media screen and (min-width: 1250px) and (max-width: 2199px) {
+        .contentWrapper .aboutCard .aboutTitle {
+          text-align: left; } }
     .contentWrapper .aboutCard .aboutText {
       font-family: Roboto;
       font-weight: 400;

@@ -1424,10 +1424,14 @@ body {
 		width: 80%;
 		overflow: scroll;
 		@media #{$phone-break-small} {
-
+			min-height: 90%;
+			justify-content: start;
+			margin-top: 10px;
 		}
 		@media #{$phone-break-medium} {
-
+			min-height: 90%;
+			justify-content: start;
+			margin-top: 10px;
 		}
 		@media #{$phone-break-large} {
 			min-height: 90%;
@@ -1458,25 +1462,25 @@ body {
 			color: rgba(148, 27, 56, 0.9);
 			margin: 0 0 20px 0;
 			@media #{$phone-break-small} {
-
+				text-align: center;
 			}
 			@media #{$phone-break-medium} {
-
+				text-align: center;
 			}
 			@media #{$phone-break-large} {
-
+				text-align: center;
 			}
 			@media #{$tablet-break} {
-
+				text-align: center;
 			}
 			@media #{$desktop-break-small} {
-
+				text-align: left;
 			}
 			@media #{$desktop-break-medium} {
-
+				text-align: left;
 			}
 			@media #{$desktop-break-large} {
-
+				text-align: left;
 			}
 		}
 
