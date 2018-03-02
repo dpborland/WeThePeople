@@ -1255,5 +1255,8 @@ body {
     order: 1; }
   .contentWrapper .activismLink {
     order: 3; }
+  .contentWrapper .aboutCard {
+    height: 50%;
+    width: 80%; }
 
 /*# sourceMappingURL=repContactCSS.css.map */

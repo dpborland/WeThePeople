@@ -1081,7 +1081,7 @@ body {
 		background-color: rgba(224, 230, 235, 0.9);
 		box-shadow: 5px 11px 35px 5px rgba(23, 22, 77, 0.7);
 		@media #{$phone-break-small} {
-			width: 100%; 
+			width: 100%;
 			font-size: 9vw;
 		}
 		@media #{$phone-break-medium} {
@@ -1409,4 +1409,16 @@ body {
 	.activismLink {
 		order: 3;
 	}
+
+	//~~~~~~// Beginning of scripts page's styles //~~~~~~//
+
+
+	//~~~~~~// Beginning of about page's styles //~~~~~~//
+
+	.aboutCard {
+		height: 50%;
+		width: 80%;
+		
+	}
+
 }
