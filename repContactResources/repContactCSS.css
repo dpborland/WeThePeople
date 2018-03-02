@@ -1256,7 +1256,13 @@ body {
   .contentWrapper .activismLink {
     order: 3; }
   .contentWrapper .aboutCard {
-    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    align-content: center;
+    padding: 20px;
+    height: 80%;
     width: 80%; }
 
 /*# sourceMappingURL=repContactCSS.css.map */
