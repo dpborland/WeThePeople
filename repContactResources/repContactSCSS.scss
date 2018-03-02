@@ -1425,6 +1425,23 @@ body {
 		height: 80%;
 		width: 80%;
 
+		.aboutTitle {
+			font-size: 2.5em;
+			font-family: Oswald;
+			font-weight: lighter;
+			color: rgba(148, 27, 56, 0.9);
+		}
+
+		.aboutText {
+			font-family: Roboto;
+			font-weight: 400;
+			font-size: 1.04em;
+			line-height: 1.6em;
+			letter-spacing: 1px;
+			margin: 0 0 0 20px;
+			text-align: left;
+			color: rgba(0, 0, 77, .9);
+		}
 	}
 
 }
