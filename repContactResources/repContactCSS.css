@@ -1258,10 +1258,7 @@ body {
   .contentWrapper .aboutCard {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    align-content: center;
-    padding: 20px;
+    padding: 25px;
     height: 80%;
     width: 80%; }
     .contentWrapper .aboutCard .aboutTitle {
@@ -1270,7 +1267,8 @@ body {
       font-weight: lighter;
       letter-spacing: 1px;
       text-align: left;
-      color: rgba(148, 27, 56, 0.9); }
+      color: rgba(148, 27, 56, 0.9);
+      margin: 0 0 20px 0; }
     .contentWrapper .aboutCard .aboutText {
       font-family: Roboto;
       font-weight: 400;
