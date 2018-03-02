@@ -1255,6 +1255,41 @@ body {
     order: 1; }
   .contentWrapper .activismLink {
     order: 3; }
+  .contentWrapper .scriptsCard {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 25px;
+    height: 20%;
+    width: 80%;
+    overflow: scroll; }
+    .contentWrapper .scriptsCard .scriptTitle {
+      width: 100%;
+      font-size: 2.5em;
+      font-family: Oswald;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      text-align: left;
+      color: rgba(148, 27, 56, 0.9);
+      margin: 0 0 20px 0; }
+    .contentWrapper .scriptsCard .scriptSizer {
+      width: 100%;
+      font-size: 2.5em;
+      font-family: Oswald;
+      font-weight: lighter;
+      letter-spacing: 1px;
+      text-align: left;
+      color: rgba(148, 27, 56, 0.9);
+      margin: 0 0 20px 0; }
+    .contentWrapper .scriptsCard .scriptText {
+      font-family: Roboto;
+      font-weight: 400;
+      font-size: 1.04em;
+      line-height: 1.6em;
+      letter-spacing: 1px;
+      margin: 0 0 0 20px;
+      text-align: left;
+      color: rgba(0, 0, 77, 0.9); }
   .contentWrapper .aboutCard {
     display: flex;
     flex-wrap: nowrap;
