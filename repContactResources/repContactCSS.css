@@ -1263,9 +1263,9 @@ body {
     height: 20%;
     width: 80%;
     overflow: scroll; }
-    .contentWrapper .scriptsCard .scriptText {
+    .contentWrapper .scriptsCard .scriptTitle {
       width: 100%; }
-      .contentWrapper .scriptsCard .scriptText .scriptTitleText {
+      .contentWrapper .scriptsCard .scriptTitle .scriptTitleText {
         width: 90%;
         font-size: 2.5em;
         font-family: Oswald;
@@ -1274,7 +1274,7 @@ body {
         text-align: left;
         color: rgba(148, 27, 56, 0.9);
         margin: 0 0 20px 0; }
-      .contentWrapper .scriptsCard .scriptText .scriptSizer {
+      .contentWrapper .scriptsCard .scriptTitle .scriptSizer {
         width: 10%;
         font-size: 2.5em;
         font-family: Oswald;
