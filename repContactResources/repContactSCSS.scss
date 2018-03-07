@@ -1529,7 +1529,7 @@ body {
 			text-align: left;
 			color: rgba(0, 0, 77, .9);
 			opacity: 0;
-			transition: opacity .3 ease;
+			transition: opacity .3s ease;
 			@media #{$phone-break-small} {
 
 			}
@@ -1552,6 +1552,16 @@ body {
 
 			}
 		}
+	}
+
+	.textVisibility {
+		opacity: 1;
+		transition: opacity .3s ease;
+	}
+
+	.cardExpanded {
+		height: 60%;
+		transition: height .3s ease;
 	}
 
 	//~~~~~~// Beginning of about page's styles //~~~~~~//
