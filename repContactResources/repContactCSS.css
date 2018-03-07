@@ -1295,7 +1295,7 @@ body {
     .contentWrapper .scriptsCard .scriptTitle:hover {
       cursor: pointer; }
     .contentWrapper .scriptsCard .scriptText {
-      display: flex;
+      display: none;
       font-family: Roboto;
       font-weight: 400;
       font-size: 1.04em;
