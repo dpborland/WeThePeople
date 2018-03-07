@@ -536,11 +536,13 @@ if (window.location.href === "http://contactmyreps.com/links.html") {
 if (window.location.href === "http://contactmyreps.com/scripts.html") {
     const issues = Array.from(document.querySelectorAll(".scriptTitle"));
     const sizer = Array.from(document.querySelectorAll(".scriptSizer"));
+    const script = Array.from(docuemnt.querySelectorAll(".scriptText"));
 
     issues.forEach( (issue, index) => {
         issue.addEventListener("click", (e) => {
             e.target.parentElement.parentElement.classList.toggle("cardExpanded");
             sizer[index].textContent == "-" ? sizer[index].textContent = "+" : sizer[index].textContent = "-";
+            script[index].classList.toggle("textVisibility");
         })
     })
 }
