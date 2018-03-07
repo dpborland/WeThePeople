@@ -536,7 +536,7 @@ if (window.location.href === "http://contactmyreps.com/links.html") {
 if (window.location.href === "http://contactmyreps.com/scripts.html") {
     const issues = Array.from(document.querySelectorAll(".scriptTitle"));
     const sizer = Array.from(document.querySelectorAll(".scriptSizer"));
-    const script = Array.from(docuemnt.querySelectorAll(".scriptText"));
+    const script = Array.from(document.querySelectorAll(".scriptText"));
 
     issues.forEach( (issue, index) => {
         issue.addEventListener("click", (e) => {
