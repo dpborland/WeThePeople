@@ -1561,7 +1561,7 @@ body {
 	}
 
 	.textVisibility {
-		display: flex;
+		display: flex !important;
 		opacity: 1 !important;
 		transition: opacity .3s ease .3s;
 	}
