@@ -234,6 +234,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: flex-start;
   width: 100%;
   height: 90%;
   margin: 0;
@@ -1259,10 +1260,11 @@ body {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
+    align-self: flex-start;
     padding: 15px 25px;
-    height: 10%;
+    height: 65px;
     width: 80%;
-    overflow: scroll;
+    overflow: hidden;
     transition: height .3s ease; }
     .contentWrapper .scriptsCard .scriptTitle {
       display: flex;
@@ -1282,10 +1284,10 @@ body {
         text-align: left;
         color: rgba(148, 27, 56, 0.9);
         margin: 0;
-        transition: letter-spacing .3s ease; }
+        transition: color .3s ease; }
       .contentWrapper .scriptsCard .scriptTitle .scriptTitleText:hover {
-        letter-spacing: 4px;
-        transition: letter-spacing .3s ease; }
+        color: rgba(23, 22, 77, 0.8);
+        transition: color .3s ease; }
       .contentWrapper .scriptsCard .scriptTitle .scriptSizer {
         height: 100%;
         width: 10%;
