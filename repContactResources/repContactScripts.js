@@ -542,7 +542,6 @@ if (window.location.href === "http://contactmyreps.com/scripts.html") {
         issue.addEventListener("click", (e) => {
             e.target.parentElement.parentElement.classList.toggle("cardExpanded");
             sizer[index].textContent == "-" ? sizer[index].textContent = "+" : sizer[index].textContent = "-";
-            script[index].style.display = "flex";
             script[index].classList.toggle("textVisibility");
         })
     })
