@@ -1295,7 +1295,8 @@ body {
     .contentWrapper .scriptsCard .scriptTitle:hover {
       cursor: pointer; }
     .contentWrapper .scriptsCard .scriptText {
-      display: none;
+      display: flex;
+      height: 0;
       font-family: Roboto;
       font-weight: 400;
       font-size: 1.04em;
@@ -1307,7 +1308,7 @@ body {
       opacity: 0;
       transition: opacity .3s ease; }
   .contentWrapper .textVisibility {
-    display: flex !important;
+    height: 50% !important;
     opacity: 1 !important;
     transition: opacity .3s ease .3s; }
   .contentWrapper .cardExpanded {
