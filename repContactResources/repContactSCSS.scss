@@ -1462,6 +1462,7 @@ body {
 				text-align: left;
 				color: rgba(148, 27, 56, 0.9);
 				margin: 0;
+				transition: letter-spacing .3s ease;
 				@media #{$phone-break-small} {
 
 				}
@@ -1483,6 +1484,11 @@ body {
 				@media #{$desktop-break-large} {
 
 				}
+			}
+
+			.scriptTitleText:hover {
+				letter-spacing: 4px;
+				transition: letter-spacing .3s ease;
 			}
 
 			.scriptSizer {

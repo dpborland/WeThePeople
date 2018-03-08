@@ -1281,7 +1281,11 @@ body {
         letter-spacing: 1px;
         text-align: left;
         color: rgba(148, 27, 56, 0.9);
-        margin: 0; }
+        margin: 0;
+        transition: letter-spacing .3s ease; }
+      .contentWrapper .scriptsCard .scriptTitle .scriptTitleText:hover {
+        letter-spacing: 4px;
+        transition: letter-spacing .3s ease; }
       .contentWrapper .scriptsCard .scriptTitle .scriptSizer {
         height: 100%;
         width: 10%;
