@@ -1271,7 +1271,7 @@ body {
       max-height: 90px;
       width: 100%;
       justify-content: space-between;
-      margin: 0 0 15px 0; }
+      margin: 0; }
       .contentWrapper .scriptsCard .scriptTitle .scriptTitleText {
         height: 100%;
         width: 90%;
