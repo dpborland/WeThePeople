@@ -1425,18 +1425,24 @@ body {
 		height: 65px;
 		width: 80%;
 		overflow: hidden;
-		transition: height .3s ease;
+		transition: max-height .3s ease, height .3s ease;
 		@media #{$phone-break-small} {
-
+			width: 90%;
+			justify-content: flex-start;
+			padding: 5px 15px;
 		}
 		@media #{$phone-break-medium} {
-
+			width: 90%;
+			justify-content: flex-start;
+			padding: 5px 15px;
 		}
 		@media #{$phone-break-large} {
-
+			width: 90%;
+			justify-content: flex-start;
+			padding: 5px 15px;
 		}
 		@media #{$tablet-break} {
-
+			align-self:	center;
 		}
 		@media #{$desktop-break-small} {
 
@@ -1549,13 +1555,13 @@ body {
 			opacity: 0;
 			transition: opacity .3s ease;
 			@media #{$phone-break-small} {
-
+				margin: 0 0 0 10px;
 			}
 			@media #{$phone-break-medium} {
-
+				margin: 0 0 0 10px;
 			}
 			@media #{$phone-break-large} {
-
+				margin: 0 0 0 10px;
 			}
 			@media #{$tablet-break} {
 
@@ -1580,7 +1586,52 @@ body {
 
 	.cardExpanded {
 		height: 60%;
-		transition: height .3s ease;
+		transition: max-height .3 ease, height .3s ease;
+		@media #{$phone-break-small} {
+			max-height: 80%;
+		}
+		@media #{$phone-break-medium} {
+			max-height: 80%;
+		}
+		@media #{$phone-break-large} {
+			max-height: 80%;
+		}
+		@media #{$tablet-break} {
+			max-height: initial;
+		}
+		@media #{$desktop-break-small} {
+			max-height: initial;
+		}
+		@media #{$desktop-break-medium} {
+			max-height: initial;
+		}
+		@media #{$desktop-break-large} {
+			max-height: initial;
+		}
+	}
+
+	.scriptsCard:first-child {
+		@media #{$phone-break-small} {
+			margin-top: 40px;
+		}
+		@media #{$phone-break-medium} {
+			margin-top: 40px;
+		}
+		@media #{$phone-break-large} {
+			margin-top: 40px;
+		}
+		@media #{$tablet-break} {
+
+		}
+		@media #{$desktop-break-small} {
+
+		}
+		@media #{$desktop-break-medium} {
+
+		}
+		@media #{$desktop-break-large} {
+
+		}
 	}
 
 	//~~~~~~// Beginning of about page's styles //~~~~~~//
@@ -1645,7 +1696,7 @@ body {
 				text-align: center;
 			}
 			@media #{$tablet-break} {
-				text-align: center;
+				text-align: left;
 			}
 			@media #{$desktop-break-small} {
 				text-align: left;

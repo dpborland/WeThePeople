@@ -1268,7 +1268,25 @@ body {
     height: 65px;
     width: 80%;
     overflow: hidden;
-    transition: height .3s ease; }
+    transition: max-height .3s ease, height .3s ease; }
+    @media screen and (min-width: 0px) and (max-width: 249px) {
+      .contentWrapper .scriptsCard {
+        width: 90%;
+        justify-content: flex-start;
+        padding: 5px 15px; } }
+    @media screen and (min-width: 250px) and (max-width: 349px) {
+      .contentWrapper .scriptsCard {
+        width: 90%;
+        justify-content: flex-start;
+        padding: 5px 15px; } }
+    @media screen and (min-width: 350px) and (max-width: 549px) {
+      .contentWrapper .scriptsCard {
+        width: 90%;
+        justify-content: flex-start;
+        padding: 5px 15px; } }
+    @media screen and (min-width: 550px) and (max-width: 749px) {
+      .contentWrapper .scriptsCard {
+        align-self: center; } }
     .contentWrapper .scriptsCard .scriptTitle {
       display: flex;
       flex-direction: row;
@@ -1316,13 +1334,52 @@ body {
       color: rgba(0, 0, 77, 0.9);
       opacity: 0;
       transition: opacity .3s ease; }
+      @media screen and (min-width: 0px) and (max-width: 249px) {
+        .contentWrapper .scriptsCard .scriptText {
+          margin: 0 0 0 10px; } }
+      @media screen and (min-width: 250px) and (max-width: 349px) {
+        .contentWrapper .scriptsCard .scriptText {
+          margin: 0 0 0 10px; } }
+      @media screen and (min-width: 350px) and (max-width: 549px) {
+        .contentWrapper .scriptsCard .scriptText {
+          margin: 0 0 0 10px; } }
   .contentWrapper .textVisibility {
     height: 50% !important;
     opacity: 1 !important;
     transition: opacity .3s ease .3s; }
   .contentWrapper .cardExpanded {
     height: 60%;
-    transition: height .3s ease; }
+    transition: max-height .3 ease, height .3s ease; }
+    @media screen and (min-width: 0px) and (max-width: 249px) {
+      .contentWrapper .cardExpanded {
+        max-height: 80%; } }
+    @media screen and (min-width: 250px) and (max-width: 349px) {
+      .contentWrapper .cardExpanded {
+        max-height: 80%; } }
+    @media screen and (min-width: 350px) and (max-width: 549px) {
+      .contentWrapper .cardExpanded {
+        max-height: 80%; } }
+    @media screen and (min-width: 550px) and (max-width: 749px) {
+      .contentWrapper .cardExpanded {
+        max-height: initial; } }
+    @media screen and (min-width: 750px) and (max-width: 899px) {
+      .contentWrapper .cardExpanded {
+        max-height: initial; } }
+    @media screen and (min-width: 900px) and (max-width: 1249px) {
+      .contentWrapper .cardExpanded {
+        max-height: initial; } }
+    @media screen and (min-width: 1250px) and (max-width: 2199px) {
+      .contentWrapper .cardExpanded {
+        max-height: initial; } }
+  @media screen and (min-width: 0px) and (max-width: 249px) {
+    .contentWrapper .scriptsCard:first-child {
+      margin-top: 40px; } }
+  @media screen and (min-width: 250px) and (max-width: 349px) {
+    .contentWrapper .scriptsCard:first-child {
+      margin-top: 40px; } }
+  @media screen and (min-width: 350px) and (max-width: 549px) {
+    .contentWrapper .scriptsCard:first-child {
+      margin-top: 40px; } }
   .contentWrapper .aboutCard {
     display: flex;
     flex-wrap: nowrap;
@@ -1374,7 +1431,7 @@ body {
           text-align: center; } }
       @media screen and (min-width: 550px) and (max-width: 749px) {
         .contentWrapper .aboutCard .aboutTitle {
-          text-align: center; } }
+          text-align: left; } }
       @media screen and (min-width: 750px) and (max-width: 899px) {
         .contentWrapper .aboutCard .aboutTitle {
           text-align: left; } }
