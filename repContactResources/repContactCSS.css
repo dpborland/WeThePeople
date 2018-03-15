@@ -1272,19 +1272,27 @@ body {
     @media screen and (min-width: 0px) and (max-width: 249px) {
       .contentWrapper .scriptsCard {
         width: 90%;
+        height: 55px;
         justify-content: flex-start;
+        align-self: center;
         padding: 5px 15px; } }
     @media screen and (min-width: 250px) and (max-width: 349px) {
       .contentWrapper .scriptsCard {
         width: 90%;
+        height: 60px;
         justify-content: flex-start;
+        align-self: center;
         padding: 5px 15px; } }
     @media screen and (min-width: 350px) and (max-width: 549px) {
       .contentWrapper .scriptsCard {
         width: 90%;
         justify-content: flex-start;
+        align-self: center;
         padding: 5px 15px; } }
     @media screen and (min-width: 550px) and (max-width: 749px) {
+      .contentWrapper .scriptsCard {
+        align-self: center; } }
+    @media screen and (min-width: 750px) and (max-width: 899px) {
       .contentWrapper .scriptsCard {
         align-self: center; } }
     .contentWrapper .scriptsCard .scriptTitle {
@@ -1306,6 +1314,12 @@ body {
         color: rgba(148, 27, 56, 0.9);
         margin: 0;
         transition: color .3s ease; }
+        @media screen and (min-width: 0px) and (max-width: 249px) {
+          .contentWrapper .scriptsCard .scriptTitle .scriptTitleText {
+            font-size: 2em; } }
+        @media screen and (min-width: 250px) and (max-width: 349px) {
+          .contentWrapper .scriptsCard .scriptTitle .scriptTitleText {
+            font-size: 2.2em; } }
       .contentWrapper .scriptsCard .scriptTitle .scriptTitleText:hover {
         color: rgba(23, 22, 77, 0.8);
         transition: color .3s ease; }
@@ -1319,6 +1333,12 @@ body {
         text-align: center;
         color: rgba(148, 27, 56, 0.9);
         margin: 0; }
+        @media screen and (min-width: 0px) and (max-width: 249px) {
+          .contentWrapper .scriptsCard .scriptTitle .scriptSizer {
+            font-size: 2em; } }
+        @media screen and (min-width: 250px) and (max-width: 349px) {
+          .contentWrapper .scriptsCard .scriptTitle .scriptSizer {
+            font-size: 2.2em; } }
     .contentWrapper .scriptsCard .scriptTitle:hover {
       cursor: pointer; }
     .contentWrapper .scriptsCard .scriptText {
@@ -1332,8 +1352,9 @@ body {
       margin: 0 0 0 20px;
       text-align: left;
       color: rgba(0, 0, 77, 0.9);
+      overflow: scroll;
       opacity: 0;
-      transition: opacity .3s ease; }
+      transition: height .8s ease, opacity .3s ease; }
       @media screen and (min-width: 0px) and (max-width: 249px) {
         .contentWrapper .scriptsCard .scriptText {
           margin: 0 0 0 10px; } }
@@ -1344,9 +1365,9 @@ body {
         .contentWrapper .scriptsCard .scriptText {
           margin: 0 0 0 10px; } }
   .contentWrapper .textVisibility {
-    height: 50% !important;
+    height: 80% !important;
     opacity: 1 !important;
-    transition: opacity .3s ease .3s; }
+    transition: height .3s ease, opacity .3s ease .3s; }
   .contentWrapper .cardExpanded {
     height: 60%;
     transition: max-height .3 ease, height .3s ease; }
